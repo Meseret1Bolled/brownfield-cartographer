@@ -1,0 +1,66 @@
+{
+  "nodes": {
+    "/tmp/jaffle_shop/dbt_project.yml": {
+      "path": "/tmp/jaffle_shop/dbt_project.yml",
+      "language": "yaml",
+      "purpose_statement": null,
+      "domain_cluster": null,
+      "complexity_score": 0.0,
+      "change_velocity_30d": 0,
+      "is_dead_code_candidate": false,
+      "last_modified": "2026-03-11T19:57:32.545141",
+      "loc": 26,
+      "comment_ratio": 0.0,
+      "imports": [],
+      "exported_functions": [],
+      "exported_classes": [],
+      "pagerank_score": 0.3333333333333333
+    },
+    "/tmp/jaffle_shop/models/schema.yml": {
+      "path": "/tmp/jaffle_shop/models/schema.yml",
+      "language": "yaml",
+      "purpose_statement": null,
+      "domain_cluster": null,
+      "complexity_score": 0.0,
+      "change_velocity_30d": 0,
+      "is_dead_code_candidate": false,
+      "last_modified": "2026-03-11T19:57:32.545989",
+      "loc": 82,
+      "comment_ratio": 0.0,
+      "imports": [],
+      "exported_functions": [],
+      "exported_classes": [],
+      "pagerank_score": 0.3333333333333333
+    },
+    "/tmp/jaffle_shop/models/staging/schema.yml": {
+      "path": "/tmp/jaffle_shop/models/staging/schema.yml",
+      "language": "yaml",
+      "purpose_statement": null,
+      "domain_cluster": null,
+      "complexity_score": 0.0,
+      "change_velocity_30d": 0,
+      "is_dead_code_candidate": false,
+      "last_modified": "2026-03-11T19:57:32.545989",
+      "loc": 31,
+      "comment_ratio": 0.0,
+      "imports": [],
+      "exported_functions": [],
+      "exported_classes": [],
+      "pagerank_score": 0.3333333333333333
+    }
+  },
+  "edges": [],
+  "circular_dependencies": [],
+  "high_velocity_files": [
+    "/tmp/jaffle_shop/dbt_project.yml",
+    "/tmp/jaffle_shop/models/schema.yml",
+    "/tmp/jaffle_shop/models/staging/schema.yml"
+  ],
+  "architectural_hubs": [
+    "/tmp/jaffle_shop/dbt_project.yml",
+    "/tmp/jaffle_shop/models/schema.yml",
+    "/tmp/jaffle_shop/models/staging/schema.yml"
+  ],
+  "generated_at": "2026-03-11T16:57:33.543057",
+  "target_repo": "/tmp/jaffle_shop"
+}
