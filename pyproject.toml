@@ -4,39 +4,46 @@ build-backend = "hatchling.build"
 
 [project]
 name = "brownfield-cartographer"
-version = "0.1.0"
-description = "Multi-agent codebase intelligence system for FDE onboarding"
+version = "1.0.0"
+description = "Multi-agent codebase intelligence system for rapid FDE onboarding in production environments"
 requires-python = ">=3.11"
 dependencies = [
+    # Core static analysis
     "tree-sitter>=0.23.0",
     "tree-sitter-python>=0.23.0",
     "tree-sitter-javascript>=0.23.0",
     "tree-sitter-yaml>=0.6.0",
     "sqlglot>=25.0.0",
+    # Graph + data
     "networkx>=3.3",
-    "pydantic>=2.7.0",
-    "typer>=0.12.0",
-    "rich>=13.7.0",
-    "gitpython>=3.1.43",
-    "pyyaml>=6.0.1",
-    "python-dotenv>=1.0.0",
-    "jedi>=0.19.0",
     "numpy>=1.26.0",
     "scipy>=1.13.0",
-    "pyvis>=0.3.2",
-    "requests>=2.31.0",
-    "google-generativeai>=0.7.0",
-    "langchain-core>=0.2.0",
-    "langgraph>=0.1.0",
-    "streamlit>=1.55.0",
-    "plotly>=5.22.0",
     "pandas>=2.2.0",
-    "fastapi>=0.135.1",
-    "uvicorn>=0.41.0",
-    "python-multipart>=0.0.22",
+    # Schema + config
+    "pydantic>=2.7.0",
+    "pyyaml>=6.0.1",
+    "python-dotenv>=1.0.0",
+    # CLI
+    "typer>=0.12.0",
+    "rich>=13.7.0",
+    # Git
+    "gitpython>=3.1.43",
+    # Python semantic analysis
+    "jedi>=0.19.0",
+    # Visualization
+    "pyvis>=0.3.2",
+    "plotly>=5.22.0",
+    # LLM / agents
     "langchain-core>=0.2.0",
     "langgraph>=0.1.0",
     "langchain-openai>=0.1.0",
+    # Web UI
+    "fastapi>=0.111.0",
+    "uvicorn>=0.30.0",
+    "python-multipart>=0.0.9",
+    "streamlit>=1.35.0",
+    # HTTP
+    "requests>=2.31.0",
 ]
 
 [project.scripts]
