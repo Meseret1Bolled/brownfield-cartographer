@@ -1,0 +1,3343 @@
+{
+  "dataset_nodes": {
+    "dynamic::dev/airflow_perf/sql_queries.py": {
+      "name": "dynamic::dev/airflow_perf/sql_queries.py",
+      "storage_type": "unknown",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/dev/airflow_perf/sql_queries.py",
+      "description": "Dynamic reference — path resolved at runtime"
+    },
+    "dynamic::airflow-core/src/airflow/example_dags/tutorial_objectstorage.py": {
+      "name": "dynamic::airflow-core/src/airflow/example_dags/tutorial_objectstorage.py",
+      "storage_type": "unknown",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/tutorial_objectstorage.py",
+      "description": "Dynamic reference — path resolved at runtime"
+    },
+    "select 1": {
+      "name": "select 1",
+      "storage_type": "file",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/utils/test_retries.py",
+      "description": null
+    },
+    "select 1;": {
+      "name": "select 1;",
+      "storage_type": "file",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/utils/test_retries.py",
+      "description": null
+    },
+    "dynamic::providers/amazon/tests/unit/amazon/aws/transfers/test_sql_to_s3.py": {
+      "name": "dynamic::providers/amazon/tests/unit/amazon/aws/transfers/test_sql_to_s3.py",
+      "storage_type": "unknown",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/unit/amazon/aws/transfers/test_sql_to_s3.py",
+      "description": "Dynamic reference — path resolved at runtime"
+    },
+    "{input_path}/input.csv": {
+      "name": "{input_path}/input.csv",
+      "storage_type": "file",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_sagemaker.py",
+      "description": null
+    },
+    "{output_path}/train.csv": {
+      "name": "{output_path}/train.csv",
+      "storage_type": "file",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_sagemaker.py",
+      "description": null
+    },
+    "{output_path}/test.csv": {
+      "name": "{output_path}/test.csv",
+      "storage_type": "file",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_sagemaker.py",
+      "description": null
+    },
+    "csv": {
+      "name": "csv",
+      "storage_type": "file",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_glue.py",
+      "description": null
+    },
+    "dynamic::providers/salesforce/src/airflow/providers/salesforce/hooks/salesforce.py": {
+      "name": "dynamic::providers/salesforce/src/airflow/providers/salesforce/hooks/salesforce.py",
+      "storage_type": "unknown",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/salesforce/src/airflow/providers/salesforce/hooks/salesforce.py",
+      "description": "Dynamic reference — path resolved at runtime"
+    },
+    "dynamic::providers/google/tests/unit/google/cloud/transfers/test_sql_to_gcs.py": {
+      "name": "dynamic::providers/google/tests/unit/google/cloud/transfers/test_sql_to_gcs.py",
+      "storage_type": "unknown",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/google/tests/unit/google/cloud/transfers/test_sql_to_gcs.py",
+      "description": "Dynamic reference — path resolved at runtime"
+    },
+    "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py": {
+      "name": "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py",
+      "storage_type": "unknown",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py",
+      "description": "Dynamic reference — path resolved at runtime"
+    },
+    "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_samba.py": {
+      "name": "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_samba.py",
+      "storage_type": "unknown",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_samba.py",
+      "description": "Dynamic reference — path resolved at runtime"
+    },
+    "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_mysql.py": {
+      "name": "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_mysql.py",
+      "storage_type": "unknown",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_mysql.py",
+      "description": "Dynamic reference — path resolved at runtime"
+    },
+    "dynamic::providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py": {
+      "name": "dynamic::providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py",
+      "storage_type": "unknown",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py",
+      "description": "Dynamic reference — path resolved at runtime"
+    },
+    "dynamic::providers/slack/src/airflow/providers/slack/transfers/sql_to_slack.py": {
+      "name": "dynamic::providers/slack/src/airflow/providers/slack/transfers/sql_to_slack.py",
+      "storage_type": "unknown",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/slack/src/airflow/providers/slack/transfers/sql_to_slack.py",
+      "description": "Dynamic reference — path resolved at runtime"
+    },
+    "orders": {
+      "name": "orders",
+      "storage_type": "table",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/sample.sql",
+      "description": null
+    },
+    "test_data": {
+      "name": "test_data",
+      "storage_type": "table",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/tutorial_taskflow_template.sql",
+      "description": null
+    },
+    "users": {
+      "name": "users",
+      "storage_type": "table",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/microsoft/mssql/tests/system/microsoft/mssql/create_table.sql",
+      "description": null
+    },
+    "items": {
+      "name": "items",
+      "storage_type": "table",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/sqlite/tests/system/sqlite/create_table.sql",
+      "description": null
+    },
+    "random_data": {
+      "name": "random_data",
+      "storage_type": "table",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/snowflake/tests/system/snowflake/example_snowflake_snowflake_op_template_file.sql",
+      "description": null
+    },
+    "ssl_users": {
+      "name": "ssl_users",
+      "storage_type": "table",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/teradata/tests/system/teradata/create_ssl_table.sql",
+      "description": null
+    },
+    "asset1_producer": {
+      "name": "asset1_producer",
+      "storage_type": "table",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/example_asset_decorator.py",
+      "description": "Dagster asset: asset1_producer"
+    },
+    "asset2_producer": {
+      "name": "asset2_producer",
+      "storage_type": "table",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/example_asset_decorator.py",
+      "description": "Dagster asset: asset2_producer"
+    },
+    "prlist.csv": {
+      "name": "prlist.csv",
+      "storage_type": "file",
+      "schema_snapshot": null,
+      "owner": null,
+      "is_source_of_truth": false,
+      "source_file": "/tmp/cartographer_142_xcgy/repo/dev/stats/explore_pr_candidates.ipynb",
+      "description": null
+    }
+  },
+  "transformation_nodes": {
+    "py::/tmp/cartographer_142_xcgy/repo/dev/airflow_perf/sql_queries.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/dev/airflow_perf/sql_queries.py",
+      "source_datasets": [],
+      "target_datasets": [
+        "dynamic::dev/airflow_perf/sql_queries.py"
+      ],
+      "transformation_type": "unknown",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/dev/airflow_perf/sql_queries.py",
+      "line_range": [
+        1,
+        225
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/tutorial_objectstorage.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/tutorial_objectstorage.py",
+      "source_datasets": [],
+      "target_datasets": [
+        "dynamic::airflow-core/src/airflow/example_dags/tutorial_objectstorage.py"
+      ],
+      "transformation_type": "unknown",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/tutorial_objectstorage.py",
+      "line_range": [
+        1,
+        142
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/utils/test_retries.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/utils/test_retries.py",
+      "source_datasets": [
+        "select 1;",
+        "select 1"
+      ],
+      "target_datasets": [],
+      "transformation_type": "sqlalchemy",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/utils/test_retries.py",
+      "line_range": [
+        1,
+        100
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/unit/amazon/aws/transfers/test_sql_to_s3.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/unit/amazon/aws/transfers/test_sql_to_s3.py",
+      "source_datasets": [
+        "dynamic::providers/amazon/tests/unit/amazon/aws/transfers/test_sql_to_s3.py"
+      ],
+      "target_datasets": [],
+      "transformation_type": "pandas_read",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/unit/amazon/aws/transfers/test_sql_to_s3.py",
+      "line_range": [
+        1,
+        705
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_sagemaker.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_sagemaker.py",
+      "source_datasets": [
+        "{input_path}/input.csv"
+      ],
+      "target_datasets": [
+        "{output_path}/test.csv",
+        "{output_path}/train.csv"
+      ],
+      "transformation_type": "pandas_read",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_sagemaker.py",
+      "line_range": [
+        1,
+        741
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_glue.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_glue.py",
+      "source_datasets": [],
+      "target_datasets": [
+        "csv"
+      ],
+      "transformation_type": "pyspark_write",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_glue.py",
+      "line_range": [
+        1,
+        227
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/providers/salesforce/src/airflow/providers/salesforce/hooks/salesforce.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/providers/salesforce/src/airflow/providers/salesforce/hooks/salesforce.py",
+      "source_datasets": [],
+      "target_datasets": [
+        "dynamic::providers/salesforce/src/airflow/providers/salesforce/hooks/salesforce.py"
+      ],
+      "transformation_type": "unknown",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/salesforce/src/airflow/providers/salesforce/hooks/salesforce.py",
+      "line_range": [
+        1,
+        420
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/providers/google/tests/unit/google/cloud/transfers/test_sql_to_gcs.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/providers/google/tests/unit/google/cloud/transfers/test_sql_to_gcs.py",
+      "source_datasets": [
+        "dynamic::providers/google/tests/unit/google/cloud/transfers/test_sql_to_gcs.py"
+      ],
+      "target_datasets": [],
+      "transformation_type": "pandas_read",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/google/tests/unit/google/cloud/transfers/test_sql_to_gcs.py",
+      "line_range": [
+        1,
+        602
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py",
+      "source_datasets": [],
+      "target_datasets": [
+        "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py"
+      ],
+      "transformation_type": "unknown",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py",
+      "line_range": [
+        1,
+        1178
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_samba.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_samba.py",
+      "source_datasets": [],
+      "target_datasets": [
+        "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_samba.py"
+      ],
+      "transformation_type": "unknown",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_samba.py",
+      "line_range": [
+        1,
+        75
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_mysql.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_mysql.py",
+      "source_datasets": [],
+      "target_datasets": [
+        "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_mysql.py"
+      ],
+      "transformation_type": "unknown",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_mysql.py",
+      "line_range": [
+        1,
+        129
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py",
+      "source_datasets": [
+        "dynamic::providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py"
+      ],
+      "target_datasets": [
+        "dynamic::providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py"
+      ],
+      "transformation_type": "pandas_read",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py",
+      "line_range": [
+        1,
+        1084
+      ],
+      "sql_query": null
+    },
+    "py::/tmp/cartographer_142_xcgy/repo/providers/slack/src/airflow/providers/slack/transfers/sql_to_slack.py": {
+      "id": "py::/tmp/cartographer_142_xcgy/repo/providers/slack/src/airflow/providers/slack/transfers/sql_to_slack.py",
+      "source_datasets": [],
+      "target_datasets": [
+        "dynamic::providers/slack/src/airflow/providers/slack/transfers/sql_to_slack.py"
+      ],
+      "transformation_type": "unknown",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/slack/src/airflow/providers/slack/transfers/sql_to_slack.py",
+      "line_range": [
+        1,
+        170
+      ],
+      "sql_query": null
+    },
+    "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/sample.sql": {
+      "id": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/sample.sql",
+      "source_datasets": [],
+      "target_datasets": [
+        "orders"
+      ],
+      "transformation_type": "sql_select",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/sample.sql",
+      "line_range": [
+        1,
+        24
+      ],
+      "sql_query": "/*\n Licensed to the Apache Software Foundation (ASF) under one\n or more contributor license agreements.  See the NOTICE file\n distributed with this work for additional information\n regarding copyright ownership.  The ASF licenses this file\n to you under the Apache License, Version 2.0 (the\n \"License\"); you may not use this file except in compliance\n with the License.  You may obtain a copy of the License at\n\n   http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agr"
+    },
+    "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/tutorial_taskflow_template.sql": {
+      "id": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/tutorial_taskflow_template.sql",
+      "source_datasets": [
+        "test_data"
+      ],
+      "target_datasets": [],
+      "transformation_type": "sql_select",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/tutorial_taskflow_template.sql",
+      "line_range": [
+        1,
+        23
+      ],
+      "sql_query": "/*\n Licensed to the Apache Software Foundation (ASF) under one\n or more contributor license agreements.  See the NOTICE file\n distributed with this work for additional information\n regarding copyright ownership.  The ASF licenses this file\n to you under the Apache License, Version 2.0 (the\n \"License\"); you may not use this file except in compliance\n with the License.  You may obtain a copy of the License at\n\n   http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agr"
+    },
+    "/tmp/cartographer_142_xcgy/repo/providers/microsoft/mssql/tests/system/microsoft/mssql/create_table.sql": {
+      "id": "/tmp/cartographer_142_xcgy/repo/providers/microsoft/mssql/tests/system/microsoft/mssql/create_table.sql",
+      "source_datasets": [],
+      "target_datasets": [
+        "users"
+      ],
+      "transformation_type": "sql_select",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/microsoft/mssql/tests/system/microsoft/mssql/create_table.sql",
+      "line_range": [
+        1,
+        24
+      ],
+      "sql_query": "/*\n Licensed to the Apache Software Foundation (ASF) under one\n or more contributor license agreements.  See the NOTICE file\n distributed with this work for additional information\n regarding copyright ownership.  The ASF licenses this file\n to you under the Apache License, Version 2.0 (the\n \"License\"); you may not use this file except in compliance\n with the License.  You may obtain a copy of the License at\n\n   http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agr"
+    },
+    "/tmp/cartographer_142_xcgy/repo/providers/sqlite/tests/system/sqlite/create_table.sql": {
+      "id": "/tmp/cartographer_142_xcgy/repo/providers/sqlite/tests/system/sqlite/create_table.sql",
+      "source_datasets": [],
+      "target_datasets": [
+        "items"
+      ],
+      "transformation_type": "sql_select",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/sqlite/tests/system/sqlite/create_table.sql",
+      "line_range": [
+        1,
+        24
+      ],
+      "sql_query": "/*\n Licensed to the Apache Software Foundation (ASF) under one\n or more contributor license agreements.  See the NOTICE file\n distributed with this work for additional information\n regarding copyright ownership.  The ASF licenses this file\n to you under the Apache License, Version 2.0 (the\n \"License\"); you may not use this file except in compliance\n with the License.  You may obtain a copy of the License at\n\n   http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agr"
+    },
+    "/tmp/cartographer_142_xcgy/repo/providers/standard/src/airflow/providers/standard/example_dags/sql/sample.sql": {
+      "id": "/tmp/cartographer_142_xcgy/repo/providers/standard/src/airflow/providers/standard/example_dags/sql/sample.sql",
+      "source_datasets": [],
+      "target_datasets": [
+        "orders"
+      ],
+      "transformation_type": "sql_select",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/standard/src/airflow/providers/standard/example_dags/sql/sample.sql",
+      "line_range": [
+        1,
+        24
+      ],
+      "sql_query": "/*\n Licensed to the Apache Software Foundation (ASF) under one\n or more contributor license agreements.  See the NOTICE file\n distributed with this work for additional information\n regarding copyright ownership.  The ASF licenses this file\n to you under the Apache License, Version 2.0 (the\n \"License\"); you may not use this file except in compliance\n with the License.  You may obtain a copy of the License at\n\n   http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agr"
+    },
+    "/tmp/cartographer_142_xcgy/repo/providers/snowflake/tests/system/snowflake/example_snowflake_snowflake_op_template_file.sql": {
+      "id": "/tmp/cartographer_142_xcgy/repo/providers/snowflake/tests/system/snowflake/example_snowflake_snowflake_op_template_file.sql",
+      "source_datasets": [],
+      "target_datasets": [
+        "random_data"
+      ],
+      "transformation_type": "sql_select",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/snowflake/tests/system/snowflake/example_snowflake_snowflake_op_template_file.sql",
+      "line_range": [
+        1,
+        23
+      ],
+      "sql_query": "/*\n Licensed to the Apache Software Foundation (ASF) under one\n or more contributor license agreements.  See the NOTICE file\n distributed with this work for additional information\n regarding copyright ownership.  The ASF licenses this file\n to you under the Apache License, Version 2.0 (the\n \"License\"); you may not use this file except in compliance\n with the License.  You may obtain a copy of the License at\n\n   http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agr"
+    },
+    "/tmp/cartographer_142_xcgy/repo/providers/teradata/tests/system/teradata/create_ssl_table.sql": {
+      "id": "/tmp/cartographer_142_xcgy/repo/providers/teradata/tests/system/teradata/create_ssl_table.sql",
+      "source_datasets": [],
+      "target_datasets": [
+        "ssl_users"
+      ],
+      "transformation_type": "sql_select",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/teradata/tests/system/teradata/create_ssl_table.sql",
+      "line_range": [
+        1,
+        22
+      ],
+      "sql_query": "/*\n Licensed to the Apache Software Foundation (ASF) under one\n or more contributor license agreements.  See the NOTICE file\n distributed with this work for additional information\n regarding copyright ownership.  The ASF licenses this file\n to you under the Apache License, Version 2.0 (the\n \"License\"); you may not use this file except in compliance\n with the License.  You may obtain a copy of the License at\n\n   http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agr"
+    },
+    "/tmp/cartographer_142_xcgy/repo/providers/teradata/tests/system/teradata/create_table.sql": {
+      "id": "/tmp/cartographer_142_xcgy/repo/providers/teradata/tests/system/teradata/create_table.sql",
+      "source_datasets": [],
+      "target_datasets": [
+        "users"
+      ],
+      "transformation_type": "sql_select",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/teradata/tests/system/teradata/create_table.sql",
+      "line_range": [
+        1,
+        22
+      ],
+      "sql_query": "/*\n Licensed to the Apache Software Foundation (ASF) under one\n or more contributor license agreements.  See the NOTICE file\n distributed with this work for additional information\n regarding copyright ownership.  The ASF licenses this file\n to you under the Apache License, Version 2.0 (the\n \"License\"); you may not use this file except in compliance\n with the License.  You may obtain a copy of the License at\n\n   http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agr"
+    },
+    "airflow::test_dag": {
+      "id": "airflow::test_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-ctl/tests/airflow_ctl/ctl/commands/test_dag_command.py",
+      "line_range": [
+        1,
+        141
+      ],
+      "sql_query": null
+    },
+    "airflow::perf_dag_2": {
+      "id": "airflow::perf_dag_2",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/dev/airflow_perf/dags/perf_dag_2.py",
+      "line_range": [
+        1,
+        58
+      ],
+      "sql_query": null
+    },
+    "airflow::perf_dag_1": {
+      "id": "airflow::perf_dag_1",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/dev/airflow_perf/dags/perf_dag_1.py",
+      "line_range": [
+        1,
+        58
+      ],
+      "sql_query": null
+    },
+    "airflow::my-dag": {
+      "id": "airflow::my-dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/task-sdk/src/airflow/sdk/definitions/dag.py",
+      "line_range": [
+        1,
+        1641
+      ],
+      "sql_query": null
+    },
+    "airflow::dag_with_non_none_schedule_and_empty_start_date": {
+      "id": "airflow::dag_with_non_none_schedule_and_empty_start_date",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/task-sdk/tests/task_sdk/definitions/test_dag.py",
+      "line_range": [
+        1,
+        943
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_add_task_checks_trigger_rule": {
+      "id": "airflow::test_dag_add_task_checks_trigger_rule",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/task-sdk/tests/task_sdk/definitions/test_dag.py",
+      "line_range": [
+        1,
+        943
+      ],
+      "sql_query": null
+    },
+    "airflow::simple_dag": {
+      "id": "airflow::simple_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/task-sdk/tests/task_sdk/definitions/test_dag.py",
+      "line_range": [
+        1,
+        943
+      ],
+      "sql_query": null
+    },
+    "airflow::dag2": {
+      "id": "airflow::dag2",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/task-sdk/tests/task_sdk/definitions/test_dag.py",
+      "line_range": [
+        1,
+        943
+      ],
+      "sql_query": null
+    },
+    "airflow::continuous": {
+      "id": "airflow::continuous",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/task-sdk/tests/task_sdk/definitions/test_dag.py",
+      "line_range": [
+        1,
+        943
+      ],
+      "sql_query": null
+    },
+    "airflow::not_exist": {
+      "id": "airflow::not_exist",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/task-sdk-integration-tests/tests/task_sdk_tests/test_dag_run_operations.py",
+      "line_range": [
+        1,
+        182
+      ],
+      "sql_query": null
+    },
+    "airflow::asset_producer_dag": {
+      "id": "airflow::asset_producer_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/task-sdk-integration-tests/dags/test_asset_dag.py",
+      "line_range": [
+        1,
+        50
+      ],
+      "sql_query": null
+    },
+    "airflow::{dag_id}": {
+      "id": "airflow::{dag_id}",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/api_fastapi/core_api/routes/public/dag_sources.py",
+      "line_range": [
+        1,
+        81
+      ],
+      "sql_query": null
+    },
+    "airflow::example_trigger_target_dag": {
+      "id": "airflow::example_trigger_target_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/example_trigger_target_dag.py",
+      "line_range": [
+        1,
+        55
+      ],
+      "sql_query": null
+    },
+    "airflow::example_nested_branch_dag": {
+      "id": "airflow::example_nested_branch_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/example_nested_branch_dag.py",
+      "line_range": [
+        1,
+        55
+      ],
+      "sql_query": null
+    },
+    "airflow::example_skip_dag": {
+      "id": "airflow::example_skip_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/example_skip_dag.py",
+      "line_range": [
+        1,
+        71
+      ],
+      "sql_query": null
+    },
+    "airflow::dag_1": {
+      "id": "airflow::dag_1",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/serialization/dag_dependency.py",
+      "line_range": [
+        1,
+        121
+      ],
+      "sql_query": null
+    },
+    "airflow::dag_2": {
+      "id": "airflow::dag_2",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/serialization/dag_dependency.py",
+      "line_range": [
+        1,
+        121
+      ],
+      "sql_query": null
+    },
+    "airflow::non_existing_dag_id": {
+      "id": "airflow::non_existing_dag_id",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dag_processing/test_dagbag.py",
+      "line_range": [
+        1,
+        1362
+      ],
+      "sql_query": null
+    },
+    "airflow::example_bash_operator": {
+      "id": "airflow::example_bash_operator",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dag_processing/test_dagbag.py",
+      "line_range": [
+        1,
+        1362
+      ],
+      "sql_query": null
+    },
+    "airflow::test_zip_dag": {
+      "id": "airflow::test_zip_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dag_processing/test_dagbag.py",
+      "line_range": [
+        1,
+        1362
+      ],
+      "sql_query": null
+    },
+    "airflow::test_missing_owner": {
+      "id": "airflow::test_missing_owner",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dag_processing/test_dagbag.py",
+      "line_range": [
+        1,
+        1362
+      ],
+      "sql_query": null
+    },
+    "airflow::test_nonstring_owner": {
+      "id": "airflow::test_nonstring_owner",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dag_processing/test_dagbag.py",
+      "line_range": [
+        1,
+        1362
+      ],
+      "sql_query": null
+    },
+    "airflow::test": {
+      "id": "airflow::test",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dag_processing/test_dagbag.py",
+      "line_range": [
+        1,
+        1362
+      ],
+      "sql_query": null
+    },
+    "airflow::test_example_bash_operator": {
+      "id": "airflow::test_example_bash_operator",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/cli/commands/test_dag_command.py",
+      "line_range": [
+        1,
+        1072
+      ],
+      "sql_query": null
+    },
+    "airflow::example_simplest_dag": {
+      "id": "airflow::example_simplest_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/cli/commands/test_dag_command.py",
+      "line_range": [
+        1,
+        1072
+      ],
+      "sql_query": null
+    },
+    "airflow::test_sensor": {
+      "id": "airflow::test_sensor",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/cli/commands/test_dag_command.py",
+      "line_range": [
+        1,
+        1072
+      ],
+      "sql_query": null
+    },
+    "airflow::test_clear_task_instances_for_backfill_running_dagrun": {
+      "id": "airflow::test_clear_task_instances_for_backfill_running_dagrun",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_clear_task_instances_for_backfill_finished_dagrun": {
+      "id": "airflow::test_clear_task_instances_for_backfill_finished_dagrun",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_find_duplicate": {
+      "id": "airflow::test_dagrun_find_duplicate",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_success_when_all_skipped": {
+      "id": "airflow::test_dagrun_success_when_all_skipped",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_success_callback": {
+      "id": "airflow::test_dagrun_success_callback",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_failure_callback": {
+      "id": "airflow::test_dagrun_failure_callback",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_failure_callback_on_tasks_deadlocked": {
+      "id": "airflow::test_dagrun_failure_callback_on_tasks_deadlocked",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_update_state_with_handle_callback_success": {
+      "id": "airflow::test_dagrun_update_state_with_handle_callback_success",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_update_state_with_handle_callback_failure": {
+      "id": "airflow::test_dagrun_update_state_with_handle_callback_failure",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_task_instance_on_empty_dagrun": {
+      "id": "airflow::test_get_task_instance_on_empty_dagrun",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_latest_runs_1": {
+      "id": "airflow::test_latest_runs_1",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_task_restoration": {
+      "id": "airflow::test_task_restoration",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_mutation_hook_run_id": {
+      "id": "airflow::test_mutation_hook_run_id",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_depends_on_past": {
+      "id": "airflow::test_depends_on_past",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_wait_for_downstream": {
+      "id": "airflow::test_wait_for_downstream",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dags": {
+      "id": "airflow::test_dags",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_stats": {
+      "id": "airflow::test_dagrun_stats",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_emit_dag_stats": {
+      "id": "airflow::test_emit_dag_stats",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_states": {
+      "id": "airflow::test_dagrun_states",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_no_prune": {
+      "id": "airflow::test_dagrun_no_prune",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_empty_deadlines": {
+      "id": "airflow::test_dagrun_empty_deadlines",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dagrun.py",
+      "line_range": [
+        1,
+        3312
+      ],
+      "sql_query": null
+    },
+    "airflow::test-dag": {
+      "id": "airflow::test-dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_scheduler_verify_max_active_runs": {
+      "id": "airflow::test_scheduler_verify_max_active_runs",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_has_import_error": {
+      "id": "airflow::test_has_import_error",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::dag_paused_after_limit": {
+      "id": "airflow::dag_paused_after_limit",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::old_existing_dag": {
+      "id": "airflow::old_existing_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_schedule_dag_no_previous_runs": {
+      "id": "airflow::test_schedule_dag_no_previous_runs",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_callback_crash": {
+      "id": "airflow::test_dag_callback_crash",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_callback_with_removed_task": {
+      "id": "airflow::test_dag_callback_with_removed_task",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_schedule_dag_once": {
+      "id": "airflow::test_schedule_dag_once",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_fractional_seconds": {
+      "id": "airflow::test_fractional_seconds",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_rich_comparison_ops": {
+      "id": "airflow::test_rich_comparison_ops",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_paused_dag_ids": {
+      "id": "airflow::test_get_paused_dag_ids",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_create_dagrun_job_id_is_set": {
+      "id": "airflow::test_create_dagrun_job_id_is_set",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_create_dagrun_note_is_set": {
+      "id": "airflow::test_create_dagrun_note_is_set",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_add_task_sets_default_task_group": {
+      "id": "airflow::test_dag_add_task_sets_default_task_group",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_clear_set_dagrun_state": {
+      "id": "airflow::test_clear_set_dagrun_state",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_local_testing_conn_file": {
+      "id": "airflow::test_local_testing_conn_file",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_clear_dag": {
+      "id": "airflow::test_clear_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::dag_without_catchup_ten_minute": {
+      "id": "airflow::dag_without_catchup_ten_minute",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::dag_without_catchup_hourly": {
+      "id": "airflow::dag_without_catchup_hourly",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::dag_without_catchup_once": {
+      "id": "airflow::dag_without_catchup_once",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_scheduler_auto_align_1": {
+      "id": "airflow::test_scheduler_auto_align_1",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_scheduler_auto_align_2": {
+      "id": "airflow::test_scheduler_auto_align_2",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_scheduler_auto_align_3": {
+      "id": "airflow::test_scheduler_auto_align_3",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_scheduler_auto_align_4": {
+      "id": "airflow::test_scheduler_auto_align_4",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_deadline": {
+      "id": "airflow::test_deadline",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_multiple_deadlines": {
+      "id": "airflow::test_multiple_deadlines",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::far_future_dag": {
+      "id": "airflow::far_future_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::my_dag": {
+      "id": "airflow::my_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::producer": {
+      "id": "airflow::producer",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::consumer": {
+      "id": "airflow::consumer",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_max_active_runs_not_none": {
+      "id": "airflow::test_max_active_runs_not_none",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::assets-consumer-multiple": {
+      "id": "airflow::assets-consumer-multiple",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_asset_expression": {
+      "id": "airflow::test_dag_asset_expression",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_team_name": {
+      "id": "airflow::test_get_team_name",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_team_name_no_team": {
+      "id": "airflow::test_get_team_name_no_team",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_dates": {
+      "id": "airflow::test_get_dates",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_iter_dagrun_infos_between_error": {
+      "id": "airflow::test_iter_dagrun_infos_between_error",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_next_data_interval": {
+      "id": "airflow::test_get_next_data_interval",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::assets-1": {
+      "id": "airflow::assets-1",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::assets-2": {
+      "id": "airflow::assets-2",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::assets-3": {
+      "id": "airflow::assets-3",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::dag-1": {
+      "id": "airflow::dag-1",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::direct_setup_trigger_rule": {
+      "id": "airflow::direct_setup_trigger_rule",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_dag.py",
+      "line_range": [
+        1,
+        3667
+      ],
+      "sql_query": null
+    },
+    "airflow::example": {
+      "id": "airflow::example",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_serialized_dag.py",
+      "line_range": [
+        1,
+        810
+      ],
+      "sql_query": null
+    },
+    "airflow::consumes_asset_decorator": {
+      "id": "airflow::consumes_asset_decorator",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_serialized_dag.py",
+      "line_range": [
+        1,
+        810
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_dependencies_with_asset_ref_example": {
+      "id": "airflow::test_get_dependencies_with_asset_ref_example",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_serialized_dag.py",
+      "line_range": [
+        1,
+        810
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_dependencies_with_asset_alias": {
+      "id": "airflow::test_get_dependencies_with_asset_alias",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_serialized_dag.py",
+      "line_range": [
+        1,
+        810
+      ],
+      "sql_query": null
+    },
+    "airflow::test_missing_serdag": {
+      "id": "airflow::test_missing_serdag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_serialized_dag.py",
+      "line_range": [
+        1,
+        810
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dynamic_success": {
+      "id": "airflow::test_dynamic_success",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_serialized_dag.py",
+      "line_range": [
+        1,
+        810
+      ],
+      "sql_query": null
+    },
+    "airflow::test_interval_change": {
+      "id": "airflow::test_interval_change",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/models/test_serialized_dag.py",
+      "line_range": [
+        1,
+        810
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_id": {
+      "id": "airflow::test_dag_id",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/v2025_11_07/test_dag_runs.py",
+      "line_range": [
+        1,
+        62
+      ],
+      "sql_query": null
+    },
+    "airflow::test_trigger_dag_run": {
+      "id": "airflow::test_trigger_dag_run",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_trigger_dag_run_partition_key": {
+      "id": "airflow::test_trigger_dag_run_partition_key",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::dag_not_found": {
+      "id": "airflow::dag_not_found",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_trigger_dag_run_import_error": {
+      "id": "airflow::test_trigger_dag_run_import_error",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_trigger_dag_run_denied": {
+      "id": "airflow::test_trigger_dag_run_denied",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_trigger_dag_run_already_exists": {
+      "id": "airflow::test_trigger_dag_run_already_exists",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_trigger_dag_run_clear": {
+      "id": "airflow::test_trigger_dag_run_clear",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_state": {
+      "id": "airflow::test_get_state",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_previous_basic": {
+      "id": "airflow::test_get_previous_basic",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_previous_with_state": {
+      "id": "airflow::test_get_previous_with_state",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_previous_none": {
+      "id": "airflow::test_get_previous_none",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_previous_no_match": {
+      "id": "airflow::test_get_previous_no_match",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_get_previous_invalid_state": {
+      "id": "airflow::test_get_previous_invalid_state",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/execution_api/versions/head/test_dag_runs.py",
+      "line_range": [
+        1,
+        572
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag0": {
+      "id": "airflow::test_dag0",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/ui/test_dags.py",
+      "line_range": [
+        1,
+        386
+      ],
+      "sql_query": null
+    },
+    "airflow::normal": {
+      "id": "airflow::normal",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/ui/test_partitioned_dag_runs.py",
+      "line_range": [
+        1,
+        336
+      ],
+      "sql_query": null
+    },
+    "airflow::list_dag": {
+      "id": "airflow::list_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/ui/test_partitioned_dag_runs.py",
+      "line_range": [
+        1,
+        336
+      ],
+      "sql_query": null
+    },
+    "airflow::target": {
+      "id": "airflow::target",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/ui/test_partitioned_dag_runs.py",
+      "line_range": [
+        1,
+        336
+      ],
+      "sql_query": null
+    },
+    "airflow::fulfilled_dag": {
+      "id": "airflow::fulfilled_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/ui/test_partitioned_dag_runs.py",
+      "line_range": [
+        1,
+        336
+      ],
+      "sql_query": null
+    },
+    "airflow::detail_dag": {
+      "id": "airflow::detail_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/ui/test_partitioned_dag_runs.py",
+      "line_range": [
+        1,
+        336
+      ],
+      "sql_query": null
+    },
+    "airflow::test_running_dag": {
+      "id": "airflow::test_running_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/public/test_dag_run.py",
+      "line_range": [
+        1,
+        2081
+      ],
+      "sql_query": null
+    },
+    "airflow::source_dag": {
+      "id": "airflow::source_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/public/test_dag_run.py",
+      "line_range": [
+        1,
+        2081
+      ],
+      "sql_query": null
+    },
+    "airflow::TEST_DAG_ID": {
+      "id": "airflow::TEST_DAG_ID",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/public/test_dag_run.py",
+      "line_range": [
+        1,
+        2081
+      ],
+      "sql_query": null
+    },
+    "airflow::inactive": {
+      "id": "airflow::inactive",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/public/test_dag_run.py",
+      "line_range": [
+        1,
+        2081
+      ],
+      "sql_query": null
+    },
+    "airflow::import_errors": {
+      "id": "airflow::import_errors",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/public/test_dag_run.py",
+      "line_range": [
+        1,
+        2081
+      ],
+      "sql_query": null
+    },
+    "airflow::allowed_scheduled": {
+      "id": "airflow::allowed_scheduled",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/public/test_dag_run.py",
+      "line_range": [
+        1,
+        2081
+      ],
+      "sql_query": null
+    },
+    "airflow::test_scheduled_dag": {
+      "id": "airflow::test_scheduled_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/public/test_dag_run.py",
+      "line_range": [
+        1,
+        2081
+      ],
+      "sql_query": null
+    },
+    "airflow::test_custom_timetable_dag": {
+      "id": "airflow::test_custom_timetable_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/public/test_dag_run.py",
+      "line_range": [
+        1,
+        2081
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_single_sorted_tags": {
+      "id": "airflow::test_dag_single_sorted_tags",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/public/test_dags.py",
+      "line_range": [
+        1,
+        1370
+      ],
+      "sql_query": null
+    },
+    "airflow::ANOTHER_DAG_ID": {
+      "id": "airflow::ANOTHER_DAG_ID",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/core_api/routes/public/test_dag_versions.py",
+      "line_range": [
+        1,
+        534
+      ],
+      "sql_query": null
+    },
+    "airflow::dagbag_singleton_test": {
+      "id": "airflow::dagbag_singleton_test",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/common/test_dagbag.py",
+      "line_range": [
+        1,
+        84
+      ],
+      "sql_query": null
+    },
+    "airflow::dag_with_queued_run": {
+      "id": "airflow::dag_with_queued_run",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/common/db/test_dags.py",
+      "line_range": [
+        1,
+        344
+      ],
+      "sql_query": null
+    },
+    "airflow::dag_with_running_run": {
+      "id": "airflow::dag_with_running_run",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/common/db/test_dags.py",
+      "line_range": [
+        1,
+        344
+      ],
+      "sql_query": null
+    },
+    "airflow::dag_with_multiple_runs": {
+      "id": "airflow::dag_with_multiple_runs",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api_fastapi/common/db/test_dags.py",
+      "line_range": [
+        1,
+        344
+      ],
+      "sql_query": null
+    },
+    "airflow::TEST_DAG_1": {
+      "id": "airflow::TEST_DAG_1",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/api/common/test_trigger_dag.py",
+      "line_range": [
+        1,
+        63
+      ],
+      "sql_query": null
+    },
+    "airflow::dag); task = PythonOperator(dag=my_dag)\n        ": {
+      "id": "airflow::dag); task = PythonOperator(dag=my_dag)\n        ",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/utils/test_dag_version_inflation_checker.py",
+      "line_range": [
+        1,
+        735
+      ],
+      "sql_query": null
+    },
+    "airflow::dag); task = PythonOperator(": {
+      "id": "airflow::dag); task = PythonOperator(",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/utils/test_dag_version_inflation_checker.py",
+      "line_range": [
+        1,
+        735
+      ],
+      "sql_query": null
+    },
+    "airflow::time_module_dag": {
+      "id": "airflow::time_module_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/utils/test_dag_version_inflation_checker.py",
+      "line_range": [
+        1,
+        735
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_states_success": {
+      "id": "airflow::test_dagrun_states_success",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/core/test_example_dags_system.py",
+      "line_range": [
+        1,
+        144
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_states_fail": {
+      "id": "airflow::test_dagrun_states_fail",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/core/test_example_dags_system.py",
+      "line_range": [
+        1,
+        144
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_states_root_fail": {
+      "id": "airflow::test_dagrun_states_root_fail",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/core/test_example_dags_system.py",
+      "line_range": [
+        1,
+        144
+      ],
+      "sql_query": null
+    },
+    "airflow::dagrun_states_root_future": {
+      "id": "airflow::dagrun_states_root_future",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/core/test_example_dags_system.py",
+      "line_range": [
+        1,
+        144
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dagrun_fast_follow": {
+      "id": "airflow::test_dagrun_fast_follow",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dags/test_dagrun_fast_follow.py",
+      "line_range": [
+        1,
+        65
+      ],
+      "sql_query": null
+    },
+    "airflow::test_run_ignores_all_dependencies": {
+      "id": "airflow::test_run_ignores_all_dependencies",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dags/test_cli_triggered_dags.py",
+      "line_range": [
+        1,
+        48
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_xcom_openlineage": {
+      "id": "airflow::test_dag_xcom_openlineage",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dags/test_dag_xcom_openlineage.py",
+      "line_range": [
+        1,
+        41
+      ],
+      "sql_query": null
+    },
+    "airflow::test_start_date_scheduling": {
+      "id": "airflow::test_start_date_scheduling",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dags/test_scheduler_dags.py",
+      "line_range": [
+        1,
+        45
+      ],
+      "sql_query": null
+    },
+    "airflow::test_task_start_date_scheduling": {
+      "id": "airflow::test_task_start_date_scheduling",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dags/test_scheduler_dags.py",
+      "line_range": [
+        1,
+        45
+      ],
+      "sql_query": null
+    },
+    "airflow::test_logging_dag": {
+      "id": "airflow::test_logging_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dags/test_logging_in_dag.py",
+      "line_range": [
+        1,
+        46
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_with_no_tags": {
+      "id": "airflow::test_dag_with_no_tags",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dags/test_dag_with_no_tags.py",
+      "line_range": [
+        1,
+        32
+      ],
+      "sql_query": null
+    },
+    "airflow::d": {
+      "id": "airflow::d",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_derived_dag_deps_sensor": {
+      "id": "airflow::test_derived_dag_deps_sensor",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::external_dag_id": {
+      "id": "airflow::external_dag_id",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_derived_dag_deps_trigger": {
+      "id": "airflow::test_derived_dag_deps_trigger",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::trigger_dag_id": {
+      "id": "airflow::trigger_dag_id",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_task_group_sorted": {
+      "id": "airflow::test_task_group_sorted",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_on_success_callback_roundtrip": {
+      "id": "airflow::test_dag_on_success_callback_roundtrip",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_on_failure_callback_roundtrip": {
+      "id": "airflow::test_dag_on_failure_callback_roundtrip",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_dag_disable_bundle_versioning_roundtrip": {
+      "id": "airflow::test_dag_disable_bundle_versioning_roundtrip",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_defaults_dag": {
+      "id": "airflow::test_defaults_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_non_defaults_dag": {
+      "id": "airflow::test_non_defaults_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_email_optimization": {
+      "id": "airflow::test_email_optimization",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_email_with_attrs": {
+      "id": "airflow::test_email_with_attrs",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_allowed_run_types": {
+      "id": "airflow::test_allowed_run_types",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_callback_dag": {
+      "id": "airflow::test_callback_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_explicit_schema_default": {
+      "id": "airflow::test_explicit_schema_default",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_mapped_dag": {
+      "id": "airflow::test_mapped_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_expand_input": {
+      "id": "airflow::test_expand_input",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_e2e_partial_kwargs": {
+      "id": "airflow::test_e2e_partial_kwargs",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::test_default_args_callbacks": {
+      "id": "airflow::test_default_args_callbacks",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/serialization/test_dag_serialization.py",
+      "line_range": [
+        1,
+        4637
+      ],
+      "sql_query": null
+    },
+    "airflow::exit_test_dag": {
+      "id": "airflow::exit_test_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/dags_with_system_exit/b_test_scheduler_dags.py",
+      "line_range": [
+        1,
+        29
+      ],
+      "sql_query": null
+    },
+    "airflow::example_xcom_test": {
+      "id": "airflow::example_xcom_test",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/airflow-e2e-tests/tests/airflow_e2e_tests/basic_tests/test_basic_dag_operations.py",
+      "line_range": [
+        1,
+        58
+      ],
+      "sql_query": null
+    },
+    "airflow::example_external_task_marker_parent": {
+      "id": "airflow::example_external_task_marker_parent",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/standard/src/airflow/providers/standard/example_dags/example_external_task_marker_dag.py",
+      "line_range": [
+        1,
+        98
+      ],
+      "sql_query": null
+    },
+    "airflow::example_external_task_marker_child": {
+      "id": "airflow::example_external_task_marker_child",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/standard/src/airflow/providers/standard/example_dags/example_external_task_marker_dag.py",
+      "line_range": [
+        1,
+        98
+      ],
+      "sql_query": null
+    },
+    "airflow::example_trigger_controller_dag": {
+      "id": "airflow::example_trigger_controller_dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/standard/src/airflow/providers/standard/example_dags/example_trigger_controller_dag.py",
+      "line_range": [
+        1,
+        46
+      ],
+      "sql_query": null
+    },
+    "airflow::{TRIGGERED_DAG_ID}": {
+      "id": "airflow::{TRIGGERED_DAG_ID}",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/standard/tests/unit/standard/operators/test_trigger_dagrun.py",
+      "line_range": [
+        1,
+        1261
+      ],
+      "sql_query": null
+    },
+    "airflow::down_stream": {
+      "id": "airflow::down_stream",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/standard/tests/unit/standard/operators/test_trigger_dagrun.py",
+      "line_range": [
+        1,
+        1261
+      ],
+      "sql_query": null
+    },
+    "airflow::openlineage_trigger_dag_deferrable_child__notrigger": {
+      "id": "airflow::openlineage_trigger_dag_deferrable_child__notrigger",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/openlineage/tests/system/openlineage/example_openlineage_trigger_dag_deferrable.py",
+      "line_range": [
+        1,
+        93
+      ],
+      "sql_query": null
+    },
+    "airflow::openlineage_trigger_dag_deferrable_child2__notrigger": {
+      "id": "airflow::openlineage_trigger_dag_deferrable_child2__notrigger",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/openlineage/tests/system/openlineage/example_openlineage_trigger_dag_deferrable.py",
+      "line_range": [
+        1,
+        93
+      ],
+      "sql_query": null
+    },
+    "airflow::openlineage_trigger_dag_child__notrigger": {
+      "id": "airflow::openlineage_trigger_dag_child__notrigger",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/openlineage/tests/system/openlineage/example_openlineage_trigger_dag.py",
+      "line_range": [
+        1,
+        88
+      ],
+      "sql_query": null
+    },
+    "airflow::example_pinot_hook": {
+      "id": "airflow::example_pinot_hook",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/pinot/tests/system/apache/pinot/example_pinot_dag.py",
+      "line_range": [
+        1,
+        65
+      ],
+      "sql_query": null
+    },
+    "airflow::example_kafka_watcher_1": {
+      "id": "airflow::example_kafka_watcher_1",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/kafka/tests/system/apache/kafka/example_dag_kafka_message_queue_trigger.py",
+      "line_range": [
+        1,
+        55
+      ],
+      "sql_query": null
+    },
+    "airflow::example_kafka_watcher_2": {
+      "id": "airflow::example_kafka_watcher_2",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/kafka/tests/system/apache/kafka/example_dag_message_queue_trigger.py",
+      "line_range": [
+        1,
+        51
+      ],
+      "sql_query": null
+    },
+    "airflow::fizzbuzz-load-topic": {
+      "id": "airflow::fizzbuzz-load-topic",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/kafka/tests/system/apache/kafka/example_dag_event_listener.py",
+      "line_range": [
+        1,
+        126
+      ],
+      "sql_query": null
+    },
+    "airflow::fizzbuzz-listener-dag": {
+      "id": "airflow::fizzbuzz-listener-dag",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/apache/kafka/tests/system/apache/kafka/example_dag_event_listener.py",
+      "line_range": [
+        1,
+        126
+      ],
+      "sql_query": null
+    },
+    "airflow::example_redis_watcher_1": {
+      "id": "airflow::example_redis_watcher_1",
+      "source_datasets": [],
+      "target_datasets": [],
+      "transformation_type": "airflow_operator",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/providers/redis/tests/system/redis/example_dag_message_queue_trigger.py",
+      "line_range": [
+        1,
+        38
+      ],
+      "sql_query": null
+    },
+    "nb::/tmp/cartographer_142_xcgy/repo/dev/stats/explore_pr_candidates.ipynb": {
+      "id": "nb::/tmp/cartographer_142_xcgy/repo/dev/stats/explore_pr_candidates.ipynb",
+      "source_datasets": [],
+      "target_datasets": [
+        "prlist.csv"
+      ],
+      "transformation_type": "pandas_read",
+      "source_file": "/tmp/cartographer_142_xcgy/repo/dev/stats/explore_pr_candidates.ipynb",
+      "line_range": [
+        1,
+        4
+      ],
+      "sql_query": null
+    }
+  },
+  "edges": [
+    {
+      "source": "select 1",
+      "target": "py::/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/utils/test_retries.py",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "select 1;",
+      "target": "py::/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/utils/test_retries.py",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "dynamic::providers/amazon/tests/unit/amazon/aws/transfers/test_sql_to_s3.py",
+      "target": "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/unit/amazon/aws/transfers/test_sql_to_s3.py",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "{input_path}/input.csv",
+      "target": "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_sagemaker.py",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "dynamic::providers/google/tests/unit/google/cloud/transfers/test_sql_to_gcs.py",
+      "target": "py::/tmp/cartographer_142_xcgy/repo/providers/google/tests/unit/google/cloud/transfers/test_sql_to_gcs.py",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "dynamic::providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py",
+      "target": "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "test_data",
+      "target": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/tutorial_taskflow_template.sql",
+      "edge_type": "CONSUMES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "py::/tmp/cartographer_142_xcgy/repo/dev/airflow_perf/sql_queries.py",
+      "target": "dynamic::dev/airflow_perf/sql_queries.py",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "py::/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/tutorial_objectstorage.py",
+      "target": "dynamic::airflow-core/src/airflow/example_dags/tutorial_objectstorage.py",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_sagemaker.py",
+      "target": "{output_path}/test.csv",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_sagemaker.py",
+      "target": "{output_path}/train.csv",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_glue.py",
+      "target": "csv",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "py::/tmp/cartographer_142_xcgy/repo/providers/salesforce/src/airflow/providers/salesforce/hooks/salesforce.py",
+      "target": "dynamic::providers/salesforce/src/airflow/providers/salesforce/hooks/salesforce.py",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py",
+      "target": "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_samba.py",
+      "target": "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_samba.py",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_mysql.py",
+      "target": "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_mysql.py",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py",
+      "target": "dynamic::providers/apache/hive/tests/unit/apache/hive/hooks/test_hive.py",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "py::/tmp/cartographer_142_xcgy/repo/providers/slack/src/airflow/providers/slack/transfers/sql_to_slack.py",
+      "target": "dynamic::providers/slack/src/airflow/providers/slack/transfers/sql_to_slack.py",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/sample.sql",
+      "target": "orders",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "/tmp/cartographer_142_xcgy/repo/providers/microsoft/mssql/tests/system/microsoft/mssql/create_table.sql",
+      "target": "users",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "/tmp/cartographer_142_xcgy/repo/providers/sqlite/tests/system/sqlite/create_table.sql",
+      "target": "items",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "/tmp/cartographer_142_xcgy/repo/providers/standard/src/airflow/providers/standard/example_dags/sql/sample.sql",
+      "target": "orders",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "/tmp/cartographer_142_xcgy/repo/providers/snowflake/tests/system/snowflake/example_snowflake_snowflake_op_template_file.sql",
+      "target": "random_data",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "/tmp/cartographer_142_xcgy/repo/providers/teradata/tests/system/teradata/create_ssl_table.sql",
+      "target": "ssl_users",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "/tmp/cartographer_142_xcgy/repo/providers/teradata/tests/system/teradata/create_table.sql",
+      "target": "users",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "nb::/tmp/cartographer_142_xcgy/repo/dev/stats/explore_pr_candidates.ipynb",
+      "target": "prlist.csv",
+      "edge_type": "PRODUCES",
+      "weight": 1.0,
+      "metadata": {}
+    }
+  ],
+  "sources": [
+    "select 1",
+    "select 1;",
+    "dynamic::providers/amazon/tests/unit/amazon/aws/transfers/test_sql_to_s3.py",
+    "{input_path}/input.csv",
+    "dynamic::providers/google/tests/unit/google/cloud/transfers/test_sql_to_gcs.py",
+    "test_data",
+    "asset1_producer",
+    "asset2_producer",
+    "py::/tmp/cartographer_142_xcgy/repo/dev/airflow_perf/sql_queries.py",
+    "py::/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/tutorial_objectstorage.py",
+    "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/system/amazon/aws/example_glue.py",
+    "py::/tmp/cartographer_142_xcgy/repo/providers/salesforce/src/airflow/providers/salesforce/hooks/salesforce.py",
+    "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py",
+    "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_samba.py",
+    "py::/tmp/cartographer_142_xcgy/repo/providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_mysql.py",
+    "py::/tmp/cartographer_142_xcgy/repo/providers/slack/src/airflow/providers/slack/transfers/sql_to_slack.py",
+    "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/sample.sql",
+    "/tmp/cartographer_142_xcgy/repo/providers/microsoft/mssql/tests/system/microsoft/mssql/create_table.sql",
+    "/tmp/cartographer_142_xcgy/repo/providers/sqlite/tests/system/sqlite/create_table.sql",
+    "/tmp/cartographer_142_xcgy/repo/providers/standard/src/airflow/providers/standard/example_dags/sql/sample.sql",
+    "/tmp/cartographer_142_xcgy/repo/providers/snowflake/tests/system/snowflake/example_snowflake_snowflake_op_template_file.sql",
+    "/tmp/cartographer_142_xcgy/repo/providers/teradata/tests/system/teradata/create_ssl_table.sql",
+    "/tmp/cartographer_142_xcgy/repo/providers/teradata/tests/system/teradata/create_table.sql",
+    "airflow::test_dag",
+    "airflow::perf_dag_2",
+    "airflow::perf_dag_1",
+    "airflow::my-dag",
+    "airflow::dag_with_non_none_schedule_and_empty_start_date",
+    "airflow::test_dag_add_task_checks_trigger_rule",
+    "airflow::simple_dag",
+    "airflow::dag2",
+    "airflow::continuous",
+    "airflow::not_exist",
+    "airflow::asset_producer_dag",
+    "airflow::{dag_id}",
+    "airflow::example_trigger_target_dag",
+    "airflow::example_nested_branch_dag",
+    "airflow::example_skip_dag",
+    "airflow::dag_1",
+    "airflow::dag_2",
+    "airflow::non_existing_dag_id",
+    "airflow::example_bash_operator",
+    "airflow::test_zip_dag",
+    "airflow::test_missing_owner",
+    "airflow::test_nonstring_owner",
+    "airflow::test",
+    "airflow::test_example_bash_operator",
+    "airflow::example_simplest_dag",
+    "airflow::test_sensor",
+    "airflow::test_clear_task_instances_for_backfill_running_dagrun",
+    "airflow::test_clear_task_instances_for_backfill_finished_dagrun",
+    "airflow::test_dagrun_find_duplicate",
+    "airflow::test_dagrun_success_when_all_skipped",
+    "airflow::test_dagrun_success_callback",
+    "airflow::test_dagrun_failure_callback",
+    "airflow::test_dagrun_failure_callback_on_tasks_deadlocked",
+    "airflow::test_dagrun_update_state_with_handle_callback_success",
+    "airflow::test_dagrun_update_state_with_handle_callback_failure",
+    "airflow::test_get_task_instance_on_empty_dagrun",
+    "airflow::test_latest_runs_1",
+    "airflow::test_task_restoration",
+    "airflow::test_mutation_hook_run_id",
+    "airflow::test_depends_on_past",
+    "airflow::test_wait_for_downstream",
+    "airflow::test_dags",
+    "airflow::test_dagrun_stats",
+    "airflow::test_emit_dag_stats",
+    "airflow::test_dagrun_states",
+    "airflow::test_dagrun_no_prune",
+    "airflow::test_dagrun_empty_deadlines",
+    "airflow::test-dag",
+    "airflow::test_scheduler_verify_max_active_runs",
+    "airflow::test_has_import_error",
+    "airflow::dag_paused_after_limit",
+    "airflow::old_existing_dag",
+    "airflow::test_schedule_dag_no_previous_runs",
+    "airflow::test_dag_callback_crash",
+    "airflow::test_dag_callback_with_removed_task",
+    "airflow::test_schedule_dag_once",
+    "airflow::test_fractional_seconds",
+    "airflow::test_rich_comparison_ops",
+    "airflow::test_get_paused_dag_ids",
+    "airflow::test_create_dagrun_job_id_is_set",
+    "airflow::test_create_dagrun_note_is_set",
+    "airflow::test_dag_add_task_sets_default_task_group",
+    "airflow::test_clear_set_dagrun_state",
+    "airflow::test_local_testing_conn_file",
+    "airflow::test_clear_dag",
+    "airflow::dag_without_catchup_ten_minute",
+    "airflow::dag_without_catchup_hourly",
+    "airflow::dag_without_catchup_once",
+    "airflow::test_scheduler_auto_align_1",
+    "airflow::test_scheduler_auto_align_2",
+    "airflow::test_scheduler_auto_align_3",
+    "airflow::test_scheduler_auto_align_4",
+    "airflow::test_deadline",
+    "airflow::test_multiple_deadlines",
+    "airflow::far_future_dag",
+    "airflow::my_dag",
+    "airflow::producer",
+    "airflow::consumer",
+    "airflow::test_max_active_runs_not_none",
+    "airflow::assets-consumer-multiple",
+    "airflow::test_dag_asset_expression",
+    "airflow::test_get_team_name",
+    "airflow::test_get_team_name_no_team",
+    "airflow::test_get_dates",
+    "airflow::test_iter_dagrun_infos_between_error",
+    "airflow::test_get_next_data_interval",
+    "airflow::assets-1",
+    "airflow::assets-2",
+    "airflow::assets-3",
+    "airflow::dag-1",
+    "airflow::direct_setup_trigger_rule",
+    "airflow::example",
+    "airflow::consumes_asset_decorator",
+    "airflow::test_get_dependencies_with_asset_ref_example",
+    "airflow::test_get_dependencies_with_asset_alias",
+    "airflow::test_missing_serdag",
+    "airflow::test_dynamic_success",
+    "airflow::test_interval_change",
+    "airflow::test_dag_id",
+    "airflow::test_trigger_dag_run",
+    "airflow::test_trigger_dag_run_partition_key",
+    "airflow::dag_not_found",
+    "airflow::test_trigger_dag_run_import_error",
+    "airflow::test_trigger_dag_run_denied",
+    "airflow::test_trigger_dag_run_already_exists",
+    "airflow::test_trigger_dag_run_clear",
+    "airflow::test_get_state",
+    "airflow::test_get_previous_basic",
+    "airflow::test_get_previous_with_state",
+    "airflow::test_get_previous_none",
+    "airflow::test_get_previous_no_match",
+    "airflow::test_get_previous_invalid_state",
+    "airflow::test_dag0",
+    "airflow::normal",
+    "airflow::list_dag",
+    "airflow::target",
+    "airflow::fulfilled_dag",
+    "airflow::detail_dag",
+    "airflow::test_running_dag",
+    "airflow::source_dag",
+    "airflow::TEST_DAG_ID",
+    "airflow::inactive",
+    "airflow::import_errors",
+    "airflow::allowed_scheduled",
+    "airflow::test_scheduled_dag",
+    "airflow::test_custom_timetable_dag",
+    "airflow::test_dag_single_sorted_tags",
+    "airflow::ANOTHER_DAG_ID",
+    "airflow::dagbag_singleton_test",
+    "airflow::dag_with_queued_run",
+    "airflow::dag_with_running_run",
+    "airflow::dag_with_multiple_runs",
+    "airflow::TEST_DAG_1",
+    "airflow::dag); task = PythonOperator(dag=my_dag)\n        ",
+    "airflow::dag); task = PythonOperator(",
+    "airflow::time_module_dag",
+    "airflow::test_dagrun_states_success",
+    "airflow::test_dagrun_states_fail",
+    "airflow::test_dagrun_states_root_fail",
+    "airflow::dagrun_states_root_future",
+    "airflow::test_dagrun_fast_follow",
+    "airflow::test_run_ignores_all_dependencies",
+    "airflow::test_dag_xcom_openlineage",
+    "airflow::test_start_date_scheduling",
+    "airflow::test_task_start_date_scheduling",
+    "airflow::test_logging_dag",
+    "airflow::test_dag_with_no_tags",
+    "airflow::d",
+    "airflow::test_derived_dag_deps_sensor",
+    "airflow::external_dag_id",
+    "airflow::test_derived_dag_deps_trigger",
+    "airflow::trigger_dag_id",
+    "airflow::test_task_group_sorted",
+    "airflow::test_dag_on_success_callback_roundtrip",
+    "airflow::test_dag_on_failure_callback_roundtrip",
+    "airflow::test_dag_disable_bundle_versioning_roundtrip",
+    "airflow::test_defaults_dag",
+    "airflow::test_non_defaults_dag",
+    "airflow::test_email_optimization",
+    "airflow::test_email_with_attrs",
+    "airflow::test_allowed_run_types",
+    "airflow::test_callback_dag",
+    "airflow::test_explicit_schema_default",
+    "airflow::test_mapped_dag",
+    "airflow::test_expand_input",
+    "airflow::test_e2e_partial_kwargs",
+    "airflow::test_default_args_callbacks",
+    "airflow::exit_test_dag",
+    "airflow::example_xcom_test",
+    "airflow::example_external_task_marker_parent",
+    "airflow::example_external_task_marker_child",
+    "airflow::example_trigger_controller_dag",
+    "airflow::{TRIGGERED_DAG_ID}",
+    "airflow::down_stream",
+    "airflow::openlineage_trigger_dag_deferrable_child__notrigger",
+    "airflow::openlineage_trigger_dag_deferrable_child2__notrigger",
+    "airflow::openlineage_trigger_dag_child__notrigger",
+    "airflow::example_pinot_hook",
+    "airflow::example_kafka_watcher_1",
+    "airflow::example_kafka_watcher_2",
+    "airflow::fizzbuzz-load-topic",
+    "airflow::fizzbuzz-listener-dag",
+    "airflow::example_redis_watcher_1",
+    "nb::/tmp/cartographer_142_xcgy/repo/dev/stats/explore_pr_candidates.ipynb"
+  ],
+  "sinks": [
+    "dynamic::dev/airflow_perf/sql_queries.py",
+    "dynamic::airflow-core/src/airflow/example_dags/tutorial_objectstorage.py",
+    "{output_path}/train.csv",
+    "{output_path}/test.csv",
+    "csv",
+    "dynamic::providers/salesforce/src/airflow/providers/salesforce/hooks/salesforce.py",
+    "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py",
+    "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_samba.py",
+    "dynamic::providers/apache/hive/src/airflow/providers/apache/hive/transfers/hive_to_mysql.py",
+    "dynamic::providers/slack/src/airflow/providers/slack/transfers/sql_to_slack.py",
+    "orders",
+    "users",
+    "items",
+    "random_data",
+    "ssl_users",
+    "asset1_producer",
+    "asset2_producer",
+    "prlist.csv",
+    "py::/tmp/cartographer_142_xcgy/repo/airflow-core/tests/unit/utils/test_retries.py",
+    "py::/tmp/cartographer_142_xcgy/repo/providers/amazon/tests/unit/amazon/aws/transfers/test_sql_to_s3.py",
+    "py::/tmp/cartographer_142_xcgy/repo/providers/google/tests/unit/google/cloud/transfers/test_sql_to_gcs.py",
+    "/tmp/cartographer_142_xcgy/repo/airflow-core/src/airflow/example_dags/sql/tutorial_taskflow_template.sql",
+    "airflow::test_dag",
+    "airflow::perf_dag_2",
+    "airflow::perf_dag_1",
+    "airflow::my-dag",
+    "airflow::dag_with_non_none_schedule_and_empty_start_date",
+    "airflow::test_dag_add_task_checks_trigger_rule",
+    "airflow::simple_dag",
+    "airflow::dag2",
+    "airflow::continuous",
+    "airflow::not_exist",
+    "airflow::asset_producer_dag",
+    "airflow::{dag_id}",
+    "airflow::example_trigger_target_dag",
+    "airflow::example_nested_branch_dag",
+    "airflow::example_skip_dag",
+    "airflow::dag_1",
+    "airflow::dag_2",
+    "airflow::non_existing_dag_id",
+    "airflow::example_bash_operator",
+    "airflow::test_zip_dag",
+    "airflow::test_missing_owner",
+    "airflow::test_nonstring_owner",
+    "airflow::test",
+    "airflow::test_example_bash_operator",
+    "airflow::example_simplest_dag",
+    "airflow::test_sensor",
+    "airflow::test_clear_task_instances_for_backfill_running_dagrun",
+    "airflow::test_clear_task_instances_for_backfill_finished_dagrun",
+    "airflow::test_dagrun_find_duplicate",
+    "airflow::test_dagrun_success_when_all_skipped",
+    "airflow::test_dagrun_success_callback",
+    "airflow::test_dagrun_failure_callback",
+    "airflow::test_dagrun_failure_callback_on_tasks_deadlocked",
+    "airflow::test_dagrun_update_state_with_handle_callback_success",
+    "airflow::test_dagrun_update_state_with_handle_callback_failure",
+    "airflow::test_get_task_instance_on_empty_dagrun",
+    "airflow::test_latest_runs_1",
+    "airflow::test_task_restoration",
+    "airflow::test_mutation_hook_run_id",
+    "airflow::test_depends_on_past",
+    "airflow::test_wait_for_downstream",
+    "airflow::test_dags",
+    "airflow::test_dagrun_stats",
+    "airflow::test_emit_dag_stats",
+    "airflow::test_dagrun_states",
+    "airflow::test_dagrun_no_prune",
+    "airflow::test_dagrun_empty_deadlines",
+    "airflow::test-dag",
+    "airflow::test_scheduler_verify_max_active_runs",
+    "airflow::test_has_import_error",
+    "airflow::dag_paused_after_limit",
+    "airflow::old_existing_dag",
+    "airflow::test_schedule_dag_no_previous_runs",
+    "airflow::test_dag_callback_crash",
+    "airflow::test_dag_callback_with_removed_task",
+    "airflow::test_schedule_dag_once",
+    "airflow::test_fractional_seconds",
+    "airflow::test_rich_comparison_ops",
+    "airflow::test_get_paused_dag_ids",
+    "airflow::test_create_dagrun_job_id_is_set",
+    "airflow::test_create_dagrun_note_is_set",
+    "airflow::test_dag_add_task_sets_default_task_group",
+    "airflow::test_clear_set_dagrun_state",
+    "airflow::test_local_testing_conn_file",
+    "airflow::test_clear_dag",
+    "airflow::dag_without_catchup_ten_minute",
+    "airflow::dag_without_catchup_hourly",
+    "airflow::dag_without_catchup_once",
+    "airflow::test_scheduler_auto_align_1",
+    "airflow::test_scheduler_auto_align_2",
+    "airflow::test_scheduler_auto_align_3",
+    "airflow::test_scheduler_auto_align_4",
+    "airflow::test_deadline",
+    "airflow::test_multiple_deadlines",
+    "airflow::far_future_dag",
+    "airflow::my_dag",
+    "airflow::producer",
+    "airflow::consumer",
+    "airflow::test_max_active_runs_not_none",
+    "airflow::assets-consumer-multiple",
+    "airflow::test_dag_asset_expression",
+    "airflow::test_get_team_name",
+    "airflow::test_get_team_name_no_team",
+    "airflow::test_get_dates",
+    "airflow::test_iter_dagrun_infos_between_error",
+    "airflow::test_get_next_data_interval",
+    "airflow::assets-1",
+    "airflow::assets-2",
+    "airflow::assets-3",
+    "airflow::dag-1",
+    "airflow::direct_setup_trigger_rule",
+    "airflow::example",
+    "airflow::consumes_asset_decorator",
+    "airflow::test_get_dependencies_with_asset_ref_example",
+    "airflow::test_get_dependencies_with_asset_alias",
+    "airflow::test_missing_serdag",
+    "airflow::test_dynamic_success",
+    "airflow::test_interval_change",
+    "airflow::test_dag_id",
+    "airflow::test_trigger_dag_run",
+    "airflow::test_trigger_dag_run_partition_key",
+    "airflow::dag_not_found",
+    "airflow::test_trigger_dag_run_import_error",
+    "airflow::test_trigger_dag_run_denied",
+    "airflow::test_trigger_dag_run_already_exists",
+    "airflow::test_trigger_dag_run_clear",
+    "airflow::test_get_state",
+    "airflow::test_get_previous_basic",
+    "airflow::test_get_previous_with_state",
+    "airflow::test_get_previous_none",
+    "airflow::test_get_previous_no_match",
+    "airflow::test_get_previous_invalid_state",
+    "airflow::test_dag0",
+    "airflow::normal",
+    "airflow::list_dag",
+    "airflow::target",
+    "airflow::fulfilled_dag",
+    "airflow::detail_dag",
+    "airflow::test_running_dag",
+    "airflow::source_dag",
+    "airflow::TEST_DAG_ID",
+    "airflow::inactive",
+    "airflow::import_errors",
+    "airflow::allowed_scheduled",
+    "airflow::test_scheduled_dag",
+    "airflow::test_custom_timetable_dag",
+    "airflow::test_dag_single_sorted_tags",
+    "airflow::ANOTHER_DAG_ID",
+    "airflow::dagbag_singleton_test",
+    "airflow::dag_with_queued_run",
+    "airflow::dag_with_running_run",
+    "airflow::dag_with_multiple_runs",
+    "airflow::TEST_DAG_1",
+    "airflow::dag); task = PythonOperator(dag=my_dag)\n        ",
+    "airflow::dag); task = PythonOperator(",
+    "airflow::time_module_dag",
+    "airflow::test_dagrun_states_success",
+    "airflow::test_dagrun_states_fail",
+    "airflow::test_dagrun_states_root_fail",
+    "airflow::dagrun_states_root_future",
+    "airflow::test_dagrun_fast_follow",
+    "airflow::test_run_ignores_all_dependencies",
+    "airflow::test_dag_xcom_openlineage",
+    "airflow::test_start_date_scheduling",
+    "airflow::test_task_start_date_scheduling",
+    "airflow::test_logging_dag",
+    "airflow::test_dag_with_no_tags",
+    "airflow::d",
+    "airflow::test_derived_dag_deps_sensor",
+    "airflow::external_dag_id",
+    "airflow::test_derived_dag_deps_trigger",
+    "airflow::trigger_dag_id",
+    "airflow::test_task_group_sorted",
+    "airflow::test_dag_on_success_callback_roundtrip",
+    "airflow::test_dag_on_failure_callback_roundtrip",
+    "airflow::test_dag_disable_bundle_versioning_roundtrip",
+    "airflow::test_defaults_dag",
+    "airflow::test_non_defaults_dag",
+    "airflow::test_email_optimization",
+    "airflow::test_email_with_attrs",
+    "airflow::test_allowed_run_types",
+    "airflow::test_callback_dag",
+    "airflow::test_explicit_schema_default",
+    "airflow::test_mapped_dag",
+    "airflow::test_expand_input",
+    "airflow::test_e2e_partial_kwargs",
+    "airflow::test_default_args_callbacks",
+    "airflow::exit_test_dag",
+    "airflow::example_xcom_test",
+    "airflow::example_external_task_marker_parent",
+    "airflow::example_external_task_marker_child",
+    "airflow::example_trigger_controller_dag",
+    "airflow::{TRIGGERED_DAG_ID}",
+    "airflow::down_stream",
+    "airflow::openlineage_trigger_dag_deferrable_child__notrigger",
+    "airflow::openlineage_trigger_dag_deferrable_child2__notrigger",
+    "airflow::openlineage_trigger_dag_child__notrigger",
+    "airflow::example_pinot_hook",
+    "airflow::example_kafka_watcher_1",
+    "airflow::example_kafka_watcher_2",
+    "airflow::fizzbuzz-load-topic",
+    "airflow::fizzbuzz-listener-dag",
+    "airflow::example_redis_watcher_1"
+  ],
+  "generated_at": "2026-03-14T15:45:08.950579",
+  "target_repo": "/tmp/cartographer_142_xcgy/repo"
+}

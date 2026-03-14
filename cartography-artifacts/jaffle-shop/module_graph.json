@@ -1,0 +1,212 @@
+{
+  "nodes": {
+    "/tmp/cartographer_4lb52r0y/repo/dbt_project.yml": {
+      "path": "/tmp/cartographer_4lb52r0y/repo/dbt_project.yml",
+      "language": "yaml",
+      "purpose_statement": "Configures the dbt project structure and settings for data transformation workflows",
+      "domain_cluster": "configuration",
+      "complexity_score": 0.0,
+      "change_velocity_30d": 0,
+      "is_dead_code_candidate": false,
+      "last_modified": "2026-03-14T18:42:52.298469",
+      "loc": 26,
+      "comment_ratio": 0.0,
+      "imports": [],
+      "exported_functions": [],
+      "exported_classes": [],
+      "pagerank_score": 0.10309287459263211
+    },
+    "/tmp/cartographer_4lb52r0y/repo/models/orders.sql": {
+      "path": "/tmp/cartographer_4lb52r0y/repo/models/orders.sql",
+      "language": "sql",
+      "purpose_statement": "Aggregates payment data by payment method for each order to enable detailed order financial analysis",
+      "domain_cluster": "transformation",
+      "complexity_score": 8.0,
+      "change_velocity_30d": 0,
+      "is_dead_code_candidate": true,
+      "last_modified": "2026-03-14T18:42:52.301329",
+      "loc": 56,
+      "comment_ratio": 0.0,
+      "imports": [
+        "dbt_ref:stg_orders",
+        "dbt_ref:stg_payments"
+      ],
+      "exported_functions": [
+        "orders"
+      ],
+      "exported_classes": [],
+      "pagerank_score": 0.10309287459263211
+    },
+    "/tmp/cartographer_4lb52r0y/repo/models/customers.sql": {
+      "path": "/tmp/cartographer_4lb52r0y/repo/models/customers.sql",
+      "language": "sql",
+      "purpose_statement": "Combines customer information with their order history and lifetime value for customer analytics",
+      "domain_cluster": "transformation",
+      "complexity_score": 11.0,
+      "change_velocity_30d": 0,
+      "is_dead_code_candidate": true,
+      "last_modified": "2026-03-14T18:42:52.300468",
+      "loc": 69,
+      "comment_ratio": 0.0,
+      "imports": [
+        "dbt_ref:stg_customers",
+        "dbt_ref:stg_orders",
+        "dbt_ref:stg_payments"
+      ],
+      "exported_functions": [
+        "customers"
+      ],
+      "exported_classes": [],
+      "pagerank_score": 0.10309287459263211
+    },
+    "/tmp/cartographer_4lb52r0y/repo/models/schema.yml": {
+      "path": "/tmp/cartographer_4lb52r0y/repo/models/schema.yml",
+      "language": "yaml",
+      "purpose_statement": "Defines data models with documentation and validation rules for data quality assurance",
+      "domain_cluster": "testing",
+      "complexity_score": 0.0,
+      "change_velocity_30d": 0,
+      "is_dead_code_candidate": false,
+      "last_modified": "2026-03-14T18:42:52.301329",
+      "loc": 82,
+      "comment_ratio": 0.0,
+      "imports": [],
+      "exported_functions": [],
+      "exported_classes": [],
+      "pagerank_score": 0.10309287459263211
+    },
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_payments.sql": {
+      "path": "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_payments.sql",
+      "language": "sql",
+      "purpose_statement": "Transforms raw payment data by converting amounts to dollars and standardizing column names for downstream use",
+      "domain_cluster": "transformation",
+      "complexity_score": 5.0,
+      "change_velocity_30d": 0,
+      "is_dead_code_candidate": false,
+      "last_modified": "2026-03-14T18:42:52.301764",
+      "loc": 25,
+      "comment_ratio": 0.08,
+      "imports": [
+        "dbt_ref:raw_payments"
+      ],
+      "exported_functions": [
+        "stg_payments"
+      ],
+      "exported_classes": [],
+      "pagerank_score": 0.17611662595052502
+    },
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_orders.sql": {
+      "path": "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_orders.sql",
+      "language": "sql",
+      "purpose_statement": "Transforms raw order data into a standardized staging table with consistent column naming for downstream analytics",
+      "domain_cluster": "transformation",
+      "complexity_score": 5.0,
+      "change_velocity_30d": 0,
+      "is_dead_code_candidate": false,
+      "last_modified": "2026-03-14T18:42:52.301764",
+      "loc": 23,
+      "comment_ratio": 0.043478260869565216,
+      "imports": [
+        "dbt_ref:raw_orders"
+      ],
+      "exported_functions": [
+        "stg_orders"
+      ],
+      "exported_classes": [],
+      "pagerank_score": 0.17611662595052502
+    },
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/schema.yml": {
+      "path": "/tmp/cartographer_4lb52r0y/repo/models/staging/schema.yml",
+      "language": "yaml",
+      "purpose_statement": "Defines data quality tests and constraints for staging tables to ensure data integrity before transformation",
+      "domain_cluster": "testing",
+      "complexity_score": 0.0,
+      "change_velocity_30d": 0,
+      "is_dead_code_candidate": false,
+      "last_modified": "2026-03-14T18:42:52.301468",
+      "loc": 31,
+      "comment_ratio": 0.0,
+      "imports": [],
+      "exported_functions": [],
+      "exported_classes": [],
+      "pagerank_score": 0.10309287459263211
+    },
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_customers.sql": {
+      "path": "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_customers.sql",
+      "language": "sql",
+      "purpose_statement": "Transforms raw customer data into a standardized staging table with consistent column naming for downstream analytics",
+      "domain_cluster": "transformation",
+      "complexity_score": 5.0,
+      "change_velocity_30d": 0,
+      "is_dead_code_candidate": false,
+      "last_modified": "2026-03-14T18:42:52.301764",
+      "loc": 22,
+      "comment_ratio": 0.045454545454545456,
+      "imports": [
+        "dbt_ref:raw_customers"
+      ],
+      "exported_functions": [
+        "stg_customers"
+      ],
+      "exported_classes": [],
+      "pagerank_score": 0.13230237513578924
+    }
+  },
+  "edges": [
+    {
+      "source": "/tmp/cartographer_4lb52r0y/repo/models/orders.sql",
+      "target": "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_orders.sql",
+      "edge_type": "IMPORTS",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "/tmp/cartographer_4lb52r0y/repo/models/orders.sql",
+      "target": "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_payments.sql",
+      "edge_type": "IMPORTS",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "/tmp/cartographer_4lb52r0y/repo/models/customers.sql",
+      "target": "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_customers.sql",
+      "edge_type": "IMPORTS",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "/tmp/cartographer_4lb52r0y/repo/models/customers.sql",
+      "target": "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_orders.sql",
+      "edge_type": "IMPORTS",
+      "weight": 1.0,
+      "metadata": {}
+    },
+    {
+      "source": "/tmp/cartographer_4lb52r0y/repo/models/customers.sql",
+      "target": "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_payments.sql",
+      "edge_type": "IMPORTS",
+      "weight": 1.0,
+      "metadata": {}
+    }
+  ],
+  "circular_dependencies": [],
+  "high_velocity_files": [
+    "/tmp/cartographer_4lb52r0y/repo/dbt_project.yml",
+    "/tmp/cartographer_4lb52r0y/repo/models/orders.sql",
+    "/tmp/cartographer_4lb52r0y/repo/models/customers.sql",
+    "/tmp/cartographer_4lb52r0y/repo/models/schema.yml",
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_payments.sql",
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_orders.sql",
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/schema.yml",
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_customers.sql"
+  ],
+  "architectural_hubs": [
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_payments.sql",
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_orders.sql",
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_customers.sql",
+    "/tmp/cartographer_4lb52r0y/repo/dbt_project.yml",
+    "/tmp/cartographer_4lb52r0y/repo/models/orders.sql"
+  ],
+  "generated_at": "2026-03-14T15:42:52.690880",
+  "target_repo": "/tmp/cartographer_4lb52r0y/repo"
+}

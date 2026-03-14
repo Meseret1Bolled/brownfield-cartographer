@@ -1,0 +1,60 @@
+{
+  "drift_flags": {},
+  "domain_map": {
+    "/tmp/cartographer_4lb52r0y/repo/dbt_project.yml": "configuration",
+    "/tmp/cartographer_4lb52r0y/repo/models/orders.sql": "transformation",
+    "/tmp/cartographer_4lb52r0y/repo/models/customers.sql": "transformation",
+    "/tmp/cartographer_4lb52r0y/repo/models/schema.yml": "testing",
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_payments.sql": "transformation",
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_orders.sql": "transformation",
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/schema.yml": "testing",
+    "/tmp/cartographer_4lb52r0y/repo/models/staging/stg_customers.sql": "transformation"
+  },
+  "day_one_answers": {
+    "What is the primary data ingestion path? (trace from raw sources to first transformation)": "The primary data ingestion path starts from the raw sources: raw_payments, raw_orders, raw_customers, and jaffle_shop. These are ingested into the staging layer through the transformation files stg_payments.sql, stg_orders.sql, and stg_customers.sql, which standardize and prepare the data for downstream use.",
+    "What are the 3-5 most critical output datasets or endpoints?": "The most critical output datasets are the final models: orders, customers, and jaffle_shop. These datasets represent the end result of the data transformation pipeline, aggregating and combining data from multiple sources for analytics and reporting purposes.",
+    "What is the blast radius if the most critical module fails? (which downstream systems break)": "If the most critical module, stg_payments.sql, fails, the blast radius would affect the orders and customers models, as they both depend on stg_payments. This would disrupt order financial analysis and customer lifetime value calculations, impacting downstream analytics and reporting.",
+    "Where is the business logic concentrated vs distributed? (which modules/files own the core rules)": "The business logic is concentrated in the transformation files, particularly in the staging layer (stg_payments.sql, stg_orders.sql, stg_customers.sql) and the final models (orders.sql, customers.sql). These files contain the core rules for data standardization, aggregation, and combination, while the configuration and testing files (dbt_project.yml, schema.yml) provide structure and validation.",
+    "What has changed most frequently in the last 30 days? (git velocity map \u2014 likely pain points)": "In the last 30 days, the most frequently changed files are dbt_project.yml, orders.sql, customers.sql, schema.yml, and stg_payments.sql. These files likely represent pain points in the codebase, with frequent modifications to project configuration, order and customer models, and data quality tests."
+  },
+  "budget_summary": {
+    "calls": 4,
+    "used_tokens_estimated": 4083,
+    "budget_tokens": 2000000,
+    "remaining_tokens": 1995917
+  },
+  "call_log": [
+    {
+      "model": "arcee-ai/trinity-large-preview:free",
+      "prompt_chars": 5839,
+      "completion_chars": 495,
+      "tokens_estimated": 1584,
+      "cumulative_tokens": 1584
+    },
+    {
+      "model": "arcee-ai/trinity-large-preview:free",
+      "prompt_chars": 2016,
+      "completion_chars": 351,
+      "tokens_estimated": 592,
+      "cumulative_tokens": 2176
+    },
+    {
+      "model": "arcee-ai/trinity-large-preview:free",
+      "prompt_chars": 1773,
+      "completion_chars": 129,
+      "tokens_estimated": 476,
+      "cumulative_tokens": 2652
+    },
+    {
+      "model": "arcee-ai/trinity-large-preview:free",
+      "prompt_chars": 4145,
+      "completion_chars": 1578,
+      "tokens_estimated": 1431,
+      "cumulative_tokens": 4083
+    }
+  ],
+  "models": {
+    "fast_model": "arcee-ai/trinity-large-preview:free",
+    "strong_model": "arcee-ai/trinity-large-preview:free"
+  }
+}
