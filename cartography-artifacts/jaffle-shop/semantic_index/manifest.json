@@ -1,0 +1,131 @@
+{
+  "generated_at": "2026-03-14T16:03:07.936826+00:00",
+  "repo": "jaffle_shop",
+  "total_modules": 8,
+  "index_type": "purpose_statement_keyword",
+  "note": "Each .json file contains the purpose statement and metadata for one module. Embed purpose_statement fields for vector similarity search, or use keyword matching on exported_functions and domain_cluster.",
+  "modules": [
+    {
+      "path": "/tmp/cartographer_zl19dzgk/repo/models/staging/stg_payments.sql",
+      "relative_path": "models/staging/stg_payments.sql",
+      "language": "Language.SQL",
+      "purpose_statement": "Transform raw payment data from cents to dollars and standardize column names",
+      "domain_cluster": "transformation",
+      "exported_functions": [
+        "stg_payments"
+      ],
+      "exported_classes": [],
+      "pagerank_score": 0.176117,
+      "complexity_score": 5.0,
+      "change_velocity_30d": 0,
+      "loc": 25,
+      "is_dead_code_candidate": false
+    },
+    {
+      "path": "/tmp/cartographer_zl19dzgk/repo/models/staging/stg_orders.sql",
+      "relative_path": "models/staging/stg_orders.sql",
+      "language": "Language.SQL",
+      "purpose_statement": "Transforms raw order data into a structured staging table for analysis, standardizing column names and making order information ready for downstream processing.",
+      "domain_cluster": "transformation",
+      "exported_functions": [
+        "stg_orders"
+      ],
+      "exported_classes": [],
+      "pagerank_score": 0.176117,
+      "complexity_score": 5.0,
+      "change_velocity_30d": 0,
+      "loc": 23,
+      "is_dead_code_candidate": false
+    },
+    {
+      "path": "/tmp/cartographer_zl19dzgk/repo/models/staging/stg_customers.sql",
+      "relative_path": "models/staging/stg_customers.sql",
+      "language": "Language.SQL",
+      "purpose_statement": "Transforms raw customer data into a structured staging table for analysis, standardizing column names and making customer information ready for downstream processing.",
+      "domain_cluster": "transformation",
+      "exported_functions": [
+        "stg_customers"
+      ],
+      "exported_classes": [],
+      "pagerank_score": 0.132302,
+      "complexity_score": 5.0,
+      "change_velocity_30d": 0,
+      "loc": 22,
+      "is_dead_code_candidate": false
+    },
+    {
+      "path": "/tmp/cartographer_zl19dzgk/repo/dbt_project.yml",
+      "relative_path": "dbt_project.yml",
+      "language": "Language.YAML",
+      "purpose_statement": "Configure dbt project settings and paths for data transformation pipeline",
+      "domain_cluster": "configuration",
+      "exported_functions": [],
+      "exported_classes": [],
+      "pagerank_score": 0.103093,
+      "complexity_score": 0.0,
+      "change_velocity_30d": 0,
+      "loc": 26,
+      "is_dead_code_candidate": false
+    },
+    {
+      "path": "/tmp/cartographer_zl19dzgk/repo/models/orders.sql",
+      "relative_path": "models/orders.sql",
+      "language": "Language.SQL",
+      "purpose_statement": "Transform payment data to show order-level breakdown by payment method and calculate total order amounts",
+      "domain_cluster": "transformation",
+      "exported_functions": [
+        "orders"
+      ],
+      "exported_classes": [],
+      "pagerank_score": 0.103093,
+      "complexity_score": 8.0,
+      "change_velocity_30d": 0,
+      "loc": 56,
+      "is_dead_code_candidate": true
+    },
+    {
+      "path": "/tmp/cartographer_zl19dzgk/repo/models/customers.sql",
+      "relative_path": "models/customers.sql",
+      "language": "Language.SQL",
+      "purpose_statement": "Create customer summary table with order history and lifetime value metrics",
+      "domain_cluster": "transformation",
+      "exported_functions": [
+        "customers"
+      ],
+      "exported_classes": [],
+      "pagerank_score": 0.103093,
+      "complexity_score": 11.0,
+      "change_velocity_30d": 0,
+      "loc": 69,
+      "is_dead_code_candidate": true
+    },
+    {
+      "path": "/tmp/cartographer_zl19dzgk/repo/models/schema.yml",
+      "relative_path": "models/schema.yml",
+      "language": "Language.YAML",
+      "purpose_statement": "Define data model schemas and validation rules for customers and orders tables",
+      "domain_cluster": "configuration",
+      "exported_functions": [],
+      "exported_classes": [],
+      "pagerank_score": 0.103093,
+      "complexity_score": 0.0,
+      "change_velocity_30d": 0,
+      "loc": 82,
+      "is_dead_code_candidate": false
+    },
+    {
+      "path": "/tmp/cartographer_zl19dzgk/repo/models/staging/schema.yml",
+      "relative_path": "models/staging/schema.yml",
+      "language": "Language.YAML",
+      "purpose_statement": "Defines data quality tests and constraints for staging tables, ensuring data integrity by validating uniqueness, non-null values, and acceptable value ranges for key fields.",
+      "domain_cluster": "testing",
+      "exported_functions": [],
+      "exported_classes": [],
+      "pagerank_score": 0.103093,
+      "complexity_score": 0.0,
+      "change_velocity_30d": 0,
+      "loc": 31,
+      "is_dead_code_candidate": false
+    }
+  ]
+}

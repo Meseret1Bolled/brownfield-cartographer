@@ -83,7 +83,80 @@ class Archivist:
         (output_dir / "CODEBASE.md").write_text(self.generate_CODEBASE_md(),        encoding="utf-8")
         (output_dir / "onboarding_brief.md").write_text(self.generate_onboarding_brief_md(), encoding="utf-8")
         self.write_cartography_trace(output_dir / "cartography_trace.jsonl")
-        logger.info("[Archivist] Wrote CODEBASE.md, onboarding_brief.md, cartography_trace.jsonl")
+        self._write_semantic_index(output_dir)
+        logger.info("[Archivist] Wrote CODEBASE.md, onboarding_brief.md, cartography_trace.jsonl, semantic_index/")
+
+    # ------------------------------------------------------------------
+    # semantic_index/ — vector-ready per-module purpose index
+    # ------------------------------------------------------------------
+
+    def _write_semantic_index(self, output_dir: Path) -> None:
+        """
+        Write semantic_index/ directory: one JSON per module + manifest.json.
+        Each entry contains the purpose statement and metadata needed for
+        semantic search and vector embedding by downstream tools.
+        """
+        index_dir = output_dir / "semantic_index"
+        index_dir.mkdir(parents=True, exist_ok=True)
+
+        manifest: list[dict[str, Any]] = []
+
+        sorted_nodes = sorted(
+            self.module_graph.nodes.items(),
+            key=lambda kv: kv[1].pagerank_score,
+            reverse=True,
+        )
+
+        for path, node in sorted_nodes:
+            entry: dict[str, Any] = {
+                "path": path,
+                "relative_path": _safe_rel(path, self.repo_path),
+                "language": str(node.language),
+                "purpose_statement": node.purpose_statement or "",
+                "domain_cluster": node.domain_cluster or "unclassified",
+                "exported_functions": node.exported_functions[:15],
+                "exported_classes": node.exported_classes[:10],
+                "pagerank_score": round(node.pagerank_score, 6),
+                "complexity_score": round(node.complexity_score, 2),
+                "change_velocity_30d": node.change_velocity_30d,
+                "loc": node.loc,
+                "is_dead_code_candidate": node.is_dead_code_candidate,
+            }
+
+            # Safe filename: replace path separators
+            safe_name = (
+                _safe_rel(path, self.repo_path)
+                .replace("/", "__")
+                .replace("\\", "__")
+                .replace(":", "__")
+            ) + ".json"
+
+            (index_dir / safe_name).write_text(
+                json.dumps(entry, indent=2, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            manifest.append(entry)
+
+        # Write manifest — the entry point for semantic search tools
+        manifest_meta: dict[str, Any] = {
+            "generated_at": datetime.now(UTC).isoformat(),
+            "repo": _detect_repo_name(self.repo_path),
+            "total_modules": len(manifest),
+            "index_type": "purpose_statement_keyword",
+            "note": (
+                "Each .json file contains the purpose statement and metadata for one module. "
+                "Embed purpose_statement fields for vector similarity search, "
+                "or use keyword matching on exported_functions and domain_cluster."
+            ),
+            "modules": manifest,
+        }
+        (index_dir / "manifest.json").write_text(
+            json.dumps(manifest_meta, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        logger.info(
+            f"[Archivist] semantic_index/ written — {len(manifest)} module entries"
+        )
 
     # ------------------------------------------------------------------
     # CODEBASE.md

@@ -1,0 +1,14 @@
+{
+  "path": "/tmp/cartographer_zl19dzgk/repo/models/staging/schema.yml",
+  "relative_path": "models/staging/schema.yml",
+  "language": "Language.YAML",
+  "purpose_statement": "Defines data quality tests and constraints for staging tables, ensuring data integrity by validating uniqueness, non-null values, and acceptable value ranges for key fields.",
+  "domain_cluster": "testing",
+  "exported_functions": [],
+  "exported_classes": [],
+  "pagerank_score": 0.103093,
+  "complexity_score": 0.0,
+  "change_velocity_30d": 0,
+  "loc": 31,
+  "is_dead_code_candidate": false
+}

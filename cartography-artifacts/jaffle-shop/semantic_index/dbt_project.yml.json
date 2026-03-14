@@ -1,0 +1,14 @@
+{
+  "path": "/tmp/cartographer_zl19dzgk/repo/dbt_project.yml",
+  "relative_path": "dbt_project.yml",
+  "language": "Language.YAML",
+  "purpose_statement": "Configure dbt project settings and paths for data transformation pipeline",
+  "domain_cluster": "configuration",
+  "exported_functions": [],
+  "exported_classes": [],
+  "pagerank_score": 0.103093,
+  "complexity_score": 0.0,
+  "change_velocity_30d": 0,
+  "loc": 26,
+  "is_dead_code_candidate": false
+}

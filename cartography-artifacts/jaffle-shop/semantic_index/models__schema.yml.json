@@ -1,0 +1,14 @@
+{
+  "path": "/tmp/cartographer_zl19dzgk/repo/models/schema.yml",
+  "relative_path": "models/schema.yml",
+  "language": "Language.YAML",
+  "purpose_statement": "Define data model schemas and validation rules for customers and orders tables",
+  "domain_cluster": "configuration",
+  "exported_functions": [],
+  "exported_classes": [],
+  "pagerank_score": 0.103093,
+  "complexity_score": 0.0,
+  "change_velocity_30d": 0,
+  "loc": 82,
+  "is_dead_code_candidate": false
+}

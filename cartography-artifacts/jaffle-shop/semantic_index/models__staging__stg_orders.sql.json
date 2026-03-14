@@ -1,0 +1,16 @@
+{
+  "path": "/tmp/cartographer_zl19dzgk/repo/models/staging/stg_orders.sql",
+  "relative_path": "models/staging/stg_orders.sql",
+  "language": "Language.SQL",
+  "purpose_statement": "Transforms raw order data into a structured staging table for analysis, standardizing column names and making order information ready for downstream processing.",
+  "domain_cluster": "transformation",
+  "exported_functions": [
+    "stg_orders"
+  ],
+  "exported_classes": [],
+  "pagerank_score": 0.176117,
+  "complexity_score": 5.0,
+  "change_velocity_30d": 0,
+  "loc": 23,
+  "is_dead_code_candidate": false
+}

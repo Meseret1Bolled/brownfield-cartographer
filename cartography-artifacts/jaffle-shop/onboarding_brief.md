@@ -1,29 +1,29 @@
 # FDE Day-One Onboarding Brief — `jaffle_shop`
 
-_Generated: 2026-03-14T15:43:17.043582+00:00_
+_Generated: 2026-03-14T16:03:07.932006+00:00_
 _System: dbt data transformation project_
 
 ## Five FDE Day-One Answers
 
 ### Q1. What is the primary data ingestion path? (trace from raw sources to first transformation)
 
-The primary data ingestion path starts from the raw sources: raw_payments, raw_orders, raw_customers, and jaffle_shop. These are ingested into the staging layer through the transformation files stg_payments.sql, stg_orders.sql, and stg_customers.sql, which standardize and prepare the data for downstream use.
+The primary data ingestion path starts with raw sources (raw_payments, raw_orders, raw_customers, jaffle_shop) flowing through staging transformations in the staging directory. The first transformation occurs in files like /tmp/cartographer_zl19dzgk/repo/models/staging/stg_payments.sql, /tmp/cartographer_zl19dzgk/repo/models/staging/stg_orders.sql, and /tmp/cartographer_zl19dzgk/repo/models/staging/stg_customers.sql, which standardize column names and prepare data for downstream processing.
 
 ### Q2. What are the 3-5 most critical output datasets or endpoints?
 
-The most critical output datasets are the final models: orders, customers, and jaffle_shop. These datasets represent the end result of the data transformation pipeline, aggregating and combining data from multiple sources for analytics and reporting purposes.
+The three most critical output datasets are orders, customers, and jaffle_shop. These are identified as data sinks (out-degree=0) in the summary, meaning they serve as final destinations for transformed data rather than feeding other processes.
 
 ### Q3. What is the blast radius if the most critical module fails? (which downstream systems break)
 
-If the most critical module, stg_payments.sql, fails, the blast radius would affect the orders and customers models, as they both depend on stg_payments. This would disrupt order financial analysis and customer lifetime value calculations, impacting downstream analytics and reporting.
+If /tmp/cartographer_zl19dzgk/repo/models/staging/stg_payments.sql fails, it would break the stg_payments dataset, which is a direct dependency for both /tmp/cartographer_zl19dzgk/repo/models/orders.sql and /tmp/cartographer_zl19dzgk/repo/models/customers.sql. This would cascade to prevent the creation of the orders and customers final datasets, effectively halting the entire transformation pipeline.
 
 ### Q4. Where is the business logic concentrated vs distributed? (which modules/files own the core rules)
 
-The business logic is concentrated in the transformation files, particularly in the staging layer (stg_payments.sql, stg_orders.sql, stg_customers.sql) and the final models (orders.sql, customers.sql). These files contain the core rules for data standardization, aggregation, and combination, while the configuration and testing files (dbt_project.yml, schema.yml) provide structure and validation.
+The business logic is concentrated in the transformation files within /tmp/cartographer_zl19dzgk/repo/models/staging/ and the main models directory. The staging files handle data standardization and basic transformations, while files like /tmp/cartographer_zl19dzgk/repo/models/orders.sql and /tmp/cartographer_zl19dzgk/repo/models/customers.sql contain more complex business logic for calculating order breakdowns and customer lifetime value metrics.
 
 ### Q5. What has changed most frequently in the last 30 days? (git velocity map — likely pain points)
 
-In the last 30 days, the most frequently changed files are dbt_project.yml, orders.sql, customers.sql, schema.yml, and stg_payments.sql. These files likely represent pain points in the codebase, with frequent modifications to project configuration, order and customer models, and data quality tests.
+Based on the high-velocity files from the last 30 days, /tmp/cartographer_zl19dzgk/repo/dbt_project.yml, /tmp/cartographer_zl19dzgk/repo/models/orders.sql, and /tmp/cartographer_zl19dzgk/repo/models/customers.sql have seen the most recent changes. These files likely represent the core transformation logic and project configuration, indicating they are active development areas and potential pain points for ongoing maintenance.
 
 ## Evidence Summary
 

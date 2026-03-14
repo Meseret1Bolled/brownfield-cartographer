@@ -1,0 +1,16 @@
+{
+  "path": "/tmp/cartographer_zl19dzgk/repo/models/staging/stg_payments.sql",
+  "relative_path": "models/staging/stg_payments.sql",
+  "language": "Language.SQL",
+  "purpose_statement": "Transform raw payment data from cents to dollars and standardize column names",
+  "domain_cluster": "transformation",
+  "exported_functions": [
+    "stg_payments"
+  ],
+  "exported_classes": [],
+  "pagerank_score": 0.176117,
+  "complexity_score": 5.0,
+  "change_velocity_30d": 0,
+  "loc": 25,
+  "is_dead_code_candidate": false
+}

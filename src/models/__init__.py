@@ -64,6 +64,7 @@ class DatasetNode(BaseModel):
     name: str
     storage_type: StorageType = StorageType.UNKNOWN
     schema_snapshot: Optional[dict[str, Any]] = None
+    freshness_sla: Optional[str] = None  # e.g. "24h", "daily", "realtime"
     owner: Optional[str] = None
     is_source_of_truth: bool = False
     source_file: Optional[str] = None

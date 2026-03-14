@@ -144,6 +144,57 @@ def _sql_exports(path: Path, source: bytes) -> list[str]:
     return sorted(set(exports))
 
 
+def _js_imports(root: Node) -> list[str]:
+    """Extract ES module import paths and require() calls from JS/TS AST."""
+    imports: list[str] = []
+    for node in _walk(root):
+        # ES6: import ... from 'module'
+        if node.type == "import_statement":
+            for child in node.children:
+                if child.type == "string":
+                    raw = child.text.decode("utf-8", errors="replace").strip("'\"")
+                    if raw:
+                        imports.append(raw)
+        # CommonJS: require('module')
+        elif node.type == "call_expression":
+            children = list(node.children)
+            if children and children[0].text == b"require":
+                for child in children[1:]:
+                    if child.type == "arguments":
+                        for arg in child.children:
+                            if arg.type == "string":
+                                raw = arg.text.decode("utf-8", errors="replace").strip("'\"")
+                                if raw:
+                                    imports.append(raw)
+    return sorted(set(imports))
+
+
+def _js_functions(root: Node) -> list[str]:
+    """Extract public function and class names from JS/TS AST."""
+    fns: list[str] = []
+    for node in _walk(root):
+        if node.type in ("function_declaration", "method_definition", "function"):
+            for child in node.children:
+                if child.type == "identifier":
+                    name = child.text.decode("utf-8", errors="replace")
+                    if name and not name.startswith("_"):
+                        fns.append(name)
+                    break
+    return sorted(set(fns))
+
+
+def _js_classes(root: Node) -> list[str]:
+    """Extract class names from JS/TS AST."""
+    cls: list[str] = []
+    for node in _walk(root):
+        if node.type == "class_declaration":
+            for child in node.children:
+                if child.type == "identifier":
+                    cls.append(child.text.decode("utf-8", errors="replace"))
+                    break
+    return sorted(set(cls))
+
+
 def analyze_module(path: Path) -> ModuleNode | None:
     entry = EXTENSION_MAP.get(path.suffix.lower())
     if not entry:
@@ -169,6 +220,10 @@ def analyze_module(path: Path) -> ModuleNode | None:
             elif lang == Lang.SQL:
                 imports   = _sql_imports(source)
                 functions = _sql_exports(path, source)
+            elif lang in (Lang.JAVASCRIPT, Lang.TYPESCRIPT):
+                imports   = _js_imports(root)
+                functions = _js_functions(root)
+                classes   = _js_classes(root)
         else:
             if lang == Lang.SQL:
                 imports   = _sql_imports(source)

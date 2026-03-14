@@ -1,0 +1,16 @@
+{
+  "path": "/tmp/cartographer_zl19dzgk/repo/models/customers.sql",
+  "relative_path": "models/customers.sql",
+  "language": "Language.SQL",
+  "purpose_statement": "Create customer summary table with order history and lifetime value metrics",
+  "domain_cluster": "transformation",
+  "exported_functions": [
+    "customers"
+  ],
+  "exported_classes": [],
+  "pagerank_score": 0.103093,
+  "complexity_score": 11.0,
+  "change_velocity_30d": 0,
+  "loc": 69,
+  "is_dead_code_candidate": true
+}

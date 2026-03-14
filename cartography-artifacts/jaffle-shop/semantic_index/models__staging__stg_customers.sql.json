@@ -1,0 +1,16 @@
+{
+  "path": "/tmp/cartographer_zl19dzgk/repo/models/staging/stg_customers.sql",
+  "relative_path": "models/staging/stg_customers.sql",
+  "language": "Language.SQL",
+  "purpose_statement": "Transforms raw customer data into a structured staging table for analysis, standardizing column names and making customer information ready for downstream processing.",
+  "domain_cluster": "transformation",
+  "exported_functions": [
+    "stg_customers"
+  ],
+  "exported_classes": [],
+  "pagerank_score": 0.132302,
+  "complexity_score": 5.0,
+  "change_velocity_30d": 0,
+  "loc": 22,
+  "is_dead_code_candidate": false
+}
