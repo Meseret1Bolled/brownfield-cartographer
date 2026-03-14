@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__bulk_email_optin.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__bulk_email_optin.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides email opt-in status for MITx Online users by joining user data with course-specific email preferences, enabling targeted communication while respecting user preferences.",
+  "purpose_statement": "Tracks which MITx Online users have opted out of bulk email communications for specific courses, enabling targeted email marketing compliance.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__bulk_email_optin"

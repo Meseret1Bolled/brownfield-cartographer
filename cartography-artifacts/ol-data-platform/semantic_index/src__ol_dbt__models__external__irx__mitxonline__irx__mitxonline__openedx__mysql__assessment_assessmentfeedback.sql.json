@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedback.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedback.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extract assessment feedback text linked to specific assessments for analysis of grading consistency and feedback quality.",
+  "purpose_statement": "Extract unique assessment feedback records by joining feedback data with assessment, submission, and student item tables, providing visibility into feedback content associated with specific assessments.",
   "domain_cluster": "ingestion",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__assessment_assessmentfeedback"

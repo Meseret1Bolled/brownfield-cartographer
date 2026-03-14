@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/resources/learn_api.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/resources/learn_api.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Handles secure communication with MIT Learn platform by signing and sending webhook notifications for course exports and video shorts processing",
+  "purpose_statement": "Handles secure webhook notifications to MIT Learn platform for course content and video processing",
   "domain_cluster": "utilities",
   "exported_functions": [
     "notify_course_export",

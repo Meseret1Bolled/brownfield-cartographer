@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/problem_engagement_detail_report.sql",
   "relative_path": "src/ol_dbt/models/reporting/problem_engagement_detail_report.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Analyzes problem engagement and performance data to understand how learners interact with course problems and their academic achievement.",
+  "purpose_statement": "Provides comprehensive problem engagement analytics showing learner performance, problem attempts, and grading patterns to enable assessment of learning effectiveness and course difficulty.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "problem_engagement_detail_report"

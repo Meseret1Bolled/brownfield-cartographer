@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2border.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2border.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw B2B order data from the source system, standardizing timestamps and renaming columns for consistent analysis of bulk order transactions.",
+  "purpose_statement": "Transforms raw B2B order data into a standardized format with ISO timestamps, capturing essential order details like pricing, status, and coupon information for bulk purchases.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__b2becommerce_b2border"

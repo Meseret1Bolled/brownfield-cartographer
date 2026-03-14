@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_orderaudit.sql",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_orderaudit.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maintains an audit trail of e-commerce order changes to support compliance and troubleshooting of order modifications.",
+  "purpose_statement": "Transforms ecommerce order audit records to track changes in order data with proper user attribution and standardized timestamps for compliance and debugging.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__bootcamps__app__postgres__ecommerce_orderaudit"

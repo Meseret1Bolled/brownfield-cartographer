@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/learning_resources/learning_resources/lib/contants.py",
   "relative_path": "dg_projects/learning_resources/learning_resources/lib/contants.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines standardized thumbnail dimensions for video short content to ensure consistent visual presentation across platforms",
+  "purpose_statement": "Defines standardized thumbnail dimensions for video content to ensure consistent visual presentation across platforms",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

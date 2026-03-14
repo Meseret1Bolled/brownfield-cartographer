@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/file_rendering.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/file_rendering.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Renders tabular data to CSV format, providing a utility for exporting structured data to a standard file format.",
+  "purpose_statement": "Renders tabular data to CSV format for file-based data export and reporting.",
   "domain_cluster": "utilities",
   "exported_functions": [
     "write_csv"

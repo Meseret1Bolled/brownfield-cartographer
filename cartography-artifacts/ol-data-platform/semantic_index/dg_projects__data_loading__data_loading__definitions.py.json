@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/data_loading/data_loading/definitions.py",
   "relative_path": "dg_projects/data_loading/data_loading/definitions.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines the core data loading assets and integrates them with Dagster's orchestration framework",
+  "purpose_statement": "Defines the data loading assets and resources, orchestrating the execution of data pipelines using Dagster and DLT for reliable data ingestion.",
   "domain_cluster": "ingestion",
   "exported_functions": [],
   "exported_classes": [],

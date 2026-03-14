@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/resources/outputs.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/resources/outputs.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Creates and manages temporary output directories for pipeline results, supporting both simple and date-based naming conventions to prevent conflicts during parallel executions.",
+  "purpose_statement": "Creates and manages temporary directories for storing pipeline execution results, supporting both simple and date-structured output organization with automatic cleanup.",
   "domain_cluster": "utilities",
   "exported_functions": [
     "current_dir_str",

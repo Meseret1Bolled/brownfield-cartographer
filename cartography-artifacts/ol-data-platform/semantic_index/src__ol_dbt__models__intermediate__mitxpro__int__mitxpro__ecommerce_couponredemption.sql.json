@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponredemption.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponredemption.sql",
   "language": "Language.SQL",
-  "purpose_statement": "This module extracts coupon redemption data from MITxPro's e-commerce system, providing a record of coupon usage linked to orders for financial and marketing analysis.",
+  "purpose_statement": "Captures coupon redemption data to track discount usage across orders",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__ecommerce_couponredemption"

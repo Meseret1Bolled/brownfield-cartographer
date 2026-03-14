@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_trainingexample_options_selected.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_trainingexample_options_selected.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks which options were selected for training examples used in assessment workflows, enabling analysis of training data selection patterns for AI-assisted grading.",
-  "domain_cluster": "ingestion",
+  "purpose_statement": "Tracks which assessment training example options were selected by users during the training process, enabling analysis of training data quality and model performance.",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitx__openedx__mysql__assessment_trainingexample_options_selected"
   ],

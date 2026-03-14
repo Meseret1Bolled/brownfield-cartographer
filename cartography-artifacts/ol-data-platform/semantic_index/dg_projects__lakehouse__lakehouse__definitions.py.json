@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/lakehouse/lakehouse/definitions.py",
   "relative_path": "dg_projects/lakehouse/lakehouse/definitions.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines ELT data pipeline assets and orchestration for the data lakehouse",
+  "purpose_statement": "Main orchestration module defining data lakehouse assets and pipelines, integrating Airbyte, dbt, and custom data processing workflows for the data platform",
   "domain_cluster": "orchestration",
   "exported_functions": [
     "get_asset_spec"

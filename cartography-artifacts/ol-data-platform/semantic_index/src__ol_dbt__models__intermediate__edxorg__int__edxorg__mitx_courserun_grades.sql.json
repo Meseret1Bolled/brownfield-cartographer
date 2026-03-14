@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courserun_grades.sql",
   "relative_path": "src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courserun_grades.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates course grades from edx.org to track student performance and completion status across courses",
+  "purpose_statement": "Captures detailed problem check events from edX course activities, extracting student answers, attempts, and grades to enable analysis of learner engagement and performance in course assessments.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__edxorg__mitx_courserun_grades"

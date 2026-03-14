@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/combined/marts__combined_discounts.sql",
   "relative_path": "src/ol_dbt/models/marts/combined/marts__combined_discounts.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates discount information from various platforms to provide unified discount management and usage tracking",
+  "purpose_statement": "Consolidates discount and coupon information from multiple platforms to track promotional offers, their usage, and redemption status across the learning ecosystem.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__combined_discounts"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__coursesinprogram.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__coursesinprogram.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps courses to programs, providing visibility into program structure and course enrollment patterns across different learning pathways.",
+  "purpose_statement": "Maps courses to programs by linking course pages to program pages through Wagtail page hierarchy",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__coursesinprogram"

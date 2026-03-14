@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courserunenrollments.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courserunenrollments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates enrollment data from multiple systems to provide a unified view of student enrollments across courses, including enrollment status, mode, and user information.",
+  "purpose_statement": "Combines enrollment data from both MITxPro and Open edX systems to provide a complete view of user enrollments across course runs",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__courserunenrollments"

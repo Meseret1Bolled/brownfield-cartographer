@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/openedx/openedx/ops/normalize_logs.py",
   "relative_path": "dg_projects/openedx/openedx/ops/normalize_logs.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "This module provides configuration and operations for loading tracking logs from S3 into DuckDB tables, enabling data engineering workflows to process and normalize educational platform log data.",
-  "domain_cluster": "transformation",
+  "purpose_statement": "Module 2 contains configuration and logic for loading tracking log files from S3 into DuckDB tables, enabling data processing workflows.",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "load_files_to_table",
     "transform_log_data",

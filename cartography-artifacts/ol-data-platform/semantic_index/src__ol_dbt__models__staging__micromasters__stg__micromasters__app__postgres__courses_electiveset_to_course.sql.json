@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_electiveset_to_course.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_electiveset_to_course.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps elective courses to their respective elective sets in MicroMasters programs, enabling flexible course selection.",
+  "purpose_statement": "Maps elective courses to their parent elective sets to support curriculum structure and course catalog organization.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__courses_electiveset_to_course"

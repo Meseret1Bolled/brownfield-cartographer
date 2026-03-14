@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/dimensional/dim_platform.sql",
   "relative_path": "src/ol_dbt/models/dimensional/dim_platform.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a dimension table for platforms with surrogate keys to enable consistent platform identification across the data warehouse.",
+  "purpose_statement": "Creates a standardized platform dimension table with surrogate keys to enable consistent cross-platform analysis and reporting.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "dim_platform"

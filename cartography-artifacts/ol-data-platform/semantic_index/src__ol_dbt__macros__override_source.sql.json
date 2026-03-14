@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/override_source.sql",
   "relative_path": "src/ol_dbt/macros/override_source.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Routes database queries to the appropriate data source based on the execution environment, allowing development on local DuckDB while maintaining production Trino compatibility",
-  "domain_cluster": "utilities",
+  "purpose_statement": "Routes database queries to appropriate data sources based on execution environment, allowing DuckDB development to transparently access production data through Glue catalog views",
+  "domain_cluster": "configuration",
   "exported_functions": [
     "override_source"
   ],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/video_engagement_report.sql",
   "relative_path": "src/ol_dbt/models/reporting/video_engagement_report.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks video engagement metrics including watched videos and viewing progress for content analysis.",
+  "purpose_statement": "Produces a video engagement report that tracks which videos users have watched and their viewing patterns, enabling analysis of content consumption and learner progress through course material.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "video_engagement_report"

@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__auth_user.sql",
   "relative_path": "src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__auth_user.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures user account data for learners enrolled in courses, including authentication and profile information.",
-  "domain_cluster": "ingestion",
+  "purpose_statement": "Provides a unified view of authenticated users enrolled in courses by joining user authentication data with course enrollment records, enabling user management and course participation tracking.",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "irx__xpro__openedx__mysql__auth_user"
   ],

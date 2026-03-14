@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/__init__.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides version metadata for a shared Dagster orchestration library used across MIT Open Learning data engineering projects",
+  "purpose_statement": "Provides a shared library for MIT Open Learning Dagster orchestration with version tracking for consistent dependency management.",
   "domain_cluster": "utilities",
   "exported_functions": [],
   "exported_classes": [],

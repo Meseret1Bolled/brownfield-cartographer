@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_course_structure.sql",
   "relative_path": "src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_course_structure.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms and organizes course structure data from edX.org, adding chapter-level information to enable detailed analysis of course organization and navigation.",
+  "purpose_statement": "Creates a structured view of MITx course content by organizing course blocks and chapters, enabling detailed analysis of course structure and content relationships.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__edxorg__mitx_course_structure"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/combined/_combined_models.yml",
   "relative_path": "src/ol_dbt/models/intermediate/combined/_combined_models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines the schema and validation rules for the combined users table, specifying required fields, data types, and constraints for user data from multiple platforms",
+  "purpose_statement": "Defines the data model schema and validation rules for the combined users table, specifying column definitions, data types, constraints, and accepted values to ensure data quality and consistency across the unified user dataset.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

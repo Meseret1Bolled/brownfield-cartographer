@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/event_log.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/event_log.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Implements a connection-pooled PostgreSQL event log storage for Dagster to efficiently handle event logging during data pipeline execution",
-  "domain_cluster": "monitoring",
+  "purpose_statement": "Provides Dagster event log storage using Postgres with connection pooling to handle high-volume event logging without connection limits",
+  "domain_cluster": "configuration",
   "exported_functions": [
     "optimize_for_webserver",
     "config_type",

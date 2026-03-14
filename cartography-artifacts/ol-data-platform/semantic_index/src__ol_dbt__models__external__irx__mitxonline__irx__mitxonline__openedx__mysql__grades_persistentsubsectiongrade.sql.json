@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__grades_persistentsubsectiongrade.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__grades_persistentsubsectiongrade.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maintains the latest persistent subsection grade records for courses, enabling accurate tracking of student progress and performance across graded and ungraded assessments.",
+  "purpose_statement": "Monitors student performance metrics at the subsection level, tracking earned versus possible points for all and graded content.",
   "domain_cluster": "ingestion",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__grades_persistentsubsectiongrade"

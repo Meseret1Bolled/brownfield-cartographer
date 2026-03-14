@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_courserun_application.sql",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_courserun_application.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms bootcamp application data to track user enrollment requests, solving the business need to manage the application process by providing a clean view of application status and related user information.",
+  "purpose_statement": "Transforms raw bootcamp course application data into standardized application records with ISO8601 timestamps for enrollment management and applicant tracking.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__bootcamps__app__postgres__applications_courserun_application"

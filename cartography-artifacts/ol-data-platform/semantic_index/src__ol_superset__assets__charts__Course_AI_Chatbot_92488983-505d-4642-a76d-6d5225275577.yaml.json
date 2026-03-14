@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Course_AI_Chatbot_92488983-505d-4642-a76d-6d5225275577.yaml",
   "relative_path": "src/ol_superset/assets/charts/Course_AI_Chatbot_92488983-505d-4642-a76d-6d5225275577.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays a detailed table of AI chatbot interactions, showing messages between humans and AI agents along with timestamps and thread information.",
+  "purpose_statement": "Displays detailed AI chatbot interactions for course analysis, allowing stakeholders to review conversations between learners and the AI assistant",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

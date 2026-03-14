@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2breceipt.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2breceipt.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts and transforms B2B ecommerce receipt data, parsing JSON fields to expose transaction details and payment metadata for business intelligence.",
+  "purpose_statement": "Extracts and normalizes B2B e-commerce receipt information from MITxPro, including payment transaction details and billing information for enterprise client management.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__b2becommerce_b2breceipt"

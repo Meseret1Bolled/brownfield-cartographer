@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/afact_course_page_engagement_68c544d7-726d-495a-bf87-81255b2e8604.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/afact_course_page_engagement_68c544d7-726d-495a-bf87-81255b2e8604.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Tracks course page engagement metrics to understand learner navigation and content interaction patterns",
+  "purpose_statement": "Tracks course page views and engagement metrics to understand how learners interact with course materials",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

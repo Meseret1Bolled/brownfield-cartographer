@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_coupon.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_coupon.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Standardizes coupon data by renaming fields and converting timestamps, enabling tracking of coupon usage and effectiveness across the platform.",
+  "purpose_statement": "Manages e-commerce coupon data from MITxPro, tracking coupon codes, their activation status, and applicability to support promotional campaign analysis.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_coupon"

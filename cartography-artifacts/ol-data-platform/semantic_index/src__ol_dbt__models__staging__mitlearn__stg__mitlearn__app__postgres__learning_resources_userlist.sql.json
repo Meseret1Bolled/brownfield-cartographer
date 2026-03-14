@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_userlist.sql",
   "relative_path": "src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_userlist.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Stores metadata about user-created lists including titles, descriptions, privacy settings, and ownership, enabling users to organize and share collections of learning resources.",
+  "purpose_statement": "Maintains user-created collections of learning resources, including titles, descriptions, authors, and privacy settings for organizing educational content.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitlearn__app__postgres__learning_resources_userlist"

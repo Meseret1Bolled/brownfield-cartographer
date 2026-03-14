@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__bigquery__email_opt_in.sql",
   "relative_path": "src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__bigquery__email_opt_in.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts email opt-in preferences for users, enabling analysis of user communication preferences and course engagement patterns.",
+  "purpose_statement": "Captures user email opt-in preferences for courses to support communication and marketing efforts while respecting user choices.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__xpro__openedx__bigquery__email_opt_in"

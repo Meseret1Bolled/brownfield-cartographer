@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/micromasters/int__micromasters__orders.sql",
   "relative_path": "src/ol_dbt/models/intermediate/micromasters/int__micromasters__orders.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates e-commerce order data including receipts, user information, and course enrollment details to provide a comprehensive view of purchase transactions and associated learner information.",
+  "purpose_statement": "Aggregates order and payment information for MicroMasters e-commerce transactions, linking user data, course enrollments, and receipt details for comprehensive transaction tracking.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__micromasters__orders"

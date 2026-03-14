@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/dimensional/tfact_video_events.sql",
   "relative_path": "src/ol_dbt/models/dimensional/tfact_video_events.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts and transforms raw video event data from multiple platforms into a structured format that captures video playback interactions including loading, playing, seeking, and completion.",
+  "purpose_statement": "Captures and processes video playback events from multiple platforms, extracting key metrics like duration, position, and timestamps to enable analysis of video consumption patterns.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "tfact_video_events"

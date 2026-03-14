@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Products_36ade680-7ae9-4d35-89b0-a46235139418.yaml",
   "relative_path": "src/ol_superset/assets/charts/Products_36ade680-7ae9-4d35-89b0-a46235139418.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays comprehensive product information including pricing, dates, certification details, and instructor data to support product catalog management and sales analysis.",
+  "purpose_statement": "Shows detailed product information including pricing, dates, delivery formats, and certifications to support product catalog management",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/override_ref.sql",
   "relative_path": "src/ol_dbt/macros/override_ref.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Implements a smart reference mechanism that allows developers to build models locally while automatically falling back to production views when local tables don't exist, enabling incremental development of the data platform.",
-  "domain_cluster": "utilities",
+  "purpose_statement": "Overrides the default dbt ref() macro to enable local development with automatic fallback to production data sources when local tables don't exist, supporting incremental development workflows.",
+  "domain_cluster": "configuration",
   "exported_functions": [
     "override_ref"
   ],

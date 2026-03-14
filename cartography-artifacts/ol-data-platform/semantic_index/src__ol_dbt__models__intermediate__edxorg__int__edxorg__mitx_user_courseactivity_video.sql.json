@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_video.sql",
   "relative_path": "src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_video.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts and transforms video-related user activity events from the raw course activity data, filtering for specific video interaction event types and parsing JSON fields to provide structured video engagement metrics like duration, playback position, and speed changes.",
+  "purpose_statement": "Extracts and transforms video-related user activity events from the course activity logs, filtering for video interactions and parsing JSON fields to capture video metadata like duration, timestamps, and playback speeds.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__edxorg__mitx_user_courseactivity_video"

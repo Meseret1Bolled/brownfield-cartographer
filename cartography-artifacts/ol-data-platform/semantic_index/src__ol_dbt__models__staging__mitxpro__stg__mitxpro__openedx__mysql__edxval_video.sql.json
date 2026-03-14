@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__edxval_video.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__edxval_video.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts and standardizes video metadata from the edX platform's MySQL database, supporting video asset management and tracking across the learning platform.",
+  "purpose_statement": "Manages video asset metadata and status information for educational content delivery.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__openedx__mysql__edxval_video"

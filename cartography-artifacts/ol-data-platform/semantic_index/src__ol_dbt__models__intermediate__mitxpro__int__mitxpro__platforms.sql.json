@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__platforms.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__platforms.sql",
   "language": "Language.SQL",
-  "purpose_statement": "This module provides basic platform information for MITxPro, extracting platform IDs and names from the source data to support platform identification across the data warehouse.",
+  "purpose_statement": "Provides platform information for MITxPro, listing available learning platforms",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__platforms"

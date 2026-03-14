@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_courserun_applicationstep.sql",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_courserun_applicationstep.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps application steps to specific bootcamp course runs with due dates, supporting application workflow management for individual courses.",
+  "purpose_statement": "Links application steps to specific course runs with due dates, creating a bridge between the application process and course scheduling.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__bootcamps__app__postgres__applications_courserun_applicationstep"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_coursepage.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_coursepage.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates and deduplicates course page information from both internal and external CMS sources, providing a unified view of course metadata for marketing and catalog purposes.",
+  "purpose_statement": "Captures and standardizes course page information from both internal and external CMS sources to provide unified course metadata.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__cms_coursepage"

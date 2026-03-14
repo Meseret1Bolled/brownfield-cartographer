@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_courseruncertificate.sql",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_courseruncertificate.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures and enriches certificate issuance data for bootcamp course completions, enabling verification and tracking of credential status.",
+  "purpose_statement": "Provides a cleaned view of course certificate data for bootcamp participants, including certificate URLs and timestamps for tracking issuance and revocation status.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__bootcamps__app__postgres__courses_courseruncertificate"

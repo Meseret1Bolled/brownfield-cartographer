@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/micromasters/marts__micromasters_summary.sql",
   "relative_path": "src/ol_dbt/models/marts/micromasters/marts__micromasters_summary.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates and summarizes MicroMasters enrollment and certificate data by program for business intelligence and program performance tracking",
+  "purpose_statement": "Aggregates enrollment and certificate data across MicroMasters programs to provide program-level statistics including total enrollments, verified enrollments, and user demographics",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__micromasters_summary"

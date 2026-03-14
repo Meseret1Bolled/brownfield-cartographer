@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courseware_studentmodule.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courseware_studentmodule.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks student module interactions and grades to monitor learning progress and course completion",
+  "purpose_statement": "This module processes student module data from edX S3 storage to track individual student progress within courses, including problem grades and module states. It converts timestamps to ISO8601 format and standardizes data types for downstream analytics on student performance.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__courseware_studentmodule"

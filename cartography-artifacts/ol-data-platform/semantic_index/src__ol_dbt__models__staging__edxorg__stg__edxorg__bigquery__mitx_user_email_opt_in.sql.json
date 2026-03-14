@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_user_email_opt_in.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_user_email_opt_in.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures user email opt-in preferences from edX to enable personalized communication and marketing compliance",
+  "purpose_statement": "This module processes user email opt-in data from the edX platform to track which users have consented to receive emails, along with their course enrollment information. It standardizes user and course identifiers while converting timestamps to ISO8601 format for consistent data handling.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__bigquery__mitx_user_email_opt_in"

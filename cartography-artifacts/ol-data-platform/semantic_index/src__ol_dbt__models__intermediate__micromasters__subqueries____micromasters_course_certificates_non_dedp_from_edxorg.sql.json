@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_certificates_non_dedp_from_edxorg.sql",
   "relative_path": "src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_certificates_non_dedp_from_edxorg.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Gathers course completion certificates from non-DEDP programs on the edx.org platform, associating them with their respective courses and programs.",
+  "purpose_statement": "Extract non-DEDP course certificates from edx.org, including certificate details and course information.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "__micromasters_course_certificates_non_dedp_from_edxorg"

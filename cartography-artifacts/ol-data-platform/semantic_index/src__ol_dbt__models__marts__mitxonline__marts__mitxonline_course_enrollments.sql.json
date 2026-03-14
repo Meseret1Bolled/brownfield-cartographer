@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_enrollments.sql",
   "relative_path": "src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_enrollments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides detailed course enrollment information specifically for the MITx Online platform, including learner demographics and enrollment status for individual courses.",
+  "purpose_statement": "Creates a detailed view of course enrollments on the MITxOnline platform by joining enrollment data with user demographic information to support analysis of learner characteristics and enrollment patterns.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__mitxonline_course_enrollments"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/zendesk/stg__zendesk__ticket_field.sql",
   "relative_path": "src/ol_dbt/models/staging/zendesk/stg__zendesk__ticket_field.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw Zendesk ticket field data by deduplicating records and casting timestamps to ISO8601 format for consistent downstream analysis",
+  "purpose_statement": "Transforms raw Zendesk ticket field data into a cleaned staging table with standardized timestamps",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__zendesk__ticket_field"

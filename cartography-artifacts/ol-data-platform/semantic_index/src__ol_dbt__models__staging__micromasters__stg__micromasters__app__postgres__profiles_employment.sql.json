@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_employment.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_employment.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Module providing: stg__micromasters__app__postgres__profiles_employment. Contains 22 lines of Language.SQL code.",
+  "purpose_statement": "Tracks and standardizes user employment history for analysis of professional outcomes of MicroMasters learners.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__profiles_employment"

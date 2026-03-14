@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/micromasters/marts__micromasters_summary_timeseries.sql",
   "relative_path": "src/ol_dbt/models/marts/micromasters/marts__micromasters_summary_timeseries.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates time-series summaries of MicroMasters enrollments and certificates to track program growth and engagement over time",
+  "purpose_statement": "Generates time-series summaries of MicroMasters enrollment data showing monthly program-level statistics and total platform-wide metrics over time",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__micromasters_summary_timeseries"

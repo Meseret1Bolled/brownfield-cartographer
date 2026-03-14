@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/marts__combined_coursesinprogram_f841a3e6-d864-4499-94dd-6ceafe8ac74f.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/marts__combined_coursesinprogram_f841a3e6-d864-4499-94dd-6ceafe8ac74f.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Maps course relationships within programs to understand program structure and course sequencing, enabling analysis of program-level enrollment and completion patterns.",
+  "purpose_statement": "Maps courses to their respective programs to enable analysis of program-level enrollment, completion rates, and course progression across educational programs.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

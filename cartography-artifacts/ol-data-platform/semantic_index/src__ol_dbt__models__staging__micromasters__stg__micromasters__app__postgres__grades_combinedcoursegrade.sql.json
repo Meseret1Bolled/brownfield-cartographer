@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_combinedcoursegrade.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_combinedcoursegrade.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Module providing: stg__micromasters__app__postgres__grades_combinedcoursegrade. Contains 20 lines of Language.SQL code.",
+  "purpose_statement": "Aggregates final course grades to measure learner achievement and course completion rates.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__grades_combinedcoursegrade"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__auth_user.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__auth_user.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Module providing: stg__micromasters__app__postgres__auth_user. Contains 19 lines of Language.SQL code.",
+  "purpose_statement": "Maintains core user identity and authentication data to support user lifecycle tracking and access management.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__auth_user"

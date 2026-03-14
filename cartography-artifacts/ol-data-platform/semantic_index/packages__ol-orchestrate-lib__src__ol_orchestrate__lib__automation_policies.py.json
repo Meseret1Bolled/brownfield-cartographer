@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/automation_policies.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/automation_policies.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines automation policies for pipeline execution based on code changes and upstream dependencies, controlling when data processing should automatically run.",
+  "purpose_statement": "Defines automation conditions for data pipeline execution logic, determining when data processing should occur based on upstream changes, code modifications, or missing data dependencies.",
   "domain_cluster": "orchestration",
   "exported_functions": [
     "upstream_or_code_changes"

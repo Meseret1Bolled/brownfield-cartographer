@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_search_percolatequery.sql",
   "relative_path": "src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_search_percolatequery.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Processes search query data for learning resources, storing query patterns and metadata to enable search analytics and optimization",
+  "purpose_statement": "Transforms raw search percolate query data into a cleaned staging model with standardized column names for analyzing saved search queries",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitlearn__app__postgres__learning_resources_search_percolatequery"

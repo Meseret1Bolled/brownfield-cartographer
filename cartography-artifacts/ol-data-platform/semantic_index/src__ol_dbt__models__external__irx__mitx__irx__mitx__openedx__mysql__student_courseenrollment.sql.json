@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__student_courseenrollment.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__student_courseenrollment.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts course enrollment information, supporting analysis of student course participation and enrollment patterns.",
+  "purpose_statement": "Extract course enrollment details including course ID, mode, and active status to track student course participation.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitx__openedx__mysql__student_courseenrollment"

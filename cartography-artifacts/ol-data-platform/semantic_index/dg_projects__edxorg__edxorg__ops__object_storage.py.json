@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/edxorg/edxorg/ops/object_storage.py",
   "relative_path": "dg_projects/edxorg/edxorg/ops/object_storage.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides deprecated file synchronization and download operations between S3 buckets, now superseded by IO Manager interface.",
+  "purpose_statement": "Manages file synchronization and download operations between S3 buckets, facilitating data movement across storage systems.",
   "domain_cluster": "utilities",
   "exported_functions": [
     "sync_files_to_s3",

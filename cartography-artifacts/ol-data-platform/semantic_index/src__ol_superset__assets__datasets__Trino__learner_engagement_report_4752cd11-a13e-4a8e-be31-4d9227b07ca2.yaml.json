@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/learner_engagement_report_4752cd11-a13e-4a8e-be31-4d9227b07ca2.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/learner_engagement_report_4752cd11-a13e-4a8e-be31-4d9227b07ca2.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "This module generates comprehensive learner engagement reports that aggregate student performance data, including problem completion rates, grades, and time spent on course materials, to assess learning outcomes.",
+  "purpose_statement": "Generates comprehensive learner engagement reports that combine problem-solving statistics, video engagement metrics, and course completion data to assess student progress and platform effectiveness.",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

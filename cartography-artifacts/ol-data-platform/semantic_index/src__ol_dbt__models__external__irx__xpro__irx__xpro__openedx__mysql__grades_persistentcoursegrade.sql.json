@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__grades_persistentcoursegrade.sql",
   "relative_path": "src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__grades_persistentcoursegrade.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maintains course grade records with grading policy details to enable academic performance tracking and reporting.",
+  "purpose_statement": "Stores final course grades with grading policies and timestamps, enabling reporting on student performance and course completion rates.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__xpro__openedx__mysql__grades_persistentcoursegrade"

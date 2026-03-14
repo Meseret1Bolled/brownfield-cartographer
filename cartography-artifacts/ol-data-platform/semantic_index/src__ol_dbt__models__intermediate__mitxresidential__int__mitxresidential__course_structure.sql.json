@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__course_structure.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__course_structure.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Processes and organizes course structure data to understand the hierarchical organization of residential MITx courses and their components.",
+  "purpose_statement": "Extract and organize course structure data, including chapters and hierarchical relationships, to understand the organization and content of residential MITx courses.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxresidential__course_structure"

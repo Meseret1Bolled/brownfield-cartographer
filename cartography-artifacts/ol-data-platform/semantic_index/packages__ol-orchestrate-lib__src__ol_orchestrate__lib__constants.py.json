@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/constants.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/constants.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines configuration constants and export type mappings for the data platform, establishing deployment environments and supported course export formats.",
+  "purpose_statement": "Defines configuration constants and environment-specific settings for the data platform, including deployment targets, export formats, and database table mappings used across the orchestration system.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

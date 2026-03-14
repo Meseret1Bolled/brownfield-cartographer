@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/bin/dbt-create-staging-models.py",
   "relative_path": "bin/dbt-create-staging-models.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Generates dbt sources and staging models by discovering tables and creating YAML and SQL files for data transformation workflows.",
+  "purpose_statement": "Generates DBT sources and staging models by discovering database tables and creating the necessary YAML and SQL files for DBT project configuration.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "extract_domain_from_prefix",

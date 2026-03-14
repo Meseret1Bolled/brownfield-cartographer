@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/canvas/canvas/resources/__init__.py",
   "relative_path": "dg_projects/canvas/canvas/resources/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides initialization for Canvas resources, serving as a container for Canvas-related API client configurations.",
+  "purpose_statement": "Exports the public interface for Canvas resource modules",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

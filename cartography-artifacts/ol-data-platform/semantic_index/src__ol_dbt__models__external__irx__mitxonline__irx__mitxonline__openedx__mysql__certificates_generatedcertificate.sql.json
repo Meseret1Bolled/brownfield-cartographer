@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__certificates_generatedcertificate.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__certificates_generatedcertificate.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks and stores the most recent certificate generation data for users, including verification and download information, to support certificate management and verification processes.",
+  "purpose_statement": "Tracks certificate generation data for courses, capturing user achievements and certificate details for audit and verification purposes.",
   "domain_cluster": "ingestion",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__certificates_generatedcertificate"

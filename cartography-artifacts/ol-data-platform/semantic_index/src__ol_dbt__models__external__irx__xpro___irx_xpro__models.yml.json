@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/xpro/_irx_xpro__models.yml",
   "relative_path": "src/ol_dbt/models/external/irx/xpro/_irx_xpro__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines data models for user mapping, course teams, and team memberships to support organizational structure and access management",
+  "purpose_statement": "Defines data models for user mapping, team structures, and team memberships to support collaborative learning and user management",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

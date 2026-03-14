@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/sensors/object_storage.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/sensors/object_storage.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Monitors Google Cloud Storage and AWS S3 buckets for new files and triggers data pipeline runs when new files are detected, enabling automated data ingestion workflows.",
-  "domain_cluster": "monitoring",
+  "purpose_statement": "Monitors cloud storage buckets (GCS and S3) for new files and triggers data pipelines when new data becomes available, enabling automated ingestion workflows.",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "dummy_filter",
     "dummy_run_config_fn",

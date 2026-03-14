@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_video.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_video.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps course video content to course runs, providing video metadata and duration information for content management and analytics.",
+  "purpose_statement": "Tracks video content metadata for edX courses, including video durations and identifiers to support media management and content analysis.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__course_video"

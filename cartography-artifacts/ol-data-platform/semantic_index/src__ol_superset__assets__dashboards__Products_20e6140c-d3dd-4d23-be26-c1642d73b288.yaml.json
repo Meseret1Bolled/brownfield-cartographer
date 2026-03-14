@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/Products_20e6140c-d3dd-4d23-be26-c1642d73b288.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/Products_20e6140c-d3dd-4d23-be26-c1642d73b288.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays product-related analytics including course-to-program mappings, product dashboard updates, and comprehensive product information for product management and analysis.",
+  "purpose_statement": "Delivers a comprehensive product performance dashboard with course-to-program mappings, product metrics, and data refresh timestamps to enable product management and business intelligence.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

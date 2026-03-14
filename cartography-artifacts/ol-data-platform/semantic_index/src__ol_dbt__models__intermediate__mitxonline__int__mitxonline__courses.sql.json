@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courses.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courses.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a unified course information view by combining course data with descriptions, topics, instructors, and other metadata to enable comprehensive course catalog analysis.",
+  "purpose_statement": "Consolidates course information including descriptions, pricing, topics, instructors, and program requirements for course catalog and enrollment management.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__courses"

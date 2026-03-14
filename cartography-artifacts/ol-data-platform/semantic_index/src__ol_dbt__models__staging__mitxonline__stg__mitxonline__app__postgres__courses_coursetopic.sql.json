@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_coursetopic.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_coursetopic.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a hierarchical taxonomy of course topics to enable content categorization and navigation.",
+  "purpose_statement": "Supplies course topic taxonomy data to support hierarchical classification and navigation of MITx Online courses by subject areas and subtopics.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__app__postgres__courses_coursetopic"

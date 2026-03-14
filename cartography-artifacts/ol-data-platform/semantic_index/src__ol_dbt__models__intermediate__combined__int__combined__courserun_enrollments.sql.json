@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/combined/int__combined__courserun_enrollments.sql",
   "relative_path": "src/ol_dbt/models/intermediate/combined/int__combined__courserun_enrollments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates and combines enrollment data from multiple learning platforms into a single unified dataset, including user enrollment status, course information, and linking to grades and certificates",
+  "purpose_statement": "Aggregates enrollment data from various platforms (MITx, MITxPro, Emeritus, Global Alumni, Bootcamps, Residential) and joins it with related grades and certificate information to create a complete view of learner participation and achievement across all educational offerings.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__combined__courserun_enrollments"

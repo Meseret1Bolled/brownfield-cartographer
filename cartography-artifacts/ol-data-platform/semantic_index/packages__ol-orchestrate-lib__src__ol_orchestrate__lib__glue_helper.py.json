@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/glue_helper.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/glue_helper.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides helper functions to create and update AWS Glue tables for data lake operations, enabling integration between data processing pipelines and AWS Athena/Glue catalog.",
-  "domain_cluster": "utilities",
+  "purpose_statement": "Provides helper functions for AWS Glue operations and dbt model data retrieval, converting data schemas and managing table creation in data lakes.",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "convert_schema",
     "create_or_update_table",

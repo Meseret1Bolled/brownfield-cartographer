@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Learner_Course_Engagement_6df62a4b-28e2-4d78-9e22-e3dfb56fd96a.yaml",
   "relative_path": "src/ol_superset/assets/charts/Learner_Course_Engagement_6df62a4b-28e2-4d78-9e22-e3dfb56fd96a.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays detailed learner engagement metrics for specific courses, showing user activity like events, problem submissions, video plays, and discussions over time",
+  "purpose_statement": "Displays learner engagement metrics including events, problem submissions, video plays, and discussions for courses, enabling analysis of learner activity patterns over time.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

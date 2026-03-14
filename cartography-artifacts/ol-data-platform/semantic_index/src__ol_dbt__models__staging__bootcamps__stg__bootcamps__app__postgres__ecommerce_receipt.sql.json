@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_receipt.sql",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_receipt.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures and standardizes e-commerce receipt data to track financial transactions and order confirmations.",
+  "purpose_statement": "Converts raw ecommerce receipt data into a structured format with standardized timestamps for financial transaction analysis and order tracking.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__bootcamps__app__postgres__ecommerce_receipt"

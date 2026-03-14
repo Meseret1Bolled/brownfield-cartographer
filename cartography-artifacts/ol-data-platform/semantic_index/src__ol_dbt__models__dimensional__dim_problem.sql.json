@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/dimensional/dim_problem.sql",
   "relative_path": "src/ol_dbt/models/dimensional/dim_problem.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a dimension table for course problems that combines problem metadata with user submission events, enabling analysis of problem-solving behavior and assessment completion.",
+  "purpose_statement": "Extracts and structures problem-solving data from course content, capturing problem metadata and learner submission events to support assessment and analytics.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "dim_problem"

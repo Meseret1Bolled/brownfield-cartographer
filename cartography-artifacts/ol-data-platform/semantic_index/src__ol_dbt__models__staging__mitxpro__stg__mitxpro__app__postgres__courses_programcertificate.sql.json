@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_programcertificate.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_programcertificate.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages program certificates issued to users, including revocation status and timestamps, to verify completion of academic programs and maintain certification records.",
+  "purpose_statement": "Stores program certificate records for learners who complete academic programs, tracking certificate issuance and revocation status for credentialing purposes.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__courses_programcertificate"

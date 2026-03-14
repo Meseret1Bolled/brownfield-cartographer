@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_structure.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_structure.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Structures and organizes course content hierarchy including chapters, modules, and topics to provide a clear understanding of course organization and navigation.",
+  "purpose_statement": "Structures course content hierarchy by organizing course blocks into chapters and maintaining content relationships for navigation and content delivery",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__course_structure"

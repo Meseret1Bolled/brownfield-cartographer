@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_coursetopic.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_coursetopic.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maintains the master list of course topics and their hierarchical relationships for organizing course content",
+  "purpose_statement": "Maintains a hierarchical taxonomy of course topics, providing a structured classification system for organizing and categorizing courses.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__courses_coursetopic"

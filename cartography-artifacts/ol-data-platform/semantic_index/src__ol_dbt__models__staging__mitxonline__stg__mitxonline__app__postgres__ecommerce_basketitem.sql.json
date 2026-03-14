@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_basketitem.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_basketitem.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Converts raw basket item data from the e-commerce system into a standardized staging format with ISO8601 timestamps for order processing and analysis.",
+  "purpose_statement": "Transforms raw basket item data from the e-commerce system, standardizing timestamps and field names to track shopping cart contents and purchase quantities for order processing.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__app__postgres__ecommerce_basketitem"

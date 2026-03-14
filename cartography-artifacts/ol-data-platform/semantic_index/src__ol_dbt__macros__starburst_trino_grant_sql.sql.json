@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/starburst_trino_grant_sql.sql",
   "relative_path": "src/ol_dbt/macros/starburst_trino_grant_sql.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Customizes database permission management to work with Starburst Galaxy's role-based permissions system by overriding default grant and revoke SQL statements to operate only on database roles.",
+  "purpose_statement": "Customizes database permission management for Starburst Galaxy by modifying grant and revoke operations to work specifically with database roles, ensuring proper access control in the distributed data platform.",
   "domain_cluster": "configuration",
   "exported_functions": [
     "starburst_trino_grant_sql"

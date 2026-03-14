@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/b2b_organization/build.yaml",
   "relative_path": "dg_projects/b2b_organization/build.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Configures Docker build settings for the b2b_organization data pipeline, specifying build context, Dockerfile location, and registry destination",
+  "purpose_statement": "Configures Docker build settings for the B2B organization data pipeline, specifying build context, Dockerfile location, and container registry",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

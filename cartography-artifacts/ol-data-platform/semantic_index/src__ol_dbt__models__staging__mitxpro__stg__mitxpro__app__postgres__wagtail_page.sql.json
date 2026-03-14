@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__wagtail_page.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__wagtail_page.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maintains website page metadata including content, publishing status, and SEO information for the xPro platform.",
+  "purpose_statement": "Maintains website page structure and metadata, enabling content management and navigation analysis for the platform's web presence.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__wagtail_page"

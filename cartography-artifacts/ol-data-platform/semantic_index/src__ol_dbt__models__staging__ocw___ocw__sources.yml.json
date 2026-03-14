@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/ocw/_ocw__sources.yml",
   "relative_path": "src/ol_dbt/models/staging/ocw/_ocw__sources.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Establishes the source configuration for raw OCW data from the warehouse, mapping production database tables to staging schemas for data ingestion.",
+  "purpose_statement": "Specifies the source table structure for raw OCW website data, mapping production database fields to staging schema for downstream processing.",
   "domain_cluster": "ingestion",
   "exported_functions": [],
   "exported_classes": [],

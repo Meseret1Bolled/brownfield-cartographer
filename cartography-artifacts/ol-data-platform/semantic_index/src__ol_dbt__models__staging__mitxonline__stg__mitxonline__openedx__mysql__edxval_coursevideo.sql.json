@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__edxval_coursevideo.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__edxval_coursevideo.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms MITx Online course video data from raw warehouse format into a cleaned staging table for managing video content visibility and associations.",
+  "purpose_statement": "Maps videos to courses to support video content management and visibility controls in course delivery.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__openedx__mysql__edxval_coursevideo"

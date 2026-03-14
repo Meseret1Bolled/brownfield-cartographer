@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/combined/marts__combined__orders.sql",
   "relative_path": "src/ol_dbt/models/marts/combined/marts__combined__orders.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Combines order data from multiple platforms to create a unified view of transactions and revenue",
+  "purpose_statement": "Aggregates order and transaction data from multiple platforms to provide a unified view of purchase activity, payment processing, and financial transactions across all learning products.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__combined__orders"

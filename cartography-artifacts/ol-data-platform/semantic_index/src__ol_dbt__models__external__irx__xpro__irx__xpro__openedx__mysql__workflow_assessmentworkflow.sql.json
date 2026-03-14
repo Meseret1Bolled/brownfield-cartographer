@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__workflow_assessmentworkflow.sql",
   "relative_path": "src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__workflow_assessmentworkflow.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks the status and timing of assessment workflows for courses.",
-  "domain_cluster": "ingestion",
+  "purpose_statement": "Maintains the latest assessment workflow status for courses by deduplicating workflow records based on modification time, supporting progress tracking and workflow management.",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "irx__xpro__openedx__mysql__workflow_assessmentworkflow"
   ],

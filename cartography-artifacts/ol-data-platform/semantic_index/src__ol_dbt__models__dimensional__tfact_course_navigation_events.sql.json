@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/dimensional/tfact_course_navigation_events.sql",
   "relative_path": "src/ol_dbt/models/dimensional/tfact_course_navigation_events.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures and processes course navigation events from multiple platforms to track how users move through course content and interact with navigation elements.",
+  "purpose_statement": "Captures and standardizes course navigation events to analyze user learning pathways and content discovery patterns across different learning platforms.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "tfact_course_navigation_events"

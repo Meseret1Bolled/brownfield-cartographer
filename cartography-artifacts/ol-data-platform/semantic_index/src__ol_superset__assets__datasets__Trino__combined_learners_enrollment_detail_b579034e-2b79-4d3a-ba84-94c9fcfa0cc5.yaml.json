@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/combined_learners_enrollment_detail_b579034e-2b79-4d3a-ba84-94c9fcfa0cc5.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/combined_learners_enrollment_detail_b579034e-2b79-4d3a-ba84-94c9fcfa0cc5.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "This module consolidates enrollment data across multiple platforms to provide a unified view of learner registrations, course progress, and program participation for comprehensive student lifecycle analysis.",
+  "purpose_statement": "Consolidates enrollment details across multiple platforms into a unified view, supporting program management and tracking learner progress across different educational offerings.",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

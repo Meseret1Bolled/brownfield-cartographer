@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__user_api_usercoursetag.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__user_api_usercoursetag.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Retrieves user course tag information including course IDs and user IDs to support analysis of user-course relationships and tagging data.",
+  "purpose_statement": "Extracts user course tag data including course IDs, user IDs, and tag IDs for tracking user-specific course metadata",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__user_api_usercoursetag"

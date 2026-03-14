@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__emeritus__api__bigquery__user_enrollments.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__emeritus__api__bigquery__user_enrollments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Ingests and cleans user enrollment data from BigQuery, standardizing timestamps and handling null values for downstream enrollment analytics",
-  "domain_cluster": "ingestion",
+  "purpose_statement": "Models individual line items within orders to track products, versions, and timestamps for order fulfillment",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "stg__emeritus__api__bigquery__user_enrollments"
   ],

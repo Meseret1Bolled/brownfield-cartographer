@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/lakehouse/lakehouse/assets/instructor_onboarding.py",
   "relative_path": "dg_projects/lakehouse/lakehouse/assets/instructor_onboarding.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Extracts instructor email addresses from course data and prepares CSV files for GitHub repository access management",
-  "domain_cluster": "ingestion",
+  "purpose_statement": "Generates instructor onboarding user lists from course data, preparing CSV files with user emails for GitHub repository access management in educational platforms.",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "generate_instructor_onboarding_user_list",
     "update_access_forge_repo"

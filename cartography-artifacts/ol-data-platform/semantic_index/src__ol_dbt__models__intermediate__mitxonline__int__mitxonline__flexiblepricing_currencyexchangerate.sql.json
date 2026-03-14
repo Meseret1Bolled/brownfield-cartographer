@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_currencyexchangerate.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_currencyexchangerate.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms currency exchange rate data into a standardized intermediate format, supporting multi-currency pricing analysis for MITx Online courses.",
+  "purpose_statement": "Aggregates daily user activity metrics per course, counting tracking events to monitor student engagement patterns over time.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__flexiblepricing_currencyexchangerate"

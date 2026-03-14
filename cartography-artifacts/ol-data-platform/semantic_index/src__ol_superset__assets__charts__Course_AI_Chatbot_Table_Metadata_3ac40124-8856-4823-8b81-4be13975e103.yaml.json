@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Course_AI_Chatbot_Table_Metadata_3ac40124-8856-4823-8b81-4be13975e103.yaml",
   "relative_path": "src/ol_superset/assets/charts/Course_AI_Chatbot_Table_Metadata_3ac40124-8856-4823-8b81-4be13975e103.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays metadata about AI chatbot tables, allowing users to see when tables were created and updated, and filter by specific table names to track data lineage and usage patterns.",
+  "purpose_statement": "Displays metadata information about Course AI Chatbot tables including creation dates and update timestamps for monitoring and documentation purposes",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

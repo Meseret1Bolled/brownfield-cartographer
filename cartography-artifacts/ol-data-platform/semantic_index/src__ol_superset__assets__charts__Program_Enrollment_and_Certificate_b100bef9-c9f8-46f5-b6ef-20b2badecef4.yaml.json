@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Program_Enrollment_and_Certificate_b100bef9-c9f8-46f5-b6ef-20b2badecef4.yaml",
   "relative_path": "src/ol_superset/assets/charts/Program_Enrollment_and_Certificate_b100bef9-c9f8-46f5-b6ef-20b2badecef4.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays comprehensive program enrollment and certificate information for learners across all platforms and programs",
+  "purpose_statement": "Provides a comprehensive view of program enrollment status, certificates, and completion data for administrative tracking",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

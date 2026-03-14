@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/ovs/int__ovs__videos.sql",
   "relative_path": "src/ol_dbt/models/intermediate/ovs/int__ovs__videos.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Combines video metadata with encoding job information to provide complete video details including duration and platform information",
+  "purpose_statement": "Aggregates course run grades from edx.org, combining certificate and grade information to provide a complete view of learner performance and completion status across multiple courses and programs.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__ovs__videos"

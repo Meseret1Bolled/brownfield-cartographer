@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courserun_enrollments.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courserun_enrollments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Combines enrollment data with user and course information to provide comprehensive enrollment records",
+  "purpose_statement": "Consolidates course enrollment data with user and course metadata to provide a comprehensive view of who is enrolled in which courses and their enrollment status.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxresidential__courserun_enrollments"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/lakehouse/lakehouse/resources/airbyte.py",
   "relative_path": "dg_projects/lakehouse/lakehouse/resources/airbyte.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides authenticated API client for interacting with Airbyte OSS to manage data integration workflows and API operations",
+  "purpose_statement": "Provides a specialized Airbyte client for interacting with Airbyte Community Edition APIs, enabling data integration workflows through programmatic control of Airbyte workspaces and connections.",
   "domain_cluster": "utilities",
   "exported_functions": [
     "ensure_workspace_id",

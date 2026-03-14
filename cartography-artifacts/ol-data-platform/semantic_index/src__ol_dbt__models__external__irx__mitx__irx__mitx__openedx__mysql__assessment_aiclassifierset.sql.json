@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aiclassifierset.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aiclassifierset.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts basic metadata about AI classifier sets used in assessments, enabling tracking of which courses and items use AI-based grading components.",
+  "purpose_statement": "Provides access to course assessment classifier set metadata for tracking AI-based assessment configurations across courses.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitx__openedx__mysql__assessment_aiclassifierset"

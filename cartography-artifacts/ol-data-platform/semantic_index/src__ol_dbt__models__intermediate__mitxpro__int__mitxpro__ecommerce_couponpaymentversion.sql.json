@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponpaymentversion.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponpaymentversion.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures coupon payment version data linking payment transactions to coupon codes and discount configurations for financial reconciliation.",
+  "purpose_statement": "Creates a consolidated view of coupon payment version data for financial and operational reporting.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__ecommerce_couponpaymentversion"

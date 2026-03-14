@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/ol_superset/commands/apply_rls.py",
   "relative_path": "src/ol_superset/ol_superset/commands/apply_rls.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Applies governance row-level security policies to Superset instances by creating or updating RLS filters based on predefined policy definitions, ensuring data access controls are properly enforced across the platform.",
-  "domain_cluster": "utilities",
+  "purpose_statement": "Applies governance row-level security policies to Superset instances, enabling organizations to enforce data access controls and compliance requirements across their analytics platform.",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "apply_rls"
   ],

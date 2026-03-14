@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Chatbot_Usage_By_Course_Section_and_Subsection_9ad6f248-c9cd-42bd-9285-5dbe6d30d5c3.yaml",
   "relative_path": "src/ol_superset/assets/charts/Chatbot_Usage_By_Course_Section_and_Subsection_9ad6f248-c9cd-42bd-9285-5dbe6d30d5c3.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Analyzes chatbot usage patterns by course section and subsection, showing where students are seeking help through the chatbot interface",
+  "purpose_statement": "Provides a table view of chatbot usage statistics broken down by course section and subsection, showing where students are most actively using the chatbot feature.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

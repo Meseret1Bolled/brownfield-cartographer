@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_types/google.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_types/google.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Creates a Dagster type wrapper for Google BigQuery dataset objects to enable type-safe data operations",
+  "purpose_statement": "Creates a Dagster type wrapper for Google BigQuery dataset objects, allowing BigQuery datasets to be used as typed inputs/outputs in Dagster pipelines",
   "domain_cluster": "utilities",
   "exported_functions": [],
   "exported_classes": [],

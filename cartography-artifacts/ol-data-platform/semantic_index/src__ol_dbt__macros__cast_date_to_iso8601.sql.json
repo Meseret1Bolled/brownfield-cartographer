@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/cast_date_to_iso8601.sql",
   "relative_path": "src/ol_dbt/macros/cast_date_to_iso8601.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Standardizes date column formatting to ISO 8601 across different database platforms, ensuring consistent temporal data representation for downstream analysis",
+  "purpose_statement": "Standardizes date formatting across different database systems by converting various date representations to ISO 8601 format, enabling consistent date handling in downstream analytics",
   "domain_cluster": "transformation",
   "exported_functions": [
     "cast_date_to_iso8601"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentpart.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentpart.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Analyzes assessment parts to understand student performance and feedback on specific assessment components.",
+  "purpose_statement": "Joins assessment parts with their assessments and submissions to extract assessment feedback and option details, supporting analysis of peer assessment outcomes and grading.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__assessment_assessmentpart"

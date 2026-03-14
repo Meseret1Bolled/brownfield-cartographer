@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxresidential/_stg_mitxresidential__models.yml",
   "relative_path": "src/ol_dbt/models/staging/mitxresidential/_stg_mitxresidential__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines the schema and data quality tests for the MITx residential user table, ensuring reliable user identity and profile information for downstream analytics and reporting.",
+  "purpose_statement": "Defines the data model and validation rules for user authentication data in the Residential MITx open edX system, ensuring data integrity for user management and access control.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

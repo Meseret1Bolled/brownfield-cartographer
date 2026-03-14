@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/dimensional/afact_course_page_engagement.sql",
   "relative_path": "src/ol_dbt/models/dimensional/afact_course_page_engagement.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates page navigation events within course content to track how learners interact with different course modules, providing insights into content consumption patterns.",
+  "purpose_statement": "Records and analyzes page navigation events within course content, tracking how learners move through course materials and which sections they access most frequently.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "afact_course_page_engagement"

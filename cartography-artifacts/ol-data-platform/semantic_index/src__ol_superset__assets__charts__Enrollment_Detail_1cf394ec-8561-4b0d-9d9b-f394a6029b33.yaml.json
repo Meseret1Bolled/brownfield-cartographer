@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Enrollment_Detail_1cf394ec-8561-4b0d-9d9b-f394a6029b33.yaml",
   "relative_path": "src/ol_superset/assets/charts/Enrollment_Detail_1cf394ec-8561-4b0d-9d9b-f394a6029b33.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides detailed enrollment records including user information, course details, payment data, and certificate status for comprehensive student enrollment tracking",
+  "purpose_statement": "Provides detailed enrollment records including user information, course details, grades, certificates, and payment information",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

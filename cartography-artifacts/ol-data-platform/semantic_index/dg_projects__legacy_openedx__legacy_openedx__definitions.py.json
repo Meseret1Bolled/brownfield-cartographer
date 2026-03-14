@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/legacy_openedx/legacy_openedx/definitions.py",
   "relative_path": "dg_projects/legacy_openedx/legacy_openedx/definitions.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Initializes and configures resources for legacy Open edX data extraction, including Vault authentication, GCS connections, and various pipeline resources for course data processing",
-  "domain_cluster": "orchestration",
+  "purpose_statement": "Initializes and configures data extraction resources for legacy Open edX course data pipelines, including authentication with Vault for secrets management, GCS connections for cloud storage, and various database clients for different deployment environments.",
+  "domain_cluster": "configuration",
   "exported_functions": [
     "open_edx_export_irx_job_config"
   ],

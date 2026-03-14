@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__users.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__users.sql",
   "language": "Language.SQL",
-  "purpose_statement": "This module consolidates comprehensive user profile data from MITxPro, combining authentication, legal address, and profile information to create a complete user record for business analysis.",
+  "purpose_statement": "Consolidates user profile and enrollment data to create comprehensive user profiles",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__users"

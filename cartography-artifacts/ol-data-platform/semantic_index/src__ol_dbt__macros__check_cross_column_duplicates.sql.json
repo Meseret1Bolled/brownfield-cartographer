@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/check_cross_column_duplicates.sql",
   "relative_path": "src/ol_dbt/macros/check_cross_column_duplicates.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Detects and reports duplicate values across two columns to ensure data integrity in user records",
-  "domain_cluster": "transformation",
+  "purpose_statement": "Validates data integrity by checking for duplicate values across two columns to prevent cross-column conflicts in user records",
+  "domain_cluster": "testing",
   "exported_functions": [
     "check_cross_column_duplicates"
   ],

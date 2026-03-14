@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/assets/__init__.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/assets/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Initializes the assets module for the orchestrate library, establishing the foundational namespace for asset-related functionality in the data platform.",
+  "purpose_statement": "Provides foundational assets and configurations for the orchestration library, enabling reusable resources and components across the data platform.",
   "domain_cluster": "orchestration",
   "exported_functions": [],
   "exported_classes": [],

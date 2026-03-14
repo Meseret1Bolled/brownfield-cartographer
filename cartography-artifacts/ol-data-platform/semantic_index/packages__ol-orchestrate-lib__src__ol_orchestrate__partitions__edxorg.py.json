@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/partitions/edxorg.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/partitions/edxorg.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines dynamic partitions for course and source data, enabling partitioned execution of data pipelines based on course and source identifiers.",
+  "purpose_statement": "Defines dynamic partition keys for organizing course data by source, enabling targeted data processing workflows.",
   "domain_cluster": "orchestration",
   "exported_functions": [],
   "exported_classes": [],

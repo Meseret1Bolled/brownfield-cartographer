@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Enrollment_Demographics_by_Education_aa6bdf8d-b5be-4142-a3fc-df4f0032189e.yaml",
   "relative_path": "src/ol_superset/assets/charts/Enrollment_Demographics_by_Education_aa6bdf8d-b5be-4142-a3fc-df4f0032189e.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides demographic analysis of course enrollments broken down by education level to understand learner backgrounds and inform educational strategy",
+  "purpose_statement": "Provides demographic breakdown of learners by education level, enabling analysis of enrollment patterns and educational background distribution among course participants.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

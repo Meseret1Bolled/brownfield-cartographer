@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/ol_superset/commands/export.py",
   "relative_path": "src/ol_superset/ol_superset/commands/export.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Exports all Superset assets from a specified instance to local YAML files, enabling backup and migration of dashboards, charts, datasets, and database configurations between environments.",
-  "domain_cluster": "ingestion",
+  "purpose_statement": "Export all Superset assets from an instance to a local directory for backup or migration purposes",
+  "domain_cluster": "utilities",
   "exported_functions": [
     "export"
   ],

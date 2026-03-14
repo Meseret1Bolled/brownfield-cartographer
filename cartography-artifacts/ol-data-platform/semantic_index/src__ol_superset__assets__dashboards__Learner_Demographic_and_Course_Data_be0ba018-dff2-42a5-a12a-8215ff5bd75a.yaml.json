@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/Learner_Demographic_and_Course_Data_be0ba018-dff2-42a5-a12a-8215ff5bd75a.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/Learner_Demographic_and_Course_Data_be0ba018-dff2-42a5-a12a-8215ff5bd75a.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays comprehensive learner demographic information including income data and course enrollment details",
+  "purpose_statement": "Delivers comprehensive learner demographic data integrated with course enrollment information for educational analytics",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

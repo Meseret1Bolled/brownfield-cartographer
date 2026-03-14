@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponpaymentversion.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponpaymentversion.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Handles coupon payment versions and discount management for MIT xPro e-commerce transactions.",
+  "purpose_statement": "Handles coupon payment versions for bulk coupon assignments, tracking discount amounts, types, expiration dates, and redemption limits for promotional campaigns.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_couponpaymentversion"

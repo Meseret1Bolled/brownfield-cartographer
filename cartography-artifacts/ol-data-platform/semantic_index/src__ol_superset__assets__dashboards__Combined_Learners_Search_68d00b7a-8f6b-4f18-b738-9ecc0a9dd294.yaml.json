@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/Combined_Learners_Search_68d00b7a-8f6b-4f18-b738-9ecc0a9dd294.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/Combined_Learners_Search_68d00b7a-8f6b-4f18-b738-9ecc0a9dd294.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Enables comprehensive search and analysis of combined learner data across multiple data sources for enrollment and order information.",
+  "purpose_statement": "Enables comprehensive search and analysis of learner data across multiple sources to support enrollment management and customer service operations.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

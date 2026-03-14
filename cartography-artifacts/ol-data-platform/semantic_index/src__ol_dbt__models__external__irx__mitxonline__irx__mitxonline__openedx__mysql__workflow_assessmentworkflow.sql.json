@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__workflow_assessmentworkflow.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__workflow_assessmentworkflow.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maintains assessment workflow states per course, tracking workflow modifications and current statuses for grading processes.",
+  "purpose_statement": "Monitors assessment workflow processes and their status changes over time to track the lifecycle of course evaluations and grading workflows.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__workflow_assessmentworkflow"

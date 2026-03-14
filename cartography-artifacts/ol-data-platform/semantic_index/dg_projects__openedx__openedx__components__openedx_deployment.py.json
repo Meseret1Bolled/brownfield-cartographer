@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/openedx/openedx/components/openedx_deployment.py",
   "relative_path": "dg_projects/openedx/openedx/components/openedx_deployment.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Factory component that creates complete OpenEdx data extraction pipeline including assets, sensors, and resources for specific deployments like mitx or xpro",
-  "domain_cluster": "orchestration",
+  "purpose_statement": "Creates configurable OpenEdX deployment components that extract course data and detect changes for data pipeline orchestration",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "build_assets",
     "build_sensors",

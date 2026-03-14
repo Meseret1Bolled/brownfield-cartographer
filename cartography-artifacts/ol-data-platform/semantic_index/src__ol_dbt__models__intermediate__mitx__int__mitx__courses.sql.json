@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitx/int__mitx__courses.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitx/int__mitx__courses.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a unified course catalog by combining course information from MITx Online and edX.org, deduplicating and standardizing course identifiers to provide a single source of truth for course metadata.",
+  "purpose_statement": "Creates a unified catalog of MITx courses by combining data from MITx Online and edX.org platforms, ensuring each course is represented only once with the most current information regardless of which platform it originated from.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitx__courses"

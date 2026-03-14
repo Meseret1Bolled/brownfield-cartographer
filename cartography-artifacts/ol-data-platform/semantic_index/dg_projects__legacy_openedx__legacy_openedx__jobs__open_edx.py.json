@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/legacy_openedx/legacy_openedx/jobs/open_edx.py",
   "relative_path": "dg_projects/legacy_openedx/legacy_openedx/jobs/open_edx.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines a Dagster graph that orchestrates the extraction of Open edX course data and user information for institutional research purposes",
+  "purpose_statement": "Orchestrates the extraction of Open edX course data and user information, preparing it for downstream analysis and storage in BigQuery",
   "domain_cluster": "orchestration",
   "exported_functions": [
     "edx_course_pipeline"

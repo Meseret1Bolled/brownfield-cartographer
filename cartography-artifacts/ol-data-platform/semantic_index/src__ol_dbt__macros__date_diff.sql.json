@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/date_diff.sql",
   "relative_path": "src/ol_dbt/macros/date_diff.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides a database-agnostic way to calculate the difference between two dates in various units, enabling consistent date arithmetic across different SQL dialects used in the data platform.",
+  "purpose_statement": "Provides a database-agnostic way to calculate the difference between two dates in various units, ensuring consistent date calculations across different database systems used in the data platform.",
   "domain_cluster": "utilities",
   "exported_functions": [
     "date_diff"

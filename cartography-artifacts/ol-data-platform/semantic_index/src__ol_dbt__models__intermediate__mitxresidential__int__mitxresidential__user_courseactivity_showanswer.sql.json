@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_showanswer.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_showanswer.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks when users view problem solutions in courses to understand help-seeking behavior",
+  "purpose_statement": "Tracks when students view correct answers for problems, enabling analysis of answer-checking behavior and potential academic integrity concerns.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxresidential__user_courseactivity_showanswer"

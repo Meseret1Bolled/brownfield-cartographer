@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__program_requirements.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__program_requirements.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Defines program requirements and course prerequisites for MITx Online programs, establishing the structural relationships between courses, electives, and core requirements to support academic program management.",
+  "purpose_statement": "Builds program requirement structures by mapping course and operator nodes to define core and elective requirements for academic programs.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__program_requirements"

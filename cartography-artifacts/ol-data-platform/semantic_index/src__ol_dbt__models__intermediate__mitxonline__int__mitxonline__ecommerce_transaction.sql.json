@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_transaction.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_transaction.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts and transforms detailed e-commerce transaction data from MITx Online, parsing JSON fields to create structured transaction attributes for payment processing and financial reporting.",
+  "purpose_statement": "Transforms raw ecommerce transaction data by extracting and structuring key payment information from JSON fields, enabling financial analysis and reconciliation of online course purchases.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__ecommerce_transaction"

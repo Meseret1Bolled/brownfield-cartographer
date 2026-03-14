@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/micromasters/marts__micromasters_course_certificates.sql",
   "relative_path": "src/ol_dbt/models/marts/micromasters/marts__micromasters_course_certificates.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Combines course certificate and grade information for Micromasters programs, providing a comprehensive view of student completion and performance across courses and programs.",
+  "purpose_statement": "Aggregates course certificate and grade information for Micromasters programs, providing a comprehensive view of student certifications and academic performance across course runs.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__micromasters_course_certificates"

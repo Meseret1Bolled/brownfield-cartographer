@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__workflow_assessmentworkflowstep.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__workflow_assessmentworkflowstep.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Identify completed assessment workflow steps to track grading progress and identify bottlenecks in the assessment process.",
-  "domain_cluster": "ingestion",
+  "purpose_statement": "Extracts assessment workflow step data filtered by active workflows to track the progress and completion status of assessment processes.",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitx__openedx__mysql__workflow_assessmentworkflowstep"
   ],

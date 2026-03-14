@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_signatorypage.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_signatorypage.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts CMS signatory page data for managing and displaying official signatory information on course certificates and other institutional documents.",
+  "purpose_statement": "Transforms CMS signatory page data from the PostgreSQL database, extracting key metadata about signatory pages including names, titles, and organizational affiliations for use in the warehouse.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__cms_signatorypage"

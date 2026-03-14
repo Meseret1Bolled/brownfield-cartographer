@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/legacy_openedx/build.yaml",
   "relative_path": "dg_projects/legacy_openedx/build.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines Docker build configuration for deploying legacy Open edX data extraction pipelines, specifying build context, Dockerfile location, and registry target",
+  "purpose_statement": "Configures Docker build settings for a legacy Open edX data extraction service, specifying the build context, Dockerfile location, and registry target to enable containerized deployment.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/afact_discussion_engagement_956060cb-b34d-4042-a1c6-ea1c4b4eca9f.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/afact_discussion_engagement_956060cb-b34d-4042-a1c6-ea1c4b4eca9f.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Measures discussion engagement metrics to evaluate the effectiveness of discussion forums and student participation in course discussions.",
+  "purpose_statement": "Measures discussion engagement metrics at a granular level, tracking user interactions with discussion topics and content blocks.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

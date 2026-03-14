@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__blockcompletion.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__blockcompletion.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks student progress by capturing block-level completion data from MITx Online courses, enabling detailed learning analytics",
+  "purpose_statement": "Records user progress on individual course blocks, tracking completion status and timestamps to monitor learning outcomes and course progression.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__openedx__blockcompletion"

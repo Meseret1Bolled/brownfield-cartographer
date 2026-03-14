@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_usercoupon.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_usercoupon.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages user coupon data for e-commerce transactions, supporting promotional discount tracking and redemption workflows.",
+  "purpose_statement": "Manages user coupon allocation and tracking for e-commerce promotions",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__ecommerce_usercoupon"

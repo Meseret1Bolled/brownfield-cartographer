@@ -3,7 +3,7 @@
   "relative_path": "dg_projects/b2b_organization/b2b_organization/partitions/b2b_organization.py",
   "language": "Language.PYTHON",
   "purpose_statement": "Defines dynamic partitions for B2B organizations to enable partitioned data processing workflows",
-  "domain_cluster": "transformation",
+  "domain_cluster": "ingestion",
   "exported_functions": [],
   "exported_classes": [],
   "pagerank_score": 0.000699,

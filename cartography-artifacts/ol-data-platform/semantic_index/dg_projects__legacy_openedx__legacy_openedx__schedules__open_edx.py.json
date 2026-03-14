@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/legacy_openedx/legacy_openedx/schedules/open_edx.py",
   "relative_path": "dg_projects/legacy_openedx/legacy_openedx/schedules/open_edx.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines daily execution schedules for Open edX data pipelines across different business units (residential, mitxpro, mitxonline), ensuring timely processing of course data.",
-  "domain_cluster": "orchestration",
+  "purpose_statement": "Schedules daily pipeline runs for different business units to process Open edX course data",
+  "domain_cluster": "utilities",
   "exported_functions": [
     "residential_edx_daily_schedule",
     "xpro_edx_daily_schedule",

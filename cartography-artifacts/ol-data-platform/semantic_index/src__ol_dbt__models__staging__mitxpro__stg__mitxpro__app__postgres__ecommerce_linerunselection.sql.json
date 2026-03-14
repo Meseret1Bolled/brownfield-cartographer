@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_linerunselection.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_linerunselection.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Records when a user deselects a specific course run from their enrollment selection to support enrollment management workflows",
+  "purpose_statement": "Tracks user selections of course runs within a line item, capturing which specific course run a user has chosen for enrollment.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_linerunselection"

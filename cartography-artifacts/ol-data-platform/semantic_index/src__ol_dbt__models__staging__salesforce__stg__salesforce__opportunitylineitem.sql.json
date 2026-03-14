@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/salesforce/stg__salesforce__opportunitylineitem.sql",
   "relative_path": "src/ol_dbt/models/staging/salesforce/stg__salesforce__opportunitylineitem.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extract and transform Salesforce opportunity line item data from raw warehouse format, removing deleted records and standardizing field names for detailed opportunity analysis",
+  "purpose_statement": "Processes Salesforce opportunity line items into a staging table with standardized field names and timestamp formatting, enabling detailed product-level sales analysis and revenue tracking.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__salesforce__opportunitylineitem"

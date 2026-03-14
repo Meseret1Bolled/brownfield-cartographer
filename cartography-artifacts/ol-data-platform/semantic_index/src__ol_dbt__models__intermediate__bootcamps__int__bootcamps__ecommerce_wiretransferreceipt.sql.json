@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__ecommerce_wiretransferreceipt.sql",
   "relative_path": "src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__ecommerce_wiretransferreceipt.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts and transforms wire transfer receipt data from the ecommerce system to provide a clean view of offline payment transactions for bootcamp orders.",
-  "domain_cluster": "transformation",
+  "purpose_statement": "Extracts wire transfer payment receipt details for bootcamp ecommerce transactions",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "int__bootcamps__ecommerce_wiretransferreceipt"
   ],

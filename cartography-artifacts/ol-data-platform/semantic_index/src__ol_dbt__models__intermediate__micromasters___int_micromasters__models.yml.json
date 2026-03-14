@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/micromasters/_int_micromasters__models.yml",
   "relative_path": "src/ol_dbt/models/intermediate/micromasters/_int_micromasters__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Consolidates program certificate data from both MicroMasters and MITx Online databases to create a unified view of learner achievements across different certificate types and issuance sources.",
+  "purpose_statement": "Defines the schema and documentation for DEDP proctored exam grade data model",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

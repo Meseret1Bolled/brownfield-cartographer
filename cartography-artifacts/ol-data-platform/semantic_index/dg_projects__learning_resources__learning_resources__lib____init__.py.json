@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/learning_resources/learning_resources/lib/__init__.py",
   "relative_path": "dg_projects/learning_resources/learning_resources/lib/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Serves as the package initialization module for the learning resources library",
+  "purpose_statement": "Provides the package namespace for learning resources utilities",
   "domain_cluster": "utilities",
   "exported_functions": [],
   "exported_classes": [],

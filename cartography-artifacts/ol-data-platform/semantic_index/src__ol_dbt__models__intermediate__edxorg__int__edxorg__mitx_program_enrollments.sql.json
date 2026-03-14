@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_program_enrollments.sql",
   "relative_path": "src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_program_enrollments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Identifies the most recent enrollment record for each user in MITx programs by filtering to the latest certificate award or enrollment date, then enriches this data with micromasters program identifiers and standardized program names for downstream analytics.",
+  "purpose_statement": "Identifies the most recent enrollment record for each user in MITx programs, including both micromasters and other program types, by filtering to the latest certificate or enrollment date per user-program combination.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__edxorg__mitx_program_enrollments"

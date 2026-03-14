@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Chatbots_90099854-5b34-4d06-926c-f58f42b2d69e.yaml",
   "relative_path": "src/ol_superset/assets/charts/Chatbots_90099854-5b34-4d06-926c-f58f42b2d69e.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays chatbot interaction data between users and agents, including conversation threads and metadata for customer service analysis",
+  "purpose_statement": "Displays chatbot conversation data for analysis of agent interactions and user communications",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

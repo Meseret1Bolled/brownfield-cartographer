@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/micromasters/int__micromasters__program_enrollments.sql",
   "relative_path": "src/ol_dbt/models/intermediate/micromasters/int__micromasters__program_enrollments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a deduplicated enrollment dataset for MicroMasters programs, handling cases where learners are enrolled in multiple related tracks to ensure accurate program-level reporting.",
+  "purpose_statement": "Consolidates program enrollment data across multiple platforms to track learner participation",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__micromasters__program_enrollments"

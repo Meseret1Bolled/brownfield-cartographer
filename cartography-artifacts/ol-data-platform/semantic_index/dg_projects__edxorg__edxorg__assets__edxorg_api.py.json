@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/edxorg/edxorg/assets/edxorg_api.py",
   "relative_path": "dg_projects/edxorg/edxorg/assets/edxorg_api.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Extracts and processes metadata about educational programs and their associated courses from the edX.org API, providing structured program information for downstream data assets.",
+  "purpose_statement": "Extracts and processes program metadata from EdX.org APIs, transforming course and program data into structured assets for downstream analytics",
   "domain_cluster": "transformation",
   "exported_functions": [
     "edxorg_program_metadata",

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_coursepage.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_coursepage.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Cleans raw course page data from the CMS into a standardized staging model with consistent field names and extracted price information for course catalog analytics.",
+  "purpose_statement": "Extracts and cleans course page data from CMS, providing structured information about individual courses including descriptions, pricing, and multimedia content for course catalog and marketing.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__app__postgres__cms_coursepage"

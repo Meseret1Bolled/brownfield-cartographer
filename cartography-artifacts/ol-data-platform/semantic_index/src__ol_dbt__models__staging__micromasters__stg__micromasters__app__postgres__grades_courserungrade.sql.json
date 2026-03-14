@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_courserungrade.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_courserungrade.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maintains course run final grades for MicroMasters learners, tracking their academic performance and completion status.",
+  "purpose_statement": "Tracks final course run grades for MicroMasters users including pass/fail status and payment information to support academic progress monitoring and credential issuance.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__grades_courserungrade"

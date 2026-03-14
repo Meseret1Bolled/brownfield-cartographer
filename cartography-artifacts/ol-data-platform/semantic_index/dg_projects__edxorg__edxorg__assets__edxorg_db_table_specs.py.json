@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/edxorg/edxorg/assets/edxorg_db_table_specs.py",
   "relative_path": "dg_projects/edxorg/edxorg/assets/edxorg_db_table_specs.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines external asset specifications for edxorg archive database table exports, enabling proper dependency tracking for TSV files that are materialized by other processes in the data pipeline.",
+  "purpose_statement": "Defines external asset specifications for processed EdX.org database tables to establish proper dependency tracking in the data pipeline",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

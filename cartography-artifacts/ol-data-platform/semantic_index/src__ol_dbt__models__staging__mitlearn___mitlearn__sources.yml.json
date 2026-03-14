@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitlearn/_mitlearn__sources.yml",
   "relative_path": "src/ol_dbt/models/staging/mitlearn/_mitlearn__sources.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines the raw data source structure for MIT Learn user accounts, enabling the data platform to ingest and track user authentication and profile information from the Airbyte pipeline",
+  "purpose_statement": "Defines the source configuration for raw MIT Learn data from Airbyte, establishing the connection to the warehouse and describing the user table schema",
   "domain_cluster": "ingestion",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__profiles_profile.sql",
   "relative_path": "src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__profiles_profile.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transform MIT Learn user profile data from raw warehouse format into cleaned staging table with standardized field names and null handling",
+  "purpose_statement": "Transforms MIT Learn user profile data into a cleaned staging table, standardizing field names and handling nulls to prepare user information for downstream analytics.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitlearn__app__postgres__profiles_profile"

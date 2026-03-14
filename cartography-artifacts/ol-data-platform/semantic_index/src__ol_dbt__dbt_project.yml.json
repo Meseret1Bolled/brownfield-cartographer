@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/dbt_project.yml",
   "relative_path": "src/ol_dbt/dbt_project.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines the dbt project configuration including model locations, variable settings, and dispatch rules to orchestrate the data transformation pipeline",
+  "purpose_statement": "Configures dbt project settings including model paths, macros, and environment variables",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

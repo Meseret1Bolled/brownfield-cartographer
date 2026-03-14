@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/Learn_User_Profile_47b963a4-74a2-472c-9a3b-a9986be146e9.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/Learn_User_Profile_47b963a4-74a2-472c-9a3b-a9986be146e9.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays detailed user profile information for learners in the Learn platform, including new user trends and last updated timestamps",
+  "purpose_statement": "Enables learning administrators to view and analyze individual user profiles, tracking new user acquisition and providing detailed user engagement data for personalized learning experiences.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

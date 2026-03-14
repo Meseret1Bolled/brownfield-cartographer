@@ -1,6 +1,6 @@
 # CODEBASE.md — `ol-data-platform`
 
-_Generated: 2026-03-14T17:14:37.409989+00:00_
+_Generated: 2026-03-14T20:26:46.991615+00:00_
 _System type: dbt data transformation project_
 
 ## Architecture Overview
@@ -12,19 +12,19 @@ _System type: dbt data transformation project_
 Top modules by PageRank (highest structural influence):
 
 1. `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__tracking_logs__user_activity.sql`
-   - Purpose: Creates an incremental staging model of user activity tracking logs, filtering out invalid records and deduplicating by key user activity fields for behavioral analysis.
+   - Purpose: Aggregates and deduplicates user activity tracking logs from the learning platform, providing comprehensive behavioral analytics for understanding learner engagement and platform usage patterns.
    - PageRank: `0.00731` | Domain: `transformation` | Velocity: `1` commits (90d)
 2. `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__tracking_logs__user_activity.sql`
-   - Purpose: Captures and processes user activity tracking logs from the MITx residential open edX platform, enabling analysis of how users interact with course content and platform features over time.
+   - Purpose: Tracks and logs user activity on the Residential MITx open edX platform, capturing detailed user interactions with course content and system events for analytics and auditing purposes.
    - PageRank: `0.00617` | Domain: `transformation` | Velocity: `1` commits (90d)
 3. `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__users.sql`
-   - Purpose: Provides a unified view of user information by combining user data from MITx Online with profile details from both MITx Online and MicroMasters platforms, enabling cross-platform user identification and enrichment.
+   - Purpose: Creates a unified user profile table by combining user data from MITx Online, legal addresses, profiles, and MicroMasters accounts to support user identification and matching across platforms.
    - PageRank: `0.00609` | Domain: `transformation` | Velocity: `1` commits (90d)
 4. `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__tracking_logs__user_activity.sql`
-   - Purpose: Captures and cleans user activity tracking logs from xPro, filtering out invalid events and deduplicating records to provide a reliable source of user engagement data.
+   - Purpose: Captures and processes user activity tracking logs from xPro courses, filtering out invalid entries and extracting relevant event details for analysis.
    - PageRank: `0.00591` | Domain: `transformation` | Velocity: `1` commits (90d)
 5. `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__tracking_logs__user_activity.sql`
-   - Purpose: Transforms raw edX tracking logs into a cleaned user activity dataset by extracting and normalizing user interaction events, ensuring incremental updates only process new data.
+   - Purpose: Captures and processes user activity tracking logs from edX.org to provide detailed behavioral data for analysis, enabling understanding of how users interact with course content.
    - PageRank: `0.00557` | Domain: `transformation` | Velocity: `1` commits (90d)
 
 ## Data Sources & Sinks
@@ -90,3334 +90,3334 @@ Files with most commits in the last 90 days (likely pain points):
 ### configuration
 
 - `build.yaml`
-  - Stores registry configuration for the build system, likely defining artifact storage locations or package repositories for the data platform.
+  - Defines build configuration for container registry integration, establishing foundation for automated deployment pipeline
   - LOC: `2` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/__init__.py`
-  - Contains no implementation - appears to be an empty package initialization file
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/b2b_organization/b2b_organization/sensors/__init__.py`
-  - Provides an empty package initialization for the B2B organization sensors module.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/b2b_organization/build.yaml`
-  - Configures Docker build settings for the b2b_organization data pipeline, specifying build context, Dockerfile location, and registry destination
+  - Configures Docker build settings for the B2B organization data pipeline, specifying build context, Dockerfile location, and container registry
   - LOC: `6` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/canvas/build.yaml`
-  - Configures Docker build settings for the Canvas data pipeline
+  - Defines Docker build configuration for Canvas data pipeline, specifying build context and target registry
   - LOC: `6` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/canvas/canvas/__init__.py`
-  - Provides initialization for the Canvas data platform module, establishing the foundation for Canvas-related data operations.
+  - Defines the public interface and exports for the Canvas data platform project
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/canvas/canvas/assets/__init__.py`
-  - Provides initialization for Canvas assets, establishing the foundation for Canvas data extraction and processing workflows.
+  - Exports the public interface for Canvas asset modules
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/canvas/canvas/defs/__init__.py`
-  - Module for canvas definitions initialization
+  - Initializes the canvas definitions package
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/canvas/canvas/lib/__init__.py`
-  - Module for canvas library initialization
+  - Initializes the canvas library package
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/canvas/canvas/resources/__init__.py`
-  - Provides initialization for Canvas resources, serving as a container for Canvas-related API client configurations.
+  - Exports the public interface for Canvas resource modules
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/canvas/canvas/sensors/__init__.py`
-  - Module for canvas sensors initialization
+  - Initializes the canvas sensors package
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/data_loading/build.yaml`
+  - Configures the build process for the data loading service, enabling containerization and deployment to a registry for scalable data operations.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/data_platform/build.yaml`
-  - Module 3 is a build configuration file that defines Docker build settings for the data platform, specifying the build context, Dockerfile location, and container registry for deployment.
+  - Docker build configuration file that specifies how to build the data platform container, including context directory, Dockerfile location, and registry destination.
   - LOC: `6` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_platform/data_platform/__init__.py`
-  - Initialises the data platform package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_platform/data_platform/assets/__init__.py`
-  - Initialises the assets package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_platform/data_platform/assets/metadata/__init__.py`
-  - Initialises the metadata package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_platform/data_platform/defs/__init__.py`
-  - Initialises the definitions package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/edxorg/build.yaml`
-  - Docker build configuration for edxorg data processing service - defines how to containerize the edxorg application for deployment
+  - Docker build configuration for edxorg data pipeline
   - LOC: `6` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/assets/edxorg_db_table_specs.py`
-  - Defines external asset specifications for edxorg archive database table exports, enabling proper dependency tracking for TSV files that are materialized by other processes in the data pipeline.
-  - LOC: `42` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/lib/__init__.py`
-  - Provides package-level initialization for edxorg library module
+- `dg_projects/edxorg/edxorg/__init__.py`
+  - Initialises the edxorg package structure
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/ops/__init__.py`
-  - Provides package-level initialization for edxorg operations module
+- `dg_projects/edxorg/edxorg/assets/__init__.py`
+  - Serves as an initialization module for the edxorg package, likely containing package-level configurations or exports
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/edxorg/edxorg/assets/edxorg_db_table_specs.py`
+  - Defines external asset specifications for processed EdX.org database tables to establish proper dependency tracking in the data pipeline
+  - LOC: `42` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/edxorg/edxorg/defs/__init__.py`
+  - Provides the main definition entry points for the edxorg data platform, serving as the module interface for asset and sensor definitions.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/edxorg/edxorg/io_managers/__init__.py`
+  - Initialises the edxorg io_managers package structure
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/edxorg/edxorg/jobs/__init__.py`
+  - Initialises the edxorg jobs package structure
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/lakehouse/build.yaml`
-  - Configures Docker build settings for the lakehouse project
+  - Configuration file defining Docker build context and registry for the lakehouse project, enabling containerized deployment of data processing infrastructure
   - LOC: `6` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/lakehouse/lakehouse/__init__.py`
+  - Placeholder module for lakehouse package, likely serving as an entry point for the lakehouse data processing system
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/lakehouse/lakehouse/resources/__init__.py`
+  - Serves as a placeholder for resource imports, organizing the lakehouse project's resource modules for consistent access patterns.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/learning_resources/build.yaml`
-  - Defines Docker build configuration for learning resources project, specifying build context and registry location
+  - Configuration for building Docker image for learning resources project
   - LOC: `6` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/learning_resources/learning_resources/__init__.py`
-  - Serves as the package initialization file for the learning_resources module, establishing it as a Python package
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/learning_resources/learning_resources/assets/__init__.py`
-  - Initializes the video shorts asset module for import into the data platform.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/learning_resources/learning_resources/defs/__init__.py`
-  - Defines the video shorts asset definitions for the data platform.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/learning_resources/learning_resources/definitions.py` ⚠️dead-code-candidate
+  - Defines and configures data extraction assets and schedules for learning resources from MIT Sloan Executive Education and Video Shorts platforms, enabling metadata collection for downstream applications.
+  - LOC: `175` | PageRank: `0.00070` | Complexity: `5.0`
 - `dg_projects/learning_resources/learning_resources/lib/contants.py`
-  - Defines standardized thumbnail dimensions for video short content to ensure consistent visual presentation across platforms
+  - Defines standardized thumbnail dimensions for video content to ensure consistent visual presentation across platforms
   - LOC: `9` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/learning_resources/learning_resources/resources/__init__.py`
-  - Serves as the package initialization file for the learning_resources resources submodule, establishing it as a Python package
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/learning_resources/learning_resources/sensors/__init__.py`
-  - Initializes the video shorts sensor module for import into the data platform.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/legacy_openedx/build.yaml`
-  - Defines Docker build configuration for deploying legacy Open edX data extraction pipelines, specifying build context, Dockerfile location, and registry target
+  - Configures Docker build settings for a legacy Open edX data extraction service, specifying the build context, Dockerfile location, and registry target to enable containerized deployment.
   - LOC: `6` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/legacy_openedx/legacy_openedx/resources/sqlite_db.py` ⚠️dead-code-candidate
-  - Provides SQLite database client and Dagster resource for local development and testing of data pipelines without requiring a full MySQL setup
-  - LOC: `63` | PageRank: `0.00070` | Complexity: `1.0`
+- `dg_projects/legacy_openedx/legacy_openedx/definitions.py` ⚠️dead-code-candidate
+  - Initializes and configures data extraction resources for legacy Open edX course data pipelines, including authentication with Vault for secrets management, GCS connections for cloud storage, and various database clients for different deployment environments.
+  - LOC: `226` | PageRank: `0.00070` | Complexity: `7.0`
 - `dg_projects/openedx/build.yaml`
-  - Docker build configuration for the OpenEdX data extraction service
+  - Docker build configuration for OpenEdX data pipeline
   - LOC: `6` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/assets/__init__.py`
-  - Serves as a placeholder module for asset exports, likely intended for future expansion or organizational structure.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/components/__init__.py`
-  - Exports the OpenEdx deployment component factory as the main interface for creating OpenEdx data pipelines
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/openedx/openedx/definitions.py` ⚠️dead-code-candidate
-  - Main OpenEdX data extraction repository definition with Vault authentication and S3 bucket configuration
+  - Configuration and vault authentication for OpenEdX data extraction pipeline
   - LOC: `223` | PageRank: `0.00070` | Complexity: `4.0`
-- `dg_projects/openedx/openedx/ops/__init__.py`
-  - This module appears to be an empty initialization file for the ops package, likely serving as a namespace container for operational Dagster components.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/partitions/openedx.py`
-  - Defines partition configurations for OpenEdx deployments and course runs to enable multi-tenant data extraction
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/schedules/__init__.py`
-  - Placeholder module for schedule exports, maintaining organizational structure for future expansion.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/sensors/__init__.py`
-  - This module appears to be an empty initialization file for the sensors package, likely serving as a namespace container for sensor-related functionality.
+- `dg_projects/openedx/openedx/lib/__init__.py`
+  - Placeholder module for openedx library, likely serving as an entry point for the Open edX platform integration
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/student_risk_probability/__init__.py`
-  - Module 3 acts as an initialization file for the student risk probability package, setting up the package structure and imports.
+  - Placeholder module for student risk probability package initialization, serving as the package entry point
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/student_risk_probability/build.yaml`
-  - Module 2 defines the build configuration for the student risk probability Docker image, specifying the build context, Dockerfile location, and target registry for deployment.
+  - Defines Docker build configuration for the student risk probability service, specifying build context, Dockerfile location, and registry for container deployment
   - LOC: `6` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/student_risk_probability/student_risk_probability/__init__.py`
-  - Module 5 serves as an initialization file for the student risk probability subpackage, organizing the internal structure and imports for the risk probability functionality.
+  - Placeholder module for student risk probability subpackage initialization, serving as the package entry point
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/student_risk_probability/student_risk_probability/assets/__init__.py`
-  - Placeholder module for assets package
+  - Module 3 serves as an empty initialization file for the assets package, establishing the package structure without providing any functionality.
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/student_risk_probability/student_risk_probability/lib/__init__.py`
-  - Placeholder module for lib package
+  - Module 5 serves as an empty initialization file for the lib package, establishing the package structure without providing any functionality.
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/student_risk_probability/student_risk_probability/resources/__init__.py`
-  - Placeholder module for resources package
+  - Module 1 serves as an empty initialization file for the resources package, establishing the package structure without providing any functionality.
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/constants.py`
-  - Defines configuration constants and export type mappings for the data platform, establishing deployment environments and supported course export formats.
+  - Defines configuration constants and environment-specific settings for the data platform, including deployment targets, export formats, and database table mappings used across the orchestration system.
   - LOC: `71` | PageRank: `0.00070` | Complexity: `1.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_types/__init__.py`
-  - Serves as a namespace package for Dagster type definitions in the orchestration library
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/__init__.py`
-  - Exports pooled PostgreSQL storage implementations for Dagster, enabling consistent connection pooling across run, event log, and schedule storage components
+  - Exports pooled Postgres storage implementations for Dagster to replace default storage classes that lack proper connection management
   - LOC: `19` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/utils.py` ⚠️dead-code-candidate
-  - Handles Vault authentication and provides S3 bucket configuration mappings based on deployment environment, enabling secure credential management and consistent storage location references.
-  - LOC: `94` | PageRank: `0.00070` | Complexity: `8.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/yaml_config_helper.py` ⚠️dead-code-candidate
-  - Loads configuration files from disk to provide flexible, externalized settings for data pipeline execution
-  - LOC: `21` | PageRank: `0.00070` | Complexity: `2.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/event_log.py` ⚠️dead-code-candidate
+  - Provides Dagster event log storage using Postgres with connection pooling to handle high-volume event logging without connection limits
+  - LOC: `204` | PageRank: `0.00070` | Complexity: `4.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/run_storage.py` ⚠️dead-code-candidate
+  - Provides Dagster run storage using Postgres with connection pooling to prevent database connection exhaustion during complex data pipeline execution
+  - LOC: `198` | PageRank: `0.00070` | Complexity: `4.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/schedule_storage.py` ⚠️dead-code-candidate
+  - Implements a Postgres-backed schedule storage with connection pooling to efficiently manage database connections for Dagster schedule persistence
+  - LOC: `197` | PageRank: `0.00070` | Complexity: `4.0`
 - `src/ol_dbt/dbt_project.yml`
-  - Defines the dbt project configuration including model locations, variable settings, and dispatch rules to orchestrate the data transformation pipeline
+  - Configures dbt project settings including model paths, macros, and environment variables
   - LOC: `137` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/macros/apply_grants_macro_override.sql` ⚠️dead-code-candidate
+  - Implements conditional database grant application logic that only applies permissions in production environments to protect test data in non-production environments
+  - LOC: `9` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/macros/duckdb_glue_integration.sql` ⚠️dead-code-candidate
+  - Enables seamless switching between DuckDB and Trino database targets by providing unified access to Iceberg tables through AWS Glue catalog, supporting flexible development environments
+  - LOC: `30` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/macros/override_ref.sql` ⚠️dead-code-candidate
+  - Overrides the default dbt ref() macro to enable local development with automatic fallback to production data sources when local tables don't exist, supporting incremental development workflows.
+  - LOC: `62` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/macros/override_source.sql` ⚠️dead-code-candidate
+  - Routes database queries to appropriate data sources based on execution environment, allowing DuckDB development to transparently access production data through Glue catalog views
+  - LOC: `27` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/macros/starburst_trino_grant_sql.sql` ⚠️dead-code-candidate
-  - Customizes database permission management to work with Starburst Galaxy's role-based permissions system by overriding default grant and revoke SQL statements to operate only on database roles.
+  - Customizes database permission management for Starburst Galaxy by modifying grant and revoke operations to work specifically with database roles, ensuring proper access control in the distributed data platform.
   - LOC: `12` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/dimensional/_dim__models.yml`
+  - Defines the dimensional model structure for video engagement analytics, specifying the schema for tracking video interactions and related metadata across the learning platform.
+  - LOC: `869` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/external/irx/mitxonline/_irx_mitxonline__models.yml`
-  - Language.YAML module with 233 lines. No exported symbols detected.
+  - Defines model metadata for user ID mapping, teams, and teams membership without actual data extraction logic
   - LOC: `233` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/intermediate/combined/_combined_models.yml`
-  - Defines the schema and validation rules for the combined users table, specifying required fields, data types, and constraints for user data from multiple platforms
+  - Defines the data model schema and validation rules for the combined users table, specifying column definitions, data types, constraints, and accepted values to ensure data quality and consistency across the unified user dataset.
   - LOC: `390` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/intermediate/edxorg/_int_edxorg__models.yml`
-  - Defines the structure and metadata for MITx course runs on edX.org, providing a reference for course information like titles, departments, and enrollment periods.
-  - LOC: `927` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/intermediate/learn-ai/_learn_ai__models.yml.yml`
+  - Defines the data structure and validation rules for intermediate models that capture AI chatbot interactions, ensuring data integrity for TutorBot and other chatbot conversation data.
+  - LOC: `129` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/intermediate/micromasters/subqueries/__int_micromasters_subqueries__models.yml`
   - Language.YAML module with 523 lines. No exported symbols detected.
   - LOC: `523` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/intermediate/mitx/_int_mitx__models.yml`
-  - Defines the schema and validation rules for intermediate models that combine MITx Online and edX.org data, establishing data quality tests and column specifications for programs, courses, and other entities.
+  - Define the schema and data validation rules for intermediate MITx models that combine data from MITx Online, edX.org, and MicroMasters platforms for programs and courses.
   - LOC: `508` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/intermediate/mitxonline/_int_mitxonline__models.yml`
-  - Provides metadata documentation for intermediate models, establishing data quality tests and column descriptions for MITx Online analytics tables.
-  - LOC: `2183` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/intermediate/mitxonline/subqueries/__int_mitxonline_subqueries__models.yml`
-  - Documents the business rules for 14.009x course application across DEDP program tracks, specifying that pre-Fall 2023 completions can apply to International Development track while post-Fall 2023 completions only count toward Public Policy track, preventing double-counting.
+  - Provides a structured definition and validation rules for the good economics for hard times program subquery, ensuring data integrity for program enrollment tracking.
   - LOC: `26` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/intermediate/mitxpro/_int_mitxpro__models.yml`
-  - Defines the schema for a unified orders table that combines B2B and regular orders, establishing the structure for downstream analytics on purchase behavior and order processing.
+  - Defines the structure and documentation for a combined orders table that merges B2B and regular orders for unified order analysis
   - LOC: `2191` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/marts/combined/_marts__combined__models.yml`
-  - Defines the schema and validation rules for combined user and course-to-program association data, ensuring data integrity and uniqueness across platforms for mart models.
+  - Defines the schema and validation rules for combined user and program enrollment data models, ensuring data integrity and consistency across platform-specific user information and program enrollment details.
   - LOC: `983` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/marts/micromasters/_marts_micromasters__models.yml`
-  - Defines data models and their documentation for MicroMasters mart tables to support data governance and understanding of the mart layer structure
-  - LOC: `277` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/marts/mitxonline/_marts__mitxonline__models.yml`
-  - Defines metadata and configuration for MITx Online marts including course certificates and user profiles, establishing data governance and column-level documentation for downstream consumption.
+  - Defines metadata and column descriptions for MITx Online mart models including course certificates and user profiles.
   - LOC: `445` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/marts/mitxpro/_marts__mitxpro__models.yml`
-  - Defines the schema and validation rules for XPro e-commerce product data, ensuring data integrity for product listings and course offerings.
+  - Defines the data model for xPro e-commerce products, establishing the structure and validation rules for product information including pricing, dates, and course/program details.
   - LOC: `140` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/marts/ocw/_marts__ocw__models.yml`
-  - Defines the schema and validation rules for OCW course data, ensuring data integrity for courses managed in OCW Studio.
+  - Defines the data model for OCW courses, establishing the structure and validation rules for course metadata including publication status, course numbers, and other course attributes.
   - LOC: `74` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/reporting/_reporting__models.yml` 🔥`21`
+  - Defines the structure and validation rules for the program summary report, ensuring consistent reporting of program-level metrics including enrollments, certificates, and user demographics across different program types.
+  - LOC: `1134` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/reporting/_reporting__sources.yml`
-  - Defines source metadata for the reporting schema, specifically documenting the student risk probability table which contains model-generated risk scores for identifying potentially suspicious student behavior.
+  - Defines a source for student risk probability data from a logistic regression model for monitoring suspicious behavior.
   - LOC: `25` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/bootcamps/_stg_bootcamps__models.yml`
+  - Defines data validation rules and column specifications for bootcamp-related ecommerce wire transfer receipts and payment data, ensuring data quality and consistency for financial reconciliation processes.
+  - LOC: `624` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/staging/edxorg/_edxorg_sources.yml`
-  - Defines the raw data sources and their schemas for the edX data warehouse, establishing the foundation for all subsequent data transformation and analysis processes.
+  - Defines the source configuration for edX.org data, establishing the connection and schema structure for raw data ingestion from various edX.org sources.
   - LOC: `1177` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/learn-ai/_learn_ai__sources.yml`
-  - Defines the source data structure for Learn AI application data, establishing the raw tables and columns available from the PostgreSQL database for downstream modeling.
-  - LOC: `117` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/micromasters/_stg_micromasters__models.yml`
-  - Stores coupon redemption records linking discounts to specific orders, ensuring accurate tracking of promotional usage and preventing duplicate redemptions.
-  - LOC: `988` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/edxorg/_stg__edxorg__models.yml`
+  - Defines the data model structure for MITx course metadata, establishing the schema for course information including platform, institution, dates, and organizational details.
+  - LOC: `1243` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/micromasters/_micromasters__sources.yml`
+  - Defines the data source configuration for MicroMasters raw data tables, establishing connections to various ecommerce and user data tables in the warehouse.
+  - LOC: `613` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/staging/mitxonline/_mitxonline__sources.yml`
-  - Defines the source data structure for MITx Online warehouse data, mapping raw tables from various loaders (Airbyte) to their respective schemas and providing column-level descriptions for downstream data processing
+  - Defines raw data sources from MITx Online platform including email optouts, ecommerce data, and courseware information
   - LOC: `2097` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/mitxpro/_mitxpro__sources.yml`
-  - Defines source configuration for raw B2B ecommerce tables from Postgres, establishing data lineage and metadata for warehouse ingestion
-  - LOC: `2344` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/staging/mitxpro/_stg_mitxpro__models.yml`
-  - Defines the schema and validation rules for B2B coupon redemption data, ensuring data integrity for tracking when coupons are used to place orders.
+  - Defines the structure and validation rules for B2B coupon redemption data, ensuring data integrity for coupon usage tracking in bulk orders.
   - LOC: `2250` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/staging/mitxresidential/_mitxresidential__sources.yml`
-  - Defines the source data models and their metadata for the MITx residential data warehouse, establishing the foundation for all subsequent data transformations.
+  - Defines source metadata for MITx open edX data warehouse tables, establishing the connection between raw data sources and downstream transformation models for user and course role data.
   - LOC: `1144` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/staging/mitxresidential/_stg_mitxresidential__models.yml`
-  - Defines the schema and data quality tests for the MITx residential user table, ensuring reliable user identity and profile information for downstream analytics and reporting.
+  - Defines the data model and validation rules for user authentication data in the Residential MITx open edX system, ensuring data integrity for user management and access control.
   - LOC: `538` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/zendesk/_stg_zendesk_models.yml`
+  - Define data model schema and validation rules for Zendesk ticket data in the data warehouse
+  - LOC: `411` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/zendesk/_zendesk__sources.yml`
+  - Defines the schema and metadata for raw Zendesk ticket data, establishing the structure for how support ticket information is stored in the warehouse.
+  - LOC: `334` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/package-lock.yml`
+  - Locks specific versions of dbt packages to ensure reproducible builds
+  - LOC: `24` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/packages.yml`
-  - Specifies version ranges for dbt packages to allow controlled updates within safe boundaries while maintaining compatibility
+  - Defines package dependencies with version constraints for dbt project
   - LOC: `14` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/profiles.yml`
-  - Configures database connection profiles for different environments (QA, production, development) to enable dbt to connect to appropriate data warehouses based on deployment context
+  - Configures database connections for development, QA, and production environments using Trino and DuckDB
   - LOC: `76` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/seeds/_seed_doc.yml`
-  - Defines seed data structures for user access roles and platform metadata to enable row-level security filtering and platform information tracking in downstream analytics
+  - Defines seed data for row-level access controls and platform metadata in analytics, enabling secure and consistent data access across MITx Online and edX.org.
   - LOC: `54` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/databases/Superset_Metadata_DB.yaml`
-  - Establishes connection parameters for Superset's metadata database to track dashboard and dataset configurations.
-  - LOC: `14` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/databases/Trino.yaml`
-  - Configures database connection settings for Trino to access production data lake resources.
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/metadata.yaml` 🔥`6`
-  - Provides metadata for dashboard assets including version control and type information
-  - LOC: `3` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/ol_superset/__init__.py`
-  - Declares the Superset asset management package version and serves as the module's initialization point.
+  - Declares version information for Superset asset management package
   - LOC: `3` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/ol_superset/commands/roles.py` ⚠️dead-code-candidate
-  - Manages dataset access permissions for governance roles by computing and applying which datasets each role should have access to based on local asset definitions and governance policies.
+  - Manage dataset access permissions for governance roles by mapping local assets to role-based permissions
   - LOC: `531` | PageRank: `0.00070` | Complexity: `52.0`
 - `src/ol_superset/sync_config.yml`
-  - Configures synchronization workflows between QA and production Superset environments, defining asset promotion strategies and environment-specific metadata mappings.
+  - Configures synchronization workflows between QA and production Superset environments, enabling controlled promotion of analytics dashboards
   - LOC: `146` | PageRank: `0.00070` | Complexity: `0.0`
 ### ingestion
 
-- `src/ol_dbt/models/staging/mitxpro/stg__emeritus__api__bigquery__user_enrollments.sql`
-  - Ingests and cleans user enrollment data from BigQuery, standardizing timestamps and handling null values for downstream enrollment analytics
-  - LOC: `58` | PageRank: `0.00122` | Complexity: `5.0`
-- `bin/utils/chunk_tracking_logs_by_day.py` ⚠️dead-code-candidate
-  - Organizes tracking log files in S3 by moving or copying them from a source bucket to a destination bucket, organizing them into date-based path prefixes to standardize inconsistent log file paths across different logging agents.
-  - LOC: `127` | PageRank: `0.00070` | Complexity: `10.0`
-- `dg_projects/canvas/canvas/resources/api_client_factory.py` ⚠️dead-code-candidate
-  - Creates API clients for Canvas and related systems by securely retrieving credentials from Vault and instantiating the appropriate client class based on configuration.
-  - LOC: `79` | PageRank: `0.00070` | Complexity: `3.0`
-- `dg_projects/data_loading/data_loading/definitions.py`
-  - Defines the core data loading assets and integrates them with Dagster's orchestration framework
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_loading/data_loading/defs/edxorg_s3_ingest/dagster_assets.py` ⚠️dead-code-candidate
-  - Module 4 creates Dagster assets that wrap dlt sources with upstream dependencies, consolidating partitioned EdX.org data into non-partitioned assets for downstream processing.
-  - LOC: `78` | PageRank: `0.00070` | Complexity: `1.0`
-- `dg_projects/data_loading/data_loading/defs/edxorg_s3_ingest/defs.py`
-  - Module 2 serves as the entry point for EdX.org S3 data ingestion definitions, exporting the consolidated Dagster assets for downstream consumption.
-  - LOC: `12` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_loading/data_loading/defs/edxorg_s3_ingest/loads.py` ⚠️dead-code-candidate
-  - Module 3 provides the core data loading functionality for EdX.org S3 CSV/TSV files, enabling ingestion of educational course data from Amazon S3 into the data platform.
-  - LOC: `191` | PageRank: `0.00070` | Complexity: `6.0`
-- `dg_projects/data_platform/data_platform/assets/metadata/databases.py`
-  - Configures metadata workflows for database sources
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/assets/edxorg_archive.py` ⚠️dead-code-candidate
-  - Handles extraction and processing of raw course assets from archived data, modeling different asset types for downstream analytics.
-  - LOC: `632` | PageRank: `0.00070` | Complexity: `18.0`
-- `dg_projects/edxorg/edxorg/jobs/edx_gcs_courses.py` ⚠️dead-code-candidate
-  - Extracts Open edX course data from GCS and uploads it to S3 nightly for institutional research
-  - LOC: `23` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/jobs/retrieve_edx_exports.py` ⚠️dead-code-candidate
-  - Extracts and processes edX.org course exports from GCS to S3 on a weekly basis for institutional research
-  - LOC: `25` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/ops/edx_gcs_courses.py` ⚠️dead-code-candidate
-  - Manages downloading course data tarballs from Google Cloud Storage and uploading results to S3 for institutional research analysis.
-  - LOC: `119` | PageRank: `0.00070` | Complexity: `4.0`
-- `dg_projects/lakehouse/lakehouse/assets/instructor_onboarding.py` ⚠️dead-code-candidate
-  - Extracts instructor email addresses from course data and prepares CSV files for GitHub repository access management
-  - LOC: `230` | PageRank: `0.00070` | Complexity: `2.0`
-- `dg_projects/learning_resources/learning_resources/assets/open_learning_library.py` ⚠️dead-code-candidate
-  - Manages synchronization of MIT Open Learning Library course repositories from GitHub to S3 for search functionality in MIT Open
-  - LOC: `13` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/learning_resources/learning_resources/assets/sloan_api.py` ⚠️dead-code-candidate
-  - Extracts course and course-offering metadata from MIT Sloan Executive Education APIs and stores the structured data in S3 for downstream use
-  - LOC: `119` | PageRank: `0.00070` | Complexity: `1.0`
-- `dg_projects/learning_resources/learning_resources/lib/google_sheets.py` ⚠️dead-code-candidate
-  - Provides data ingestion from Google Sheets to retrieve video metadata for downstream processing in a learning resources pipeline
-  - LOC: `329` | PageRank: `0.00070` | Complexity: `32.0`
-- `dg_projects/legacy_openedx/legacy_openedx/resources/mysql_db.py` ⚠️dead-code-candidate
-  - Provides a reusable MySQL database client for connecting to and querying a MySQL database, enabling data extraction from legacy Open edX systems
-  - LOC: `102` | PageRank: `0.00070` | Complexity: `1.0`
-- `dg_projects/openedx/openedx/assets/openedx.py` ⚠️dead-code-candidate
-  - Provides access to live courseware data from Open edX environments, enabling downstream analytics and content processing workflows.
-  - LOC: `384` | PageRank: `0.00070` | Complexity: `15.0`
-- `dg_projects/student_risk_probability/student_risk_probability/definitions.py`
-  - Module 4 establishes the asset definitions and job configurations for the student risk probability project, including data export jobs and resource management for interacting with Iceberg catalogs and S3 storage.
-  - LOC: `68` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/mitx/_irx_mitx__models.yml`
-  - Defines the structure and documentation for MITx database models to enable consistent access and understanding of the data schema across the organization.
-  - LOC: `240` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aitrainingworkflow_training_examples.sql` ⚠️dead-code-candidate
-  - Links training examples to AI training workflows, supporting the management and tracking of machine learning training data across different assessment processes.
-  - LOC: `8` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentfeedback.sql` ⚠️dead-code-candidate
-  - Extract assessment feedback text associated with completed submissions to support quality assurance and feedback analysis.
-  - LOC: `33` | PageRank: `0.00070` | Complexity: `11.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_trainingexample.sql` ⚠️dead-code-candidate
-  - Retrieve training examples used in both automated and student training workflows to support machine learning model training and evaluation.
-  - LOC: `33` | PageRank: `0.00070` | Complexity: `12.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_trainingexample_options_selected.sql` ⚠️dead-code-candidate
-  - Tracks which options were selected for training examples used in assessment workflows, enabling analysis of training data selection patterns for AI-assisted grading.
-  - LOC: `48` | PageRank: `0.00070` | Complexity: `14.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__auth_user.sql` ⚠️dead-code-candidate
-  - Extract active user accounts with course enrollment data to support user management and platform access control.
-  - LOC: `33` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__django_comment_client_role_users.sql` ⚠️dead-code-candidate
-  - Maps users to their roles within course communities, supporting community management and access control for discussion forums and collaborative features.
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__student_languageproficiency.sql` ⚠️dead-code-candidate
-  - Links student language proficiency data with user profiles and course enrollments to understand the linguistic diversity of the student population in MITx courses.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__submissions_studentitem.sql` ⚠️dead-code-candidate
-  - Provides a mapping between student IDs, course IDs, and item IDs to enable tracking of student interactions with specific course content.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__submissions_submission.sql` ⚠️dead-code-candidate
-  - Capture student submission metadata to monitor assignment completion rates and submission patterns.
-  - LOC: `10` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__teams.sql` ⚠️dead-code-candidate
-  - Stores information about course teams including their size and descriptions, facilitating team-based learning activities and group assignments.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__user_api_usercoursetag.sql` ⚠️dead-code-candidate
-  - Maintains user-specific tags for courses, enabling personalized learning experiences and custom categorization of student interactions with course content.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__workflow_assessmentworkflowstep.sql` ⚠️dead-code-candidate
-  - Identify completed assessment workflow steps to track grading progress and identify bottlenecks in the assessment process.
-  - LOC: `12` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessment.sql` ⚠️dead-code-candidate
-  - Retrieve assessment scores along with scorer information for analytics on grading patterns and assessment completion rates.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedback.sql` ⚠️dead-code-candidate
-  - Extract assessment feedback text linked to specific assessments for analysis of grading consistency and feedback quality.
-  - LOC: `33` | PageRank: `0.00070` | Complexity: `11.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__auth_userprofile.sql` ⚠️dead-code-candidate
-  - Combines user profile information with course enrollment data to provide comprehensive user details for enrolled students, supporting personalized learning experiences and user analytics.
-  - LOC: `28` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__certificates_generatedcertificate.sql` ⚠️dead-code-candidate
-  - Tracks and stores the most recent certificate generation data for users, including verification and download information, to support certificate management and verification processes.
-  - LOC: `23` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__grades_persistentsubsectiongrade.sql` ⚠️dead-code-candidate
-  - Maintains the latest persistent subsection grade records for courses, enabling accurate tracking of student progress and performance across graded and ungraded assessments.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__student_courseenrollment.sql` ⚠️dead-code-candidate
-  - Extracts basic course enrollment information including course ID, enrollment mode, and active status to track which users are enrolled in which courses and their enrollment state.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__submissions_scoresummary.sql` ⚠️dead-code-candidate
-  - Extract score summary records for student items to enable analysis of student performance trends and grading summary statistics.
-  - LOC: `10` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__teams_membership.sql` ⚠️dead-code-candidate
-  - Map users to their team memberships to enable analysis of collaborative learning patterns and team-based assessment workflows.
-  - LOC: `14` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__user_id_map.sql` ⚠️dead-code-candidate
-  - Creates a mapping between anonymous user identifiers and actual user credentials, facilitating privacy-preserving analytics while maintaining the ability to connect user data across systems.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__workflow_assessmentworkflowstep.sql` ⚠️dead-code-candidate
-  - Track assessment workflow step completion times to analyze grading process efficiency and identify bottlenecks in the review pipeline.
-  - LOC: `12` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessment.sql` ⚠️dead-code-candidate
-  - Links assessment scores to the learners who completed them and the specific submissions.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__auth_user.sql` ⚠️dead-code-candidate
-  - Captures user account data for learners enrolled in courses, including authentication and profile information.
-  - LOC: `33` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__certificates_generatedcertificate.sql` ⚠️dead-code-candidate
-  - Tracks certificate generation data for learners who complete courses, including verification and download information.
-  - LOC: `23` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__django_comment_client_role_users.sql` ⚠️dead-code-candidate
-  - Maps users to their roles within courses, such as student, instructor, or TA.
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__student_anonymoususerid.sql` ⚠️dead-code-candidate
-  - Maps anonymous user IDs to course IDs to enable privacy-preserving user tracking across MITx courses.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__submissions_scoresummary.sql` ⚠️dead-code-candidate
-  - Tracks submission score summaries for student items to provide performance insights for course administrators and instructors.
-  - LOC: `10` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__workflow_assessmentworkflow.sql` ⚠️dead-code-candidate
-  - Tracks the status and timing of assessment workflows for courses.
-  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/staging/bootcamps/_bootcamps__sources.yml`
-  - Defines raw data sources for bootcamp-related tables including wire transfer receipts, payment receipts, and ecommerce line items, establishing the foundation for downstream data processing.
-  - LOC: `419` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/micromasters/_micromasters__sources.yml`
-  - Defines the source data structure and metadata for MicroMasters data integration, establishing the foundation for all subsequent data transformations.
-  - LOC: `613` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/mitlearn/_mitlearn__sources.yml`
-  - Defines the raw data source structure for MIT Learn user accounts, enabling the data platform to ingest and track user authentication and profile information from the Airbyte pipeline
-  - LOC: `248` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/ocw/_ocw__sources.yml`
-  - Establishes the source configuration for raw OCW data from the warehouse, mapping production database tables to staging schemas for data ingestion.
-  - LOC: `172` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/ovs/_ovs__sources.yml`
-  - Defines the source configuration for raw OVS data ingestion, specifying which tables and columns to extract from the PostgreSQL database.
-  - LOC: `158` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/salesforce/_salesforce__sources.yml`
-  - Define metadata and schema for Salesforce opportunity raw data source, including field descriptions and data types for data catalog and documentation
-  - LOC: `242` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/dim_video_135f82ef-b81b-4f5b-8f82-ed299675e618.yaml`
-  - Provides dimensional data about video content including sources, IDs, and relationships for tracking and analyzing video usage patterns across courses.
-  - LOC: `163` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/engagement_problem_completion_raw_4490876f-d440-4df8-8e42-a467bac0821f.yaml`
-  - Tracks learner engagement with course problems, measuring completion rates and accuracy for analytics and reporting.
-  - LOC: `175` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/int__learn_ai__chatbot_f1ec896e-86d4-451a-84cc-841d234e70a6.yaml`
-  - Provides access to chatbot interaction data including session details and user information for analysis of learner support interactions.
-  - LOC: `295` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/learner_demographics_and_cert_info_b6b616b4-f695-4bf6-ad11-ea234f86e6e0.yaml`
-  - Provides demographic and certification information about learners to support student success analysis and program evaluation.
-  - LOC: `271` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined_problem_submissions_70adedf0-bc96-4922-a720-d579f2b4065c.yaml`
-  - Aggregates problem submission data including grades and timestamps for analyzing student performance and assessment patterns.
-  - LOC: `295` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined_video_engagements_a7af739c-62dd-4be0-a46f-5771a7e0c466.yaml`
-  - Aggregates video engagement metrics including user education levels and course information for analyzing learning patterns and content effectiveness.
-  - LOC: `367` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__micromasters_course_certificates_70bc54c5-1073-4bdc-922b-76f6eff82ae3.yaml`
-  - Manages micromasters course certificate data to track credential completion and learner achievements.
-  - LOC: `224` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__micromasters_summary_8e87819b-5332-4cb5-8cda-02f7b8502446.yaml`
-  - Provides summary statistics for micromasters programs including certificate earners, verified users, and enrollment counts for program performance tracking.
-  - LOC: `139` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_course_engagements_daily_e7330108-bdfa-4ff0-8ca3-084d7e8cbda8.yaml`
-  - Provides daily aggregated course engagement data from MITx Online, including course activity dates, platform identification, and current course run status to support learning analytics and course performance monitoring.
-  - LOC: `228` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_user_profiles_000eb064-5511-455c-bbdb-33ffe0f0af68.yaml`
-  - Stores user profile information from MITx Online including personal details, location, education level, and currency preferences for user segmentation and demographic analysis.
-  - LOC: `163` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_video_engagements_w_video_counts_bf17ec0d-2a0a-4f97-ab5b-ae2df862d4b5.yaml`
-  - Analyzes video engagement metrics to understand content consumption patterns and learning effectiveness.
-  - LOC: `150` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__mitxpro_all_coupons_50998478-4b82-451d-82ed-5ea60fd48b05.yaml`
-  - Contains coupon and discount information for MITxPro products including contract numbers, payment details, and product identifiers to support revenue analysis and promotional campaign tracking.
-  - LOC: `320` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/raw__learn_ai__app__postgres__ai_chatbots_tutorbotoutput_757ec475-ddad-436a-9a7c-3da657b69a9b.yaml`
-  - Captures and stores AI chatbot interaction data for tutoring applications, enabling analysis of student engagement patterns and effectiveness of AI-driven educational support.
-  - LOC: `140` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/student_risk_probability_report_ca346322-251e-455b-a2cc-b11976e69ce5.yaml`
-  - Tracks student risk probability reports with grade information and risk scores for courses, enabling early intervention and student success initiatives.
-  - LOC: `122` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/tfact_chatbot_events_83431f55-aaaf-4fe5-aa60-a3502e1442f9.yaml`
-  - Captures chatbot interaction events including timestamps, thread IDs, and source information for analyzing AI assistant usage and engagement.
-  - LOC: `223` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/tfact_course_navigation_events_2189d254-14fd-4b38-85a8-6af918546dd0.yaml`
-  - Captures user navigation events within courses to understand learning pathways and platform usage patterns.
-  - LOC: `175` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/tfact_problem_events_5fc7287d-1bf8-4fc2-b008-c80f84e3a6d9.yaml`
-  - Records problem event data from courses including timestamps, user interactions, and grades to support learning analytics and course effectiveness measurement.
-  - LOC: `211` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/ol_superset/commands/export.py` ⚠️dead-code-candidate
-  - Exports all Superset assets from a specified instance to local YAML files, enabling backup and migration of dashboards, charts, datasets, and database configurations between environments.
-  - LOC: `142` | PageRank: `0.00070` | Complexity: `3.0`
-### monitoring
-
-- `dg_projects/canvas/canvas/sensors/canvas.py` ⚠️dead-code-candidate
-  - Sensor to monitor a Google Sheet for Canvas course IDs to export and trigger data pipeline runs
-  - LOC: `81` | PageRank: `0.00070` | Complexity: `3.0`
-- `dg_projects/learning_resources/learning_resources/sensors/video_shorts.py` ⚠️dead-code-candidate
-  - Monitors Google Sheets for new video short entries and automatically creates partitions to trigger processing workflows for new educational video content.
-  - LOC: `83` | PageRank: `0.00070` | Complexity: `4.0`
-- `dg_projects/legacy_openedx/legacy_openedx/resources/healthchecks.py` ⚠️dead-code-candidate
-  - Implements Healthchecks.io integration for monitoring pipeline execution status and performance metrics
-  - LOC: `40` | PageRank: `0.00070` | Complexity: `1.0`
-- `dg_projects/openedx/openedx/sensors/openedx.py` ⚠️dead-code-candidate
-  - Monitors Open edX course catalog for new courses and triggers data pipeline runs when new courses are detected.
-  - LOC: `143` | PageRank: `0.00070` | Complexity: `9.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/hooks.py` ⚠️dead-code-candidate
-  - Implements Dagster hooks for sending success/failure notifications to Healthchecks.io, enabling monitoring and alerting for pipeline execution.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/event_log.py` ⚠️dead-code-candidate
-  - Implements a connection-pooled PostgreSQL event log storage for Dagster to efficiently handle event logging during data pipeline execution
-  - LOC: `204` | PageRank: `0.00070` | Complexity: `4.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/run_storage.py` ⚠️dead-code-candidate
-  - Provides a connection-pooled PostgreSQL implementation for Dagster run storage to prevent database connection exhaustion during complex data pipeline executions
-  - LOC: `198` | PageRank: `0.00070` | Complexity: `4.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/schedule_storage.py` ⚠️dead-code-candidate
-  - Provides PostgreSQL-backed schedule storage with connection pooling to efficiently manage workflow scheduling metadata
-  - LOC: `197` | PageRank: `0.00070` | Complexity: `4.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/sensors/object_storage.py` ⚠️dead-code-candidate
-  - Monitors Google Cloud Storage and AWS S3 buckets for new files and triggers data pipeline runs when new files are detected, enabling automated data ingestion workflows.
-  - LOC: `97` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_superset/assets/charts/Enrollment_Detail_Dashboard_Last_Updated_1ed19d7a-4f9b-4c13-a6f9-ba348f1c4d3d.yaml`
-  - Monitors the last update timestamps for enrollment detail reports, ensuring data currency and facilitating data pipeline monitoring.
-  - LOC: `85` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Latest_Dashboard_Activity_Recorded_Date_582d2109-e097-4acc-a39e-f19932afa98d.yaml`
-  - Shows the most recent date when dashboard activity was recorded, providing administrators with a quick view of data freshness and system monitoring status.
-  - LOC: `120` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Latest_Product_Created_Date_cdba7fac-5019-4d70-9f0c-817fb7f194d8.yaml`
-  - Shows the most recent product creation date to monitor product catalog updates and data pipeline completeness
-  - LOC: `62` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Order_Dashboard_Last_Updated_0ef1c6be-600c-4802-aa04-33f1b6dd9e9b.yaml`
-  - Tracks and displays the last update timestamps for order-related data tables, helping monitor data freshness and update schedules.
-  - LOC: `79` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Product_Dashboard_Last_Updated_6733b1cd-bb65-44e6-959e-ca21305807e7.yaml`
-  - Monitors the last update times of product data marts, ensuring data freshness and pipeline reliability.
-  - LOC: `80` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/dim_user_last_updated_1e1419f1-f836-43de-964e-6ea9d9521645.yaml`
-  - Monitors the last update timestamps for user dimension tables to ensure data freshness and track ETL processes
-  - LOC: `80` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Superset_Metadata_DB/tables_3b10e411-e497-4e8c-8132-08f673e8d72d.yaml`
-  - Manages metadata about Superset tables including creation timestamps and permissions for database table tracking.
-  - LOC: `391` | PageRank: `0.00070` | Complexity: `0.0`
-### orchestration
-
-- `dg_deployments/local/dagster.yaml`
-  - Configures Dagster scheduler, run coordinator, and storage backend for orchestrating data pipeline execution with PostgreSQL persistence and local artifact storage
-  - LOC: `24` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_deployments/local/workspace.yaml`
-  - Defines workspace configuration for Dagster web server to discover and load multiple gRPC-based code locations, enabling distributed orchestration across different data domains
-  - LOC: `40` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/b2b_organization/b2b_organization/sensors/b2b_organization.py` ⚠️dead-code-candidate
-  - Generates dynamic partition requests for B2B organization data exports based on new organizations found in the data warehouse, enabling automated data processing for B2B customers.
-  - LOC: `65` | PageRank: `0.00070` | Complexity: `1.0`
-- `dg_projects/data_loading/build.yaml`
-  - Builds and deploys the data loading application as a Docker container for production use
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/lakehouse/lakehouse/definitions.py` ⚠️dead-code-candidate
-  - Defines ELT data pipeline assets and orchestration for the data lakehouse
-  - LOC: `303` | PageRank: `0.00070` | Complexity: `14.0`
-- `dg_projects/learning_resources/learning_resources/definitions.py` ⚠️dead-code-candidate
-  - Defines the data pipeline for extracting learning resource metadata from multiple sources (MIT Sloan, Video Shorts, Open Learning Library) and orchestrates asset jobs and schedules for processing
-  - LOC: `175` | PageRank: `0.00070` | Complexity: `5.0`
-- `dg_projects/legacy_openedx/legacy_openedx/definitions.py` ⚠️dead-code-candidate
-  - Initializes and configures resources for legacy Open edX data extraction, including Vault authentication, GCS connections, and various pipeline resources for course data processing
-  - LOC: `226` | PageRank: `0.00070` | Complexity: `7.0`
-- `dg_projects/legacy_openedx/legacy_openedx/jobs/open_edx.py` ⚠️dead-code-candidate
-  - Defines a Dagster graph that orchestrates the extraction of Open edX course data and user information for institutional research purposes
-  - LOC: `53` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/legacy_openedx/legacy_openedx/schedules/open_edx.py` ⚠️dead-code-candidate
-  - Defines daily execution schedules for Open edX data pipelines across different business units (residential, mitxpro, mitxonline), ensuring timely processing of course data.
-  - LOC: `37` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/components/openedx_deployment.py` ⚠️dead-code-candidate
-  - Factory component that creates complete OpenEdx data extraction pipeline including assets, sensors, and resources for specific deployments like mitx or xpro
-  - LOC: `199` | PageRank: `0.00070` | Complexity: `2.0`
-- `dg_projects/openedx/openedx/schedules/open_edx.py` ⚠️dead-code-candidate
-  - Schedules daily data pipeline runs for different business units (residential, MITxPro, MITxOnline) to process Open edX course data.
-  - LOC: `37` | PageRank: `0.00070` | Complexity: `0.0`
-- `docker-compose.yaml` 🔥`6`
-  - Provides containerized orchestration for Dagster data pipeline infrastructure, enabling reproducible data processing workflows with PostgreSQL persistence and local development capabilities.
-  - LOC: `356` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/assets/__init__.py`
-  - Initializes the assets module for the orchestrate library, establishing the foundational namespace for asset-related functionality in the data platform.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/io_managers/__init__.py`
-  - Provides initialization for orchestration I/O manager components, establishing the foundation for data input/output operations in pipelines.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/jobs/__init__.py`
-  - Provides initialization for orchestration job components, serving as the entry point for defining and managing data pipeline workflows.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/automation_policies.py` ⚠️dead-code-candidate
-  - Defines automation policies for pipeline execution based on code changes and upstream dependencies, controlling when data processing should automatically run.
-  - LOC: `18` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/ops/__init__.py`
-  - Initializes the ops module for the orchestrate library, establishing the namespace for operational components in the data platform.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/partitions/__init__.py`
-  - Provides initialization for orchestration partition components, enabling the definition and management of data partitioning strategies for pipeline execution.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/partitions/edxorg.py`
-  - Defines dynamic partitions for course and source data, enabling partitioned execution of data pipelines based on course and source identifiers.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/schedules/__init__.py`
-  - Initializes the schedules module for the orchestrate library, providing the namespace for schedule-related functionality in the data platform.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/sensors/__init__.py`
-  - Initializes the sensors module for the orchestrate library, creating the namespace for sensor-related functionality in the data platform.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_orchestrate/__init__.py`
-  - Serves as a deprecated module that has been migrated to a new CLI structure for data orchestration workflows.
-  - LOC: `34` | PageRank: `0.00070` | Complexity: `0.0`
-### serving
-
-- `src/ol_superset/assets/charts/Chatbot_Usage_By_Course_Section_and_Subsection_9ad6f248-c9cd-42bd-9285-5dbe6d30d5c3.yaml`
-  - Analyzes chatbot usage patterns by course section and subsection, showing where students are seeking help through the chatbot interface
-  - LOC: `98` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Chatbot_Usage_By_Type_751da4ab-6e41-44de-a2b8-e54dc7b2c6b0.yaml`
-  - Shows chatbot usage patterns by type over time, tracking the frequency of different chatbot interactions to understand which features are being used most.
-  - LOC: `124` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Chatbot_data_for_Saliha_8fb96290-8e60-48c0-93c1-bf0f5b3c1823.yaml`
-  - Displays chatbot conversation data for Saliha, filtering by specific course IDs and showing only sessions with agent or human messages
-  - LOC: `78` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Chatbots_37348ff8-4ec6-4b33-a2a6-5d8d8bf62356.yaml`
-  - Filters and displays chatbot interactions specifically for the VideoGPTBot agent, allowing analysis of AI-assisted learning conversations and student support effectiveness.
-  - LOC: `79` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Chatbots_90099854-5b34-4d06-926c-f58f42b2d69e.yaml`
-  - Displays chatbot interaction data between users and agents, including conversation threads and metadata for customer service analysis
-  - LOC: `48` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Combined_Learners_0cf1e9cf-4645-4397-ac5a-d9a7b75d0ad5.yaml`
-  - Lists all learners with their details such as username, email, country, and full name, supporting user management and analysis.
-  - LOC: `56` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Combined_Learners_f2f10600-7302-4887-af04-d0aad29333ea.yaml`
-  - Provides a comprehensive list of combined learners with their usernames, emails, countries, and full names for user management and analysis.
-  - LOC: `51` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Content_Engagement_-_Weekly_fb5f7dd7-f56e-44f4-97f6-ed0c3804382f.yaml` 🔥`6`
-  - Visualizes weekly trends in content engagement, showing counts of users who watched videos, tried problems, or participated in discussions over time.
-  - LOC: `230` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Content_Engagement_984bd054-65c0-4f76-b7ee-7fb0608ccd6e.yaml`
-  - Tracks user engagement with course content by measuring distinct counts of video views, problem attempts, and discussion participation over time
-  - LOC: `231` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Content_Engagement_aa66927b-cc60-4950-8ad8-f79081736841.yaml` 🔥`6`
-  - Measures content engagement by tracking distinct users who watched videos, attempted problems, or participated in discussions across course activities
-  - LOC: `216` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Counts_by_course_run_5670e704-3dc6-4b28-a12c-20d4faabcd46.yaml`
-  - Provides enrollment and certificate counts by course run over time to track course performance and completion rates
-  - LOC: `311` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Coupon_Dashboard_Last_Updated_a468ef05-11af-4a02-b61c-f928f36f17fb.yaml`
-  - Monitors coupon data freshness by displaying when coupon-related tables were last updated in the data warehouse
-  - LOC: `79` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Coupon_Discount_Summary_2e066386-dc90-48e3-859b-2b665b3cb257.yaml`
-  - Displays a detailed summary of coupon and discount information including validity status, remaining coupons, and usage statistics in a tabular format for business analysis.
-  - LOC: `96` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Coupon_Summary_ae86fc71-d19e-4e6a-80b6-c68ca638b536.yaml`
-  - Tracks coupon usage and availability, showing active coupons, redemption counts, and remaining valid coupons for promotional campaign management
-  - LOC: `107` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Course_AI_Chatbot_92488983-505d-4642-a76d-6d5225275577.yaml`
-  - Displays a detailed table of AI chatbot interactions, showing messages between humans and AI agents along with timestamps and thread information.
-  - LOC: `48` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Course_AI_Chatbot_Deprecated_148f6894-7e0b-4750-aef4-501db89a4543.yaml`
-  - Logs AI chatbot interactions for course support, capturing both agent and human messages for troubleshooting and analysis.
-  - LOC: `92` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Course_AI_Chatbot_Table_Metadata_3ac40124-8856-4823-8b81-4be13975e103.yaml`
-  - Displays metadata about AI chatbot tables, allowing users to see when tables were created and updated, and filter by specific table names to track data lineage and usage patterns.
-  - LOC: `79` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Course_Run_Metadata_01f0a8ee-45f0-40ef-a96e-250a40aebf10.yaml`
-  - Shows metadata about course runs including titles, IDs, platforms, and start/end dates in a tabular format for easy reference and management.
-  - LOC: `54` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Course_Run_Metadata_23fb7405-da8f-4983-839d-b1d7fb07e733.yaml`
-  - Provides a detailed table view of course run metadata including titles, IDs, platforms, dates, and current status to help administrators track and manage course offerings.
-  - LOC: `59` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Course_Run_Metadata_c6e47f3c-aeb2-4e25-bf43-e9bd3f068127.yaml`
-  - Displays metadata for course runs including titles, IDs, platforms, and start/end dates in a sortable table format
-  - LOC: `54` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Course_to_Program_Reference_5a5e1d10-7bbe-4329-891d-029255d6efe0.yaml`
-  - Creates a reference table mapping courses to their parent programs, showing relationships between course and program identifiers and titles.
-  - LOC: `50` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/DEDP_3T2023_certificates_by_course_runs_092c45b2-f7d3-4c7e-b4aa-99890c07746a.yaml`
-  - Visualizes certificate completion counts by course runs for a specific program and term using a time series bar chart to track educational program performance.
-  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/DEDP_Learner_Grades_by_Course_1ec63597-fd4e-4e55-b5e0-aa09309f3cce.yaml`
-  - Displays DEDP learner grades organized by course, enabling analysis of student performance across different courses within the DEDP program.
-  - LOC: `66` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Daily_Learner_Enrollment-_All_Courses_65762bf7-1c08-4abb-ad17-e569311a67d0.yaml`
-  - Displays daily enrollment trends across all courses, breaking down enrollment counts by verification status (verified vs audit) to track enrollment patterns and course popularity over time.
-  - LOC: `83` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Daily_Learner_Enrollment_0805cae0-185d-4796-9ed4-a240ab047352.yaml`
-  - Shows daily enrollment counts for a specific course, breaking down verified, audit, and total enrollments by date to monitor course popularity and learner engagement trends.
-  - LOC: `110` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Daily_Learner_Enrollment_Graph_e197cb29-a6e4-4880-a28f-35a959c77ed8.yaml`
-  - Displays daily enrollment trends for a specific course run, showing total, verified, and audit enrollment counts over time in an area chart.
-  - LOC: `123` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Data_Detail_Discussion_39c99c2d-1290-4d37-9b0f-eef559172947.yaml`
-  - Shows detailed discussion data including posts, content, and timestamps, enabling analysis of user engagement and interaction patterns within the learning platform.
-  - LOC: `67` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Data_Detail_Navigation_cf8305f6-fe5d-4791-8185-3051b76f4738.yaml`
-  - Displays detailed navigation data including event timestamps and user interactions
-  - LOC: `65` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Data_Detail_Problems_5e8a4f03-1504-4f8b-9990-de300d73ff93.yaml`
-  - Displays detailed problem-solving data including student attempts, grades, and success rates for course assessment analysis
-  - LOC: `73` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Data_Detail_Video_8cd66663-f93f-4751-be11-14c5d4c28ed5.yaml`
-  - Shows detailed video event data including timestamps, durations, and positions for analysis of video engagement
-  - LOC: `61` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Distribution_of_Number_of_Videos_Watched_9bdb6168-d5c9-4651-af36-556e29f3b5db.yaml`
-  - Shows the distribution of how many videos learners watch, providing insights into content engagement patterns across the user base.
-  - LOC: `114` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Engagement_By_Section_And_Subsection_b503879e-45e5-43aa-90eb-de7044e442b4.yaml`
-  - Displays engagement data by section and subsection including page views, percentage watched, and average grades to analyze how students interact with different parts of course material.
-  - LOC: `293` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Engagement_Totals_24ea41c4-da94-443a-af6b-77bc7e09c303.yaml`
-  - Visualizes engagement metrics over time, showing counts of video watchers, problem solvers, discussion participants, and total learners in an area chart format.
-  - LOC: `147` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Enrollment_Activity_Over_Time_07019136-a885-4261-8960-cfca368642d7.yaml`
-  - Presents a time-series line chart of enrollment activity over time, allowing administrators to analyze enrollment trends and patterns across different course offerings.
-  - LOC: `644` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Enrollment_Activity_b7056cdf-6d2a-43c0-b0a8-b66ab3f3980c.yaml`
-  - Provides enrollment activity tracking by visualizing verified, audit, total enrollments, and certificates earned over time for courses
-  - LOC: `126` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Enrollment_Data_Updated_Date_9eb01f0f-df02-421e-9c26-d5fdb8cff986.yaml`
-  - Shows the most recent enrollment data update date to track when course enrollment information was last refreshed
-  - LOC: `63` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Enrollment_Demographics_by_Education_aa6bdf8d-b5be-4142-a3fc-df4f0032189e.yaml`
-  - Provides demographic analysis of course enrollments broken down by education level to understand learner backgrounds and inform educational strategy
-  - LOC: `113` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Enrollment_Demographics_by_Gender_e9c00f99-deb8-4a1f-99d4-d4e592b7c8db.yaml`
-  - Shows enrollment demographics broken down by gender, providing insights into the gender distribution of learners in the program.
-  - LOC: `121` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Enrollment_Detail_1cf394ec-8561-4b0d-9d9b-f394a6029b33.yaml`
-  - Provides detailed enrollment records including user information, course details, payment data, and certificate status for comprehensive student enrollment tracking
-  - LOC: `111` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Enrollment_Geography_118ba89d-4c33-4720-b22e-a2576ff93316.yaml`
-  - Visualizes enrollment data geographically on a world map, showing where users are located by aggregating enrollment counts by country.
-  - LOC: `89` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Individual_Enrollment_Detail_f8aa5d0c-f838-4236-9057-4f118d340a53.yaml`
-  - Provides detailed individual enrollment information for learners across courses, including personal details, enrollment status, and certification data to support enrollment analysis and learner tracking.
-  - LOC: `81` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Latest_Activity_Date_f9e19a79-18f9-4a54-ad7a-85c5f0b5b801.yaml`
-  - Displays the most recent activity date from a dataset, allowing users to quickly identify when the latest data updates occurred across the platform.
-  - LOC: `100` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Latest_Course_Activity_Date_5f95a268-4339-4d73-b8d8-d082ca53b28d.yaml`
-  - Shows the latest activity date for courses to monitor engagement timelines
-  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Latest_Dashboard_Activity_Recorded_Date_af403a98-7ff4-407a-b1c9-5161ffc10522.yaml`
-  - Displays the most recent dashboard activity date to track when data was last updated, helping users verify data freshness and monitor system usage patterns over time.
-  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Latest_Fulfilled_Order_Date_686fd4b2-e9f4-401b-bd85-b03f8b8824fd.yaml`
-  - Shows the most recent order creation dates for fulfilled or refunded orders across different platforms to track sales activity and identify recent transactions
-  - LOC: `104` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Learn_New_Users_5cba1239-2f4c-472b-82f6-788f18de0fd2.yaml`
-  - Tracks new user signups on MIT Learn platform, showing weekly user count trends with time-based filtering
-  - LOC: `106` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Learn_User_Profile_2e3e900a-3782-4738-80fe-0d60802d4461.yaml`
-  - Displays detailed user profiles for learners in the MITx system, including personal information, education level, interests, and engagement status to support user management and analysis
-  - LOC: `91` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Learner_Course_Engagement_6df62a4b-28e2-4d78-9e22-e3dfb56fd96a.yaml`
-  - Displays detailed learner engagement metrics for specific courses, showing user activity like events, problem submissions, video plays, and discussions over time
-  - LOC: `84` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Learner_Deferred_Report_5ce15be9-994b-4377-8c99-21d35267a2dd.yaml`
-  - Tracks learners whose enrollment status is deferred, providing visibility into enrollment delays or pending approvals.
-  - LOC: `71` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Learner_Demographic_Including_Income_and_Course_Data_11b1455f-25f1-45aa-8358-b8449013bb24.yaml`
-  - Consolidates comprehensive learner demographic data including income, course enrollment history, and certification status to support research and program evaluation
-  - LOC: `74` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Learner_Page_Engagement_9bd2269c-fd5c-463d-b63e-14fa63e90a55.yaml`
-  - Presents detailed page engagement data for learners including course navigation and content interaction to analyze learning behavior and content effectiveness
-  - LOC: `55` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Learner_Performance_d747faf0-d2f8-4dde-84ca-54b60775e051.yaml`
-  - Reports learner performance metrics including passing grades, average course grades, and certificate completion rates for academic assessment
-  - LOC: `138` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Learner_Problem_Engagement_695dd2d8-48d5-436b-a646-204bdf5f2be5.yaml`
-  - Provides detailed learner engagement data for individual problems, tracking attempts, correct answers, and grade distributions to help instructors understand student performance and identify areas where learners struggle.
-  - LOC: `76` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Learner_Video_Engagement_3c5fdc59-85d7-484b-9fdf-170336c8a4c0.yaml`
-  - Displays detailed video engagement metrics for learners, including percent watched, time played, and video duration for individual course sections
-  - LOC: `93` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Learners_Enrolled_37d70f20-6dcc-4237-921b-521dc43425a7.yaml` 🔥`6`
-  - Displays the total count of distinct learners currently enrolled in courses, providing a quick overview of active learner engagement.
-  - LOC: `87` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Learners_Enrolled_c0066291-5b04-437d-b41d-3a4412aa8c82.yaml`
-  - Displays the total count of currently enrolled learners in a course, providing a quick metric for course enrollment status.
-  - LOC: `85` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITxOnline_Content_Engagement_3267dca3-cc86-47f9-ae47-f338d1af4071.yaml`
-  - Tracks different types of content engagement (video watching, problem solving, discussion participation) over time to measure learner activity and course interaction levels.
-  - LOC: `223` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITxOnline_Content_Engagement_836bab76-b440-4f9e-935d-54817dd3dc25.yaml`
-  - Tracks and visualizes user engagement with MITxOnline content over time through multiple metrics including video watching, problem attempts, and discussion participation, showing trends in learning activity.
-  - LOC: `224` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITxOnline_Earned_Certificate_d953e953-a5d6-4e48-af54-5b0e033a401c.yaml`
-  - Visualizes the daily trend of earned certificates over time, enabling analysis of certificate issuance patterns and completion rates across the platform.
-  - LOC: `85` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITxOnline_Engagement_Totals_0cad65c5-cfb7-4530-95ff-289c093da51d.yaml`
-  - Displays daily engagement totals across videos, problems, and discussions to measure overall learner activity and course participation
-  - LOC: `137` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITxOnline_Engagement_Totals_c5db1f81-e676-4565-a158-ef68de95dfb1.yaml`
-  - Shows daily engagement totals across MITxOnline courses, tracking metrics like video watching, problem attempts, discussion participation, and unique learner counts to measure overall platform engagement.
-  - LOC: `137` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITxOnline_Enrollment_Activity_6fd11c69-4110-465f-8ed6-bfcdbe59b8b4.yaml`
-  - Visualizes daily enrollment trends by enrollment type (verified, audit, total) to track course adoption patterns and marketing effectiveness over time.
-  - LOC: `95` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITxOnline_Enrollment_Demographics_by_Education_5cfc7ea9-6636-41b4-9af7-68c98aeff4de.yaml`
-  - Analyzes enrollment demographics by education level to understand learner background distribution
-  - LOC: `56` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITxOnline_Enrollment_Demographics_by_Gender_57721cfb-3413-484d-abfa-cb1be38daafe.yaml`
-  - Shows enrollment demographics by gender to analyze learner diversity and participation patterns in MITxOnline courses
-  - LOC: `57` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITxOnline_Enrollment_Geography_de62ba2c-c4c8-4973-99eb-f1a7bcbe16e6.yaml`
-  - Visualizes the geographic distribution of MITxOnline enrollments by country, showing where learners are located worldwide using a color-coded world map.
-  - LOC: `38` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITxOnline_Learner_Enrollments-_All_Course_ab3dd918-2308-446f-8d81-f89ac4f342cf.yaml`
-  - Visualizes learner enrollment trends over time, breaking down counts by enrollment type (verified, audit, total) to track platform growth and learner behavior patterns.
-  - LOC: `122` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITxOnline_Learner_Enrollments-_course-v1MITxT14.100x3T2023_3b710d6c-6265-43ce-82ef-4c57409b8fda.yaml`
-  - Displays learner enrollment trends over time for specific courses, breaking down enrollment types (verified, audit, total)
-  - LOC: `121` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITx_Enrollments_89862956-6021-420f-b56e-cd73e6680a78.yaml`
-  - Displays enrollment information for MITx courses including user details and course identifiers
-  - LOC: `34` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/MITx_Online_Course_Run_Metadata_c46d73a1-16c3-450b-a43d-63383fad7be2.yaml`
-  - Provides a table view of MITx Online course run metadata including course numbers, titles, and run dates for administrative reference.
-  - LOC: `59` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Micromasters_Users_d7f0a985-f4b0-4643-9832-88d106aa087c.yaml`
-  - Provides a list of Micromasters users with basic user information, sorted by user ID in descending order
-  - LOC: `33` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/OCW_Resources_c697af06-b2be-4653-9680-e9af0c822e38.yaml`
-  - Displays comprehensive OCW resource metadata in tabular format for content management and quality assurance
-  - LOC: `90` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/OCW_Resources_cd72f611-dac4-45a0-99ca-8b3c9e260597.yaml`
-  - Displays a comprehensive table of OCW (OpenCourseWare) resources with metadata and status information, enabling content managers to monitor resource availability and licensing compliance.
-  - LOC: `95` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Order_detail_aff18084-6079-49b3-9604-d68c8a315296.yaml`
-  - Shows the most recent order fulfillment dates for tracking e-commerce operations and order processing timelines
-  - LOC: `109` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Order_detail_c0ce9f7b-a8e8-49d3-909b-9c44718fae8a.yaml`
-  - Displays detailed order information with comprehensive product, payment, and receipt data for transaction analysis and reporting
-  - LOC: `114` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Order_detail_d58f3f14-9d41-4e6e-8245-d194d15aac01.yaml`
-  - Shows detailed order transaction data including pricing, discounts, payment methods, and customer information for financial reconciliation and customer service operations.
-  - LOC: `147` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Order_detail_fb906f1f-c07f-472f-9387-ad02f73cae55.yaml`
-  - Provides detailed order information including pricing, discounts, taxes, and payment details, enabling comprehensive analysis of sales transactions and revenue tracking across different products and platforms.
-  - LOC: `109` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Organization_Administration_Certificates_f1674827-3018-4ff5-bafc-8d4e0fbea7a6.yaml`
-  - Tracks and visualizes the monthly count of certificates issued through the organization's administration system, providing insights into certification activity over time.
-  - LOC: `139` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Organization_Administration_Chatbot_Use_a8eba8e2-dff3-4975-8b54-9f6f4dd39478.yaml`
-  - Provides a visual time-series chart showing chatbot usage and learner session counts for course administration, helping track engagement patterns over time.
-  - LOC: `165` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Organization_Administration_Detail_Report_caf22ae5-3cde-427d-8627-cd55c5febd87.yaml`
-  - Provides detailed organizational administration data including platform, course, user activity, and certificate information for administrative reporting and analysis
-  - LOC: `65` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Organization_Administration_Enrollment_Count_cumulative_01f7089f-1355-4a0f-8a51-277c79f26e2b.yaml`
-  - Provides cumulative enrollment counts over time for organizational administration, tracking how many learners are enrolled each month and carrying forward those counts to subsequent months.
-  - LOC: `141` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Organization_Administration_Problems_Tried_fe95c76a-352c-41a4-8e41-9252b68421ea.yaml`
-  - Aggregates monthly problem-solving attempts by learners to measure engagement with course content and learning activities
-  - LOC: `136` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Organization_Administration_Unique_Active_Learners_33b8ff2e-ddd7-4fa6-a438-d422da92fb27.yaml`
-  - Tracks unique active learners by organization, counting distinct users who engaged in any learning activity within a given month
-  - LOC: `156` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Organization_Administration_Videos_Watched_5d97d317-30ee-46df-882b-0451efe2ac1d.yaml`
-  - Tracks monthly video viewing activity by users in organizational administration courses to monitor engagement and resource usage
-  - LOC: `135` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Page_Engagement_By_Courserun_008cffdc-9283-4daf-8507-746491486bd4.yaml`
-  - Aggregates page view counts by courserun, enabling analysis of content popularity and learner navigation patterns.
-  - LOC: `91` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Page_Engagement_By_Section_b4d14d82-feb2-49bf-847f-2cb8b2c11d20.yaml`
-  - Analyzes page engagement metrics by course section to understand learner interaction with course content
-  - LOC: `131` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Page_Engagement_By_Subsection_f41fcf95-edc7-4dcd-bbe8-54406e775b37.yaml` 🔥`6`
-  - Displays page engagement metrics by subsection, showing total page views for each subsection to understand which content areas receive the most learner interaction.
-  - LOC: `60` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Percent_Content_Engagement_822d24da-190a-49ea-9253-8a26637a89c8.yaml`
-  - Measures content engagement rates across different course activities including video watching, problem submission, and discussion participation
-  - LOC: `129` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Percent_Engagement_Out_of_Total_Engagement_Opportunities_3bc78cde-60af-405c-9d7d-13e61558c228.yaml`
-  - Calculates and displays the average engagement percentages across videos watched, problems submitted, and discussions engaged for each course run.
-  - LOC: `115` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Percentage_of_Video_Played_9bb14cc1-d787-4f47-b6d3-86adb3d4ec47.yaml`
-  - Measures average video completion rates by section, helping assess learner engagement with course video content.
-  - LOC: `109` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Problem_Engagement_By_Subsection_bec01f31-3a3e-4bba-a280-9160e00e2b87.yaml`
-  - Shows problem engagement statistics broken down by subsection to track student performance
-  - LOC: `75` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Problem_Engagement_Test_Report_c05f9d50-bb41-4058-9f35-1ec46ec907c9.yaml`
-  - Provides a test report showing problem engagement metrics including percentage of problems attempted and percentage of problems correct, grouped by section, to evaluate student performance in course content.
-  - LOC: `86` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Problem_Engagement_by_Courserun_1e30a45b-d97d-4f44-ac2c-1d9de9e05bc1.yaml`
-  - Presents average problem engagement rates by courserun to evaluate learning activity and course difficulty across different programs
-  - LOC: `69` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Problem_Engagement_by_Section_ec8dc53c-60d0-4bd1-9913-4388b41ca53d.yaml`
-  - Shows problem engagement statistics by course section, including average percentages of problems attempted and correct with detailed metrics
-  - LOC: `190` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Problem_Results_8247b593-276a-4e86-96e1-62869ec2c59b.yaml`
-  - Provides detailed problem-level performance analytics for courses, showing correct/incorrect answer rates and percentages to identify learning gaps and track student success at the individual problem level.
-  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Problem_Results_f07a7065-db29-4749-a4c6-d2c75c9d55f8.yaml`
-  - Presents problem-solving success rates and counts by course run to evaluate course effectiveness and identify areas needing improvement in educational content.
-  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Problem_Submission_Results_d0bcae8d-1f6a-415b-a3af-52323e8eeee2.yaml`
-  - Analyzes problem submission patterns by course, showing success and failure rates to help educators identify difficult concepts and improve course content or instruction.
-  - LOC: `112` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Products_36ade680-7ae9-4d35-89b0-a46235139418.yaml`
-  - Displays comprehensive product information including pricing, dates, certification details, and instructor data to support product catalog management and sales analysis.
-  - LOC: `115` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Program_Enrollment_and_Certificate_b100bef9-c9f8-46f5-b6ef-20b2badecef4.yaml` 🔥`6`
-  - Displays comprehensive program enrollment and certificate information for learners across all platforms and programs
-  - LOC: `71` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Program_Enrollment_and_Certificate_d9047161-f8d8-4af2-adb0-283c74b639f2.yaml`
-  - Displays comprehensive program enrollment and completion data, including user demographics and course progress, to track program participation and identify completion trends.
-  - LOC: `105` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Program_Summary_8350fe92-c02c-4e98-92ed-adabae3fb582.yaml`
-  - Presents a summary of program metrics including enrollments, unique users, certificates, and other key performance indicators for program evaluation.
-  - LOC: `60` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Record_Count_1e441a91-5d1a-4f4f-9bf8-90fcc9d12988.yaml`
-  - Displays a big number showing the total count of records in a dataset, providing a quick summary metric for data volume monitoring.
-  - LOC: `44` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Student_Level-_Course_Grades_1ffe71c4-0732-4e17-a343-67ef3dd28f3d.yaml`
-  - Provides student-level course grade data organized by platform and user identifiers
-  - LOC: `135` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Student_Level_Course_Grades_1a78ac33-5081-4fb7-9593-89b1aed6daad.yaml`
-  - Presents student-level course grades in a tabular format with additional risk probability metrics, enabling detailed analysis of individual student performance and potential academic risk.
-  - LOC: `71` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Suspicious_Behavior_Report_3acf6da0-1add-486f-9e70-884a1bb306f9.yaml`
-  - Generates a detailed table report of suspicious learner behavior patterns, including problem-solving attempts and time metrics, to identify potential academic integrity issues.
-  - LOC: `87` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Tutorbot_c1d81d88-a705-4c90-a816-f488f7cbbaea.yaml`
-  - Provides a comprehensive view of all tutorbot interactions and chat sessions, including user details and conversation content, for analyzing AI tutoring effectiveness and student support quality.
-  - LOC: `43` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Tutorbot_with_filter_bc2f4ec2-0532-4a55-8482-e12ecae7e7de.yaml`
-  - Shows tutorbot conversation data with filtering capability to exclude specific course runs for analysis
-  - LOC: `83` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Users_Receiving_Program_Certificates_Over_Time_faf44954-50d0-4135-9efc-b26ebc06e5d8.yaml`
-  - Tracks program certificate issuance over time by counting unique users receiving certificates on a daily basis
-  - LOC: `120` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Video_Engagement_By_Courserun_93c228c1-4ad3-4268-830a-d99befebaaee.yaml`
-  - Shows detailed video engagement metrics including total video duration, time played, and percentage watched for each course run.
-  - LOC: `107` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Video_Engagement_By_Section_and_Subsection_738b9337-2477-4f49-95e6-4201a90c6f28.yaml`
-  - Analyzes video engagement metrics by section and subsection, showing viewing patterns and completion rates for educational content.
-  - LOC: `127` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Video_Engagement_By_Section_f37fc707-aeb4-4731-b0d5-634b47a57eae.yaml`
-  - Analyzes video engagement metrics by course section, displaying watch time percentages and durations to understand content consumption patterns across different learning modules.
-  - LOC: `148` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Video_Engagement_By_Subsection_8146a868-1014-48d3-9e0d-8223de1ae1a9.yaml`
-  - Measures video engagement at the subsection level, calculating watch completion rates to help instructors understand which content students are actually consuming and where attention drops off.
-  - LOC: `107` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Video_Engagement_by_Section_ebcf2551-ca8e-4fce-b04b-55e382b1c963.yaml`
-  - Tracks video engagement metrics by course section to analyze learner viewing patterns and content consumption
-  - LOC: `257` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Video_Engagement_per_Section_52f9966c-2de9-41fd-b29a-ccd1781696cb.yaml`
-  - Analyzes video engagement metrics by section, showing the percentage of users who watched at least one video versus all videos, to measure content consumption and identify engagement patterns.
-  - LOC: `155` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Video_Engagement_per_Section_ac95bf65-b2ea-4e6a-9fdf-8fdff4758f5e.yaml`
-  - Tracks video engagement metrics at the section level, showing how many learners have viewed at least one video versus all videos in each section to measure content consumption patterns.
-  - LOC: `258` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Video_Engagement_per_Section_f9c49065-6eb1-4c47-ab2b-a03654cdcbc4.yaml`
-  - Visualizes video engagement metrics per course section, showing how many users watched at least one video versus all videos in each section to assess content consumption patterns and identify potential engagement drop-off points.
-  - LOC: `258` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/Videos_Rewatched_397698ec-916f-46e4-bd4c-cae296806b10.yaml`
-  - Displays daily aggregated video watch counts with filtering for rewatched content, helping analyze viewing patterns and content engagement behavior.
-  - LOC: `147` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/course_user_mapping_08141743-0bc0-4a79-a3b4-39d34d221742.yaml`
-  - Maps users to their enrolled courses, showing course enrollment details and user information for tracking course participation and user-course relationships.
-  - LOC: `37` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/of_Watches_By_Video_cb328531-f862-467c-b073-4a2cec5dfbe2.yaml`
-  - Provides a detailed breakdown of video watch activity by section, subsection, and block to understand content consumption patterns
-  - LOC: `86` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/charts/xPRO_Product_List_-_Standard_Products_Only_244158fe-79de-4ad8-bc53-f82ef3f32ffa.yaml`
-  - Lists all standard xPRO products with their details including pricing, availability dates, and enrollment periods to manage and track the catalog of educational offerings.
-  - LOC: `59` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Combined_Learners_Search_68d00b7a-8f6b-4f18-b738-9ecc0a9dd294.yaml`
-  - Enables comprehensive search and analysis of combined learner data across multiple data sources for enrollment and order information.
-  - LOC: `567` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Coupons_06b246fd-65db-440b-9a98-183ca37a2660.yaml`
-  - Manages and tracks coupon/discount program performance through summary statistics and dashboard updates for financial and promotional analysis.
-  - LOC: `257` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Course_AI_Chatbot_b6b79d2a-4a21-4454-a4df-d12549e9bd7d.yaml`
-  - Analyzes AI chatbot usage patterns in courses to improve automated student support and identify areas where chatbot assistance is most needed.
-  - LOC: `218` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Course_Engagement_2311d08c-60b3-4b6d-87d2-b417dccb64f7.yaml`
-  - Monitors learner engagement with course content including video views, problem results, and overall participation metrics
-  - LOC: `544` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Course_Enrollment_Activity_101c4123-af4c-492b-a087-246d06569a1d.yaml`
-  - Tracks and analyzes course enrollment patterns, demographics, and geographic distribution
-  - LOC: `692` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Distribution_of_Number_of_Videos_Watched_b54af54e-1da9-4835-a65b-3ba03c6b3e57.yaml`
-  - Analyzes the distribution patterns of video watching behavior across learners to understand engagement levels and content consumption patterns.
-  - LOC: `283` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Enrollment_Detail_by_Learner_da9e03d3-e1bb-45b8-981f-208deca90e7a.yaml`
-  - Shows detailed enrollment information for individual learners including performance and status tracking
-  - LOC: `481` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Instructor_Level_Administration_Dashboard_5495ac4d-bac4-429c-8a7b-070f27f34904.yaml`
-  - Provides instructors with a dashboard to monitor and analyze chatbot usage patterns and video engagement metrics across course sections
-  - LOC: `476` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Learn_User_Profile_47b963a4-74a2-472c-9a3b-a9986be146e9.yaml`
-  - Displays detailed user profile information for learners in the Learn platform, including new user trends and last updated timestamps
-  - LOC: `296` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Learner_Demographic_and_Course_Data_be0ba018-dff2-42a5-a12a-8215ff5bd75a.yaml`
-  - Displays comprehensive learner demographic information including income data and course enrollment details
-  - LOC: `277` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Learner_Engagement_ca0fe164-7452-4e90-be12-e0c793f0ac05.yaml`
-  - Enables educators to monitor and analyze learner engagement with course videos, tracking which subsections and course runs are most engaging to optimize content delivery.
-  - LOC: `1210` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/MITx_and_xPro_Products_be482a19-1c1e-4f4d-87be-aad2b50d54bf.yaml`
-  - Manages and displays MITx and xPro product information including creation dates and product listings with column definitions and data source details
-  - LOC: `344` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Orders_7b9f141d-14d2-40c6-aa01-fef8a0375ce8.yaml`
-  - Provides a comprehensive view of order management including fulfillment dates, contract details, and detailed order information to streamline e-commerce operations.
-  - LOC: `421` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Organization_Administration_Dashboard_e71b9aea-9503-4bed-be3d-232fb5c3e67e.yaml`
-  - Provides administrative oversight of organization-wide learning activities by tracking enrollment counts, active learners, video consumption, and problem engagement metrics for organizational administration purposes.
-  - LOC: `427` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Products_20e6140c-d3dd-4d23-be26-c1642d73b288.yaml`
-  - Displays product-related analytics including course-to-program mappings, product dashboard updates, and comprehensive product information for product management and analysis.
-  - LOC: `400` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Program_Enrollment_and_Credential_203bbba1-adb8-4f95-8951-7e958f2d6260.yaml`
-  - Tracks program enrollment patterns and credential issuance to evaluate the effectiveness of educational programs and student progression.
-  - LOC: `554` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/Suspicious_Behavior_Report_1e2883d9-d122-4af6-aa33-43a0f0ac2c3b.yaml`
-  - Detects and reports suspicious academic behavior patterns to maintain academic integrity and identify potential cheating incidents.
-  - LOC: `399` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/dashboards/xPro_Reference_Dashboard_45b6c06a-1e2d-43d3-8b98-a95b82b375d5.yaml`
-  - Serves as a central reference dashboard for xPro product data with links to related dashboards and charts for enrollment, products, course engagement, and orders
-  - LOC: `167` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/Data_Detail_Discuss_5bab95fd-d465-44f3-bed8-40c559958fc4.yaml`
-  - Provides detailed discussion event data for analyzing user engagement and interaction patterns within courses, enabling insights into how learners participate in course discussions.
-  - LOC: `144` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/Data_Detail_Nav_32e283f5-fc02-403a-9c92-b8286352cdba.yaml`
-  - Monitors course navigation events to track how learners interact with course content and their progression through learning materials.
-  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/Enrollment_Activity_Counts_Dataset_a9301703-0ac1-4eb7-a409-f65da5d8cba1.yaml`
-  - Tracks enrollment activities and counts across courses to monitor learner progression and engagement, supporting analysis of enrollment trends and course completion metrics.
-  - LOC: `232` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/Learner_Demographics_And_Cert_Info_232090f5-bb02-4327-9067-2ae49b64074b.yaml`
-  - Compiles comprehensive learner demographic data and certificate information for analyzing student populations and program completion rates.
-  - LOC: `286` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/afact_course_page_engagement_68c544d7-726d-495a-bf87-81255b2e8604.yaml`
-  - Tracks course page engagement metrics to understand learner navigation and content interaction patterns
-  - LOC: `163` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/afact_discussion_engagement_956060cb-b34d-4042-a1c6-ea1c4b4eca9f.yaml`
-  - Measures discussion engagement metrics to evaluate the effectiveness of discussion forums and student participation in course discussions.
-  - LOC: `271` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/cheating_detection_report_65bdc57c-00f9-42d0-bd37-d4363532fd81.yaml`
-  - Provides a report for detecting academic dishonesty by analyzing student performance metrics across courses, helping identify potential cheating patterns.
-  - LOC: `332` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/combined_enrollments_with_gender_and_date_f3e517dd-4012-441e-8dfe-edaef1318000.yaml`
-  - This dataset merges enrollment records with demographic information like gender and date details, enabling analysis of enrollment patterns across different user segments.
-  - LOC: `523` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/dim_problem_23a7a643-e426-42ea-9759-c05f7a524e22.yaml`
-  - Stores and manages problem-level data for courses, supporting assessment analysis and content debugging.
-  - LOC: `151` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/dim_user_7f46cdba-1bf0-4f10-9606-a41b77b9e77c.yaml`
-  - Maintains a dimensional user profile dataset containing demographic information, preferences, and interests, supporting personalized learning experiences and targeted communications.
-  - LOC: `564` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/engagment_problem_test1_b9e94ba2-f399-4210-b042-b8aaa4039f58.yaml`
-  - Evaluates problem-solving engagement and performance metrics for educational assessment and learner progress tracking
-  - LOC: `275` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/enrollment_detail_report_01f179b6-cb75-465f-8ceb-0525c24fa223.yaml`
-  - Generates detailed enrollment reports including payment and certification information for business intelligence.
-  - LOC: `539` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/instructor_module_report_8c2b6f11-28f8-4353-8e43-6c53ea6b1d91.yaml`
-  - Delivers instructor-focused reporting data including video engagement metrics and user activity patterns, helping instructors understand learner behavior and course effectiveness.
-  - LOC: `211` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/int__learn_ai__tutorbot_4fe652f8-e672-4e71-89da-fb964985847b.yaml`
-  - Captures AI tutorbot interaction data to analyze learner engagement and support system effectiveness.
-  - LOC: `199` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/int__ocw__resources_8bb67686-3d31-4418-bda9-87fdeb25b665.yaml`
-  - This dataset tracks the status of external resource URLs and backup URLs for course materials, monitoring whether links are accessible or broken.
-  - LOC: `451` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined__orders_02e97623-3edd-4d3a-acbe-119e889a043a.yaml`
-  - Aggregates order data with calculated date fields for financial and sales analysis
-  - LOC: `657` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined__orders_2f64a0b1-a1d4-4dec-95c3-7978296a3555.yaml`
-  - Processes and organizes e-commerce order data including pricing, dates, and financial information for revenue analysis and business reporting.
-  - LOC: `645` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined__users_5f006731-f052-4586-88f2-ad1b3c904ca9.yaml`
-  - Tracks and aggregates user engagement data across multiple platforms to provide insights into user behavior and course participation patterns.
-  - LOC: `452` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined_course_engagements_f221af29-5df4-4025-8355-401041f94835.yaml`
-  - Provides aggregated course engagement metrics for analysis of learner participation and activity across courses
-  - LOC: `271` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined_course_enrollment_detail_836dd1f0-3e2e-45a9-a721-62a471a43de8.yaml`
-  - This dataset consolidates course enrollment details across platforms, tracking certificates, grades, and enrollment status for individual courses.
-  - LOC: `475` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined_coursesinprogram_f841a3e6-d864-4499-94dd-6ceafe8ac74f.yaml`
-  - Maps course relationships within programs to understand program structure and course sequencing, enabling analysis of program-level enrollment and completion patterns.
-  - LOC: `115` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined_program_enrollment_detail_0983d23f-8182-482a-9f0f-b32d69984efc.yaml`
-  - This dataset provides detailed enrollment information for programs, including certificate status, enrollment dates, and completion tracking for program-level learning.
-  - LOC: `353` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined_total_course_engagements_edf21d6a-1f41-4812-a1aa-3fcbc8358466.yaml`
-  - This dataset aggregates total course engagement metrics, combining enrollment data with user activity to measure course participation and completion rates.
-  - LOC: `199` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__micromasters_program_certificates_e531ebf4-6189-4c02-9729-6c6ef18b81ef.yaml`
-  - Tracks MicroMasters program certificate issuance and learner completion data for program management and reporting.
-  - LOC: `283` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_course_certificates_45f0412f-0d34-4d04-a3ff-e595a3bada19.yaml`
-  - Manages course certificate data including issuance details, student information, and certificate URLs for credential verification and tracking.
-  - LOC: `140` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_course_enrollments_811f8301-4bea-461e-8359-d354af75c4b1.yaml`
-  - Provides enrollment data for MITx Online courses, enabling analysis of course participation and learner demographics.
-  - LOC: `235` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_discussions_75610c3a-34e1-47f7-ab74-f350afcd9f66.yaml`
-  - Captures and analyzes discussion activity within online courses to understand student engagement and interaction patterns in educational content.
-  - LOC: `223` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__ocw_courses_5e9078ef-d0a9-4db7-9635-75fb9a2321de.yaml`
-  - Provides access to OCW course data through a Trino database connection for data analysis and reporting purposes.
-  - LOC: `247` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/mitxonline_video_engagements_w_video_counts_0514985b-ff21-490b-a34e-25ae356da7e9.yaml`
-  - Analyzes video engagement patterns with course and user details for content consumption insights
-  - LOC: `127` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/tfact_video_events_2a608e5d-c828-4457-83c2-0912a1534430.yaml`
-  - Tracks video engagement metrics including watch duration and user interactions to analyze learning behavior and content effectiveness.
-  - LOC: `199` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/video_engagement_report_232bb992-50ba-4dfb-bb9f-bfb403a3517a.yaml`
-  - Generates video engagement reports to analyze how learners interact with video content, including viewing patterns and completion rates.
-  - LOC: `139` | PageRank: `0.00070` | Complexity: `0.0`
-### testing
-
-- `bin/dbt-local-dev.py` ⚠️dead-code-candidate
-  - Provides a unified CLI tool for local dbt development with DuckDB and Iceberg, enabling testing, registration of Glue tables, and cleanup of development schemas.
-  - LOC: `1782` | PageRank: `0.00070` | Complexity: `155.0`
-- `dg_projects/canvas/canvas_tests/__init__.py`
-  - Module 1 serves as a placeholder for test initialization in the Canvas project, providing a structure for organizing and running tests.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_loading/data_loading_tests/__init__.py`
-  - Placeholder for test suite organization and test discovery
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_platform/orchestration_platform_tests/__init__.py`
-  - Module 4 is an empty initialization file for orchestration platform tests, serving as a package marker without any test functionality.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/defs/__init__.py`
-  - Placeholder module with no defined purpose.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/sensors/__init__.py`
-  - Placeholder module with no defined purpose.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg_tests/test_edxorg_lib.py` ⚠️dead-code-candidate
-  - Unit tests for edxorg parsing utilities - validates file categorization and path parsing logic for edx.org data archive processing
-  - LOC: `138` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/lakehouse/lakehouse_tests/__init__.py`
-  - Placeholder module for lakehouse tests - likely serves as an entry point for test discovery and execution
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/legacy_openedx/legacy_openedx_tests/__init__.py`
-  - Module 2 is an empty test initialization file, likely intended to mark the test directory as a package but containing no test functionality.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/__init__.py`
-  - Empty initialization module with no implemented functionality.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/intermediate/bootcamps/_int_bootcamps__models.yml`
-  - Defines data quality tests and expectations for wire transfer receipt data to ensure data integrity when tracking offline payment methods for bootcamp orders.
-  - LOC: `490` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/_int_mitxresidential__models.yml`
-  - Tracks and validates core user attributes for residential MITx platform users, ensuring data integrity for downstream analytics and reporting.
-  - LOC: `661` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/intermediate/salesforce/_int_salesforce__models.yml`
-  - Defines data quality tests and descriptions for the Salesforce opportunity intermediate model to ensure data integrity and business rule compliance.
-  - LOC: `156` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/bootcamps/_stg_bootcamps__models.yml`
-  - Defines data quality tests and column specifications for wire transfer receipts, payment receipts, and ecommerce line items in the bootcamps system
-  - LOC: `624` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/learn-ai/_stg_learn_ai__models.yml`
-  - Defines data quality tests and column descriptions for the cleaned Learn AI models to ensure data integrity and provide documentation for downstream consumers.
-  - LOC: `172` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/mitxonline/_stg_mitxonline__models.yml`
-  - Validates and enforces data quality rules for staging tables containing user enrollment and email opt-out information
-  - LOC: `2057` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/ovs/_stg_ovs__models.yml`
-  - Defines data quality tests for transformed OVS studio collection and video models, ensuring data integrity through constraints like uniqueness and nullability.
-  - LOC: `200` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/ol_superset/commands/validate.py` ⚠️dead-code-candidate
-  - Validates Superset asset YAML files for syntax errors and provides an inventory of assets to ensure configuration files are well-formed before deployment.
-  - LOC: `164` | PageRank: `0.00070` | Complexity: `17.0`
-### transformation
-
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__tracking_logs__user_activity.sql`
-  - Creates an incremental staging model of user activity tracking logs, filtering out invalid records and deduplicating by key user activity fields for behavioral analysis.
-  - LOC: `55` | PageRank: `0.00731` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__tracking_logs__user_activity.sql`
-  - Captures and processes user activity tracking logs from the MITx residential open edX platform, enabling analysis of how users interact with course content and platform features over time.
-  - LOC: `49` | PageRank: `0.00617` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__users.sql`
-  - Provides a unified view of user information by combining user data from MITx Online with profile details from both MITx Online and MicroMasters platforms, enabling cross-platform user identification and enrichment.
-  - LOC: `94` | PageRank: `0.00609` | Complexity: `19.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__tracking_logs__user_activity.sql`
-  - Captures and cleans user activity tracking logs from xPro, filtering out invalid events and deduplicating records to provide a reliable source of user engagement data.
-  - LOC: `55` | PageRank: `0.00591` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__tracking_logs__user_activity.sql`
-  - Transforms raw edX tracking logs into a cleaned user activity dataset by extracting and normalizing user interaction events, ensuring incremental updates only process new data.
-  - LOC: `51` | PageRank: `0.00557` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitx/int__mitx__programs.sql`
-  - Consolidates program information from MITx Online and MicroMasters platforms into a unified view, mapping DEDP programs between systems and distinguishing between different program types like MicroMasters and DEDP programs.
-  - LOC: `31` | PageRank: `0.00548` | Complexity: `6.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_activity.sql`
-  - Captures and structures user activity data from edX.org tracking logs, enabling analysis of learner engagement and behavior within MITx courses.
-  - LOC: `16` | PageRank: `0.00469` | Complexity: `1.0`
-- `src/ol_dbt/models/dimensional/dim_course_content.sql`
-  - Consolidates course structure data from multiple platforms (MITxOnline, edX, XPro, Residential) into a single unified view for consistent course content analysis across different learning environments.
-  - LOC: `174` | PageRank: `0.00402` | Complexity: `21.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__programs.sql`
-  - Consolidates program information including requirements, topics, instructors, and metadata to provide a comprehensive view of educational programs and their components.
-  - LOC: `73` | PageRank: `0.00398` | Complexity: `14.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_runs.sql`
-  - Consolidates course run information from MITx Online by joining course details with run-specific data, providing a comprehensive view of available courses and their delivery schedules.
-  - LOC: `30` | PageRank: `0.00368` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_program.sql`
-  - Standardizes program information from MicroMasters, including pricing, course requirements, and availability, to support program management and enrollment decisions.
-  - LOC: `22` | PageRank: `0.00350` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_courserun.sql`
-  - Transforms MITx Online course run data from raw warehouse format into a cleaned staging table with standardized timestamps and URL construction for course access.
-  - LOC: `39` | PageRank: `0.00327` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/ocw/stg__ocw__studio__postgres__websites_websitecontent.sql`
-  - Transforms OCW studio website content data from raw warehouse tables into a staging model with extracted course metadata and standardized column names for website content management.
-  - LOC: `66` | PageRank: `0.00321` | Complexity: `6.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_users.sql`
-  - Combines and deduplicates user profile information from multiple sources to create a unified user dataset with complete demographic and contact details
-  - LOC: `84` | PageRank: `0.00306` | Complexity: `9.0`
-- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__programs.sql`
-  - Provides a clean view of MicroMasters program metadata including titles, descriptions, and enrollment requirements for reporting and analysis.
-  - LOC: `13` | PageRank: `0.00303` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters__users.sql`
-  - Creates a comprehensive user profile by combining authentication data from multiple platforms (MicroMasters, mitxonline, edx.org) and enriching it with demographic and contact information.
-  - LOC: `93` | PageRank: `0.00281` | Complexity: `13.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courseruns.sql`
-  - Consolidates MITx course run information from multiple sources including course details, instructor information, and program associations for comprehensive course catalog management
-  - LOC: `134` | PageRank: `0.00280` | Complexity: `14.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_programrequirement.sql`
-  - Tracks program requirement structures for MITx Online courses, enabling the system to manage complex prerequisite relationships and course eligibility rules for academic programs.
-  - LOC: `22` | PageRank: `0.00279` | Complexity: `4.0`
 - `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__api__course_structure.sql`
-  - Tracks changes to course structure over time to enable accurate course content delivery and version control for learners.
+  - Tracks course structure changes over time to enable accurate course content delivery and version control, ensuring learners receive the correct course materials and structure.
   - LOC: `43` | PageRank: `0.00273` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_course.sql`
-  - Transform course metadata from MITx Online's PostgreSQL database, converting course identifiers to multiple formats and extracting course numbers for use in course catalog and enrollment analytics.
-  - LOC: `20` | PageRank: `0.00272` | Complexity: `4.0`
-- `src/ol_dbt/models/dimensional/dim_user.sql`
-  - Creates a unified user dimension table that deduplicates and consolidates user data across MITx Online, edX, and MITx Pro platforms for consistent user analytics.
-  - LOC: `600` | PageRank: `0.00264` | Complexity: `48.0`
-- `src/ol_dbt/models/intermediate/mitx/int__mitx__users.sql`
-  - Creates a unified view of user profiles by deduplicating and merging user data from MITx Online, edX.org, and MicroMasters platforms, prioritizing MITx Online data when conflicts exist and consolidating profile information.
-  - LOC: `224` | PageRank: `0.00261` | Complexity: `19.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_user_info_combo.sql`
-  - Combines user profile, enrollment, and certificate information from multiple sources into a unified dataset for comprehensive learner analytics and course completion tracking.
-  - LOC: `56` | PageRank: `0.00255` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__program_requirements.sql`
-  - Defines program requirements and course prerequisites for MITx Online programs, establishing the structural relationships between courses, electives, and core requirements to support academic program management.
-  - LOC: `125` | PageRank: `0.00245` | Complexity: `17.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__api__course_structure.sql`
-  - Tracks changes in course structure data to detect when course content has been modified, ensuring downstream systems have the latest course organization and content information.
-  - LOC: `39` | PageRank: `0.00239` | Complexity: `6.0`
-- `src/ol_dbt/models/marts/combined/marts__combined_course_enrollment_detail.sql`
-  - Creates a unified dataset of course enrollment details across multiple platforms by combining enrollment data, course runs, user information, and transaction records to provide a comprehensive view of learner activity and payment status.
-  - LOC: `485` | PageRank: `0.00237` | Complexity: `47.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_structure.sql`
-  - Processes course structure data to track content changes by comparing content hashes, ensuring only updated course blocks are processed for downstream analytics.
-  - LOC: `39` | PageRank: `0.00231` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__api__course_structure.sql`
-  - Transforms raw course structure data to track changes in course content by identifying when course blocks are modified or updated, enabling analysis of course evolution over time.
-  - LOC: `39` | PageRank: `0.00231` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_course.sql`
-  - Transforms raw course metadata from MicroMasters to standardized format, linking edx.org courses to MicroMasters programs for program structure and prerequisites.
-  - LOC: `23` | PageRank: `0.00225` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_program.sql`
-  - Transforms raw program data to categorize and standardize MITx Online educational programs, distinguishing MicroMasters credentials from other program types
-  - LOC: `26` | PageRank: `0.00221` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_courserun.sql`
-  - Extracts and transforms bootcamp course run information, solving the business need to track course scheduling and availability by providing standardized course run data with consistent date formats and identifiers.
-  - LOC: `18` | PageRank: `0.00214` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courses.sql`
-  - Creates a unified course information view by combining course data with descriptions, topics, instructors, and other metadata to enable comprehensive course catalog analysis.
-  - LOC: `84` | PageRank: `0.00203` | Complexity: `17.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__users_user.sql`
-  - Transforms raw xPro user data into a cleaned staging table for downstream analytics, standardizing timestamps and formatting user information.
-  - LOC: `19` | PageRank: `0.00201` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_user_email_opt_in.sql`
-  - Captures user email opt-in preferences from edX to enable personalized communication and marketing compliance
-  - LOC: `21` | PageRank: `0.00200` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitx/int__mitx__courses.sql`
-  - Creates a unified course catalog by combining course information from MITx Online and edX.org, deduplicating and standardizing course identifiers to provide a single source of truth for course metadata.
-  - LOC: `46` | PageRank: `0.00200` | Complexity: `7.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_productversion.sql`
-  - Stores product version information including pricing and descriptions for e-commerce products.
-  - LOC: `22` | PageRank: `0.00195` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__auth_usersocialauth.sql`
-  - Tracks user authentication methods and providers to enable identity matching across systems
-  - LOC: `20` | PageRank: `0.00195` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_profile.sql`
-  - Transforms user profile data from MicroMasters to a standardized format, capturing demographic, contact, and educational information for user management and personalization.
-  - LOC: `74` | PageRank: `0.00195` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__api__courserun.sql`
-  - Maintains course run details including availability and enrollment information for program catalog management
-  - LOC: `55` | PageRank: `0.00193` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/combined/int__combined__course_runs.sql`
-  - This model consolidates course run information from multiple educational platforms and providers (MITx, MITxOnline, edX, MITxPro, bootcamps, micromasters, emeritus, global alumni, and residential) to provide a unified catalog of all available course offerings.
-  - LOC: `223` | PageRank: `0.00193` | Complexity: `33.0`
-- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__users.sql`
-  - Creates a comprehensive user profile by combining basic user information with their highest education degree and most recent employment details, providing a complete view of learner background and demographics.
-  - LOC: `84` | PageRank: `0.00192` | Complexity: `9.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courserun.sql`
-  - Extracts and standardizes MITxPro course run information from raw data, including URLs and timestamps, to support course catalog and enrollment analytics.
-  - LOC: `28` | PageRank: `0.00191` | Complexity: `4.0`
-- `src/ol_dbt/models/marts/combined/marts__combined_video_engagements.sql`
-  - Aggregates video engagement data across all learning platforms to provide a unified view of learner video interactions and consumption patterns.
-  - LOC: `126` | PageRank: `0.00189` | Complexity: `12.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_platform.sql`
-  - Maintains a reference table of learning platforms and their identifiers for cross-platform data integration.
-  - LOC: `14` | PageRank: `0.00188` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserunenrollments.sql`
-  - Verifies course enrollments by cross-referencing MITx Online enrollments with verified purchase orders from both MITx Online and MicroMasters platforms, ensuring accurate enrollment tracking for DEDP courses.
-  - LOC: `138` | PageRank: `0.00188` | Complexity: `28.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_program.sql`
-  - Transforms raw program data from MITxPro into a clean, standardized format for downstream analytics, enabling business users to analyze program offerings and their status.
-  - LOC: `31` | PageRank: `0.00188` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun.sql`
-  - Transforms raw course overview data to provide a comprehensive view of course metadata including dates, grading policies, and course attributes for business reporting.
-  - LOC: `26` | PageRank: `0.00186` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__program_certificates.sql`
-  - Aggregates program certificate information from multiple sources to provide a comprehensive view of learner certifications, handling the transition between MicroMasters and MITx Online certificate systems.
-  - LOC: `141` | PageRank: `0.00184` | Complexity: `14.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_discount.sql`
-  - Transforms raw MITx Online ecommerce discount data into a standardized format for analytics, enabling analysis of discount programs including their types, amounts, and redemption patterns.
-  - LOC: `34` | PageRank: `0.00170` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_coursepage.sql`
-  - Cleans raw course page data from the CMS into a standardized staging model with consistent field names and extracted price information for course catalog analytics.
-  - LOC: `21` | PageRank: `0.00169` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_coursetopic.sql`
-  - Maintains the master list of course topics and their hierarchical relationships for organizing course content
-  - LOC: `17` | PageRank: `0.00165` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponproduct.sql`
-  - Transforms coupon product eligibility data from MITxPro's e-commerce system, supporting business analysis of promotional offerings and program-specific discounts.
-  - LOC: `20` | PageRank: `0.00164` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_receipt.sql`
-  - Captures and standardizes e-commerce receipt data to track financial transactions and order confirmations.
-  - LOC: `18` | PageRank: `0.00163` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_programpage.sql`
-  - Transforms raw program page data from the CMS into a cleaned staging model with standardized field names and extracted price information for downstream analytics.
-  - LOC: `21` | PageRank: `0.00163` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__wagtail_page.sql`
-  - Maintains website page metadata including content, publishing status, and SEO information for the xPro platform.
-  - LOC: `29` | PageRank: `0.00162` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponpayment.sql`
-  - Stores information about coupon payments used in the e-commerce system, tracking payment details and timestamps for financial reconciliation and audit purposes.
-  - LOC: `16` | PageRank: `0.00161` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_receipt.sql`
-  - Transforms raw ecommerce receipt data into a standardized format with ISO8601 timestamps for easier downstream analysis and reporting.
-  - LOC: `19` | PageRank: `0.00161` | Complexity: `4.0`
-- `src/ol_dbt/models/dimensional/tfact_problem_events.sql`
-  - Tracks problem check and showanswer events from MITx Online tracking logs to capture student problem-solving interactions and assessment data.
-  - LOC: `253` | PageRank: `0.00161` | Complexity: `21.0`
-- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__course_certificates.sql`
-  - Combines course certificates from multiple sources (MicroMasters, MITxOnline, and legacy edx.org) for DEDP programs, ensuring proper deduplication and data consistency for learners who have migrated between platforms.
-  - LOC: `173` | PageRank: `0.00160` | Complexity: `17.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_company.sql`
-  - Stores company information for e-commerce customers and partners.
-  - LOC: `16` | PageRank: `0.00160` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponversion.sql`
-  - Transforms coupon version data to track changes to coupon configurations over time, supporting audit trails and version control for promotional campaigns.
-  - LOC: `17` | PageRank: `0.00159` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_basket.sql`
-  - Provides a deduplicated view of user shopping baskets, ensuring only the most recent basket state per user is available for downstream analysis.
-  - LOC: `20` | PageRank: `0.00159` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_transaction.sql`
-  - Records and tracks financial transactions and payment processing for online purchases
-  - LOC: `22` | PageRank: `0.00159` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__auth_user.sql`
-  - Stores and maintains user account information, providing the foundation for user identification and personalization.
-  - LOC: `28` | PageRank: `0.00158` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_wagtail_page.sql`
-  - Standardizes Wagtail CMS page metadata to support content management and navigation across the MITx Online platform
-  - LOC: `28` | PageRank: `0.00156` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_coursepage.sql`
-  - Consolidates and deduplicates course page information from both internal and external CMS sources, providing a unified view of course metadata for marketing and catalog purposes.
-  - LOC: `63` | PageRank: `0.00156` | Complexity: `11.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__openedx_openedxuser.sql`
-  - Maintains a mapping between internal user IDs and their corresponding edX platform credentials for authentication and profile management.
-  - LOC: `19` | PageRank: `0.00155` | Complexity: `4.0`
 - `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__auth_user.sql`
-  - Extracts and standardizes user authentication data from the open edX platform for identity management and access control purposes.
+  - Maintains core user authentication and profile data from the open edX platform, supporting user management and access control for the online learning environment.
   - LOC: `19` | PageRank: `0.00155` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courserun_certificates.sql`
-  - Compiles course certificate data for MITx courses on edX.org, joining user and course information to track earned certificates and their details.
-  - LOC: `182` | PageRank: `0.00153` | Complexity: `24.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_to_topics.sql`
-  - Maps MITx Online courses to their associated topics by joining course pages with topic relationships, enabling topic-based course organization and discovery.
-  - LOC: `22` | PageRank: `0.00151` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courserun_enrollments.sql`
-  - Combines enrollment data from edX.org with micromasters course run information to create a unified view of course enrollments including verification status and upgrade deadlines, supporting analysis of learner progression through MITx programs.
-  - LOC: `124` | PageRank: `0.00151` | Complexity: `27.0`
-- `src/ol_dbt/models/marts/combined/marts__combined_program_enrollment_detail.sql`
-  - Aggregates program enrollment and certificate data across multiple platforms to create a unified view of learner progress through educational programs and their completion status.
-  - LOC: `360` | PageRank: `0.00150` | Complexity: `53.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__program_learner_report.sql`
-  - Aggregates program learner completion data to assess program effectiveness and learner outcomes
-  - LOC: `121` | PageRank: `0.00150` | Complexity: `14.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponredemption.sql`
-  - Records coupon redemption transactions to track when and how promotional coupons are used in course purchases.
-  - LOC: `19` | PageRank: `0.00150` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__users.sql`
-  - This module consolidates user account information with legal address and profile details to provide a complete view of user demographics, contact information, and professional background for bootcamp participants.
-  - LOC: `40` | PageRank: `0.00149` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/mitx/int__mitx__program_requirements.sql`
-  - Combines program requirements from MITx Online and MicroMasters platforms to provide a unified view of course requirements across both systems, enabling consistent program tracking and enrollment validation.
-  - LOC: `59` | PageRank: `0.00149` | Complexity: `11.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__flexiblepricing_flexiblepricetier.sql`
-  - Processes flexible pricing tier data to manage income-based pricing tiers for courses, supporting equitable access to education
-  - LOC: `20` | PageRank: `0.00147` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_courserun.sql`
-  - Module providing: stg__micromasters__app__postgres__courses_courserun. Contains 35 lines of Language.SQL code.
-  - LOC: `35` | PageRank: `0.00145` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2bcoupon.sql`
-  - Standardizes B2B coupon data from Postgres into staging tables with consistent timestamp formatting and boolean field naming conventions
-  - LOC: `25` | PageRank: `0.00144` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_courserun.sql`
-  - Sources and normalizes MITx course information from BigQuery, providing comprehensive course metadata including titles, schedules, and institutional details for catalog and enrollment systems.
-  - LOC: `44` | PageRank: `0.00144` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_course.sql`
-  - Transforms bootcamp course data from raw warehouse tables into a cleaned staging model with standardized column names for course identification and metadata.
-  - LOC: `15` | PageRank: `0.00142` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_discountredemption.sql`
-  - Transforms raw discount redemption data into a cleaned staging model with standardized field names and ISO8601 timestamps for tracking promotional usage.
-  - LOC: `20` | PageRank: `0.00142` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/salesforce/stg__salesforce__opportunity.sql`
-  - Extract and transform Salesforce opportunity data from raw warehouse format, removing deleted records and standardizing field names for downstream analytics
-  - LOC: `40` | PageRank: `0.00141` | Complexity: `4.0`
 - `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__users_user.sql`
   - Manages user account information and authentication for MITx Online platform
   - LOC: `24` | PageRank: `0.00140` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2breceipt.sql`
-  - Extracts and transforms B2B ecommerce receipt data, parsing JSON fields to expose transaction details and payment metadata for business intelligence.
-  - LOC: `26` | PageRank: `0.00140` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_video.sql`
-  - Tracks video-related user interactions in MITx Online courses including play, pause, speed changes, and transcript navigation, solving the need to understand student engagement patterns with video content for educational analytics.
-  - LOC: `30` | PageRank: `0.00140` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_discountproduct.sql`
-  - Transforms MITx Online discount product data from raw warehouse format into a cleaned staging table with standardized timestamps for tracking discount-product relationships.
-  - LOC: `20` | PageRank: `0.00139` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__program_certificates.sql`
-  - Generates a comprehensive view of program certificates by combining certificate data with program and user information, including certificate URLs for verification.
-  - LOC: `43` | PageRank: `0.00139` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_structure.sql`
-  - Structures and organizes course content hierarchy including chapters, modules, and topics to provide a clear understanding of course organization and navigation.
-  - LOC: `66` | PageRank: `0.00139` | Complexity: `9.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponpaymentversion.sql`
-  - Handles coupon payment versions and discount management for MIT xPro e-commerce transactions.
-  - LOC: `38` | PageRank: `0.00136` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserunenrollments_with_programs.sql`
-  - Combines course enrollment data with program requirements to identify which enrollments are part of structured learning programs, supporting program completion tracking and analytics.
-  - LOC: `87` | PageRank: `0.00136` | Complexity: `13.0`
-- `src/ol_dbt/models/intermediate/combined/int__combined__users.sql`
-  - Consolidates user profile information from multiple educational platforms into a single unified dataset, handling duplicates and providing consistent user identification across systems
-  - LOC: `259` | PageRank: `0.00136` | Complexity: `19.0`
 - `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__django_contenttype.sql`
-  - Provides content type mappings for the Django application to support polymorphic relationships and content management functionality.
+  - Maintains content type metadata for the Django application, enabling proper handling of different data models and their relationships within the platform.
   - LOC: `20` | PageRank: `0.00135` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__users.sql`
-  - This module consolidates comprehensive user profile data from MITxPro, combining authentication, legal address, and profile information to create a complete user record for business analysis.
-  - LOC: `75` | PageRank: `0.00135` | Complexity: `14.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2bcouponredemption.sql`
-  - Transforms raw B2B coupon redemption data into a standardized staging format with ISO8601 timestamps for business reporting and analysis.
-  - LOC: `18` | PageRank: `0.00135` | Complexity: `4.0`
 - `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__users_legaladdress.sql`
-  - Captures user legal address information from the MITx Online platform to support compliance and demographic analysis requirements.
+  - Captures user legal address information for compliance and regional reporting purposes, enabling the organization to maintain accurate records of user locations and associated legal requirements.
   - LOC: `17` | PageRank: `0.00135` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__users_userprofile.sql`
-  - Transform raw user profile data from MITx Online's PostgreSQL database into a cleaned staging table with standardized field names and data types for downstream analytics, handling null values and converting timestamps to ISO8601 format.
-  - LOC: `28` | PageRank: `0.00135` | Complexity: `4.0`
-- `src/ol_dbt/models/marts/combined/marts__combined_coursesinprogram.sql`
-  - Maps courses to their respective programs across different platforms to provide program structure visibility
-  - LOC: `86` | PageRank: `0.00134` | Complexity: `17.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_instructorpage.sql`
-  - Extract and transform instructor page data from MITx Online's PostgreSQL CMS database into a staging table with standardized field names for use in instructor-related analytics and reporting.
-  - LOC: `15` | PageRank: `0.00133` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_instructorpagelink.sql`
-  - Maintains instructor page relationships within the CMS, supporting navigation and linking between course content and instructor profiles.
-  - LOC: `12` | PageRank: `0.00133` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_order.sql`
-  - Processes e-commerce order data including transactions, payments, and user information to track course purchases and financial transactions.
-  - LOC: `112` | PageRank: `0.00132` | Complexity: `21.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_certificates.sql`
-  - Provides detailed information about course certificates issued on MITx Online, including certificate status and user details, supporting credential verification and learner achievement tracking.
-  - LOC: `40` | PageRank: `0.00132` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/mitx/int__mitx__courserun_enrollments.sql`
-  - Combines and deduplicates course enrollment data from MITx Online and edX.org platforms to provide a unified view of learner enrollments across both systems, handling platform-specific enrollment logic and deduplication for DEDP courses.
-  - LOC: `68` | PageRank: `0.00132` | Complexity: `7.0`
-- `src/ol_dbt/models/marts/combined/marts__combined__orders.sql`
-  - Combines order data from multiple platforms to create a unified view of transactions and revenue
-  - LOC: `521` | PageRank: `0.00130` | Complexity: `39.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__auth_userprofile.sql`
-  - Transforms and cleans user profile data from the MITx residential platform, standardizing names and demographic information for consistent analysis of learner characteristics.
-  - LOC: `18` | PageRank: `0.00130` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__auth_user.sql`
-  - Module providing: stg__micromasters__app__postgres__auth_user. Contains 19 lines of Language.SQL code.
-  - LOC: `19` | PageRank: `0.00130` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__api__course.sql`
-  - Extracts and normalizes course metadata from edX, including titles, descriptions, topics, and prerequisites, to provide a clean reference dataset for course catalog management.
-  - LOC: `28` | PageRank: `0.00130` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/learn-ai/stg__learn_ai__app__postgres__chatbots_userchatsession.sql`
-  - Cleanses chatbot user session data from Learn AI, enabling analysis of AI assistant interactions and integration with Canvas courses for educational support services.
-  - LOC: `24` | PageRank: `0.00129` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__bulk_email_optin.sql`
-  - Provides email opt-in status for MITx Online users by joining user data with course-specific email preferences, enabling targeted communication while respecting user preferences.
-  - LOC: `31` | PageRank: `0.00129` | Complexity: `8.0`
-- `src/ol_dbt/models/marts/combined/marts__combined__users.sql`
-  - Creates a unified view of user data across multiple platforms to provide comprehensive user analytics and enrollment tracking
-  - LOC: `271` | PageRank: `0.00129` | Complexity: `30.0`
-- `src/ol_dbt/models/reporting/cheating_detection_report.sql`
-  - Implements a cheating detection system that analyzes problem submission patterns and grades to identify potential academic integrity violations across courses.
-  - LOC: `306` | PageRank: `0.00129` | Complexity: `32.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_wiretransferreceipt.sql`
-  - Processes wire transfer receipt data from the e-commerce system, addressing the business requirement to track payment methods and financial transactions by standardizing wire transfer information with proper timestamps.
-  - LOC: `19` | PageRank: `0.00129` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_blockedcountry.sql`
-  - Manages geographic restrictions for MITx Online courses, allowing the platform to enforce compliance with licensing and regulatory requirements by blocking access from specific countries.
-  - LOC: `17` | PageRank: `0.00129` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_basket.sql`
-  - Manages user shopping baskets for e-commerce transactions, tracking basket creation, updates, and associations with specific users for course enrollment purchases
-  - LOC: `20` | PageRank: `0.00129` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_basketdiscount.sql`
-  - Transforms raw ecommerce basket discount data to track when users apply discounts to their shopping baskets, enabling analysis of promotional campaign effectiveness and revenue impact
-  - LOC: `22` | PageRank: `0.00129` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_basketitem.sql`
-  - Converts raw basket item data from the e-commerce system into a standardized staging format with ISO8601 timestamps for order processing and analysis.
-  - LOC: `21` | PageRank: `0.00129` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_userdiscount.sql`
-  - Transforms MITx Online user discount data from raw warehouse format into a cleaned staging table with standardized timestamps for tracking discount usage.
-  - LOC: `19` | PageRank: `0.00129` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__flexiblepricing_countryincomethreshold.sql`
-  - Defines income-based pricing thresholds for different countries to support flexible pricing strategies
-  - LOC: `21` | PageRank: `0.00129` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__flexiblepricing_currencyexchangerate.sql`
-  - Maintains currency exchange rates for flexible pricing, supporting international transactions by tracking exchange rates and their validity periods across different currencies
-  - LOC: `23` | PageRank: `0.00129` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_linerunselection.sql`
-  - Records when a user deselects a specific course run from their enrollment selection to support enrollment management workflows
-  - LOC: `19` | PageRank: `0.00129` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/salesforce/stg__salesforce__opportunitylineitem.sql`
-  - Extract and transform Salesforce opportunity line item data from raw warehouse format, removing deleted records and standardizing field names for detailed opportunity analysis
-  - LOC: `29` | PageRank: `0.00129` | Complexity: `4.0`
-- `src/ol_dbt/models/dimensional/dim_problem.sql`
-  - Creates a dimension table for course problems that combines problem metadata with user submission events, enabling analysis of problem-solving behavior and assessment completion.
-  - LOC: `119` | PageRank: `0.00127` | Complexity: `10.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__program_instructors.sql`
-  - Creates a list of instructors associated with MITx Online programs, enabling program pages to display instructor information and credentials to learners.
-  - LOC: `21` | PageRank: `0.00127` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_product.sql`
-  - Provides a comprehensive view of product information including pricing, descriptions, and associations with courses or programs, enabling analysis of product offerings and their attributes.
-  - LOC: `67` | PageRank: `0.00125` | Complexity: `16.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_education.sql`
-  - Captures and standardizes user education profiles for MicroMasters learners, including their academic background and degree information.
-  - LOC: `22` | PageRank: `0.00124` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_employment.sql`
-  - Module providing: stg__micromasters__app__postgres__profiles_employment. Contains 22 lines of Language.SQL code.
-  - LOC: `22` | PageRank: `0.00124` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_coupon.sql`
-  - Standardizes coupon data by renaming fields and converting timestamps, enabling tracking of coupon usage and effectiveness across the platform.
-  - LOC: `20` | PageRank: `0.00124` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_problemcheck.sql`
-  - Captures and structures problem check events from user activity logs to enable detailed analysis of student problem-solving behavior and assessment performance.
-  - LOC: `25` | PageRank: `0.00124` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courses.sql`
-  - Consolidates course metadata from multiple sources including platform details, topics, instructors, and certificate information, creating a comprehensive catalog for course management and marketing purposes.
-  - LOC: `82` | PageRank: `0.00123` | Complexity: `17.0`
-- `src/ol_dbt/models/intermediate/ovs/int__ovs__videos.sql`
-  - Combines video metadata with encoding job information to provide complete video details including duration and platform information
-  - LOC: `51` | PageRank: `0.00123` | Complexity: `12.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__edxval_video.sql`
-  - Extracts and standardizes video metadata from the MITx residential platform, providing a foundation for analyzing video content usage and engagement patterns across courses.
-  - LOC: `17` | PageRank: `0.00123` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_programpage.sql`
-  - Consolidates CMS program page data from both internal and external sources to provide unified program information.
-  - LOC: `40` | PageRank: `0.00123` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__global_alumni__api__bigquery__user_enrollments.sql`
-  - Standardizes global alumni enrollment data including user demographics and course run details for enrollment analytics and reporting.
-  - LOC: `49` | PageRank: `0.00122` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponpaymentversion.sql`
-  - Captures coupon payment version data linking payment transactions to coupon codes and discount configurations for financial reconciliation.
-  - LOC: `31` | PageRank: `0.00122` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitx/int__mitx__courserun_certificates.sql`
-  - Combines course completion certificates from multiple sources (MITx Online, edX.org, and MicroMasters) while filtering out duplicates and program-specific certificates to create a comprehensive view of individual course completions.
-  - LOC: `96` | PageRank: `0.00122` | Complexity: `12.0`
-- `src/ol_dbt/models/dimensional/dim_platform.sql`
-  - Creates a dimension table for platforms with surrogate keys to enable consistent platform identification across the data warehouse.
-  - LOC: `11` | PageRank: `0.00120` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_certificates_dedp_from_micromasters.sql`
-  - Finds the highest grade course certificates for DEDP courses from MicroMasters by selecting the best run per user per course before certificate generation, handling ties by timestamp.
-  - LOC: `73` | PageRank: `0.00120` | Complexity: `18.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_video.sql`
-  - Extracts and transforms video-related user activity events from the raw course activity data, filtering for specific video interaction event types and parsing JSON fields to provide structured video engagement metrics like duration, playback position, and speed changes.
-  - LOC: `32` | PageRank: `0.00120` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_video.sql`
-  - Extracts and transforms video-related user activity events from MITx tracking logs for detailed video engagement analytics.
-  - LOC: `31` | PageRank: `0.00120` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_person_course.sql`
-  - Provides a comprehensive view of user engagement and performance in edX courses by transforming raw course activity data into structured metrics for analytics and reporting.
-  - LOC: `69` | PageRank: `0.00120` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/ocw/stg__ocw__studio__postgres__websites_website.sql`
-  - Transforms OCW studio website data from raw warehouse tables into a staging model with standardized column names and derived fields for website status and metadata management.
-  - LOC: `44` | PageRank: `0.00118` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/ocw/stg__ocw__studio__postgres__websites_websitestarter.sql`
-  - Transforms OCW studio website starter data from raw warehouse tables into a staging model with standardized column names and ISO8601 formatted timestamps for website starter configurations.
-  - LOC: `22` | PageRank: `0.00118` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__programenrollments.sql`
-  - Consolidates program enrollment data from MITx Online by joining enrollment records with program and user information, providing a comprehensive view of learner program participation and status.
-  - LOC: `39` | PageRank: `0.00118` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_grades.sql`
-  - Aggregates course grade information from MITx Online including user details and course metadata to provide a comprehensive view of student performance across all courses, solving the need for academic reporting and transcript generation.
-  - LOC: `40` | PageRank: `0.00117` | Complexity: `8.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_facultymemberspage.sql`
-  - Manages faculty member information displayed on course pages, including headings and faculty details, to present accurate instructor information to students.
-  - LOC: `14` | PageRank: `0.00117` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_course.sql`
-  - Maintains metadata about online courses including titles, status, and program associations for catalog management and course delivery.
-  - LOC: `27` | PageRank: `0.00117` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__course_grades.sql`
-  - Combine course grade data from multiple platforms (MicroMasters, MITxOnline, edX) for DEDP program learners to provide unified academic performance tracking
-  - LOC: `168` | PageRank: `0.00116` | Complexity: `17.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__edxval_video.sql`
-  - Tracks video assets and metadata from the edX platform for educational content management
-  - LOC: `18` | PageRank: `0.00116` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/combined/int__combined__courserun_enrollments.sql`
-  - Aggregates and combines enrollment data from multiple learning platforms into a single unified dataset, including user enrollment status, course information, and linking to grades and certificates
-  - LOC: `249` | PageRank: `0.00116` | Complexity: `29.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__programs.sql`
-  - Module providing: int__mitxpro__programs. Contains 89 lines of Language.SQL code.
-  - LOC: `89` | PageRank: `0.00115` | Complexity: `20.0`
-- `src/ol_dbt/models/intermediate/mitx/int__mitx__courserun_enrollments_with_programs.sql`
-  - Joins course enrollment data from edX.org with user information and program requirements to create a comprehensive view of active enrollments across both edX and MITx Online platforms.
-  - LOC: `78` | PageRank: `0.00114` | Complexity: `12.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_line.sql`
-  - Transforms raw ecommerce line item data from the MicroMasters PostgreSQL database into a standardized staging format with readable course identifiers and proper data types
-  - LOC: `22` | PageRank: `0.00114` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_order.sql`
-  - Captures e-commerce order transactions for financial reconciliation and user purchase history
-  - LOC: `21` | PageRank: `0.00114` | Complexity: `4.0`
-- `src/ol_dbt/models/dimensional/tfact_course_navigation_events.sql`
-  - Captures and processes course navigation events from multiple platforms to track how users move through course content and interact with navigation elements.
-  - LOC: `247` | PageRank: `0.00113` | Complexity: `21.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courserun_grades.sql`
-  - Aggregates course grades from edx.org to track student performance and completion status across courses
-  - LOC: `81` | PageRank: `0.00113` | Complexity: `13.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_coursepage_topics.sql`
-  - Maps course pages to their associated course topics for organizing educational content by subject area
-  - LOC: `8` | PageRank: `0.00113` | Complexity: `3.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_coursetopic.sql`
-  - Creates a hierarchical taxonomy of course topics to enable content categorization and navigation.
-  - LOC: `15` | PageRank: `0.00113` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_programcertificate.sql`
-  - Tracks MicroMasters program completion and certification status for users, enabling verification of educational credentials and program participation.
-  - LOC: `20` | PageRank: `0.00113` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__course_runs.sql`
-  - Provides a consolidated view of course runs with platform information for MITxPro, enabling analysis of course availability and scheduling across different platforms.
-  - LOC: `35` | PageRank: `0.00112` | Complexity: `7.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__auth_user.sql`
-  - Standardizes user authentication data from the bootcamp platform, solving the business problem of user management by providing a consistent view of user accounts with proper timestamps for account activity.
-  - LOC: `17` | PageRank: `0.00112` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__profiles_legaladdress.sql`
-  - Transforms raw legal address data from bootcamp applications into a standardized format for downstream processing and analysis.
-  - LOC: `27` | PageRank: `0.00112` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__profiles_profile.sql`
-  - Transforms raw bootcamp user profile data into a cleaned format with standardized fields for user demographics and professional information, solving the business problem of having inconsistent user data across the platform by providing a unified view of user profiles.
-  - LOC: `40` | PageRank: `0.00112` | Complexity: `6.0`
-- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_grades_dedp_from_micromasters.sql`
-  - Identifies the highest course grade for each MicroMasters user per course, resolving ties by selecting the most recent grade before certificate generation.
-  - LOC: `77` | PageRank: `0.00111` | Complexity: `20.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_programrun.sql`
-  - Captures and standardizes program run information from MITxPro's PostgreSQL database, enabling tracking of program lifecycle dates and metadata for educational programs.
-  - LOC: `19` | PageRank: `0.00111` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__edxval_video.sql`
-  - Extracts and standardizes video metadata from the edX platform's MySQL database, supporting video asset management and tracking across the learning platform.
-  - LOC: `18` | PageRank: `0.00111` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courseware_studentmodule.sql`
-  - Transforms raw student module data to track individual student interactions with course content, capturing grades and state changes for learning analytics.
-  - LOC: `22` | PageRank: `0.00110` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courseware_studentmodulehistoryextended.sql`
-  - Tracks historical changes to student module states and grades in MITx residential courses, enabling analysis of learning progress and problem-solving patterns over time.
-  - LOC: `48` | PageRank: `0.00110` | Complexity: `6.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_video.sql`
-  - Filters and extracts video-related user activities from tracking logs, capturing detailed video interaction metrics for learning analytics.
-  - LOC: `30` | PageRank: `0.00110` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_discussion.sql`
-  - Captures and structures discussion forum events from course activities to track student engagement and participation in course discussions.
-  - LOC: `24` | PageRank: `0.00110` | Complexity: `3.0`
-- `src/ol_dbt/models/staging/zendesk/stg__zendesk__user.sql`
-  - Transforms raw Zendesk user data into a cleaned staging table with standardized field names and formats, making user information available for analysis of support interactions and agent performance.
-  - LOC: `52` | PageRank: `0.00109` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__auth_user.sql`
-  - Maintains user account information from the Open edX platform for authentication and authorization purposes
-  - LOC: `17` | PageRank: `0.00109` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_programcertificate.sql`
-  - Processes program certificate data from MITx Online to track digital credentials issued to learners, including their status and timestamps for auditing and reporting.
-  - LOC: `18` | PageRank: `0.00109` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__ecommerce_receipt.sql`
-  - This module processes and extracts detailed payment receipt information from JSON data, including transaction details, payment methods, and billing information, to support financial tracking and reconciliation of course purchases.
-  - LOC: `33` | PageRank: `0.00109` | Complexity: `3.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courserunenrollment.sql`
-  - Standardizes course run enrollment data from the source system, providing a clean view of user enrollments, statuses, and timestamps for educational program tracking.
-  - LOC: `22` | PageRank: `0.00109` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_courseruncertificate.sql`
-  - Provides a clean, enriched view of MITx Online course certificate data including URLs and timestamps for downstream reporting and analysis
-  - LOC: `22` | PageRank: `0.00107` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_receipt.sql`
-  - Extracts and transforms payment receipt data from JSON format into structured fields, enabling financial transaction analysis and reconciliation.
-  - LOC: `33` | PageRank: `0.00107` | Complexity: `3.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__bulk_email_optout.sql`
-  - Cleans bulk email optout data from the MITx Online platform to track user preferences for email communications and course-related notifications.
-  - LOC: `15` | PageRank: `0.00106` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__users.sql`
-  - Consolidates user profile data from authentication and profile tables to provide a comprehensive view of residential MITx users.
-  - LOC: `25` | PageRank: `0.00106` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__edxval_coursevideo.sql`
-  - Manages course video metadata, allowing for content management and video-related analytics.
-  - LOC: `16` | PageRank: `0.00106` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_flexiblepriceapplication.sql`
-  - Manages flexible pricing applications for courses and programs, linking pricing requests with user information, discount details, and content types to enable dynamic pricing and financial aid processing.
-  - LOC: `61` | PageRank: `0.00106` | Complexity: `14.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_coursecertificate.sql`
-  - Stores course completion certificates with verification URLs for credentialing and program completion tracking
-  - LOC: `21` | PageRank: `0.00106` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_courserungrade.sql`
-  - Maintains course run final grades for MicroMasters learners, tracking their academic performance and completion status.
-  - LOC: `22` | PageRank: `0.00106` | Complexity: `4.0`
-- `src/ol_dbt/models/dimensional/tfact_video_events.sql`
-  - Extracts and transforms raw video event data from multiple platforms into a structured format that captures video playback interactions including loading, playing, seeking, and completion.
-  - LOC: `219` | PageRank: `0.00106` | Complexity: `21.0`
-- `src/ol_dbt/models/staging/learn-ai/stg__learn_ai__app__postgres__users_user.sql`
-  - Transforms raw user data by extracting key fields and deduplicating records to provide a clean dataset of user information for analysis.
-  - LOC: `22` | PageRank: `0.00105` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_productversion.sql`
-  - Module providing: int__mitxpro__ecommerce_productversion. Contains 15 lines of Language.SQL code.
-  - LOC: `15` | PageRank: `0.00105` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_transaction.sql`
-  - Extracts and transforms detailed e-commerce transaction data from MITx Online, parsing JSON fields to create structured transaction attributes for payment processing and financial reporting.
-  - LOC: `42` | PageRank: `0.00105` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__course_enrollments.sql`
-  - Consolidates course enrollment data from MITx platform with program information, filtering specifically for MicroMasters programs to track learner participation and program completion status.
-  - LOC: `33` | PageRank: `0.00105` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courses_to_topics.sql`
-  - Creates a mapping between courses and their topical categories by joining course pages with topic assignments, enabling analysis of course content organization and topic coverage across the platform.
-  - LOC: `24` | PageRank: `0.00104` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_line.sql`
-  - Creates a unified view of ecommerce line items by joining order details with product information and program run associations, enabling analysis of purchases and their relationships to specific courses and programs.
-  - LOC: `38` | PageRank: `0.00104` | Complexity: `9.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_order.sql`
-  - Aggregates order-level data including coupon redemption details and payment information, providing a comprehensive view of customer transactions for financial reporting and order management.
-  - LOC: `68` | PageRank: `0.00104` | Complexity: `14.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__users_legaladdress.sql`
-  - Standardizes user legal address information, consolidating address components and renaming fields for consistent user data management and compliance reporting.
-  - LOC: `30` | PageRank: `0.00104` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__users_profile.sql`
-  - Stores user profile information including demographics, employment details, and educational background for customer segmentation and personalization.
-  - LOC: `24` | PageRank: `0.00104` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_certificates_dedp_from_mitxonline.sql`
-  - Extracts DEDP course certificates from MITxOnline data by joining certificates with course runs, courses, and enrollment data, filtering for DEDP programs and excluding revoked certificates.
-  - LOC: `40` | PageRank: `0.00104` | Complexity: `10.0`
-- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_certificates_non_dedp_from_edxorg.sql`
-  - Gathers course completion certificates from non-DEDP programs on the edx.org platform, associating them with their respective courses and programs.
-  - LOC: `30` | PageRank: `0.00104` | Complexity: `7.0`
-- `src/ol_dbt/models/dimensional/afact_problem_engagement.sql`
-  - Aggregates problem engagement metrics including attempt counts, success rates, and timing data to analyze student performance and problem difficulty across course content.
-  - LOC: `86` | PageRank: `0.00104` | Complexity: `8.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_programenrollment.sql`
-  - Manages user enrollments in educational programs and tracks enrollment status and activity
-  - LOC: `20` | PageRank: `0.00103` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_course_to_department.sql`
-  - Maps relationships between courses and their associated departments, providing organizational context for course offerings and enabling department-level reporting and analysis
-  - LOC: `13` | PageRank: `0.00103` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_department.sql`
-  - Provides a clean reference table of MITx Online course departments for organizational reporting and filtering.
-  - LOC: `16` | PageRank: `0.00103` | Complexity: `4.0`
 - `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_courserungrade.sql`
-  - Records and maintains course completion grades and academic performance for MITx Online learners
+  - Records and manages course grades and academic performance for MITx Online users
   - LOC: `21` | PageRank: `0.00103` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_videos.sql`
-  - Links MITx Online course videos with external video platform data to enrich video metadata, ensuring accurate video duration and status information for course content management.
-  - LOC: `32` | PageRank: `0.00103` | Complexity: `8.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_video.sql`
-  - Maps course video content to course runs, providing video metadata and duration information for content management and analytics.
-  - LOC: `17` | PageRank: `0.00102` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__program_requirements.sql`
-  - Define MicroMasters program requirements by categorizing courses as Core or Elective to support program completion tracking
-  - LOC: `84` | PageRank: `0.00102` | Complexity: `13.0`
-- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_program_certificates_dedp_from_micromasters.sql`
-  - Identifies DEDP program certificates from MicroMasters data by joining program certificates with program metadata, filtering for DEDP programs only.
-  - LOC: `23` | PageRank: `0.00101` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_program_certificates_dedp_from_mitxonline.sql`
-  - Extracts DEDP program completion certificates from mitxonline, linking them to their corresponding MicroMasters programs and users.
-  - LOC: `25` | PageRank: `0.00101` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_program_certificates_non_dedp.sql`
-  - Compiles non-DEDp MicroMasters program certificates from edX.org data, handling duplicate certificates and including override list for users who should receive certificates despite not meeting requirements.
-  - LOC: `83` | PageRank: `0.00101` | Complexity: `14.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_product.sql`
-  - Maps e-commerce products to their corresponding course runs or programs to understand what educational offerings are available for purchase.
-  - LOC: `48` | PageRank: `0.00100` | Complexity: `13.0`
-- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__ecommerce_order.sql`
-  - This module consolidates ecommerce order data with related line items, receipts, users, and course run information to provide a comprehensive view of course purchases, including payment details and user information.
-  - LOC: `51` | PageRank: `0.00100` | Complexity: `11.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_problemcheck.sql`
-  - Extracts problem check events from course activity data to analyze student performance on individual problems
-  - LOC: `24` | PageRank: `0.00100` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/learn-ai/int__learn_ai__chatbot.sql`
-  - Combines chatbot checkpoint data with user and course information to track AI recommendation and assistance interactions across multiple chatbot agents.
-  - LOC: `88` | PageRank: `0.00100` | Complexity: `15.0`
-- `src/ol_dbt/models/intermediate/learn-ai/int__learn_ai__tutorbot.sql`
-  - Consolidates TutorBot chat session data with user and course information to analyze AI tutoring interactions and their effectiveness.
-  - LOC: `35` | PageRank: `0.00100` | Complexity: `9.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_problemcheck.sql`
-  - Captures problem submission attempts with detailed grading information to analyze student performance
-  - LOC: `25` | PageRank: `0.00100` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/ocw/int__ocw__course_instructors.sql`
-  - Maps instructor UUIDs to detailed instructor information by joining course metadata with instructor content records to provide comprehensive instructor details for each course.
-  - LOC: `37` | PageRank: `0.00100` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/ocw/int__ocw__courses.sql`
-  - Consolidates core course metadata from multiple source tables to provide a unified view of OCW course attributes including title, status, publication dates, and descriptive information.
-  - LOC: `45` | PageRank: `0.00100` | Complexity: `7.0`
-- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_video_engagements.sql`
-  - Creates a mart of MITx Online video engagement data by joining video activity with course structure and video metadata, providing comprehensive information about video interactions including timestamps, playback positions, and associated course content.
-  - LOC: `61` | PageRank: `0.00100` | Complexity: `11.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_basketitem.sql`
-  - Tracks items added to shopping baskets in the e-commerce system, capturing product selections and quantities for later purchase processing.
-  - LOC: `21` | PageRank: `0.00100` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_basketrunselection.sql`
-  - Transforms raw ecommerce basket run selection data from Postgres into a standardized staging format with ISO8601 timestamps for downstream analytics
-  - LOC: `19` | PageRank: `0.00100` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponbasket.sql`
-  - Processes raw coupon basket data from xPro's e-commerce system, deduplicating records and standardizing timestamps for consistent downstream usage.
-  - LOC: `20` | PageRank: `0.00100` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_productcouponassignment.sql`
-  - Manages coupon assignment data for tracking bulk coupon distributions, redemption status, and communication with recipients about their assigned coupons.
-  - LOC: `25` | PageRank: `0.00100` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/zendesk/stg__zendesk__ticket_comment.sql`
-  - Transforms raw Zendesk ticket comment data into a cleaned staging table with standardized field names and formats, making support ticket conversations accessible for analysis and reporting.
-  - LOC: `28` | PageRank: `0.00100` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_product.sql`
-  - Manages product catalog information including pricing and availability for online commerce
-  - LOC: `21` | PageRank: `0.00100` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_coursepage_topics.sql`
-  - Tracks topic assignments for both internal course pages and external course pages to understand content categorization across different course types
-  - LOC: `17` | PageRank: `0.00099` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__edxval_coursevideo.sql`
-  - Transforms MITx Online course video data from raw warehouse format into a cleaned staging table for managing video content visibility and associations.
-  - LOC: `16` | PageRank: `0.00099` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/subqueries/__mitxonline_good_economics_for_hard_times_program.sql`
-  - Determines which DEDP program should count a 14.009x enrollment for micromasters reporting based on whether the learner is in the Public Policy program or completed the course before Fall 2023, ensuring accurate credential tracking across program tracks.
-  - LOC: `52` | PageRank: `0.00099` | Complexity: `9.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__course_structure.sql`
-  - This module processes course structure data from MITxPro, organizing it by course run and time to provide a structured view of course content including chapters and their relationships.
-  - LOC: `66` | PageRank: `0.00099` | Complexity: `9.0`
-- `src/ol_dbt/models/dimensional/dim_video.sql`
-  - Creates a unified dimension table for video content by combining metadata from multiple sources and joining with video duration data to support video analytics.
-  - LOC: `102` | PageRank: `0.00098` | Complexity: `10.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__program_entitlement.sql`
-  - Provides cleansed data about user program entitlements from edX, enabling analysis of purchased programs, their entitlements, and redemption status for business reporting and user access management.
-  - LOC: `20` | PageRank: `0.00098` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_program_certificates.sql`
-  - Creates a deduplicated list of learners who have completed MITx programs on edX.org, linking each learner to their corresponding micromasters program ID for downstream analytics.
-  - LOC: `44` | PageRank: `0.00098` | Complexity: `6.0`
-- `src/ol_dbt/models/dimensional/tfact_discussion_events.sql`
-  - Tracks discussion forum events from MITx Online and MITx Pro platforms to monitor student engagement in collaborative learning and knowledge sharing activities.
-  - LOC: `215` | PageRank: `0.00097` | Complexity: `15.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_certificatepage.sql`
-  - Stores certificate template configurations and settings for generating professional certificates
-  - LOC: `17` | PageRank: `0.00097` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__program_courses.sql`
-  - Consolidates program course metadata to support program structure and learner pathway analysis
-  - LOC: `16` | PageRank: `0.00097` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__programs.sql`
-  - Creates a clean staging table for program metadata from raw S3 data, deduplicating by program UUID to provide a single source of truth for program information.
-  - LOC: `18` | PageRank: `0.00097` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__program_runs.sql`
-  - Creates a consolidated view of program run information by combining program details with specific run instances, allowing tracking of different program offerings over time.
-  - LOC: `21` | PageRank: `0.00096` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_courseruncertificate.sql`
-  - Captures and enriches certificate issuance data for bootcamp course completions, enabling verification and tracking of credential status.
-  - LOC: `21` | PageRank: `0.00096` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courseruncertificate.sql`
-  - Manages course completion certificates for MIT xPro users including certificate generation and revocation tracking.
-  - LOC: `21` | PageRank: `0.00096` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_program_courses.sql`
-  - Creates a comprehensive mapping of MITx programs to their constituent courses by joining program and course data, then enhances this with micromasters program names to provide a unified view of program structures for analysis.
-  - LOC: `31` | PageRank: `0.00096` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_grades_dedp_from_mitxonline.sql`
-  - Extracts and combines course grade information for DEDP programs from MITxOnline, linking grades to specific course runs and programs to track academic performance and completion metrics.
-  - LOC: `37` | PageRank: `0.00095` | Complexity: `9.0`
-- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_grades_non_dedp_from_edxorg.sql`
-  - Retrieves non-DEDp course grades from edX.org by joining course grades with course runs and programs, filtering for non-DEDp programs only.
-  - LOC: `28` | PageRank: `0.00095` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_instructors.sql`
-  - Provides a list of instructors associated with each course by joining course pages with instructor information through pagelink relationships, enabling course catalog displays with instructor details.
-  - LOC: `21` | PageRank: `0.00094` | Complexity: `7.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__edxval_coursevideo.sql`
-  - Processes course video metadata from Open edX, enabling content management and analysis of video-related features across courses.
-  - LOC: `16` | PageRank: `0.00094` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__exams_examrun.sql`
-  - Stores and tracks exam run information for MicroMasters courses, including exam scheduling and grading details.
-  - LOC: `24` | PageRank: `0.00093` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_coupon.sql`
-  - This model consolidates coupon data from the e-commerce system to provide a unified view of available coupons, their properties, and their relationships to payment methods, enabling better analysis of promotional strategies.
-  - LOC: `21` | PageRank: `0.00093` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/combined/int__combined__course_videos.sql`
-  - Creates a unified view of course video content across multiple learning platforms, combining video metadata and duration information from different sources into a single dataset
-  - LOC: `69` | PageRank: `0.00093` | Complexity: `8.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__grades_subsectiongrade.sql`
-  - Transforms persistent subsection grade data to track student progress and performance in course modules for learning analytics
-  - LOC: `25` | PageRank: `0.00093` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__grades_subsectiongradeoverride.sql`
-  - Transforms MITx Online subsection grade override data from raw warehouse format into a cleaned staging table with deduplication to ensure only the most recent overrides are retained.
-  - LOC: `24` | PageRank: `0.00093` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courserunenrollments.sql`
-  - Consolidates enrollment data from multiple systems to provide a unified view of student enrollments across courses, including enrollment status, mode, and user information.
-  - LOC: `50` | PageRank: `0.00092` | Complexity: `11.0`
-- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__orders.sql`
-  - Aggregates e-commerce order data including receipts, user information, and course enrollment details to provide a comprehensive view of purchase transactions and associated learner information.
-  - LOC: `95` | PageRank: `0.00092` | Complexity: `19.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_line.sql`
-  - Transforms raw ecommerce line item data from Postgres into staging format with standardized timestamps for order line analysis
-  - LOC: `19` | PageRank: `0.00092` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_programrunline.sql`
-  - Manages the relationship between program runs and their associated line items, tracking which program runs contain which courses or content.
-  - LOC: `19` | PageRank: `0.00092` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__courserun_certificates.sql`
-  - Creates a unified view of bootcamp course certificates by joining certificate data with course run details and user information to track certificate issuance, revocation status, and associated learner details.
-  - LOC: `36` | PageRank: `0.00092` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courserun_certificates.sql`
-  - Module providing: int__mitxpro__courserun_certificates. Contains 37 lines of Language.SQL code.
-  - LOC: `37` | PageRank: `0.00092` | Complexity: `8.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courserunenrollment.sql`
-  - Tracks course enrollment status and certificate blocking for bootcamp participants, supporting enrollment management and credential control.
-  - LOC: `21` | PageRank: `0.00092` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courserungrade.sql`
-  - Tracks individual course grades for users, including letter grades and pass/fail status, to monitor student academic progress and performance in specific courses.
-  - LOC: `21` | PageRank: `0.00092` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun_enrollment.sql`
-  - Tracks and stores course enrollment data for students, enabling analysis of course participation and enrollment status.
-  - LOC: `16` | PageRank: `0.00092` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun_grade.sql`
-  - Records and tracks course grades for students, enabling performance analysis and certification decisions.
-  - LOC: `18` | PageRank: `0.00092` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__b2b_contractpage.sql`
-  - Transforms B2B contract page data to manage enterprise learning agreements, including contract details, enrollment terms, and membership configurations for organizational customers.
-  - LOC: `21` | PageRank: `0.00092` | Complexity: `4.0`
 - `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__b2b_organizationpage.sql`
-  - Manages organizational profiles and SSO integration for B2B partners on MITx Online platform
+  - Manages organizational information and branding for B2B partners on MITx Online platform
   - LOC: `16` | PageRank: `0.00092` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_programcertificate.sql`
-  - Manages program certificates issued to users, including revocation status and timestamps, to verify completion of academic programs and maintain certification records.
-  - LOC: `20` | PageRank: `0.00092` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_programenrollment.sql`
-  - Manages program enrollment records, tracking which users are enrolled in which programs and their enrollment status.
-  - LOC: `21` | PageRank: `0.00092` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_electiveset.sql`
-  - Manages program-level elective requirements to ensure students meet graduation criteria
-  - LOC: `16` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_electiveset_to_course.sql`
-  - Maps elective courses to their respective elective sets in MicroMasters programs, enabling flexible course selection.
-  - LOC: `15` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__user_program_certificate_override_list.sql`
-  - Provides a secure, hardcoded list of program certificate overrides for specific users, enabling manual overrides of automated certificate generation logic.
-  - LOC: `4` | PageRank: `0.00091` | Complexity: `1.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__django_contenttype.sql`
-  - Standardizes Django content type metadata to enable consistent referencing of database models across the platform.
-  - LOC: `20` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_product.sql`
-  - Manages product catalog information including active status, content types, and lifecycle timestamps for e-commerce operations.
-  - LOC: `21` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/learn-ai/stg__learn_ai__app__postgres__chatbots_tutorbotoutput.sql`
-  - Transforms raw tutorbot output data by extracting key fields and deduplicating records to provide a clean dataset of chatbot interactions.
-  - LOC: `14` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__reversion_version.sql`
-  - Stores version history for content changes, enabling audit trails and rollback capabilities for administrative modifications across the platform.
-  - LOC: `19` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/ovs/stg__ovs__studio__postgres__ui_collection.sql`
-  - Models collection metadata from the raw data source, standardizing identifiers and timestamps for content organization and access control analysis.
-  - LOC: `27` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/ovs/stg__ovs__studio__postgres__ui_collectionedxendpoint.sql`
-  - Creates a mapping table between collections and edX endpoints, enabling analysis of content distribution across different edX environments.
-  - LOC: `17` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/ovs/stg__ovs__studio__postgres__ui_edxendpoint.sql`
-  - Transforms raw OVS studio endpoint data by renaming columns and standardizing timestamp formats for downstream use.
-  - LOC: `20` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/ovs/stg__ovs__studio__postgres__ui_encodejob.sql`
-  - Transforms and standardizes video encoding job data from multiple source tables, extracting duration metrics and normalizing state codes for video processing analytics.
-  - LOC: `63` | PageRank: `0.00091` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/ovs/stg__ovs__studio__postgres__ui_video.sql`
-  - Transforms raw OVS video data by renaming columns, casting data types, and standardizing timestamp formats for consistency.
-  - LOC: `29` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__courseware_studentmodule.sql`
-  - Captures detailed student interaction data with course modules to enable progress tracking and analytics.
-  - LOC: `22` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__courseware_studentmodule.sql`
-  - Captures student interaction data with course content, including problem attempts, grades, and progress tracking for learning analytics and reporting.
-  - LOC: `22` | PageRank: `0.00091` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_courserunenrollment.sql`
-  - Tracks student enrollment status and subscription preferences for MITx Online course runs to support access control and communication.
-  - LOC: `26` | PageRank: `0.00090` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_problemsubmitted.sql`
-  - Captures and structures problem submission events from course activities to track student performance and grading data.
-  - LOC: `23` | PageRank: `0.00090` | Complexity: `3.0`
-- `src/ol_dbt/models/dimensional/dim_discussion_topic.sql`
-  - Creates a unified dimension table for discussion topics across course content, combining discussion components and course-wide discussion topics to enable analysis of discussion engagement and topic distribution.
-  - LOC: `63` | PageRank: `0.00090` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__dedp_proctored_exam_grades.sql`
-  - Combines proctored exam grades from multiple sources to provide comprehensive performance data for learners across MicroMasters and MITx Online programs.
-  - LOC: `53` | PageRank: `0.00090` | Complexity: `13.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__proctored_exam_grades.sql`
-  - Extracts and joins proctored exam grades from MITx Online with course information from MicroMasters to associate exam runs with their respective courses and user details, solving the business need to track and report on proctored exam performance across different platforms.
-  - LOC: `88` | PageRank: `0.00090` | Complexity: `19.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_problemcheck.sql`
-  - Extracts problem check events from course activity tracking to capture student assessment data including answers, attempts, and grades.
-  - LOC: `25` | PageRank: `0.00090` | Complexity: `3.0`
-- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_engagements_daily.sql`
-  - Aggregates daily course engagement metrics including video plays, problem submissions, and discussion participation to monitor learner activity and course effectiveness.
-  - LOC: `103` | PageRank: `0.00090` | Complexity: `16.0`
-- `src/ol_dbt/models/intermediate/combined/int__combined__course_structure.sql`
-  - This model combines course structure data from multiple platforms (MITxOnline, edX, MITxPro, and residential) into a single dataset with platform identifiers, enabling unified analysis of course content organization across all learning platforms.
-  - LOC: `89` | PageRank: `0.00090` | Complexity: `10.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_program_enrollments.sql`
-  - Identifies the most recent enrollment record for each user in MITx programs by filtering to the latest certificate award or enrollment date, then enriches this data with micromasters program identifiers and standardized program names for downstream analytics.
-  - LOC: `38` | PageRank: `0.00090` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__courserun_enrollment.sql`
-  - Tracks course enrollment data from edX, capturing which users are enrolled in which courses and their enrollment status.
-  - LOC: `15` | PageRank: `0.00090` | Complexity: `4.0`
-- `src/ol_dbt/models/dimensional/tfact_studentmodule_problems.sql`
-  - Aggregates student problem-solving events from multiple platforms (MITx Online, MITx Pro, Residential) to provide comprehensive tracking of student assessment attempts and outcomes.
-  - LOC: `148` | PageRank: `0.00089` | Complexity: `14.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_course_structure.sql`
-  - Transforms and organizes course structure data from edX.org, adding chapter-level information to enable detailed analysis of course organization and navigation.
-  - LOC: `65` | PageRank: `0.00089` | Complexity: `9.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__course_structure.sql`
-  - Processes and organizes course structure data to understand the hierarchical organization of residential MITx courses and their components.
-  - LOC: `66` | PageRank: `0.00089` | Complexity: `9.0`
 - `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__flexiblepricing_flexiblepriceapplication.sql`
-  - Manages flexible pricing applications and financial aid requests to support equitable access to courses based on users' financial circumstances.
+  - Manages flexible pricing applications and financial assistance requests, supporting the organization's ability to provide need-based pricing and track financial aid decisions.
   - LOC: `32` | PageRank: `0.00088` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2bcoupon.sql`
-  - Provides access to B2B coupon data including discount details and usage information for business-to-business e-commerce operations.
-  - LOC: `19` | PageRank: `0.00088` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponversion.sql`
-  - Tracks coupon version history, allowing analysis of coupon changes and identification of the most recent coupon versions.
-  - LOC: `31` | PageRank: `0.00088` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_coursesinprogrampage.sql`
-  - Transforms course-in-program page data from MITxPro's CMS, enabling structured representation of program-level course listings and their associated course page relationships.
-  - LOC: `15` | PageRank: `0.00087` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_line.sql`
-  - Processes e-commerce line item data for bootcamp transactions, enabling financial tracking and order management.
-  - LOC: `20` | PageRank: `0.00087` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_order.sql`
-  - Transforms raw ecommerce order data from the bootcamps PostgreSQL database into a standardized staging format with proper formatting and timestamps
-  - LOC: `22` | PageRank: `0.00087` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivities_daily.sql`
-  - Aggregates daily user course activity statistics from tracking logs, enabling analysis of user engagement patterns at a daily level in MITx Online courses.
-  - LOC: `19` | PageRank: `0.00086` | Complexity: `4.0`
-- `src/ol_dbt/models/dimensional/tfact_chatbot_events.sql`
-  - Captures chatbot interaction events from MITx Online and Canvas platforms to analyze student engagement with AI-powered tutoring and support systems.
-  - LOC: `188` | PageRank: `0.00086` | Complexity: `14.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courserun_videos.sql`
-  - Links MITxPro course videos with external video platform data to provide unified video metadata including duration and status information.
-  - LOC: `32` | PageRank: `0.00086` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courserun_videos.sql`
-  - Creates a consolidated view of course videos by joining video metadata with course video information to enable video content analysis and tracking.
-  - LOC: `17` | PageRank: `0.00086` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_combinedcoursegrade.sql`
-  - Module providing: stg__micromasters__app__postgres__grades_combinedcoursegrade. Contains 20 lines of Language.SQL code.
-  - LOC: `20` | PageRank: `0.00086` | Complexity: `4.0`
-- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_user_profiles.sql`
-  - Centralizes user profile information with the latest income data for flexible pricing applications to support financial aid and demographic analysis.
-  - LOC: `38` | PageRank: `0.00086` | Complexity: `6.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__coursesfaculty.sql`
-  - Extracts and structures faculty member information associated with course pages, enabling analysis of course instructors and their profiles.
-  - LOC: `49` | PageRank: `0.00085` | Complexity: `11.0`
-- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_learningresourcetopic.sql`
-  - Creates a staging model for learning resource topics, capturing hierarchical topic structures and their relationships for content categorization
-  - LOC: `15` | PageRank: `0.00085` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__profiles_profile.sql`
-  - Transform MIT Learn user profile data from raw warehouse format into cleaned staging table with standardized field names and null handling
-  - LOC: `33` | PageRank: `0.00085` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__profiles_profile_topic_interests.sql`
-  - Records the association between user profiles and their topic interests, allowing the system to understand what subjects users are interested in learning about.
-  - LOC: `14` | PageRank: `0.00085` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__users_user.sql`
-  - Maintains core user account information including authentication details, personal information, and activity timestamps, forming the foundation for user identification and access control.
-  - LOC: `28` | PageRank: `0.00085` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__course_runs.sql`
-  - This module extracts and presents key information about course runs, including their titles, readable IDs, and start/end dates, to support tracking and management of bootcamp course offerings.
-  - LOC: `15` | PageRank: `0.00085` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__courses.sql`
-  - Provides a reference table of bootcamp course information including course IDs, titles, and readable identifiers for use in downstream analytics and reporting.
-  - LOC: `12` | PageRank: `0.00085` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courseruns.sql`
-  - Provides course metadata for scheduling and organizational purposes
-  - LOC: `16` | PageRank: `0.00085` | Complexity: `3.0`
-- `src/ol_dbt/models/dimensional/afact_course_page_engagement.sql`
-  - Aggregates page navigation events within course content to track how learners interact with different course modules, providing insights into content consumption patterns.
-  - LOC: `61` | PageRank: `0.00085` | Complexity: `6.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_showanswer.sql`
-  - Captures user activity data when students view answer solutions in MITx Online courses, solving the business need to monitor and analyze student engagement with answer explanations for educational assessment and improvement.
-  - LOC: `16` | PageRank: `0.00085` | Complexity: `3.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_order.sql`
-  - Tracks and standardizes e-commerce order data including pricing, tax calculations, and timestamps for financial reporting and reconciliation.
-  - LOC: `26` | PageRank: `0.00085` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/learn-ai/stg__learn_ai__app__postgres__chatbots_chatresponserating.sql`
-  - Captures user feedback on AI chatbot responses, including ratings and reasons, to evaluate and improve the chatbot's performance and user satisfaction.
-  - LOC: `16` | PageRank: `0.00084` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/learn-ai/stg__learn_ai__app__postgres__chatbots_djangocheckpoint.sql`
-  - Transforms raw chatbot checkpoint data by extracting key fields including conversation steps and messages, then deduplicates to provide a clean dataset of chatbot conversation states.
-  - LOC: `25` | PageRank: `0.00084` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/salesforce/int__salesforce__opportunity.sql`
-  - Provides a curated view of Salesforce opportunity data for downstream analytics, exposing key opportunity attributes such as stage, amount, and revenue sharing details.
-  - LOC: `30` | PageRank: `0.00084` | Complexity: `3.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2border.sql`
-  - Transforms raw B2B order data from the source system, standardizing timestamps and renaming columns for consistent analysis of bulk order transactions.
-  - LOC: `29` | PageRank: `0.00084` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_allcoupons.sql`
-  - Consolidates coupon data from multiple MITxPro e-commerce sources to provide a unified view of all available coupons and their attributes.
-  - LOC: `101` | PageRank: `0.00084` | Complexity: `13.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_allorders.sql`
-  - This module consolidates order and user data from MITxPro's e-commerce system, linking orders with user information, course runs, and payment details to support business operations.
-  - LOC: `235` | PageRank: `0.00084` | Complexity: `38.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_company.sql`
-  - Creates a simplified view of company data from the e-commerce system, providing essential company information for business operations and reporting.
-  - LOC: `11` | PageRank: `0.00084` | Complexity: `3.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_certificate_signatory.sql`
-  - Cleans and deduplicates course certificate signatory data, normalizing names and constructing image URLs to support certificate generation and verification workflows.
-  - LOC: `44` | PageRank: `0.00083` | Complexity: `8.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__dashboard_programenrollment.sql`
-  - Manages user enrollment data in MicroMasters programs, supporting access control and tracking of which users are registered for which educational programs.
-  - LOC: `14` | PageRank: `0.00083` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_proctoredexamgrade.sql`
-  - Records proctored exam results to verify academic integrity and determine course completion eligibility
-  - LOC: `26` | PageRank: `0.00083` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_line.sql`
-  - Transform e-commerce line item data from MITx Online's PostgreSQL database into a cleaned staging table with standardized field names and ISO8601 timestamps for financial and transactional analytics.
-  - LOC: `21` | PageRank: `0.00082` | Complexity: `4.0`
 - `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_order.sql`
-  - Tracks e-commerce orders and their payment status for MITx Online platform
+  - Tracks e-commerce orders and their financial details for MITx Online platform
   - LOC: `21` | PageRank: `0.00082` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2border.sql`
-  - Consolidates B2B order data with product and Salesforce opportunity information to provide a comprehensive view of corporate purchases, their associated products, and sales pipeline connections.
-  - LOC: `60` | PageRank: `0.00082` | Complexity: `13.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2breceipt.sql`
-  - Stores structured data for e-commerce receipt transactions including payment details and billing information for business-to-business purchases.
-  - LOC: `19` | PageRank: `0.00082` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__coursesinprogram.sql`
-  - Maps courses to programs, providing visibility into program structure and course enrollment patterns across different learning pathways.
-  - LOC: `52` | PageRank: `0.00082` | Complexity: `13.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__programsfaculty.sql`
-  - Provides faculty information for MITxPro programs by joining faculty member data with program page paths to enable faculty attribution on program pages.
-  - LOC: `51` | PageRank: `0.00082` | Complexity: `11.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_discount.sql`
-  - Maintains a reference of available discount codes and their properties for MITx Online ecommerce transactions, supporting promotional campaigns and pricing strategies.
-  - LOC: `17` | PageRank: `0.00082` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_discountproduct.sql`
-  - Transforms raw ecommerce discount product data into a cleaned intermediate table for further analytics, enabling analysis of discount-product relationships in the MITx Online platform.
-  - LOC: `11` | PageRank: `0.00082` | Complexity: `3.0`
-- `src/ol_dbt/models/marts/mitxpro/marts__mitxpro_all_coupons.sql`
-  - Provides a consolidated view of all coupons and related data across multiple e-commerce systems, enabling comprehensive coupon management and analysis for business decision-making.
-  - LOC: `249` | PageRank: `0.00082` | Complexity: `42.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_subsection_grades.sql`
-  - Combines subsection grade data with course structure information to provide detailed academic performance metrics, including both raw and overridden grades for individual course components.
-  - LOC: `55` | PageRank: `0.00081` | Complexity: `8.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__courseware_studentmodulehistoryextended.sql`
-  - Tracks historical state changes of student module interactions, enabling analysis of learning progression and problem-solving patterns over time by maintaining a complete audit trail of student activity
-  - LOC: `35` | PageRank: `0.00081` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__courseware_studentmodulehistoryextended.sql`
-  - Captures and deduplicates student module interaction history for analytics on learning progress and problem performance.
-  - LOC: `35` | PageRank: `0.00081` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/zendesk/stg__zendesk__brand.sql`
-  - Transform and clean raw Zendesk brand data for analysis in the data warehouse
-  - LOC: `23` | PageRank: `0.00080` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/zendesk/stg__zendesk__group.sql`
-  - Transform and clean raw Zendesk group data for analysis in the data warehouse
-  - LOC: `20` | PageRank: `0.00080` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/zendesk/stg__zendesk__organization.sql`
-  - Transform and clean raw Zendesk organization data for analysis in the data warehouse
-  - LOC: `23` | PageRank: `0.00080` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/zendesk/stg__zendesk__ticket.sql`
-  - Transform and clean raw Zendesk ticket data for analysis in the data warehouse
-  - LOC: `56` | PageRank: `0.00080` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/zendesk/stg__zendesk__ticket_field.sql`
-  - Transforms raw Zendesk ticket field data by deduplicating records and casting timestamps to ISO8601 format for consistent downstream analysis
-  - LOC: `18` | PageRank: `0.00080` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_coupon.sql`
-  - Transforms raw micromasters ecommerce coupon data into a cleaned staging table with standardized field names, formatted amounts, and human-readable discount descriptions for analysis of promotional campaigns.
-  - LOC: `36` | PageRank: `0.00080` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_receipt.sql`
-  - Processes payment receipt data from CyberSource transactions, providing transaction verification and payment status information for order fulfillment.
-  - LOC: `39` | PageRank: `0.00080` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_redeemedcoupon.sql`
-  - Module providing: stg__micromasters__app__postgres__ecommerce_redeemedcoupon. Contains 20 lines of Language.SQL code.
-  - LOC: `20` | PageRank: `0.00080` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_to_departments.sql`
-  - Maps MITx Online courses to their respective departments, providing a bridge between course content and organizational structure for reporting and analysis.
-  - LOC: `18` | PageRank: `0.00078` | Complexity: `5.0`
-- `src/ol_dbt/models/reporting/organization_administration_report.sql`
-  - Generates organization administration reports with enrollment, role, and engagement data for institutional oversight.
-  - LOC: `313` | PageRank: `0.00078` | Complexity: `37.0`
-- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__courserunenrollments.sql`
-  - This module combines enrollment data with course run and user information to provide a comprehensive view of active course enrollments, including user details and course information, to support enrollment management and tracking.
-  - LOC: `35` | PageRank: `0.00078` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/combined/int__combined__courserun_certificates.sql`
-  - Creates a unified view of course completion certificates across multiple learning platforms, combining certificate data while filtering out revoked certificates and standardizing user identifiers
-  - LOC: `71` | PageRank: `0.00078` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/mitx/int__mitx__courserun_grades.sql`
-  - Aggregates course grade data from MITx Online and edX.org platforms while excluding DEDP course grades that are handled separately through program requirements, providing a unified view of non-DEDP course performance.
-  - LOC: `85` | PageRank: `0.00078` | Complexity: `12.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courserun_grades.sql`
-  - Module providing: int__mitxpro__courserun_grades. Contains 36 lines of Language.SQL code.
-  - LOC: `36` | PageRank: `0.00078` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courserun_enrollments.sql`
-  - Combines enrollment data with user and course information to provide comprehensive enrollment records
-  - LOC: `30` | PageRank: `0.00078` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courserun_grades.sql`
-  - Provides a unified view of course grades by combining student grade data with course and user information to enable comprehensive academic performance analysis.
-  - LOC: `30` | PageRank: `0.00078` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__coursetopic.sql`
-  - Manages course topic taxonomy for MITxPro, organizing courses into hierarchical topics for better categorization and discovery.
-  - LOC: `12` | PageRank: `0.00077` | Complexity: `3.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_applicationstep.sql`
-  - Structures bootcamp application step definitions to define the sequential requirements for course applications.
-  - LOC: `15` | PageRank: `0.00077` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_applicationstep_submission.sql`
-  - Processes application submission data to track the status and review history of bootcamp applications across different stages.
-  - LOC: `24` | PageRank: `0.00077` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_courserun_application.sql`
-  - Transforms bootcamp application data to track user enrollment requests, solving the business need to manage the application process by providing a clean view of application status and related user information.
-  - LOC: `21` | PageRank: `0.00077` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_courserun_applicationstep.sql`
-  - Maps application steps to specific bootcamp course runs with due dates, supporting application workflow management for individual courses.
-  - LOC: `16` | PageRank: `0.00077` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_installment.sql`
-  - Transforms raw bootcamp installment data from the bootcamps PostgreSQL database into a standardized staging format with proper data types and timestamps
-  - LOC: `15` | PageRank: `0.00077` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_personalprice.sql`
-  - Maps personalized pricing information for bootcamp runs to individual users to support dynamic pricing strategies and financial reporting.
-  - LOC: `15` | PageRank: `0.00077` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/combined/int__combined__user_course_roles.sql`
-  - This model aggregates user course role assignments from multiple platforms to create a comprehensive view of user permissions and access levels across different learning environments, supporting access control and user management.
-  - LOC: `172` | PageRank: `0.00077` | Complexity: `33.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__b2b_contract_to_courseruns.sql`
-  - Creates a mapping between B2B contracts and course runs to enable business-to-business reporting on which organizations have access to specific course offerings, solving the need to manage and track contractual relationships with enterprise customers.
-  - LOC: `23` | PageRank: `0.00077` | Complexity: `7.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_discussion.sql`
-  - Extracts and structures discussion forum activity data from user course interactions for analysis of community engagement and learning discussions
-  - LOC: `23` | PageRank: `0.00077` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_problemsubmitted.sql`
-  - Transforms raw problem submission events from course activity data into a structured format containing detailed problem performance metrics including scores, weights, and problem identifiers for academic analytics.
-  - LOC: `22` | PageRank: `0.00077` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_discussion.sql`
-  - Captures discussion forum activity within courses, allowing analysis of student engagement and participation in course discussions.
-  - LOC: `24` | PageRank: `0.00077` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_problemsubmitted.sql`
-  - Module providing: int__mitxpro__user_courseactivity_problemsubmitted. Contains 23 lines of Language.SQL code.
-  - LOC: `23` | PageRank: `0.00077` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_discussion.sql`
-  - Extracts and structures discussion forum interactions from user activity logs to analyze community engagement and knowledge sharing in residential MITx courses.
-  - LOC: `24` | PageRank: `0.00077` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_problemsubmitted.sql`
-  - Logs problem submission events with detailed scoring information for academic performance tracking
-  - LOC: `23` | PageRank: `0.00077` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__program_enrollments.sql`
-  - Creates a deduplicated enrollment dataset for MicroMasters programs, handling cases where learners are enrolled in multiple related tracks to ensure accurate program-level reporting.
-  - LOC: `198` | PageRank: `0.00077` | Complexity: `19.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__program_certificates.sql`
-  - Generates program certificate records with URLs for valid certificates, linking students to their completed program credentials.
-  - LOC: `38` | PageRank: `0.00077` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__programenrollments.sql`
-  - Consolidates program enrollment data with user and program details to track active student registrations across MITxPro programs.
-  - LOC: `40` | PageRank: `0.00077` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2bcouponredemption.sql`
-  - Captures B2B coupon redemption events to track when corporate coupon codes are applied to orders, enabling analysis of coupon utilization and redemption patterns.
-  - LOC: `12` | PageRank: `0.00076` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponredemption.sql`
-  - This module extracts coupon redemption data from MITxPro's e-commerce system, providing a record of coupon usage linked to orders for financial and marketing analysis.
-  - LOC: `12` | PageRank: `0.00076` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponproduct.sql`
-  - Extracts coupon-product relationships to track which products are associated with specific coupons, enabling analysis of promotional campaign effectiveness and product-level discounting.
-  - LOC: `13` | PageRank: `0.00076` | Complexity: `3.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__user.sql`
-  - Ingests and cleans raw user authentication data from edX, converting string fields to appropriate types and normalizing timestamps for user profile analysis.
-  - LOC: `27` | PageRank: `0.00075` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__user_courseaccessrole.sql`
-  - Manages course access roles and permissions by mapping user roles to specific courses, enabling role-based access control across the learning platform.
-  - LOC: `16` | PageRank: `0.00075` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__user_profile.sql`
-  - Transforms raw user profile data into standardized format, enabling consistent user information across the platform for personalization and analytics.
-  - LOC: `44` | PageRank: `0.00075` | Complexity: `9.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__user_courseaccessrole.sql`
-  - Clean and standardize course access role data from Open edX MySQL database, mapping MITx organization codes and providing consistent naming conventions for course access roles and user relationships.
-  - LOC: `15` | PageRank: `0.00075` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__user_courseaccessrole.sql`
-  - Tracks user access roles in MIT xPro courses to manage permissions and enrollment tracking.
-  - LOC: `15` | PageRank: `0.00075` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__user_courseaccessrole.sql`
-  - Maps user roles to courses by cleaning and standardizing course access role data, providing visibility into who has what level of access to specific courses.
-  - LOC: `15` | PageRank: `0.00075` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_product.sql`
-  - Extracts pricing and enrollment mode information for MITx course runs to support financial analysis and enrollment management
-  - LOC: `14` | PageRank: `0.00075` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_signatorypage.sql`
-  - Cleans signatory page data for certificate generation, organizing signatory information and organizational details for official document creation.
-  - LOC: `17` | PageRank: `0.00075` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_wagtailcore_revision.sql`
-  - Cleans and deduplicates Wagtail CMS revision data to track content changes and editing history for website content management
-  - LOC: `20` | PageRank: `0.00075` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivities_daily.sql`
-  - Tracks daily user activity within MITx courses by counting events per user per course per day, providing granular engagement analytics.
-  - LOC: `18` | PageRank: `0.00073` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivities_daily.sql`
-  - Aggregates daily user activity statistics for course runs, tracking the number of events per user per day to support engagement analysis.
-  - LOC: `19` | PageRank: `0.00073` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivities_daily.sql`
-  - Aggregates daily user activity counts by course for usage analytics and trend reporting.
-  - LOC: `19` | PageRank: `0.00073` | Complexity: `4.0`
-- `bin/dbt-create-staging-models.py` ⚠️dead-code-candidate
-  - Generates dbt sources and staging models by discovering tables and creating YAML and SQL files for data transformation workflows.
-  - LOC: `745` | PageRank: `0.00070` | Complexity: `66.0`
-- `dg_deployments/reconcile_edxorg_partitions.py` ⚠️dead-code-candidate
-  - Fixes data integrity issues in edX archive partitions by correcting course ID formatting errors that occurred due to regex parsing bugs, ensuring proper asset materialization and S3 path consistency
-  - LOC: `572` | PageRank: `0.00070` | Complexity: `50.0`
 - `dg_projects/b2b_organization/b2b_organization/assets/data_export.py` ⚠️dead-code-candidate
-  - Exports organization-specific data from a reporting table to CSV files for individual B2B organizations
+  - Exports B2B organization administration reports to CSV files partitioned by organization and date
   - LOC: `78` | PageRank: `0.00070` | Complexity: `1.0`
 - `dg_projects/b2b_organization/b2b_organization/definitions.py`
-  - Defines the core data pipeline assets, jobs, and sensors for exporting b2b organization data, including environment-specific S3 storage configurations and Vault authentication
+  - Defines the core B2B organization data pipeline including assets, jobs, sensors, and resource configurations for data export and storage
   - LOC: `59` | PageRank: `0.00070` | Complexity: `2.0`
 - `dg_projects/b2b_organization/b2b_organization/partitions/b2b_organization.py`
   - Defines dynamic partitions for B2B organizations to enable partitioned data processing workflows
   - LOC: `5` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/canvas/canvas/assets/canvas.py` ⚠️dead-code-candidate
-  - Extracts and processes course data from Canvas, including files, assignments, and other course elements, transforming them into structured assets for downstream use.
+  - Contains assets for extracting and processing Canvas course data including files and assignments
   - LOC: `266` | PageRank: `0.00070` | Complexity: `8.0`
-- `dg_projects/canvas/canvas/definitions.py` ⚠️dead-code-candidate
-  - Defines Canvas course export definitions and related resources for Dagster data pipelines
-  - LOC: `127` | PageRank: `0.00070` | Complexity: `5.0`
-- `dg_projects/edxorg/edxorg/assets/edxorg_api.py` ⚠️dead-code-candidate
-  - Extracts and processes metadata about educational programs and their associated courses from the edX.org API, providing structured program information for downstream data assets.
-  - LOC: `273` | PageRank: `0.00070` | Complexity: `12.0`
-- `dg_projects/edxorg/edxorg/assets/openedx_course_archives.py` ⚠️dead-code-candidate
-  - Processes and extracts structured metadata from edX course XML exports, including course details, video elements, and certificate information, transforming raw course data into analyzable formats.
-  - LOC: `247` | PageRank: `0.00070` | Complexity: `9.0`
+- `dg_projects/canvas/canvas/lib/canvas.py` ⚠️dead-code-candidate
+  - Fetches Canvas course IDs from a Google Sheet to enable dynamic data pipeline partitioning
+  - LOC: `54` | PageRank: `0.00070` | Complexity: `3.0`
+- `dg_projects/data_loading/data_loading/definitions.py`
+  - Defines the data loading assets and resources, orchestrating the execution of data pipelines using Dagster and DLT for reliable data ingestion.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/data_loading/data_loading/defs/edxorg_s3_ingest/dagster_assets.py` ⚠️dead-code-candidate
+  - Module 4 creates Dagster assets that wrap dlt sources with upstream dependencies, enabling consolidated, non-partitioned assets that depend on the edxorg_archive pipeline for proper data lineage.
+  - LOC: `78` | PageRank: `0.00070` | Complexity: `1.0`
+- `dg_projects/data_loading/data_loading/defs/edxorg_s3_ingest/defs.py`
+  - Module 2 exports Dagster assets for EdX.org S3 data ingestion, making the consolidated tables available for orchestration and dependency management in the data pipeline.
+  - LOC: `12` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/data_loading/data_loading/defs/edxorg_s3_ingest/loads.py` ⚠️dead-code-candidate
+  - Module 3 implements the core logic for loading EdX.org CSV/TSV data from S3 using dlt, providing the data extraction mechanism that feeds into downstream processing.
+  - LOC: `191` | PageRank: `0.00070` | Complexity: `6.0`
+- `dg_projects/data_platform/data_platform/assets/metadata/databases.py`
+  - Configures and initializes metadata workflows for database ingestion, specifically setting up a Trino source connection to extract database metadata for cataloging and governance.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/edxorg/edxorg/definitions.py` ⚠️dead-code-candidate
-  - Data synchronization and processing definitions for edx.org data - orchestrates the ingestion, transformation, and storage of course data, tracking logs, and credential reports from edx.org and IRx sources
+  - Core data pipeline definitions for EdX.org data synchronization and processing
   - LOC: `295` | PageRank: `0.00070` | Complexity: `2.0`
-- `dg_projects/lakehouse/lakehouse/assets/lakehouse/dbt.py` ⚠️dead-code-candidate
-  - Defines and orchestrates DBT-based data transformation assets for the lakehouse, including environment-specific configuration and automation policies
-  - LOC: `62` | PageRank: `0.00070` | Complexity: `2.0`
-- `dg_projects/lakehouse/lakehouse/assets/superset.py` ⚠️dead-code-candidate
-  - Generates and refreshes Superset datasets based on dbt models to ensure BI dashboards reflect current data warehouse state
-  - LOC: `90` | PageRank: `0.00070` | Complexity: `3.0`
-- `dg_projects/learning_resources/learning_resources/assets/video_shorts.py` ⚠️dead-code-candidate
-  - Processes and transforms video short content from Google Sheets metadata, including compression, thumbnail generation, and storage management for educational video assets.
-  - LOC: `509` | PageRank: `0.00070` | Complexity: `22.0`
-- `dg_projects/learning_resources/learning_resources/lib/video_processing.py` ⚠️dead-code-candidate
-  - Handles video processing tasks including thumbnail generation and file compression to optimize media assets for web delivery
-  - LOC: `190` | PageRank: `0.00070` | Complexity: `12.0`
+- `dg_projects/edxorg/edxorg/ops/edx_gcs_courses.py` ⚠️dead-code-candidate
+  - Downloads course data tarballs from Google Cloud Storage and uploads processed results to S3, enabling data ingestion from edX platforms.
+  - LOC: `119` | PageRank: `0.00070` | Complexity: `4.0`
+- `dg_projects/learning_resources/learning_resources/assets/open_learning_library.py` ⚠️dead-code-candidate
+  - Monitors and synchronizes Open Learning Library course repositories from GitHub to S3, maintaining access to archived course content for search functionality.
+  - LOC: `13` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/learning_resources/learning_resources/assets/sloan_api.py` ⚠️dead-code-candidate
+  - Extracts and processes course metadata from MIT Sloan Executive Education API, transforming it into structured assets for storage and consumption by other systems.
+  - LOC: `119` | PageRank: `0.00070` | Complexity: `1.0`
+- `dg_projects/learning_resources/learning_resources/lib/google_sheets.py` ⚠️dead-code-candidate
+  - Handles authentication and data retrieval from Google Sheets to ingest video metadata for processing
+  - LOC: `329` | PageRank: `0.00070` | Complexity: `32.0`
 - `dg_projects/legacy_openedx/legacy_openedx/ops/open_edx.py` ⚠️dead-code-candidate
-  - Provides core data processing operations for Open edX integration, including course listing, database exports, and data transformation utilities for the data platform.
+  - Provides operations to export Open edX course data and forum content from databases
   - LOC: `686` | PageRank: `0.00070` | Complexity: `18.0`
-- `dg_projects/openedx/openedx/jobs/normalize_logs.py` ⚠️dead-code-candidate
-  - Graph definitions for normalizing and transforming OpenEdX tracking log data between S3 buckets
-  - LOC: `46` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/legacy_openedx/legacy_openedx/resources/mysql_db.py` ⚠️dead-code-candidate
+  - Provides a reusable MySQL database client for connecting to and querying Open edX databases, enabling data extraction operations
+  - LOC: `102` | PageRank: `0.00070` | Complexity: `1.0`
+- `dg_projects/openedx/openedx/components/openedx_deployment.py` ⚠️dead-code-candidate
+  - Creates configurable OpenEdX deployment components that extract course data and detect changes for data pipeline orchestration
+  - LOC: `199` | PageRank: `0.00070` | Complexity: `2.0`
 - `dg_projects/openedx/openedx/ops/normalize_logs.py` ⚠️dead-code-candidate
-  - This module provides configuration and operations for loading tracking logs from S3 into DuckDB tables, enabling data engineering workflows to process and normalize educational platform log data.
+  - Module 2 contains configuration and logic for loading tracking log files from S3 into DuckDB tables, enabling data processing workflows.
   - LOC: `269` | PageRank: `0.00070` | Complexity: `8.0`
-- `dg_projects/student_risk_probability/student_risk_probability/assets/risk_probability.py` ⚠️dead-code-candidate
-  - Calculate student risk probabilities for academic integrity monitoring by applying logistic regression to scaled features from cheating detection data
-  - LOC: `80` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/student_risk_probability/student_risk_probability/lib/helper.py` ⚠️dead-code-candidate
-  - Provide helper functions for scaling features and calculating risk probabilities using logistic regression weights
-  - LOC: `58` | PageRank: `0.00070` | Complexity: `1.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/openedx.py` ⚠️dead-code-candidate
-  - Handles course structure processing by generating block indexes and unnesting course data for downstream analytics, enabling structured course content analysis.
-  - LOC: `316` | PageRank: `0.00070` | Complexity: `28.0`
-- `src/ol_dbt/macros/apply_deduplication_query.sql` ⚠️dead-code-candidate
-  - Provides deduplication logic to ensure only the most recent record is retained when incremental sync appends duplicate data, preventing data quality issues from multiple record versions
-  - LOC: `39` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/macros/cast_date_to_iso8601.sql` ⚠️dead-code-candidate
-  - Standardizes date column formatting to ISO 8601 across different database platforms, ensuring consistent temporal data representation for downstream analysis
-  - LOC: `26` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/macros/check_cross_column_duplicates.sql` ⚠️dead-code-candidate
-  - Detects and reports duplicate values across two columns to ensure data integrity in user records
-  - LOC: `38` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/macros/extract_course_id.sql` ⚠️dead-code-candidate
-  - Extracts and normalizes course identifiers from various tracking log formats for consistent course data analysis
-  - LOC: `49` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/macros/generate_base_model_enhanced.sql` ⚠️dead-code-candidate
-  - Generates enhanced base models for data sources by automatically detecting entity types from table names and handling column metadata retrieval from both database relations and configuration files, solving the problem of inconsistent schema discovery across different data sources.
-  - LOC: `200` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/macros/transform_code_to_readable_values.sql` ⚠️dead-code-candidate
-  - Transforms coded gender values into human-readable text for reporting and analysis
-  - LOC: `144` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/macros/transform_studentmodule_data.sql` ⚠️dead-code-candidate
-  - Transforms student module data to extract problem events and state information, solving the need to track student interactions with course problems across both current and historical data for analytics and reporting.
-  - LOC: `91` | PageRank: `0.00070` | Complexity: `10.0`
-- `src/ol_dbt/models/dimensional/_dim__models.yml`
-  - Defines the structure and validation rules for a fact table that aggregates video engagement metrics by learner, video, and course run, serving as a reference for downstream analytics.
-  - LOC: `869` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/dimensional/afact_discussion_engagement.sql` ⚠️dead-code-candidate
-  - Creates a summarized view of discussion forum engagement by learner, tracking how users interact with posts through creation, viewing, voting, replying, and commenting.
-  - LOC: `67` | PageRank: `0.00070` | Complexity: `8.0`
-- `src/ol_dbt/models/dimensional/afact_video_engagement.sql` ⚠️dead-code-candidate
-  - Analyzes video engagement events to calculate time played and track user interactions with videos, providing insights into video consumption patterns.
-  - LOC: `108` | PageRank: `0.00070` | Complexity: `17.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__bigquery__email_opt_in.sql` ⚠️dead-code-candidate
-  - Captures and exposes user email opt-in preferences for marketing and communication purposes, enabling targeted email campaigns based on user consent.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aiclassifier.sql` ⚠️dead-code-candidate
-  - Retrieves configuration details for individual AI classifiers, including their parameters and classification logic, to understand how AI grading decisions are made.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aiclassifierset.sql` ⚠️dead-code-candidate
-  - Extracts basic metadata about AI classifier sets used in assessments, enabling tracking of which courses and items use AI-based grading components.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aigradingworkflow.sql` ⚠️dead-code-candidate
-  - Captures scheduling information for AI grading workflows, allowing monitoring of when AI algorithms are invoked to grade student submissions.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aitrainingworkflow.sql` ⚠️dead-code-candidate
-  - This module handles AI training workflows for assessments, managing the process of training machine learning models to evaluate student submissions and provide automated feedback.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessment.sql` ⚠️dead-code-candidate
-  - This module links assessment data with submission and student item information from the MITx Open edX MySQL database, enabling the analysis of assessment scoring by connecting scorer IDs with assessment IDs and score types.
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/arrow_helper.py` ⚠️dead-code-candidate
+  - Handles the export of data from in-memory Arrow tables to Parquet files, providing file system abstraction for writing structured data to local or cloud storage in a format optimized for analytics workloads.
+  - LOC: `55` | PageRank: `0.00070` | Complexity: `3.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/sensors/object_storage.py` ⚠️dead-code-candidate
+  - Monitors cloud storage buckets (GCS and S3) for new files and triggers data pipelines when new data becomes available, enabling automated ingestion workflows.
+  - LOC: `97` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessment.sql` ⚠️dead-code-candidate
+  - Extract scorer IDs, assessment IDs, and score types for assessments by joining assessment data with submission and student item records, enabling tracking of who scored what assessment.
   - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentfeedback_assessments.sql` ⚠️dead-code-candidate
-  - Links assessment feedback assessments to their parent assessments and submissions for tracking feedback relationships
-  - LOC: `28` | PageRank: `0.00070` | Complexity: `9.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentfeedback_options.sql` ⚠️dead-code-candidate
-  - Extracts assessment feedback options linked to their corresponding assessments and submissions for feedback analysis
-  - LOC: `39` | PageRank: `0.00070` | Complexity: `13.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentfeedbackoption.sql` ⚠️dead-code-candidate
-  - Retrieves feedback option details for assessment feedback, enabling analysis of student responses and feedback mechanisms.
-  - LOC: `44` | PageRank: `0.00070` | Complexity: `15.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentpart.sql` ⚠️dead-code-candidate
-  - Joins assessment parts with their parent assessments, submissions, and student items to provide a complete view of student responses and feedback for AI-graded assessment components.
-  - LOC: `25` | PageRank: `0.00070` | Complexity: `9.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_criterion.sql` ⚠️dead-code-candidate
-  - Extracts assessment criterion details, supporting evaluation of grading rubrics and assessment criteria.
-  - LOC: `66` | PageRank: `0.00070` | Complexity: `24.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_criterionoption.sql` ⚠️dead-code-candidate
-  - Gathers criterion option data for assessments, facilitating evaluation of grading criteria and scoring mechanisms.
-  - LOC: `73` | PageRank: `0.00070` | Complexity: `26.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_peerworkflow.sql` ⚠️dead-code-candidate
-  - Captures peer workflow timing data for assessments including cancellation and completion timestamps
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_peerworkflowitem.sql` ⚠️dead-code-candidate
-  - Tracks the initiation of peer assessment workflows, providing visibility into when students begin the peer grading process for submitted assignments.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_rubric.sql` ⚠️dead-code-candidate
-  - This module centralizes rubric data used across multiple assessment systems, ensuring consistent evaluation criteria and grading standards are applied throughout the learning platform.
-  - LOC: `55` | PageRank: `0.00070` | Complexity: `22.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_studenttrainingworkflow.sql` ⚠️dead-code-candidate
-  - This module manages student training workflows for assessments, tracking how students interact with and learn from the assessment process to improve their understanding and performance.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_studenttrainingworkflowitem.sql` ⚠️dead-code-candidate
-  - This module extracts student training workflow items from the MITx Open edX MySQL database, capturing the progression of students through training workflows including workflow IDs, order numbers, start times, and unique identifiers.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__auth_userprofile.sql` ⚠️dead-code-candidate
-  - Retrieves user profile data including demographics and preferences for enrolled students
-  - LOC: `28` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__certificates_generatedcertificate.sql` ⚠️dead-code-candidate
-  - This module manages digital certificates for course completion, tracking verification, distribution, and status to ensure proper credentialing and recognition of learner achievements.
-  - LOC: `23` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__course_groups_cohortmembership.sql` ⚠️dead-code-candidate
-  - Manages student cohort assignments within courses, supporting personalized learning experiences and targeted content delivery based on student groupings.
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__courseware_studentmodulehistoryextended.sql` ⚠️dead-code-candidate
-  - This module consolidates student module history data by joining extended history records with current module states, providing a comprehensive view of student interactions with course content including grades, timestamps, and module metadata.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__credit_crediteligibility.sql` ⚠️dead-code-candidate
-  - Handles credit eligibility tracking for courses, managing deadlines and eligibility status for students seeking academic credit or certification.
-  - LOC: `18` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__grades_persistentcoursegrade.sql` ⚠️dead-code-candidate
-  - This module extracts and deduplicates persistent course grade data from the MITx Open edX MySQL database, capturing student performance metrics including percentage grades, letter grades, and completion timestamps for analysis of course outcomes.
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__grades_persistentsubsectiongrade.sql` ⚠️dead-code-candidate
-  - This module tracks student progress within course subsections by persisting grades data, enabling analysis of learning outcomes and identifying areas where students struggle or excel.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__student_anonymoususerid.sql` ⚠️dead-code-candidate
-  - This module retrieves anonymous user IDs mapped to course IDs from the MITx Open edX MySQL database, enabling the tracking of user activity while preserving privacy through anonymized identifiers.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__student_courseaccessrole.sql` ⚠️dead-code-candidate
-  - Manages course access roles, defining which users have what permissions within specific courses and organizations.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__student_courseenrollment.sql` ⚠️dead-code-candidate
-  - Extracts course enrollment information, supporting analysis of student course participation and enrollment patterns.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__submissions_score.sql` ⚠️dead-code-candidate
-  - Tracks student submission scores and whether they were reset, linking them to specific items and students for performance analysis.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__submissions_scoresummary.sql` ⚠️dead-code-candidate
-  - Maintains records of student assessment scores, enabling performance tracking and grading analysis across course submissions.
-  - LOC: `10` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__teams_membership.sql` ⚠️dead-code-candidate
-  - Provides team membership information, enabling analysis of collaborative learning groups and team-based activities.
-  - LOC: `14` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__user_id_map.sql` ⚠️dead-code-candidate
-  - Maps anonymous user IDs to actual user IDs and usernames for user identification in the platform
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__workflow_assessmentworkflow.sql` ⚠️dead-code-candidate
-  - Maintains a deduplicated view of assessment workflow states to track the lifecycle and status of assessments across the platform.
-  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__bigquery__email_opt_in.sql` ⚠️dead-code-candidate
-  - Manages email opt-in preferences for users to enable targeted communication and marketing campaigns.
-  - LOC: `13` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedback_assessments.sql` ⚠️dead-code-candidate
-  - Provides a mapping between assessment feedback records and their associated assessments, submissions, and student items to enable analysis of assessment feedback data.
-  - LOC: `28` | PageRank: `0.00070` | Complexity: `9.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedback_options.sql` ⚠️dead-code-candidate
-  - Tracks assessment feedback options linked to their corresponding assessments, submissions, and student items to enable analysis of assessment feedback data.
-  - LOC: `39` | PageRank: `0.00070` | Complexity: `13.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedbackoption.sql` ⚠️dead-code-candidate
-  - Creates a distinct list of assessment feedback options along with their text content by joining multiple assessment-related tables to support analysis of peer assessment options.
-  - LOC: `44` | PageRank: `0.00070` | Complexity: `15.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentpart.sql` ⚠️dead-code-candidate
-  - Analyzes assessment parts to understand student performance and feedback on specific assessment components.
-  - LOC: `25` | PageRank: `0.00070` | Complexity: `9.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_peerworkflow.sql` ⚠️dead-code-candidate
-  - Extracts peer workflow data including cancellation times, grading completion times, and course information to track peer assessment processes.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_peerworkflowitem.sql` ⚠️dead-code-candidate
-  - Tracks peer workflow items for assessments to monitor the progress and status of peer review activities.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedback.sql` ⚠️dead-code-candidate
+  - Extract unique assessment feedback records by joining feedback data with assessment, submission, and student item tables, providing visibility into feedback content associated with specific assessments.
+  - LOC: `33` | PageRank: `0.00070` | Complexity: `11.0`
 - `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_studenttrainingworkflow.sql` ⚠️dead-code-candidate
-  - Monitors student enrollment in courses and their associated workflow items, providing visibility into which students are taking which courses and their progress through course materials.
+  - Records student enrollment in courses and tracks their progress through training workflows by linking students to specific course items.
   - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
 - `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_studenttrainingworkflowitem.sql` ⚠️dead-code-candidate
-  - Tracks the progress of students through training workflow items by capturing workflow IDs, order numbers, start times, and item IDs for monitoring and analysis of training completion.
+  - Tracks the progress of students through training workflows by capturing when they start specific workflow items and their order in the sequence.
   - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
 - `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__auth_user.sql` ⚠️dead-code-candidate
-  - Creates a comprehensive user profile by joining authentication data with course enrollment information, providing essential user details for system access and course participation tracking.
+  - Maintains user profiles and authentication data for students enrolled in courses, including personal information and access permissions.
   - LOC: `33` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__course_groups_cohortmembership.sql` ⚠️dead-code-candidate
-  - Maps users to course cohorts and user groups, enabling analysis of group-based learning activities and cohort membership.
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__auth_userprofile.sql` ⚠️dead-code-candidate
+  - Provides demographic and profile information for enrolled students, including personal details and educational background for user analysis.
+  - LOC: `28` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__certificates_generatedcertificate.sql` ⚠️dead-code-candidate
+  - Tracks certificate generation data for courses, capturing user achievements and certificate details for audit and verification purposes.
+  - LOC: `23` | PageRank: `0.00070` | Complexity: `3.0`
 - `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__credit_crediteligibility.sql` ⚠️dead-code-candidate
-  - Manages credit eligibility and course assignments by linking user credit eligibility records to specific courses, enabling tracking of deadlines and course participation for credit-bearing activities.
+  - Manages credit eligibility by linking users to courses they can earn credit for, including deadlines and course mappings.
   - LOC: `18` | PageRank: `0.00070` | Complexity: `5.0`
 - `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__django_comment_client_role_users.sql` ⚠️dead-code-candidate
-  - Maps user roles to courses by associating users with their roles in specific courses, supporting course administration and access control management.
+  - Maps users to their roles in specific courses, enabling role-based access control and permissions within the learning platform.
   - LOC: `16` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__grades_persistentcoursegrade.sql` ⚠️dead-code-candidate
-  - Tracks student course grades including percentages and letter grades, recording when students pass courses and when grades were last modified.
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__student_anonymoususerid.sql` ⚠️dead-code-candidate
-  - Handles anonymous user IDs to protect user privacy while tracking course participation and activity.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__student_courseaccessrole.sql` ⚠️dead-code-candidate
-  - Manages course access roles in the mitxonline environment, defining user permissions within courses and organizations.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__student_languageproficiency.sql` ⚠️dead-code-candidate
-  - Links user language proficiency data to active course enrollments, enabling analysis of language skills in educational contexts.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__submissions_score.sql` ⚠️dead-code-candidate
-  - Captures individual submission scores and points earned, filtering to only include valid student items from the submissions system.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__submissions_studentitem.sql` ⚠️dead-code-candidate
-  - Links student submissions to specific course items, tracking which students submitted work for which assignments.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__submissions_submission.sql` ⚠️dead-code-candidate
-  - Tracks submission records for team-based assignments, capturing when teams submitted work, its status, and submission identifiers.
-  - LOC: `10` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__teams.sql` ⚠️dead-code-candidate
-  - Manages course team information to facilitate group work and collaboration in online courses.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__user_api_usercoursetag.sql` ⚠️dead-code-candidate
-  - Retrieves user course tag information including course IDs and user IDs to support analysis of user-course relationships and tagging data.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__workflow_assessmentworkflow.sql` ⚠️dead-code-candidate
-  - Maintains assessment workflow states per course, tracking workflow modifications and current statuses for grading processes.
-  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/xpro/_irx_xpro__models.yml`
-  - Defines data models for user mapping, course teams, and team memberships to support organizational structure and access management
-  - LOC: `211` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__bigquery__email_opt_in.sql` ⚠️dead-code-candidate
-  - Extracts email opt-in preferences for users, enabling analysis of user communication preferences and course engagement patterns.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessmentfeedback.sql` ⚠️dead-code-candidate
-  - Extracts assessment feedback data by joining multiple assessment-related tables to capture detailed feedback for student submissions.
-  - LOC: `33` | PageRank: `0.00070` | Complexity: `11.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessmentfeedback_assessments.sql` ⚠️dead-code-candidate
-  - Links assessment feedback to the original assessments and submissions, enabling tracking of feedback processes and assessment completion.
-  - LOC: `28` | PageRank: `0.00070` | Complexity: `9.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessmentfeedback_options.sql` ⚠️dead-code-candidate
-  - Extracts assessment feedback option data linked to specific assessments by joining multiple feedback-related tables, supporting detailed analysis of student assessment interactions.
-  - LOC: `39` | PageRank: `0.00070` | Complexity: `13.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessmentfeedbackoption.sql` ⚠️dead-code-candidate
-  - Extracts assessment feedback options and their relationships to assessments and submissions, enabling analysis of student feedback mechanisms in the learning platform.
-  - LOC: `44` | PageRank: `0.00070` | Complexity: `15.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessmentpart.sql` ⚠️dead-code-candidate
-  - Joins assessment data with submissions to provide feedback on student assessment performance
-  - LOC: `25` | PageRank: `0.00070` | Complexity: `9.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_peerworkflow.sql` ⚠️dead-code-candidate
-  - Records peer assessment workflow timestamps, enabling analysis of peer grading completion and workflow timing in courses.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_peerworkflowitem.sql` ⚠️dead-code-candidate
-  - Tracks peer assessment workflow items to monitor assessment initiation and assignment for quality control.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_studenttrainingworkflow.sql` ⚠️dead-code-candidate
-  - Manages student training workflows, supporting the tracking of student progress through training items in courses.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_studenttrainingworkflowitem.sql` ⚠️dead-code-candidate
-  - Retrieves workflow item data for student training workflows, tracking the progress and order of training exercises.
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__auth_userprofile.sql` ⚠️dead-code-candidate
-  - Joins user profile data with course enrollment information to provide a comprehensive view of enrolled students' profiles and demographics.
-  - LOC: `28` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__course_groups_cohortmembership.sql` ⚠️dead-code-candidate
-  - Tracks which users belong to which course cohorts/groups, enabling analysis of cohort-based course access and enrollment patterns.
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__credit_crediteligibility.sql` ⚠️dead-code-candidate
-  - Retrieves credit eligibility data along with course information, enabling tracking of which users are eligible for credit in specific courses and when they were added or modified.
-  - LOC: `18` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__grades_persistentcoursegrade.sql` ⚠️dead-code-candidate
-  - Maintains course grade records with grading policy details to enable academic performance tracking and reporting.
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__grades_persistentsubsectiongrade.sql` ⚠️dead-code-candidate
-  - Stores subsection grade details including attempt data to support granular assessment progress monitoring.
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__grades_persistentsubsectiongrade.sql` ⚠️dead-code-candidate
+  - Monitors student performance metrics at the subsection level, tracking earned versus possible points for all and graded content.
   - LOC: `19` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__student_courseaccessrole.sql` ⚠️dead-code-candidate
-  - Extracts course access role data to manage user permissions and roles within courses
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__student_courseenrollment.sql` ⚠️dead-code-candidate
+  - Maintains course enrollment records, tracking which users are actively enrolled in which courses and their enrollment mode.
   - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__student_courseenrollment.sql` ⚠️dead-code-candidate
-  - Extracts course enrollment data to understand which students are enrolled in courses and their enrollment status
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__student_languageproficiency.sql` ⚠️dead-code-candidate
-  - Maps student language proficiency to user profiles and course enrollments to support multilingual learning analytics.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__submissions_score.sql` ⚠️dead-code-candidate
-  - Filters submission scores to include only those that have corresponding student items, ensuring data integrity in assessment scoring.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__submissions_studentitem.sql` ⚠️dead-code-candidate
-  - Extracts student submission data to track which students submitted items for which courses
-  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__submissions_submission.sql` ⚠️dead-code-candidate
-  - Captures team submission data to track submission status and timing for collaborative assessment management.
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__submissions_scoresummary.sql` ⚠️dead-code-candidate
+  - Extract score summary records including highest and latest scores for student items, providing a consolidated view of student performance metrics.
   - LOC: `10` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__teams.sql` ⚠️dead-code-candidate
-  - Provides access to team information from the openedx MySQL teams table, enabling analysis of course team structures and their attributes.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__teams_membership.sql` ⚠️dead-code-candidate
-  - Provides a list of users and their team memberships by joining course teams with team membership data, enabling team-based collaboration features and reporting.
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__teams_membership.sql` ⚠️dead-code-candidate
+  - Extract team membership records by joining course team and team membership tables, establishing the relationship between users and their team assignments.
   - LOC: `14` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__user_api_usercoursetag.sql` ⚠️dead-code-candidate
-  - Captures user-course tags, supporting the analysis of user-specific course metadata and tagging patterns.
-  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__user_id_map.sql` ⚠️dead-code-candidate
-  - Maps anonymous user IDs to usernames for enrolled users, enabling privacy-preserving user identification in analytics.
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__user_id_map.sql` ⚠️dead-code-candidate
+  - Creates a mapping between anonymous user identifiers and actual user accounts to enable privacy-preserving analytics while maintaining user accountability.
   - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__workflow_assessmentworkflowstep.sql` ⚠️dead-code-candidate
-  - Provides access to assessment workflow step data, enabling analysis of the assessment process flow and completion status for various workflows.
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__workflow_assessmentworkflowstep.sql` ⚠️dead-code-candidate
+  - Extract workflow assessment step details including completion timestamps and order for specific workflows, enabling tracking of assessment process progress and timing.
   - LOC: `12` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__applications.sql` ⚠️dead-code-candidate
-  - Tracks bootcamp application progress and payment status by joining application data with course runs, application steps, payment information, and order fulfillment details to provide a comprehensive view of each applicant's journey.
-  - LOC: `100` | PageRank: `0.00070` | Complexity: `21.0`
 - `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__ecommerce_wiretransferreceipt.sql` ⚠️dead-code-candidate
-  - Extracts and transforms wire transfer receipt data from the ecommerce system to provide a clean view of offline payment transactions for bootcamp orders.
+  - Extracts wire transfer payment receipt details for bootcamp ecommerce transactions
   - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivities.sql` ⚠️dead-code-candidate
-  - Aggregates and summarizes user course activity data including play video events, problem check attempts, and overall engagement metrics for analysis of learning behavior
-  - LOC: `68` | PageRank: `0.00070` | Complexity: `10.0`
-- `src/ol_dbt/models/intermediate/learn-ai/_learn_ai__models.yml.yml`
-  - Stores structured data for e-commerce receipt transactions including payment details and billing information for business-to-business purchases.
-  - LOC: `129` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/intermediate/micromasters/_int_micromasters__models.yml`
-  - Consolidates program certificate data from both MicroMasters and MITx Online databases to create a unified view of learner achievements across different certificate types and issuance sources.
-  - LOC: `685` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/intermediate/mitx/int__mitx__program_certificates.sql` ⚠️dead-code-candidate
-  - Aggregates program completion certificates from MicroMasters and MITx Online platforms, deduplicating and standardizing certificate data to provide a unified view of program completions across both systems.
-  - LOC: `45` | PageRank: `0.00070` | Complexity: `8.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_blockedcountries.sql` ⚠️dead-code-candidate
-  - Provides a view of which countries are blocked from accessing specific MITx Online courses, enabling compliance with regional restrictions and licensing requirements.
-  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_basket.sql` ⚠️dead-code-candidate
-  - Tracks shopping cart data for MITx Online users, capturing basket creation and modification timestamps to support e-commerce functionality.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_basketdiscount.sql` ⚠️dead-code-candidate
-  - Creates an intermediate table of basket discount data, allowing tracking of how and when discounts are applied to user baskets in the MITx Online e-commerce system.
-  - LOC: `14` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_basketitem.sql` ⚠️dead-code-candidate
-  - Transforms and structures e-commerce basket item data to track product purchases and cart activities within the platform.
-  - LOC: `13` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_discountredemption.sql` ⚠️dead-code-candidate
-  - Extracts discount redemption records from MITx Online e-commerce system to track promotional code usage and financial impact of discounts.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_userdiscount.sql` ⚠️dead-code-candidate
-  - Transforms and structures user discount data to track promotional offers and pricing adjustments applied to user accounts.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_countryincomethreshold.sql` ⚠️dead-code-candidate
-  - Exposes country income threshold data for flexible pricing, supporting financial aid and pricing decisions based on geographic location and economic factors.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_currencyexchangerate.sql` ⚠️dead-code-candidate
-  - Transforms currency exchange rate data into a standardized intermediate format, supporting multi-currency pricing analysis for MITx Online courses.
-  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_flexiblepricetier.sql` ⚠️dead-code-candidate
-  - Lists flexible pricing tiers with income thresholds, enabling differential pricing strategies based on user economic circumstances and supporting accessibility initiatives.
-  - LOC: `15` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivities.sql` ⚠️dead-code-candidate
-  - Aggregates and analyzes user engagement data across MITx Online courses, including video plays, problem checks, and chapter visits, to provide comprehensive course activity statistics.
-  - LOC: `103` | PageRank: `0.00070` | Complexity: `17.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_basket.sql` ⚠️dead-code-candidate
-  - Links shopping baskets to coupons, enabling analysis of promotional usage and shopping cart behavior.
-  - LOC: `18` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_basketitem.sql` ⚠️dead-code-candidate
-  - Maps basket items to their corresponding baskets and users, establishing the relationship between shopping cart contents and customer accounts for order processing workflows.
-  - LOC: `21` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_basketrunselection.sql` ⚠️dead-code-candidate
-  - This model links basket run selections with user information to track which courses users have selected in their shopping baskets, supporting enrollment and purchasing workflows.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_linerunselection.sql` ⚠️dead-code-candidate
-  - Tracks line run selections for MITxPro e-commerce transactions, capturing which course runs were selected for specific line items.
-  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_productcouponassignment.sql` ⚠️dead-code-candidate
-  - Tracks coupon assignments to products and users, enabling analysis of coupon redemption and usage patterns.
-  - LOC: `24` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__platforms.sql` ⚠️dead-code-candidate
-  - This module provides basic platform information for MITxPro, extracting platform IDs and names from the source data to support platform identification across the data warehouse.
-  - LOC: `10` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivities.sql` ⚠️dead-code-candidate
-  - Aggregates user course activity data from multiple sources to provide insights into student engagement with course content, including video plays, problem submissions, and module completion.
-  - LOC: `104` | PageRank: `0.00070` | Complexity: `17.0`
-- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_showanswer.sql` ⚠️dead-code-candidate
-  - Captures user interactions with course content where answers were shown, tracking student engagement patterns and problem-solving behavior for educational analytics.
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivities.sql` ⚠️dead-code-candidate
-  - Aggregates and analyzes user engagement metrics across various course activities to measure participation and learning behavior in residential MITx courses.
-  - LOC: `69` | PageRank: `0.00070` | Complexity: `10.0`
-- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_showanswer.sql` ⚠️dead-code-candidate
-  - Tracks when users view problem solutions in courses to understand help-seeking behavior
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/ocw/_int_ocw__models.yml`
-  - Provides metadata about OCW courses including their status, publication details, and URLs for managing course content
-  - LOC: `257` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/intermediate/ocw/int__ocw__course_departments.sql` ⚠️dead-code-candidate
-  - Transforms department number identifiers into human-readable department names and associates them with courses to enable organizational analysis of course offerings.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/ocw/int__ocw__course_topics.sql` ⚠️dead-code-candidate
-  - Extracts and normalizes topic, subtopic, and speciality classifications for OCW courses from JSON arrays stored in the website content metadata.
-  - LOC: `12` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/intermediate/ocw/int__ocw__resources.sql` ⚠️dead-code-candidate
-  - Aggregates all learning resources associated with OCW courses including files, links, and metadata to provide a comprehensive inventory of course materials and their attributes.
-  - LOC: `135` | PageRank: `0.00070` | Complexity: `9.0`
-- `src/ol_dbt/models/intermediate/ovs/_int_ovs__models.yml`
-  - Tracks video collections and their associated videos across different edX platforms for content management and distribution
-  - LOC: `52` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/intermediate/salesforce/int__salesforce__opportunitylineitem.sql` ⚠️dead-code-candidate
-  - Provides a curated view of Salesforce opportunity line item data for downstream analytics, exposing product details and pricing information for each opportunity.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/intermediate/zendesk/_zendesk_models.yml`
-  - Consolidate Zendesk ticket metadata for analytics, including ticket details, status, and relationships to brands and groups
-  - LOC: `148` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/intermediate/zendesk/int__zendesk__ticket.sql` ⚠️dead-code-candidate
-  - Aggregate Zendesk ticket data with related entities like users, organizations, and custom fields for comprehensive ticket analysis
-  - LOC: `126` | PageRank: `0.00070` | Complexity: `27.0`
-- `src/ol_dbt/models/intermediate/zendesk/int__zendesk__ticket_comment.sql` ⚠️dead-code-candidate
-  - Capture detailed Zendesk ticket comment data including author, content, and metadata for conversation analysis
-  - LOC: `27` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/marts/combined/marts__combined__products.sql` ⚠️dead-code-candidate
-  - Consolidates product information from different platforms to create a unified product catalog with consistent attributes
-  - LOC: `281` | PageRank: `0.00070` | Complexity: `29.0`
-- `src/ol_dbt/models/marts/combined/marts__combined_course_engagements.sql` ⚠️dead-code-candidate
-  - Consolidates daily course activity metrics across all platforms to enable comprehensive tracking of learner engagement and participation patterns.
-  - LOC: `272` | PageRank: `0.00070` | Complexity: `29.0`
-- `src/ol_dbt/models/marts/combined/marts__combined_discounts.sql` ⚠️dead-code-candidate
-  - Aggregates discount information from various platforms to provide unified discount management and usage tracking
-  - LOC: `108` | PageRank: `0.00070` | Complexity: `17.0`
-- `src/ol_dbt/models/marts/combined/marts__combined_problem_submissions.sql` ⚠️dead-code-candidate
-  - Consolidates problem submission and assessment data from multiple learning platforms into a single dataset for comprehensive analysis of learner performance and engagement.
-  - LOC: `105` | PageRank: `0.00070` | Complexity: `10.0`
-- `src/ol_dbt/models/marts/combined/marts__combined_total_course_engagements.sql` ⚠️dead-code-candidate
-  - Calculates comprehensive course engagement metrics by combining enrollment data with activity patterns to provide insights into learner participation and course effectiveness.
-  - LOC: `315` | PageRank: `0.00070` | Complexity: `34.0`
-- `src/ol_dbt/models/marts/micromasters/marts__micromasters_course_certificates.sql` ⚠️dead-code-candidate
-  - Combines course certificate and grade information for Micromasters programs, providing a comprehensive view of student completion and performance across courses and programs.
-  - LOC: `36` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/marts/micromasters/marts__micromasters_dedp_exam_grades.sql` ⚠️dead-code-candidate
-  - Creates a unified view of proctored exam grades from both Micromasters and MITxOnline platforms, combining student performance data across different learning systems.
-  - LOC: `49` | PageRank: `0.00070` | Complexity: `8.0`
-- `src/ol_dbt/models/marts/micromasters/marts__micromasters_program_certificates.sql` ⚠️dead-code-candidate
-  - Exposes a simple view of MicroMasters program certificates for downstream consumption by business users and applications
-  - LOC: `7` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/models/marts/micromasters/marts__micromasters_summary.sql` ⚠️dead-code-candidate
-  - Aggregates and summarizes MicroMasters enrollment and certificate data by program for business intelligence and program performance tracking
-  - LOC: `95` | PageRank: `0.00070` | Complexity: `19.0`
-- `src/ol_dbt/models/marts/micromasters/marts__micromasters_summary_timeseries.sql` ⚠️dead-code-candidate
-  - Creates time-series summaries of MicroMasters enrollments and certificates to track program growth and engagement over time
-  - LOC: `222` | PageRank: `0.00070` | Complexity: `28.0`
-- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_certificates.sql` ⚠️dead-code-candidate
-  - Provides a comprehensive view of course completion certificates including user details and certificate metadata for verification and reporting purposes.
-  - LOC: `22` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_enrollments.sql` ⚠️dead-code-candidate
-  - Provides detailed course enrollment information specifically for the MITx Online platform, including learner demographics and enrollment status for individual courses.
-  - LOC: `29` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_discussions.sql` ⚠️dead-code-candidate
-  - Captures detailed discussion activity data including user interactions, course context, and timing to analyze community engagement and learning discussions.
-  - LOC: `34` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_problem_submissions.sql` ⚠️dead-code-candidate
-  - Creates a mart of MITx Online problem submissions with enriched user and course metadata, including information about the most recent submission attempt for each user-course-problem combination.
-  - LOC: `42` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_problem_summary.sql` ⚠️dead-code-candidate
-  - Tracks user engagement with problem-solving activities by aggregating show answer usage and problem attempt data to understand learning patterns and difficulty levels.
-  - LOC: `76` | PageRank: `0.00070` | Complexity: `12.0`
-- `src/ol_dbt/models/marts/mitxpro/marts__mitxpro_ecommerce_productlist.sql` ⚠️dead-code-candidate
-  - Creates a unified product catalog with enriched metadata from multiple sources, supporting product discovery and catalog management across different platforms.
-  - LOC: `141` | PageRank: `0.00070` | Complexity: `23.0`
-- `src/ol_dbt/models/marts/ocw/marts__ocw_courses.sql` ⚠️dead-code-candidate
-  - Creates a denormalized view of OCW courses with instructor information, providing a comprehensive dataset for course analysis and reporting.
-  - LOC: `33` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/migration/_migration__models.yml`
-  - Identifies course runs and enrollments from edX.org that have not yet been migrated to MITx Online, providing a catalog of pending migration items for data engineering teams to process.
-  - LOC: `155` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/migration/edxorg_to_mitxonline_course_runs.sql` ⚠️dead-code-candidate
-  - Extracts and transforms course run data from edX.org, preparing it for migration to MITx Online by standardizing course identifiers, aggregating related data, and identifying courses that need to be migrated.
+  - Extracts and transforms course run data from edx.org to identify which courses need to be migrated to MITx Online, including metadata like department information, signatories, and enrollment statistics.
   - LOC: `93` | PageRank: `0.00070` | Complexity: `15.0`
 - `src/ol_dbt/models/migration/edxorg_to_mitxonline_enrollments.sql` 🔥`9` ⚠️dead-code-candidate
-  - Synchronizes course enrollments and grades between edX and MITxOnline platforms, including certificate generation and signatory management for cross-platform course completion tracking.
+  - Maps course enrollments from edXOrg to MITxOnline by joining enrollment data with course information and certificate details to maintain enrollment records across platform migrations.
   - LOC: `192` | PageRank: `0.00070` | Complexity: `33.0`
 - `src/ol_dbt/models/migration/edxorg_to_mitxonline_program_entitlements.sql` ⚠️dead-code-candidate
-  - Identifies program entitlements from edX.org that have not yet been migrated to MITx Online, enabling data engineers to track and process pending entitlement migrations between the two platforms.
+  - Maps program entitlements from edx.org to MITx Online by linking program data, user entitlements, and ecommerce orders to enable accurate program access tracking in the new platform.
   - LOC: `87` | PageRank: `0.00070` | Complexity: `20.0`
 - `src/ol_dbt/models/migration/edxorg_to_mitxonline_users.sql` ⚠️dead-code-candidate
-  - Migrates user data from edX to MITxOnline platform by matching certificate holders and program entitlement users, ensuring consistent user profiles across platforms.
+  - Migrates user data from edXOrg to MITxOnline by matching certificates and program entitlements with MITxOnline user records, ensuring consistent user profiles across platforms.
   - LOC: `62` | PageRank: `0.00070` | Complexity: `12.0`
-- `src/ol_dbt/models/reporting/Enrollment_Activity_Counts_Dataset.sql` ⚠️dead-code-candidate
-  - Provides daily counts of enrollment activities including enrollments, unenrollments, and audit mode participation for reporting and analysis.
-  - LOC: `140` | PageRank: `0.00070` | Complexity: `14.0`
-- `src/ol_dbt/models/reporting/_reporting__models.yml` 🔥`21`
-  - Defines the structure and validation rules for a program summary report that aggregates enrollment, certification, and demographic data across multiple learning programs for business intelligence reporting.
-  - LOC: `1134` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/reporting/chatbot_usage_report.sql` ⚠️dead-code-candidate
-  - Generates a chatbot usage report by consolidating chatbot and tutorbot conversation data, deduplicating messages and organizing them by thread for analysis of AI agent interactions with students.
-  - LOC: `90` | PageRank: `0.00070` | Complexity: `14.0`
-- `src/ol_dbt/models/reporting/combined_enrollments_with_gender_and_date.sql` ⚠️dead-code-candidate
-  - Creates a detailed enrollment dataset enriched with user demographic information including gender and job details, supporting diversity analysis and personalized learning insights for business stakeholders.
-  - LOC: `51` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/reporting/combined_video_engagements_counts_report.sql` ⚠️dead-code-candidate
-  - Aggregates video engagement data across multiple platforms to provide comprehensive viewing statistics including total videos, user-specific watch counts, and maximum video index reached.
-  - LOC: `38` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/reporting/engagement_problem_completion_raw.sql` ⚠️dead-code-candidate
-  - Calculates problem completion statistics including attempts, correct answers, and completion rates for course assessments.
-  - LOC: `79` | PageRank: `0.00070` | Complexity: `18.0`
-- `src/ol_dbt/models/reporting/engagement_problem_completion_summary.sql` ⚠️dead-code-candidate
-  - Provides a detailed summary of problem engagement and completion rates for learners across different courses and sections, tracking attempts and successful completions.
-  - LOC: `82` | PageRank: `0.00070` | Complexity: `18.0`
-- `src/ol_dbt/models/reporting/enrollment_detail_report.sql` ⚠️dead-code-candidate
-  - Provides detailed enrollment data for courses, including user information, enrollment status, and completion metrics to track learner participation and progress.
-  - LOC: `94` | PageRank: `0.00070` | Complexity: `12.0`
-- `src/ol_dbt/models/reporting/instructor_module_report.sql` ⚠️dead-code-candidate
-  - Provides detailed instructor-level analytics for course modules, including user engagement metrics, video watch patterns, and activity tracking to support teaching effectiveness evaluation.
-  - LOC: `234` | PageRank: `0.00070` | Complexity: `36.0`
-- `src/ol_dbt/models/reporting/learner_demographics_and_cert_info.sql` ⚠️dead-code-candidate
-  - Generates demographic and certification information for learners, specifically identifying Data, Economics, and Design of Policy (DEDP) program participation and course completion counts.
-  - LOC: `80` | PageRank: `0.00070` | Complexity: `16.0`
-- `src/ol_dbt/models/reporting/learner_engagement_report.sql` ⚠️dead-code-candidate
-  - Measures learner engagement through video consumption, discussion participation, and other interactive elements to assess course engagement levels.
-  - LOC: `385` | PageRank: `0.00070` | Complexity: `53.0`
-- `src/ol_dbt/models/reporting/mitxonline_course_engagements_daily_report.sql` ⚠️dead-code-candidate
-  - Aggregates daily course engagement metrics including events, problem submissions, and video plays for online learning platforms.
-  - LOC: `40` | PageRank: `0.00070` | Complexity: `7.0`
-- `src/ol_dbt/models/reporting/mitxonline_video_engagements_w_video_counts.sql` ⚠️dead-code-candidate
-  - Creates a report of MITx Online video engagement metrics, including total videos per section, user-specific viewing counts, and current course status.
-  - LOC: `51` | PageRank: `0.00070` | Complexity: `6.0`
-- `src/ol_dbt/models/reporting/page_engagement_views_report.sql` ⚠️dead-code-candidate
-  - Tracks page views and navigation patterns within courses to understand how learners interact with course content and materials.
-  - LOC: `66` | PageRank: `0.00070` | Complexity: `13.0`
-- `src/ol_dbt/models/reporting/problem_engagement_detail_report.sql` ⚠️dead-code-candidate
-  - Analyzes problem engagement and performance data to understand how learners interact with course problems and their academic achievement.
-  - LOC: `121` | PageRank: `0.00070` | Complexity: `20.0`
-- `src/ol_dbt/models/reporting/program_enrollment_with_user_report.sql` ⚠️dead-code-candidate
-  - Generates a comprehensive enrollment report with user demographics and course completion tracking for program-level analysis, enabling program administrators to monitor student progress and program effectiveness.
-  - LOC: `114` | PageRank: `0.00070` | Complexity: `15.0`
-- `src/ol_dbt/models/reporting/program_summary_report.sql` ⚠️dead-code-candidate
-  - Generates program-level enrollment and completion statistics to measure program effectiveness and learner outcomes across multiple courses.
-  - LOC: `75` | PageRank: `0.00070` | Complexity: `14.0`
-- `src/ol_dbt/models/reporting/student_risk_probability_report.sql` ⚠️dead-code-candidate
-  - Combines student grade data with risk probability assessments to provide a comprehensive view of student performance and potential risk factors.
-  - LOC: `31` | PageRank: `0.00070` | Complexity: `6.0`
-- `src/ol_dbt/models/reporting/video_engagement_report.sql` ⚠️dead-code-candidate
-  - Tracks video engagement metrics including watched videos and viewing progress for content analysis.
-  - LOC: `37` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__django_contenttype.sql` ⚠️dead-code-candidate
-  - Transforms raw Django content type data from the bootcamps PostgreSQL database into a standardized staging format with concatenated identifiers
-  - LOC: `20` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_orderaudit.sql` ⚠️dead-code-candidate
-  - Maintains an audit trail of e-commerce order changes to support compliance and troubleshooting of order modifications.
-  - LOC: `20` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/edxorg/_stg__edxorg__models.yml`
-  - Defines the structure and validation rules for course run metadata, ensuring consistent course information across the platform for reporting and analytics.
-  - LOC: `1243` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_policy.sql` ⚠️dead-code-candidate
-  - Cleanses and standardizes course policy data from edX, making course structure, pacing, and discussion settings available for downstream applications and analytics.
-  - LOC: `18` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun.sql` ⚠️dead-code-candidate
-  - Transforms and cleans course metadata from raw S3 data, standardizing course identifiers and handling null timestamps to enable consistent course information across the platform.
-  - LOC: `36` | PageRank: `0.00070` | Complexity: `9.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun_certificate.sql` ⚠️dead-code-candidate
-  - Transforms raw edX course certificate data by cleaning, deduplicating, and casting values to appropriate types for downstream analysis.
-  - LOC: `31` | PageRank: `0.00070` | Complexity: `6.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun_enrollment.sql` ⚠️dead-code-candidate
-  - Transforms raw edX courserun enrollment data into a standardized format, supporting analysis of course participation, enrollment status, and user engagement across learning platforms.
-  - LOC: `18` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun_grade.sql` ⚠️dead-code-candidate
-  - Standardizes course grade data from persistent grade storage, converting string values to proper types and normalizing timestamps to provide accurate academic performance metrics.
-  - LOC: `30` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courseware_studentmodule.sql` ⚠️dead-code-candidate
-  - Tracks student module interactions and grades to monitor learning progress and course completion
-  - LOC: `22` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__django_contenttype.sql` ⚠️dead-code-candidate
-  - Transforms raw Django content type data into a cleaned staging table with standardized field names and concatenated full names for reference in downstream data processing.
-  - LOC: `20` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_couponinvoice.sql` ⚠️dead-code-candidate
-  - Tracks coupon invoice information for MicroMasters ecommerce transactions, managing promotional discounts and billing.
-  - LOC: `17` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_usercoupon.sql` ⚠️dead-code-candidate
-  - Manages user coupon data for e-commerce transactions, supporting promotional discount tracking and redemption workflows.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitlearn/_stg_mitlearn_models.yml`
-  - Transforms raw MIT Learn user data into a standardized staging model with consistent naming conventions and validation rules for downstream analytics
-  - LOC: `274` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_search_percolatequery.sql` ⚠️dead-code-candidate
-  - Processes search query data for learning resources, storing query patterns and metadata to enable search analytics and optimization
-  - LOC: `18` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_search_percolatequery_users.sql` ⚠️dead-code-candidate
-  - Tracks which users are associated with specific search percolate queries, enabling personalized search alert functionality for monitoring relevant content.
-  - LOC: `15` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_userlist.sql` ⚠️dead-code-candidate
-  - Stores metadata about user-created lists including titles, descriptions, privacy settings, and ownership, enabling users to organize and share collections of learning resources.
-  - LOC: `18` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_userlist_topics.sql` ⚠️dead-code-candidate
-  - Establishes a mapping between user lists and learning resource topics, enabling personalized content recommendations and topic-based user segmentation
-  - LOC: `14` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_userlistrelationship.sql` ⚠️dead-code-candidate
-  - Captures the hierarchical relationships between user-created lists and their constituent items, enabling tracking of which lists contain which resources and their ordering within those lists.
-  - LOC: `17` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_programrun.sql` ⚠️dead-code-candidate
-  - Manages program run scheduling and lifecycle, allowing the platform to coordinate when academic programs are available to learners and track their active periods.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__reversion_revision.sql` ⚠️dead-code-candidate
-  - Processes Wagtail reversion revision data to maintain audit trail of content modifications for compliance and rollback capabilities
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__blockcompletion.sql` ⚠️dead-code-candidate
-  - Tracks student progress by capturing block-level completion data from MITx Online courses, enabling detailed learning analytics
-  - LOC: `37` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/bootcamps/_bootcamps__sources.yml`
+  - Defines the structure and metadata of raw bootcamp data sources, enabling reliable data extraction from the warehouse.
+  - LOC: `419` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/learn-ai/_learn_ai__sources.yml`
+  - Defines the Learn AI data sources from raw warehouse tables for staging, establishing the foundation for data extraction from the Learn AI application's PostgreSQL database
+  - LOC: `117` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/mitlearn/_mitlearn__sources.yml`
+  - Defines the source configuration for raw MIT Learn data from Airbyte, establishing the connection to the warehouse and describing the user table schema
+  - LOC: `248` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__grades_visibleblocks.sql` ⚠️dead-code-candidate
-  - Stores and manages visibility settings for course content blocks in MITx Online platform
+  - Controls visibility of course content and grade blocks in MITx Online platform
   - LOC: `15` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2bcouponaudit.sql` ⚠️dead-code-candidate
-  - Captures audit trail data for B2B coupon modifications, tracking changes to coupon attributes and user actions for compliance and debugging purposes.
-  - LOC: `21` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2borderaudit.sql` ⚠️dead-code-candidate
-  - Captures and standardizes order audit trail data from MITxPro's B2B e-commerce system, enabling tracking of changes to orders and supporting compliance and business intelligence needs.
-  - LOC: `21` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_signatorypage.sql` ⚠️dead-code-candidate
-  - Extracts CMS signatory page data for managing and displaying official signatory information on course certificates and other institutional documents.
-  - LOC: `15` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_bulkcouponassignment.sql` ⚠️dead-code-candidate
-  - Manages bulk coupon assignments and distribution tracking for MIT xPro promotional campaigns.
-  - LOC: `24` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_orderaudit.sql` ⚠️dead-code-candidate
-  - Captures and standardizes order audit data from MITxPro's e-commerce system, allowing tracking of changes to orders for business operations and auditing purposes.
-  - LOC: `21` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__blockcompletion.sql` ⚠️dead-code-candidate
-  - Extracts and processes block completion data from Open edX, providing insights into learner progress and course completion patterns for educational analytics.
-  - LOC: `37` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__blockcompletion.sql` ⚠️dead-code-candidate
-  - Captures and maintains block-level completion data for students, supporting progress tracking and learning analytics.
-  - LOC: `37` | PageRank: `0.00070` | Complexity: `5.0`
-- `src/ol_dbt/models/staging/ocw/_stg_ocw__models.yml`
-  - Defines metadata structure and validation rules for OCW websites in the staging layer, ensuring data quality for downstream analytics on OCW website properties and publishing status.
+- `src/ol_dbt/models/staging/mitxpro/_mitxpro__sources.yml`
+  - Captures enrollment data from external systems including course details, user information, and enrollment status for analytics and reporting
+  - LOC: `2344` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/ocw/_ocw__sources.yml`
+  - Specifies the source table structure for raw OCW website data, mapping production database fields to staging schema for downstream processing.
+  - LOC: `172` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/ovs/_ovs__sources.yml`
+  - Defines the raw data sources from the OVS warehouse for video collections and videos, establishing the foundational data structures for downstream processing.
+  - LOC: `158` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/salesforce/_salesforce__sources.yml`
+  - Defines the source configuration for Salesforce raw data, specifying the database schema and table structure for opportunity data ingestion from the third-party CRM system.
+  - LOC: `242` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/int__learn_ai__chatbot_f1ec896e-86d4-451a-84cc-841d234e70a6.yaml`
+  - Stores and manages chatbot interaction data, tracking user conversations and engagement with the AI learning assistant.
+  - LOC: `295` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_course_engagements_daily_e7330108-bdfa-4ff0-8ca3-084d7e8cbda8.yaml`
+  - Tracks daily course engagement metrics for MITx Online platform, including user activity and course status information
+  - LOC: `228` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_user_profiles_000eb064-5511-455c-bbdb-33ffe0f0af68.yaml`
+  - Stores user profile information for MITx Online platform including demographic and educational background data
+  - LOC: `163` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__mitxpro_all_coupons_50998478-4b82-451d-82ed-5ea60fd48b05.yaml`
+  - Manages coupon data for MITxPro platform including discount information and payment details
+  - LOC: `320` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/tfact_problem_events_5fc7287d-1bf8-4fc2-b008-c80f84e3a6d9.yaml`
+  - Captures problem event data including user interactions and grading information for course assessments
+  - LOC: `211` | PageRank: `0.00070` | Complexity: `0.0`
+### monitoring
+
+- `dg_projects/b2b_organization/b2b_organization/sensors/b2b_organization.py` ⚠️dead-code-candidate
+  - Monitors B2B organizational customer data changes and triggers data exports for new or updated organizations by querying a DBT model and creating dynamic partitions for incremental processing.
+  - LOC: `65` | PageRank: `0.00070` | Complexity: `1.0`
+- `dg_projects/canvas/canvas/sensors/canvas.py` ⚠️dead-code-candidate
+  - Monitors a Google Sheet for Canvas course IDs and triggers data pipeline runs when new IDs are added or removed
+  - LOC: `81` | PageRank: `0.00070` | Complexity: `3.0`
+- `dg_projects/data_platform/data_platform/definitions.py` ⚠️dead-code-candidate
+  - Platform-level utilities and notifications for the data engineering pipeline, providing Slack failure notifications and vault authentication for run monitoring and error handling.
+  - LOC: `142` | PageRank: `0.00070` | Complexity: `12.0`
+- `dg_projects/edxorg/edxorg/sensors/__init__.py`
+  - Contains sensor definitions for monitoring and triggering data processing workflows based on external events or schedules.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/learning_resources/learning_resources/sensors/video_shorts.py` ⚠️dead-code-candidate
+  - Monitors Google Sheets for new video metadata and automatically triggers the processing pipeline for newly discovered videos, ensuring timely content updates.
+  - LOC: `83` | PageRank: `0.00070` | Complexity: `4.0`
+- `dg_projects/legacy_openedx/legacy_openedx/resources/healthchecks.py` ⚠️dead-code-candidate
+  - Implements a Healthchecks.io integration resource for monitoring pipeline execution status, allowing automated health check pings to track job start times and failures.
+  - LOC: `40` | PageRank: `0.00070` | Complexity: `1.0`
+- `dg_projects/openedx/openedx/sensors/openedx.py` ⚠️dead-code-candidate
+  - Monitors Open edX course data for changes and dynamically partitions course runs, triggering data processing pipelines when new or updated courses are detected.
+  - LOC: `143` | PageRank: `0.00070` | Complexity: `9.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/hooks.py` ⚠️dead-code-candidate
+  - Implements Dagster hooks for integration with external monitoring services, providing automated notifications for pipeline success and failure events to enable operational visibility and alerting.
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/migration/_migration__models.yml`
+  - Identifies course runs that have been created on edx.org but have not yet been migrated to MITx Online, providing a catalog of pending migration items for data engineering teams.
+  - LOC: `155` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Latest_Dashboard_Activity_Recorded_Date_af403a98-7ff4-407a-b1c9-5161ffc10522.yaml`
+  - Displays the latest recorded date of dashboard activity to monitor data freshness and system usage
+  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Latest_Product_Created_Date_cdba7fac-5019-4d70-9f0c-817fb7f194d8.yaml`
+  - Tracks the most recent product creation dates, providing visibility into product pipeline activity and development velocity.
+  - LOC: `62` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Product_Dashboard_Last_Updated_6733b1cd-bb65-44e6-959e-ca21305807e7.yaml`
+  - Monitors the last update timestamps of product dashboard tables, allowing data engineering teams to track data freshness and system updates.
+  - LOC: `80` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/dim_user_last_updated_1e1419f1-f836-43de-964e-6ea9d9521645.yaml`
+  - Monitors data freshness and update patterns for user dimension tables, ensuring data pipeline reliability and timely data availability for downstream analytics.
+  - LOC: `80` | PageRank: `0.00070` | Complexity: `0.0`
+### orchestration
+
+- `dg_deployments/local/dagster.yaml`
+  - Configures local Dagster deployment settings including scheduler, run coordinator, storage backend, and artifact storage for orchestrating data pipelines.
+  - LOC: `24` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_deployments/local/workspace.yaml`
+  - Defines a workspace configuration that connects multiple Dagster gRPC servers, enabling distributed orchestration across different data platform components.
+  - LOC: `40` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/canvas/canvas/definitions.py` ⚠️dead-code-candidate
+  - Orchestrates Canvas course export pipeline with asset definitions, authentication, and scheduling capabilities
+  - LOC: `127` | PageRank: `0.00070` | Complexity: `5.0`
+- `dg_projects/edxorg/edxorg/jobs/edx_gcs_courses.py` ⚠️dead-code-candidate
+  - Orchestrates nightly extraction of Open edX course data from GCS to S3 for institutional research
+  - LOC: `23` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/edxorg/edxorg/jobs/retrieve_edx_exports.py` ⚠️dead-code-candidate
+  - Orchestrates weekly retrieval and extraction of edX.org course exports from GCS to S3 for institutional research
+  - LOC: `25` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/lakehouse/lakehouse/definitions.py` ⚠️dead-code-candidate
+  - Main orchestration module defining data lakehouse assets and pipelines, integrating Airbyte, dbt, and custom data processing workflows for the data platform
+  - LOC: `303` | PageRank: `0.00070` | Complexity: `14.0`
+- `dg_projects/learning_resources/learning_resources/defs/__init__.py`
+  - Defines the orchestration structure and dependencies for video processing assets, establishing how they should be scheduled and executed within the data pipeline.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/legacy_openedx/legacy_openedx/jobs/open_edx.py` ⚠️dead-code-candidate
+  - Orchestrates the extraction of Open edX course data and user information, preparing it for downstream analysis and storage in BigQuery
+  - LOC: `53` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/schedules/open_edx.py` ⚠️dead-code-candidate
+  - Defines daily scheduled jobs for different business units (residential, MITxPro, and MITxOnline) to trigger Open edX course processing pipelines.
+  - LOC: `37` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/student_risk_probability/student_risk_probability/definitions.py`
+  - Configures Dagster asset job and definitions for student risk probability calculations, setting up data processing pipelines with Iceberg storage and S3 integration
+  - LOC: `68` | PageRank: `0.00070` | Complexity: `3.0`
+- `docker-compose.yaml` 🔥`6`
+  - Provides containerized development environment for Dagster data orchestration platform, enabling team collaboration and consistent deployment of data pipelines
+  - LOC: `356` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/assets/__init__.py`
+  - Provides foundational assets and configurations for the orchestration library, enabling reusable resources and components across the data platform.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/io_managers/__init__.py`
+  - Defines the public interface for input/output manager components, exposing available IO managers for data handling.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/jobs/__init__.py`
+  - Defines the public interface for job orchestration components, exposing available job definitions for execution scheduling.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/automation_policies.py` ⚠️dead-code-candidate
+  - Defines automation conditions for data pipeline execution logic, determining when data processing should occur based on upstream changes, code modifications, or missing data dependencies.
+  - LOC: `18` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/partitions/__init__.py`
+  - Defines the public interface for partition-related components, exposing available partition definitions for data segmentation.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/partitions/edxorg.py`
+  - Defines dynamic partition keys for organizing course data by source, enabling targeted data processing workflows.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/schedules/__init__.py`
+  - Defines schedule configurations and timing logic for orchestrating data pipeline execution at regular intervals.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/sensors/__init__.py`
+  - Serves as the entry point for sensor-related functionality, organizing and exposing storage monitoring capabilities to the orchestration system.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_orchestrate/__init__.py`
+  - Deprecated module that previously contained orchestration logic for data engineering workflows, now migrated to a new CLI-based structure with separate code locations for different data sources.
+  - LOC: `34` | PageRank: `0.00070` | Complexity: `0.0`
+### serving
+
+- `src/ol_superset/assets/charts/Chatbot_Usage_By_Course_Section_and_Subsection_9ad6f248-c9cd-42bd-9285-5dbe6d30d5c3.yaml`
+  - Provides a table view of chatbot usage statistics broken down by course section and subsection, showing where students are most actively using the chatbot feature.
+  - LOC: `98` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Chatbot_Usage_By_Type_751da4ab-6e41-44de-a2b8-e54dc7b2c6b0.yaml`
+  - Tracks and visualizes chatbot usage patterns by type over time to analyze user interaction with automated support systems.
+  - LOC: `124` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Chatbot_data_for_Saliha_8fb96290-8e60-48c0-93c1-bf0f5b3c1823.yaml`
+  - Displays chatbot conversation data for Saliha, filtering by specific course IDs and ensuring messages are present, to analyze AI agent interactions
+  - LOC: `78` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Chatbots_37348ff8-4ec6-4b33-a2a6-5d8d8bf62356.yaml`
+  - Filters and displays chatbot interaction data specifically for the VideoGPTBot agent, allowing support teams to review AI-powered assistance conversations and their effectiveness.
+  - LOC: `79` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Chatbots_90099854-5b34-4d06-926c-f58f42b2d69e.yaml`
+  - Displays chatbot conversation data for analysis of agent interactions and user communications
+  - LOC: `48` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Combined_Learners_0cf1e9cf-4645-4397-ac5a-d9a7b75d0ad5.yaml`
+  - Provides a searchable table of combined learner information including usernames, emails, countries, and full names for learner data analysis and management.
+  - LOC: `56` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Combined_Learners_f2f10600-7302-4887-af04-d0aad29333ea.yaml`
+  - Provides a comprehensive table of combined learner information including usernames, emails, and countries for user management and outreach
+  - LOC: `51` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Content_Engagement_-_Weekly_fb5f7dd7-f56e-44f4-97f6-ed0c3804382f.yaml` 🔥`6`
+  - Visualizes weekly trends in content engagement, tracking distinct users who watched videos, attempted problems, or participated in discussions.
+  - LOC: `230` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Content_Engagement_984bd054-65c0-4f76-b7ee-7fb0608ccd6e.yaml`
+  - Visualizes user engagement across video watching, problem attempts, and discussion participation over time
+  - LOC: `231` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Content_Engagement_aa66927b-cc60-4950-8ad8-f79081736841.yaml` 🔥`6`
+  - Visualizes content engagement metrics over time, showing how many users watched videos, attempted problems, or participated in discussions on a daily basis.
+  - LOC: `216` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Counts_by_course_run_5670e704-3dc6-4b28-a12c-20d4faabcd46.yaml`
+  - Provides enrollment and certification trend analysis by course run over time, enabling administrators to monitor course performance and learner engagement patterns.
+  - LOC: `311` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Coupon_Dashboard_Last_Updated_a468ef05-11af-4a02-b61c-f928f36f17fb.yaml`
+  - Displays coupon creation and update timestamps from the coupon management system, providing visibility into coupon lifecycle and modification history.
+  - LOC: `79` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Coupon_Discount_Summary_2e066386-dc90-48e3-859b-2b665b3cb257.yaml`
+  - Provides a detailed summary of coupon and discount usage to manage and optimize promotional strategies and financial incentives.
+  - LOC: `96` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Coupon_Summary_ae86fc71-d19e-4e6a-80b6-c68ca638b536.yaml`
+  - Summarizes coupon usage statistics including validity status and remaining available coupons
+  - LOC: `107` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Course_AI_Chatbot_92488983-505d-4642-a76d-6d5225275577.yaml`
+  - Displays detailed AI chatbot interactions for course analysis, allowing stakeholders to review conversations between learners and the AI assistant
+  - LOC: `48` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Course_AI_Chatbot_Deprecated_148f6894-7e0b-4750-aef4-501db89a4543.yaml`
+  - Provides access to course AI chatbot interactions including agent and human messages, enabling analysis of chatbot usage and effectiveness in supporting learners.
+  - LOC: `92` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Course_AI_Chatbot_Table_Metadata_3ac40124-8856-4823-8b81-4be13975e103.yaml`
+  - Displays metadata information about Course AI Chatbot tables including creation dates and update timestamps for monitoring and documentation purposes
+  - LOC: `79` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Course_Run_Metadata_01f0a8ee-45f0-40ef-a96e-250a40aebf10.yaml`
+  - Shows detailed metadata for course runs including titles, IDs, platforms, and timing information in a tabular format for comprehensive course management.
+  - LOC: `54` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Course_Run_Metadata_23fb7405-da8f-4983-839d-b1d7fb07e733.yaml`
+  - Displays comprehensive metadata for course runs including titles, IDs, platforms, dates, and current status to provide an overview of course offerings
+  - LOC: `59` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Course_Run_Metadata_c6e47f3c-aeb2-4e25-bf43-e9bd3f068127.yaml`
+  - Provides metadata about course runs including titles, IDs, platforms, and dates, serving as a reference for course scheduling and management
+  - LOC: `54` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Course_to_Program_Reference_5a5e1d10-7bbe-4329-891d-029255d6efe0.yaml`
+  - Creates a reference table linking courses to their parent programs, enabling program-level analysis of course offerings
+  - LOC: `50` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/DEDP_3T2023_certificates_by_course_runs_092c45b2-f7d3-4c7e-b4aa-99890c07746a.yaml`
+  - Tracks certificate issuance counts across DEDP 3T2023 course runs to monitor program completion rates
+  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/DEDP_Learner_Grades_by_Course_1ec63597-fd4e-4e55-b5e0-aa09309f3cce.yaml`
+  - Displays DEDP learner grades organized by course for program evaluation and academic performance tracking
+  - LOC: `66` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Daily_Learner_Enrollment-_All_Courses_65762bf7-1c08-4abb-ad17-e569311a67d0.yaml`
+  - Shows daily enrollment trends across all courses broken down by enrollment type to analyze course popularity and enrollment patterns over time
+  - LOC: `83` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Daily_Learner_Enrollment_0805cae0-185d-4796-9ed4-a240ab047352.yaml`
+  - Shows daily enrollment statistics for learners in specific courses broken down by enrollment mode (verified, audit, total) for tracking course participation
+  - LOC: `110` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Daily_Learner_Enrollment_Graph_e197cb29-a6e4-4880-a28f-35a959c77ed8.yaml`
+  - Shows daily enrollment trends for specific courses, tracking total, verified, and audit enrollments over time
+  - LOC: `123` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Data_Detail_Discussion_39c99c2d-1290-4d37-9b0f-eef559172947.yaml`
+  - Shows detailed discussion data including platform, course information, event types, and content, facilitating analysis of user engagement and discussion patterns within courses.
+  - LOC: `67` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Data_Detail_Navigation_cf8305f6-fe5d-4791-8185-3051b76f4738.yaml`
+  - Enables detailed navigation through raw event data with filtering capabilities for platform activity analysis
+  - LOC: `65` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Data_Detail_Problems_5e8a4f03-1504-4f8b-9990-de300d73ff93.yaml`
+  - Displays detailed problem attempt data including grades, success status, and timestamps for learning analytics
+  - LOC: `73` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Data_Detail_Video_8cd66663-f93f-4751-be11-14c5d4c28ed5.yaml`
+  - Shows detailed video interaction data including timestamps, durations, and positions, useful for analyzing user engagement with course video content
+  - LOC: `61` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Distribution_of_Number_of_Videos_Watched_9bdb6168-d5c9-4651-af36-556e29f3b5db.yaml`
+  - Analyzes the distribution of the number of videos watched by learners to assess content engagement and identify viewing patterns.
+  - LOC: `114` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Engagement_By_Section_And_Subsection_b503879e-45e5-43aa-90eb-de7044e442b4.yaml`
+  - Displays engagement data by section and subsection including page views, video watch percentages, and average grades for learning analytics.
+  - LOC: `293` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Engagement_Totals_24ea41c4-da94-443a-af6b-77bc7e09c303.yaml`
+  - Visualizes engagement metrics for online courses, showing learner participation in videos, problems, and discussions to measure course effectiveness
+  - LOC: `147` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Enrollment_Activity_Over_Time_07019136-a885-4261-8960-cfca368642d7.yaml`
+  - Visualizes enrollment trends over time, tracking both total enrollments and audit enrollments to provide insights into course participation patterns.
+  - LOC: `644` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Enrollment_Activity_b7056cdf-6d2a-43c0-b0a8-b66ab3f3980c.yaml`
+  - Provides a time-series visualization of enrollment activity metrics, showing trends in verified enrollments, audits, total enrollments, and certificates earned over time.
+  - LOC: `126` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Enrollment_Data_Updated_Date_9eb01f0f-df02-421e-9c26-d5fdb8cff986.yaml`
+  - Shows the most recent course enrollment creation date for tracking enrollment data freshness
+  - LOC: `63` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Enrollment_Demographics_by_Education_aa6bdf8d-b5be-4142-a3fc-df4f0032189e.yaml`
+  - Provides demographic breakdown of learners by education level, enabling analysis of enrollment patterns and educational background distribution among course participants.
+  - LOC: `113` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Enrollment_Demographics_by_Gender_e9c00f99-deb8-4a1f-99d4-d4e592b7c8db.yaml`
+  - Shows enrollment demographics broken down by gender to analyze learner diversity and inclusion patterns
+  - LOC: `121` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Enrollment_Detail_1cf394ec-8561-4b0d-9d9b-f394a6029b33.yaml`
+  - Provides detailed enrollment records including user information, course details, grades, certificates, and payment information
+  - LOC: `111` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Enrollment_Detail_Dashboard_Last_Updated_1ed19d7a-4f9b-4c13-a6f9-ba348f1c4d3d.yaml`
+  - Shows the last updated timestamp for enrollment detail report data in a table format, filtered to track when enrollment data was last refreshed.
+  - LOC: `85` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Enrollment_Geography_118ba89d-4c33-4720-b22e-a2576ff93316.yaml`
+  - Shows the geographic distribution of enrollments across different countries using a world map visualization
+  - LOC: `89` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Individual_Enrollment_Detail_f8aa5d0c-f838-4236-9057-4f118d340a53.yaml`
+  - Provides detailed enrollment information for individual learners including their course progress, certificates, and demographic data to track learner engagement and completion
+  - LOC: `81` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Latest_Activity_Date_f9e19a79-18f9-4a54-ad7a-85c5f0b5b801.yaml`
+  - Displays the most recent activity date from a dataset, allowing users to quickly identify the latest timestamp of recorded events or transactions.
+  - LOC: `100` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Latest_Course_Activity_Date_5f95a268-4339-4d73-b8d8-d082ca53b28d.yaml`
+  - Reports the latest course activity date across all users, helping track course engagement timelines
+  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Latest_Dashboard_Activity_Recorded_Date_582d2109-e097-4acc-a39e-f19932afa98d.yaml`
+  - Shows the most recent date when dashboard activity was recorded, helping administrators monitor data freshness and system activity status.
+  - LOC: `120` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Latest_Fulfilled_Order_Date_686fd4b2-e9f4-401b-bd85-b03f8b8824fd.yaml`
+  - Shows the most recent fulfillment dates for orders across platforms, helping track order processing timelines and identify potential delays in the fulfillment pipeline.
+  - LOC: `104` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Learn_New_Users_5cba1239-2f4c-472b-82f6-788f18de0fd2.yaml`
+  - Tracks new user registrations over time on the MitLearn platform, using weekly aggregation to monitor user growth trends
+  - LOC: `106` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Learn_User_Profile_2e3e900a-3782-4738-80fe-0d60802d4461.yaml`
+  - Displays user profiles from the learning platform, allowing administrators to view and analyze learner information including demographics, interests, and engagement status.
+  - LOC: `91` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Learner_Course_Engagement_6df62a4b-28e2-4d78-9e22-e3dfb56fd96a.yaml`
+  - Displays learner engagement metrics including events, problem submissions, video plays, and discussions for courses, enabling analysis of learner activity patterns over time.
+  - LOC: `84` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Learner_Deferred_Report_5ce15be9-994b-4377-8c99-21d35267a2dd.yaml`
+  - Tracks and reports learners who have deferred their enrollment status in courses, enabling administrators to monitor deferred learners by platform, course, and user details.
+  - LOC: `71` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Learner_Demographic_Including_Income_and_Course_Data_11b1455f-25f1-45aa-8358-b8449013bb24.yaml`
+  - Combines learner demographic information with course enrollment and completion data, providing a comprehensive view of learner backgrounds and their educational journey through various programs.
+  - LOC: `74` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Learner_Page_Engagement_9bd2269c-fd5c-463d-b63e-14fa63e90a55.yaml`
+  - Displays detailed engagement metrics for learner page views, tracking which course content users interact with and how frequently they access different learning materials.
+  - LOC: `55` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Learner_Performance_d747faf0-d2f8-4dde-84ca-54b60775e051.yaml`
+  - Analyzes learner performance by course, including passing grades, average scores, and certificate completion rates.
+  - LOC: `138` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Learner_Problem_Engagement_695dd2d8-48d5-436b-a646-204bdf5f2be5.yaml`
+  - Provides detailed learner performance data on individual problems, showing attempts, correct answers, and grade distributions to help instructors identify student difficulties and track learning progress.
+  - LOC: `76` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Learner_Video_Engagement_3c5fdc59-85d7-484b-9fdf-170336c8a4c0.yaml`
+  - Shows detailed video engagement data for learners, including percent watched and time played, allowing instructors to analyze individual student video consumption patterns.
+  - LOC: `93` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Learners_Enrolled_37d70f20-6dcc-4237-921b-521dc43425a7.yaml` 🔥`6`
+  - Displays the total count of currently enrolled learners as a large numeric visualization for quick insight into enrollment numbers.
+  - LOC: `87` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Learners_Enrolled_c0066291-5b04-437d-b41d-3a4412aa8c82.yaml`
+  - Displays the total number of unique learners currently enrolled in courses, providing a quick overview of active user engagement.
+  - LOC: `85` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITxOnline_Content_Engagement_3267dca3-cc86-47f9-ae47-f338d1af4071.yaml`
+  - Visualizes learner engagement with course content, such as video watching, problem solving, and discussion participation, to evaluate overall content interaction.
+  - LOC: `223` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITxOnline_Content_Engagement_836bab76-b440-4f9e-935d-54817dd3dc25.yaml`
+  - Visualizes user engagement patterns with MITxOnline content over time through multiple metrics like video watching and problem solving
+  - LOC: `224` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITxOnline_Earned_Certificate_d953e953-a5d6-4e48-af54-5b0e033a401c.yaml`
+  - Shows time-series data of earned certificates over time, providing insights into certification trends and completion patterns across courses.
+  - LOC: `85` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITxOnline_Engagement_Totals_0cad65c5-cfb7-4530-95ff-289c093da51d.yaml`
+  - Tracks daily engagement metrics like video watching, problem attempts, and discussion participation across courseruns.
+  - LOC: `137` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITxOnline_Engagement_Totals_c5db1f81-e676-4565-a158-ef68de95dfb1.yaml`
+  - Tracks daily engagement metrics across all MITxOnline courses to monitor overall platform usage and learner activity patterns
+  - LOC: `137` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITxOnline_Enrollment_Activity_6fd11c69-4110-465f-8ed6-bfcdbe59b8b4.yaml`
+  - Visualizes daily enrollment trends by type (verified, audit, total) using area charts, helping administrators track course adoption and compare enrollment patterns over time.
+  - LOC: `95` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITxOnline_Enrollment_Demographics_by_Education_5cfc7ea9-6636-41b4-9af7-68c98aeff4de.yaml`
+  - Analyzes enrollment demographics by education level to understand learner backgrounds
+  - LOC: `56` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITxOnline_Enrollment_Demographics_by_Gender_57721cfb-3413-484d-abfa-cb1be38daafe.yaml`
+  - Displays enrollment demographics by gender to understand the gender distribution of learners.
+  - LOC: `57` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITxOnline_Enrollment_Geography_de62ba2c-c4c8-4973-99eb-f1a7bcbe16e6.yaml`
+  - Displays the geographic distribution of MITxOnline enrollments to understand the global reach and regional engagement of the platform.
+  - LOC: `38` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITxOnline_Learner_Enrollments-_All_Course_ab3dd918-2308-446f-8d81-f89ac4f342cf.yaml`
+  - Visualizes learner enrollment trends across all courses over time, breaking down counts by enrollment mode (verified, audit, total) to track overall course participation and growth.
+  - LOC: `122` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITxOnline_Learner_Enrollments-_course-v1MITxT14.100x3T2023_3b710d6c-6265-43ce-82ef-4c57409b8fda.yaml`
+  - Tracks and visualizes learner enrollment trends over time for specific MITxOnline courses, breaking down enrollment types (verified, audit, total) to monitor course popularity and growth patterns.
+  - LOC: `121` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITx_Enrollments_89862956-6021-420f-b56e-cd73e6680a78.yaml`
+  - Provides a detailed enrollment table showing course run information and user details for MITx courses
+  - LOC: `34` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/MITx_Online_Course_Run_Metadata_c46d73a1-16c3-450b-a43d-63383fad7be2.yaml`
+  - Provides course run metadata and scheduling information for MITx Online courses, helping administrators track course availability and timing
+  - LOC: `59` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Micromasters_Users_d7f0a985-f4b0-4643-9832-88d106aa087c.yaml`
+  - Lists Micromasters users with their IDs, usernames, and emails, providing a basic user directory for administrative purposes
+  - LOC: `33` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/OCW_Resources_c697af06-b2be-4653-9680-e9af0c822e38.yaml`
+  - Serves as a comprehensive repository of OpenCourseWare learning resources, providing detailed metadata and access information for educational content management.
+  - LOC: `90` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/OCW_Resources_cd72f611-dac4-45a0-99ca-8b3c9e260597.yaml`
+  - Displays a comprehensive list of OpenCourseWare (OCW) resources including course details, resource metadata, and external resource status, facilitating resource management and quality assurance.
+  - LOC: `95` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Order_Dashboard_Last_Updated_0ef1c6be-600c-4802-aa04-33f1b6dd9e9b.yaml`
+  - Displays the last updated timestamp for order-related data in a table format, filtered to show only marts__combined__orders table updates for data freshness monitoring.
+  - LOC: `79` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Order_detail_aff18084-6079-49b3-9604-d68c8a315296.yaml`
+  - Presents order details with fulfillment status and creation dates, allowing tracking of completed transactions and order processing timelines.
+  - LOC: `109` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Order_detail_c0ce9f7b-a8e8-49d3-909b-9c44718fae8a.yaml`
+  - Provides detailed order information including pricing, payment, and user data for analysis and reporting.
+  - LOC: `114` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Order_detail_d58f3f14-9d41-4e6e-8245-d194d15aac01.yaml`
+  - Provides detailed order transaction data including pricing, discounts, taxes, and payment information for financial reconciliation and customer service
+  - LOC: `147` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Order_detail_fb906f1f-c07f-472f-9387-ad02f73cae55.yaml`
+  - Provides detailed order information including pricing, discounts, payment details, and transaction data for e-commerce transaction analysis
+  - LOC: `109` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Organization_Administration_Certificates_f1674827-3018-4ff5-bafc-8d4e0fbea7a6.yaml`
+  - Provides a time-series visualization of the total count of organization administration certificates created per month, enabling tracking of certificate issuance trends over time.
+  - LOC: `139` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Organization_Administration_Chatbot_Use_a8eba8e2-dff3-4975-8b54-9f6f4dd39478.yaml`
+  - Provides a monthly summary of chatbot usage and learner session activity within specific course blocks, enabling administrators to track engagement with the chatbot feature over time.
+  - LOC: `165` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Organization_Administration_Detail_Report_caf22ae5-3cde-427d-8627-cd55c5febd87.yaml`
+  - Provides detailed reporting on organization-level administration activities, tracking certificate creation dates, user engagement metrics, and chatbot usage patterns across different platforms and courses.
+  - LOC: `65` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Organization_Administration_Enrollment_Count_cumulative_01f7089f-1355-4a0f-8a51-277c79f26e2b.yaml`
+  - Tracks and visualizes cumulative enrollment counts over time to monitor and analyze the growth of course enrollments.
+  - LOC: `141` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Organization_Administration_Problems_Tried_fe95c76a-352c-41a4-8e41-9252b68421ea.yaml`
+  - Tracks the number of distinct problems attempted by learners over time, aggregated monthly, to measure problem-solving activity and course engagement levels.
+  - LOC: `136` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Organization_Administration_Unique_Active_Learners_33b8ff2e-ddd7-4fa6-a438-d422da92fb27.yaml`
+  - Shows monthly counts of unique active learners who engaged with course content through discussions, videos, problems, or other activities, providing insights into learner participation trends.
+  - LOC: `156` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Organization_Administration_Videos_Watched_5d97d317-30ee-46df-882b-0451efe2ac1d.yaml`
+  - Tracks monthly video consumption patterns for organization administration, helping measure learner engagement and content utilization effectiveness.
+  - LOC: `135` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Page_Engagement_By_Courserun_008cffdc-9283-4daf-8507-746491486bd4.yaml`
+  - Aggregates page view counts by courserun, providing insights into course content popularity and learner engagement patterns across different course offerings.
+  - LOC: `91` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Page_Engagement_By_Section_b4d14d82-feb2-49bf-847f-2cb8b2c11d20.yaml`
+  - Reports on page-level engagement metrics across course sections, aggregating view counts to understand which content areas are most actively accessed by learners.
+  - LOC: `131` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Page_Engagement_By_Subsection_f41fcf95-edc7-4dcd-bbe8-54406e775b37.yaml` 🔥`6`
+  - Displays page view engagement data organized by subsection to understand which course content areas attract the most student interaction
+  - LOC: `60` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Percent_Content_Engagement_822d24da-190a-49ea-9253-8a26637a89c8.yaml`
+  - Calculates and displays content engagement percentages across courses, measuring learner participation in discussions, video playback, and problem submissions to assess overall course engagement levels.
+  - LOC: `129` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Percent_Engagement_Out_of_Total_Engagement_Opportunities_3bc78cde-60af-405c-9d7d-13e61558c228.yaml`
+  - Shows the average percentage of engagement opportunities utilized across videos, problems, and discussions for each course run.
+  - LOC: `115` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Percentage_of_Video_Played_9bb14cc1-d787-4f47-b6d3-86adb3d4ec47.yaml`
+  - Calculates and displays the average percentage of video content played by learners, helping educators understand video engagement patterns across different sections and subsections of courses.
+  - LOC: `109` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Problem_Engagement_By_Subsection_bec01f31-3a3e-4bba-a280-9160e00e2b87.yaml`
+  - Displays problem engagement statistics by subsection, showing average percentage of problems attempted per section
+  - LOC: `75` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Problem_Engagement_Test_Report_c05f9d50-bb41-4058-9f35-1ec46ec907c9.yaml`
+  - Provides a test report showing problem engagement metrics (attempted and correct percentages) by section for educational assessment analysis.
+  - LOC: `86` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Problem_Engagement_by_Courserun_1e30a45b-d97d-4f44-ac2c-1d9de9e05bc1.yaml`
+  - Shows average problem engagement rates by courserun to assess learner participation in course activities.
+  - LOC: `69` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Problem_Engagement_by_Section_ec8dc53c-60d0-4bd1-9913-4388b41ca53d.yaml`
+  - Analyzes problem engagement metrics by course section, providing average problem attempt and success rates to help instructors identify areas where students struggle and need additional support.
+  - LOC: `190` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Problem_Results_8247b593-276a-4e86-96e1-62869ec2c59b.yaml`
+  - Displays problem-level performance metrics including correct/incorrect counts and percentages for course problems, enabling analysis of student problem-solving success rates.
+  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Problem_Results_f07a7065-db29-4749-a4c6-d2c75c9d55f8.yaml`
+  - Analyzes problem-level assessment results showing correct/incorrect counts and percentages to evaluate learning effectiveness
+  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Problem_Submission_Results_d0bcae8d-1f6a-415b-a3af-52323e8eeee2.yaml`
+  - Displays problem submission success rates with correct/incorrect counts and percentages, enabling course administrators to assess problem difficulty and effectiveness of course content.
+  - LOC: `112` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Products_36ade680-7ae9-4d35-89b0-a46235139418.yaml`
+  - Shows detailed product information including pricing, dates, delivery formats, and certifications to support product catalog management
+  - LOC: `115` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Program_Enrollment_and_Certificate_b100bef9-c9f8-46f5-b6ef-20b2badecef4.yaml` 🔥`6`
+  - Provides a comprehensive view of program enrollment status, certificates, and completion data for administrative tracking
+  - LOC: `71` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Program_Enrollment_and_Certificate_d9047161-f8d8-4af2-adb0-283c74b639f2.yaml`
+  - Provides comprehensive program enrollment and completion data including user details, enrollment status, and certificate information for program-level analysis.
+  - LOC: `105` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Program_Summary_8350fe92-c02c-4e98-92ed-adabae3fb582.yaml`
+  - Presents program-level summary statistics including enrollments, certificates, and user demographics for strategic planning and reporting
+  - LOC: `60` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Record_Count_1e441a91-5d1a-4f4f-9bf8-90fcc9d12988.yaml`
+  - Displays the total record count for a dataset to provide a quick overview of data volume
+  - LOC: `44` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Student_Level-_Course_Grades_1ffe71c4-0732-4e17-a343-67ef3dd28f3d.yaml`
+  - Shows student-level course grades with platform and user identifiers, aggregating final grades for analysis
+  - LOC: `135` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Student_Level_Course_Grades_1a78ac33-5081-4fb7-9593-89b1aed6daad.yaml`
+  - Presents detailed student-level course grade information in a tabular format with risk probability metrics
+  - LOC: `71` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Suspicious_Behavior_Report_3acf6da0-1add-486f-9e70-884a1bb306f9.yaml`
+  - Generates a detailed report of suspicious learner behavior patterns, including problem-solving attempts and performance metrics, to identify potential academic integrity issues.
+  - LOC: `87` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Tutorbot_c1d81d88-a705-4c90-a816-f488f7cbbaea.yaml`
+  - Shows detailed tutorbot chat session data including conversation content, user information, and timestamps for educational support analysis.
+  - LOC: `43` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Tutorbot_with_filter_bc2f4ec2-0532-4a55-8482-e12ecae7e7de.yaml`
+  - Filters and displays tutorbot chat interactions for specific courses to support instructional technology analysis
+  - LOC: `83` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Users_Receiving_Program_Certificates_Over_Time_faf44954-50d0-4135-9efc-b26ebc06e5d8.yaml`
+  - Displays the count of unique users receiving program certificates over time, helping track the growth of program completion rates.
+  - LOC: `120` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Video_Engagement_By_Courserun_93c228c1-4ad3-4268-830a-d99befebaaee.yaml`
+  - Presents detailed video engagement metrics by course run, including percentage watched and total viewing time.
+  - LOC: `107` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Video_Engagement_By_Section_and_Subsection_738b9337-2477-4f49-95e6-4201a90c6f28.yaml`
+  - Analyzes video engagement metrics by course section and subsection to measure content effectiveness and learner participation
+  - LOC: `127` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Video_Engagement_By_Section_f37fc707-aeb4-4731-b0d5-634b47a57eae.yaml`
+  - Presents video engagement metrics by course section, displaying percentage watched and time metrics to evaluate learner video consumption patterns across different course sections.
+  - LOC: `148` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Video_Engagement_By_Subsection_8146a868-1014-48d3-9e0d-8223de1ae1a9.yaml`
+  - Shows video engagement metrics by subsection, including watch time percentages and duration data, to help course designers understand which content students are actually viewing and completing.
+  - LOC: `107` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Video_Engagement_by_Section_ebcf2551-ca8e-4fce-b04b-55e382b1c963.yaml`
+  - Visualizes video engagement patterns across course sections, comparing metrics like viewers who watched at least one video versus those who completed all videos, with temporal analysis capabilities.
   - LOC: `257` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/salesforce/_stg_salesforce__models.yml`
-  - Define dbt model configuration and data quality tests for transformed Salesforce opportunity data to ensure data integrity in analytics pipeline
-  - LOC: `150` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/zendesk/_stg_zendesk_models.yml`
-  - Define the schema and validation rules for Zendesk ticket data in the data warehouse
-  - LOC: `411` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/models/staging/zendesk/_zendesk__sources.yml`
-  - Defines the source schema and metadata for Zendesk support tickets, enabling downstream data processing and analysis of customer support interactions.
-  - LOC: `334` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/Data_Detail_Problems_dc0886e8-1861-4bd9-a694-25a063adcf83.yaml`
-  - Consolidates detailed problem event data with course and problem metadata for analytics
-  - LOC: `205` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Video_Engagement_per_Section_52f9966c-2de9-41fd-b29a-ccd1781696cb.yaml`
+  - Visualizes video engagement metrics showing how many users watched at least one video versus all videos in a course section, tracking content consumption patterns.
+  - LOC: `155` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Video_Engagement_per_Section_ac95bf65-b2ea-4e6a-9fdf-8fdff4758f5e.yaml`
+  - Shows video engagement metrics broken down by course section to identify which content areas have higher or lower student participation
+  - LOC: `258` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Video_Engagement_per_Section_f9c49065-6eb1-4c47-ab2b-a03654cdcbc4.yaml`
+  - Visualizes video engagement metrics per course section showing how many users watched at least one video versus all videos for content effectiveness analysis
+  - LOC: `258` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/Videos_Rewatched_397698ec-916f-46e4-bd4c-cae296806b10.yaml`
+  - Tracks and displays the volume of video rewatches over time to identify content that users find valuable enough to review multiple times
+  - LOC: `147` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/course_user_mapping_08141743-0bc0-4a79-a3b4-39d34d221742.yaml`
+  - Maps users to their courses and programs, showing course enrollment details and user information for course management and analysis.
+  - LOC: `37` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/of_Watches_By_Video_cb328531-f862-467c-b073-4a2cec5dfbe2.yaml`
+  - Displays aggregated watch counts for videos by section and subsection to track content consumption patterns
+  - LOC: `86` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/charts/xPRO_Product_List_-_Standard_Products_Only_244158fe-79de-4ad8-bc53-f82ef3f32ffa.yaml`
+  - Lists standard xPRO products with pricing, descriptions, and enrollment details for course catalog management.
+  - LOC: `59` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Combined_Learners_Search_68d00b7a-8f6b-4f18-b738-9ecc0a9dd294.yaml`
+  - Enables comprehensive search and analysis of learner data across multiple sources to support enrollment management and customer service operations.
+  - LOC: `567` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Coupons_06b246fd-65db-440b-9a98-183ca37a2660.yaml`
+  - Offers a detailed view of coupon and discount usage patterns, enabling analysis of promotional effectiveness and financial impact of discount programs.
+  - LOC: `257` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Course_AI_Chatbot_b6b79d2a-4a21-4454-a4df-d12549e9bd7d.yaml`
+  - Analyzes chatbot usage data in courses, providing insights into student interactions with AI assistants to evaluate the effectiveness of automated support and identify areas for improvement.
+  - LOC: `218` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Course_Engagement_2311d08c-60b3-4b6d-87d2-b417dccb64f7.yaml`
+  - Analyzes course engagement patterns including video consumption, problem completion, and content interaction metrics
+  - LOC: `544` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Course_Enrollment_Activity_101c4123-af4c-492b-a087-246d06569a1d.yaml`
+  - Presents course enrollment activity metrics including geographic distribution and learner performance analytics
+  - LOC: `692` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Distribution_of_Number_of_Videos_Watched_b54af54e-1da9-4835-a65b-3ba03c6b3e57.yaml`
+  - Visualizes the distribution of video consumption patterns across learners to understand engagement levels and identify outliers in learning behavior.
+  - LOC: `283` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Enrollment_Detail_by_Learner_da9e03d3-e1bb-45b8-981f-208deca90e7a.yaml`
+  - Offers detailed enrollment tracking and analysis for individual learners across course offerings
+  - LOC: `481` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Instructor_Level_Administration_Dashboard_5495ac4d-bac4-429c-8a7b-070f27f34904.yaml`
+  - Provides instructors with administrative tools to monitor chatbot usage and video engagement metrics across course sections and subsections, enabling data-driven teaching decisions and student support.
+  - LOC: `476` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Learn_User_Profile_47b963a4-74a2-472c-9a3b-a9986be146e9.yaml`
+  - Enables learning administrators to view and analyze individual user profiles, tracking new user acquisition and providing detailed user engagement data for personalized learning experiences.
+  - LOC: `296` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Learner_Demographic_and_Course_Data_be0ba018-dff2-42a5-a12a-8215ff5bd75a.yaml`
+  - Delivers comprehensive learner demographic data integrated with course enrollment information for educational analytics
+  - LOC: `277` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Learner_Engagement_ca0fe164-7452-4e90-be12-e0c793f0ac05.yaml`
+  - Provides insights into learner engagement with video content and course materials, tracking video completion rates, discussion participation, and overall engagement metrics to identify learning patterns and content effectiveness.
+  - LOC: `1210` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/MITx_and_xPro_Products_be482a19-1c1e-4f4d-87be-aad2b50d54bf.yaml`
+  - Provides product management insights for MITx and xPro platforms by displaying product creation timelines and comprehensive product data, supporting business decisions around course offerings and pricing strategies.
+  - LOC: `344` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Orders_7b9f141d-14d2-40c6-aa01-fef8a0375ce8.yaml`
+  - Tracks and analyzes order processing and fulfillment data, providing visibility into sales transactions, order status, and fulfillment timelines to support business operations and customer service.
+  - LOC: `421` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Organization_Administration_Dashboard_e71b9aea-9503-4bed-be3d-232fb5c3e67e.yaml`
+  - Provides a centralized view for monitoring organization-level administrative activities, including enrollment counts, active learner metrics, and content consumption statistics to support operational oversight.
+  - LOC: `427` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Products_20e6140c-d3dd-4d23-be26-c1642d73b288.yaml`
+  - Delivers a comprehensive product performance dashboard with course-to-program mappings, product metrics, and data refresh timestamps to enable product management and business intelligence.
+  - LOC: `400` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Program_Enrollment_and_Credential_203bbba1-adb8-4f95-8951-7e958f2d6260.yaml`
+  - Monitors program enrollment and credential completion rates, tracking student progress through educational programs and certificate attainment to assess program effectiveness and student success.
+  - LOC: `554` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/Suspicious_Behavior_Report_1e2883d9-d122-4af6-aa33-43a0f0ac2c3b.yaml`
+  - Identifies and analyzes suspicious behavior patterns in course activities, detecting potential academic integrity issues and helping maintain the credibility of educational assessments.
+  - LOC: `399` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/dashboards/xPro_Reference_Dashboard_45b6c06a-1e2d-43d3-8b98-a95b82b375d5.yaml`
+  - Serves as a central reference dashboard for xPro platform metrics, providing quick access to key dashboards and charts related to enrollment, products, course engagement, and orders for business intelligence.
+  - LOC: `167` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/databases/Superset_Metadata_DB.yaml`
+  - Sets up database connection details for the Superset metadata database, allowing the platform to access and manage Superset's internal metadata and configuration.
+  - LOC: `14` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/databases/Trino.yaml`
+  - Configures connection parameters for accessing the Trino data warehouse, enabling the platform to query production data lake tables through Superset.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Superset_Metadata_DB/tables_3b10e411-e497-4e8c-8132-08f673e8d72d.yaml`
+  - Defines metadata and configuration for the Superset metadata database tables, allowing administrators to monitor and manage Superset's internal table structures and permissions.
+  - LOC: `391` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/Data_Detail_Discuss_5bab95fd-d465-44f3-bed8-40c559958fc4.yaml`
+  - Provides detailed discussion activity data including event timestamps, post content, and user engagement metrics for analysis of course discussion forums.
+  - LOC: `144` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/Data_Detail_Nav_32e283f5-fc02-403a-9c92-b8286352cdba.yaml`
+  - Captures detailed navigation events within courses, allowing analysis of how users interact with course content and navigate through materials.
+  - LOC: `119` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/assets/datasets/Trino/Data_Detail_Video_3967f60c-2d80-41ad-8245-67dbf555bd82.yaml`
-  - Captures detailed video interaction data, including viewing duration, position, and event types to analyze student engagement with course video content.
+  - Analyzes video content consumption patterns, tracking user engagement with video materials including viewing duration and positions
   - LOC: `133` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/Program_Enrollment_with_user_cc496da8-03f6-43ea-9b6c-900ba695e4b6.yaml`
-  - Combines program enrollment data with user demographics and course completion metrics for comprehensive program analysis
-  - LOC: `512` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/afact_problem_engagement_37bb25c7-421f-432a-bc42-5cc10a129746.yaml`
-  - Monitors problem engagement metrics including attempts and timestamps for learning analytics
-  - LOC: `175` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/Enrollment_Activity_Counts_Dataset_a9301703-0ac1-4eb7-a409-f65da5d8cba1.yaml`
+  - Aggregates enrollment activity counts by user demographics and course status to track enrollment trends, certificate completions, and course participation patterns over time.
+  - LOC: `232` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/Learner_Demographics_And_Cert_Info_232090f5-bb02-4327-9067-2ae49b64074b.yaml`
+  - Compiles comprehensive learner demographic and certification data to support marketing analysis, program enrollment tracking, and personalized learner engagement strategies.
+  - LOC: `286` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/afact_course_page_engagement_68c544d7-726d-495a-bf87-81255b2e8604.yaml`
+  - Tracks course page views and engagement metrics to understand how learners interact with course materials
+  - LOC: `163` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/afact_discussion_engagement_956060cb-b34d-4042-a1c6-ea1c4b4eca9f.yaml`
+  - Measures discussion engagement metrics at a granular level, tracking user interactions with discussion topics and content blocks.
+  - LOC: `271` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/assets/datasets/Trino/afact_video_engagement_7ac81107-1993-427e-b2ed-b8835b1ce58d.yaml`
-  - Tracks video engagement metrics including play time and activity timestamps for learning analytics
+  - Tracks video engagement metrics for courses, measuring how users interact with video content including play time and activity timestamps.
   - LOC: `247` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/assets/datasets/Trino/chatbot_usage_report_b1f7c663-9faf-4c95-bdeb-d786a3f4cd3c.yaml`
-  - Provides analytics on chatbot usage patterns, tracking user interactions, AI responses, and conversation threads to evaluate virtual assistant effectiveness.
+  - Monitors and analyzes chatbot interactions, tracking user queries, AI responses, and conversation patterns
   - LOC: `123` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/combined_learners_enrollment_detail_b579034e-2b79-4d3a-ba84-94c9fcfa0cc5.yaml`
-  - This module consolidates enrollment data across multiple platforms to provide a unified view of learner registrations, course progress, and program participation for comprehensive student lifecycle analysis.
-  - LOC: `842` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/cheating_detection_report_65bdc57c-00f9-42d0-bd37-d4363532fd81.yaml`
+  - Provides visibility into academic integrity by tracking user exam and homework performance patterns to identify potential cheating behavior in online courses.
+  - LOC: `332` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/combined_enrollments_with_gender_and_date_f3e517dd-4012-441e-8dfe-edaef1318000.yaml`
+  - Combines enrollment data with gender and date information for comprehensive enrollment analytics
+  - LOC: `523` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/assets/datasets/Trino/dim_course_content_466da6d4-e870-4afd-866a-4c95044400b6.yaml`
-  - Maps and organizes course content structure for learning analytics, enabling detailed tracking of student progress through course materials and identification of content engagement patterns.
+  - Contains course content structure and metadata for dimensional analysis of learning materials
   - LOC: `175` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/assets/datasets/Trino/dim_discussion_topic_62e16051-719e-48d6-b256-e40600ec3764.yaml`
-  - Stores discussion topic metadata for course content management and analysis
+  - Stores discussion topic metadata for courses, enabling analysis of discussion forum structure and organization.
   - LOC: `127` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/assets/datasets/Trino/dim_platform_0e455533-8a1c-4dd8-a894-cff7a228889c.yaml`
-  - Maintains platform dimension data, providing reference information about different learning platforms and their characteristics
+  - Maintains a dimensional table of platform information, providing reference data about different learning platforms and their characteristics.
   - LOC: `91` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/engagement_problem_completion_summary_6e06ce54-f2a2-4df1-9bcb-5c556f42d247.yaml`
-  - Tracks and summarizes student engagement with course problems, providing insights into completion rates and problem-solving behavior across course runs.
-  - LOC: `139` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/engagement_problem_summary_test1_d763f86e-5c1b-4996-9b35-f8cb13947f11.yaml`
-  - This module provides a detailed analysis of student engagement with course problems, tracking metrics like problems attempted, problems solved, and completion rates for individual learners across different courses.
-  - LOC: `196` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/engagement_problem_summary_test2_a2198d6f-df2d-492c-b30b-9e3279466bdb.yaml`
-  - Analyzes problem engagement metrics across courses, calculating attempt rates and problem completion statistics for student performance tracking
-  - LOC: `156` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/learner_engagement_report_4752cd11-a13e-4a8e-be31-4d9227b07ca2.yaml`
-  - This module generates comprehensive learner engagement reports that aggregate student performance data, including problem completion rates, grades, and time spent on course materials, to assess learning outcomes.
-  - LOC: `331` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined__products_d53b0a52-4450-4d2a-8ce4-143b9f9e327b.yaml`
-  - This module serves as a centralized product catalog that consolidates course information across multiple platforms, enabling analysis of course availability, pricing, and enrollment status for business decision-making.
-  - LOC: `375` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined_discounts_a5df905c-0480-4227-b234-1a1064672b32.yaml`
-  - Manages and tracks discount programs across multiple channels, providing visibility into promotional effectiveness and helping optimize pricing strategies for different customer segments.
-  - LOC: `295` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__combined_video_engagements_w_video_counts_42f063d3-3c06-4834-b993-777fdbc6dea7.yaml`
-  - Analyzes video engagement patterns across courses with completion status tracking
-  - LOC: `158` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__micromasters_dedp_exam_grades_b22c2064-0dd4-4e1a-9cdf-a74a9302f39d.yaml`
-  - Tracks and analyzes proctored exam performance for MicroMasters programs, allowing educators to monitor student progress and identify areas needing improvement in specialized courses.
-  - LOC: `175` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__micromasters_summary_timeseries_14b2945b-3ad0-4a39-9b10-9362c3b54022.yaml`
-  - Aggregates and summarizes MicroMasters program performance metrics over time, tracking certificate earners and user engagement across program courses.
+- `src/ol_superset/assets/datasets/Trino/dim_problem_23a7a643-e426-42ea-9759-c05f7a524e22.yaml`
+  - Stores problem metadata and relationships for course content including problem types and attempt limits
   - LOC: `151` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_problem_submissions_9e61277c-345a-4958-947b-2436eb4abf15.yaml`
-  - Tracks problem submission activity for MITxOnline courses, enabling analysis of student engagement and performance on course problems
-  - LOC: `236` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_problem_summary_dc51305d-a55b-42b6-84d2-a412f96ac900.yaml`
-  - This module provides detailed problem-level analytics for MITxOnline courses, tracking individual student performance on specific problems and generating summary statistics for course assessment and improvement.
+- `src/ol_superset/assets/datasets/Trino/dim_user_7f46cdba-1bf0-4f10-9606-a41b77b9e77c.yaml`
+  - Stores user dimension data including join dates, preferences, interests, and goals to support personalized learning experiences and user segmentation.
+  - LOC: `564` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/dim_video_135f82ef-b81b-4f5b-8f82-ed299675e618.yaml`
+  - Provides dimensional data for video content including metadata and engagement tracking to support video analytics and content management.
+  - LOC: `163` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/engagement_problem_completion_raw_4490876f-d440-4df8-8e42-a467bac0821f.yaml`
+  - Tracks student engagement and problem completion rates in online courses, providing insights into learning effectiveness and course performance metrics.
   - LOC: `175` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_video_engagements_2eadf96c-5d64-4ad2-bd41-c8e41c316e65.yaml`
-  - Provides mart-level video engagement data with user details for business intelligence
+- `src/ol_superset/assets/datasets/Trino/engagement_problem_completion_summary_6e06ce54-f2a2-4df1-9bcb-5c556f42d247.yaml`
+  - Tracks and analyzes student engagement with course problems, providing insights into completion rates and user performance across different course sections
+  - LOC: `139` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/engagement_problem_summary_test2_a2198d6f-df2d-492c-b30b-9e3279466bdb.yaml`
+  - Aggregates problem engagement metrics to analyze student interaction with course content, showing completion rates and attempt patterns across different course sections.
+  - LOC: `156` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/engagment_problem_test1_b9e94ba2-f399-4210-b042-b8aaa4039f58.yaml`
+  - Analyzes problem engagement data including attempts, grades, and completion rates for detailed learning assessment
+  - LOC: `275` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/enrollment_detail_report_01f179b6-cb75-465f-8ceb-0525c24fa223.yaml`
+  - Provides detailed enrollment reporting with financial data including payment amounts and certificate information
+  - LOC: `539` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/instructor_module_report_8c2b6f11-28f8-4353-8e43-6c53ea6b1d91.yaml`
+  - Tracks instructor module-level activity including video engagement metrics and chatbot interactions to monitor teaching effectiveness and student engagement in course modules.
+  - LOC: `211` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/int__learn_ai__tutorbot_4fe652f8-e672-4e71-89da-fb964985847b.yaml`
+  - Captures AI tutorbot interaction data including chat sessions and user engagement
+  - LOC: `199` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/int__ocw__resources_8bb67686-3d31-4418-bda9-87fdeb25b665.yaml`
+  - Stores metadata for a Trino table containing external resource information with status codes and backup URLs for Open Learning Warehouse resources
+  - LOC: `451` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/learner_demographics_and_cert_info_b6b616b4-f695-4bf6-ad11-ea234f86e6e0.yaml`
+  - Provides comprehensive demographic and certification information about learners, enabling analysis of student populations and certification patterns across programs.
   - LOC: `271` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/marts__mitxpro_ecommerce_productlist_dc5b25f5-cf3a-41b4-9b15-4b58532da463.yaml`
-  - Provides product listing data for e-commerce analysis, enabling business users to analyze product pricing, availability, and categorization across the platform's catalog.
+- `src/ol_superset/assets/datasets/Trino/marts__combined__orders_02e97623-3edd-4d3a-acbe-119e889a043a.yaml`
+  - Tracks and aggregates order data including pricing and temporal information for financial analysis and reporting
+  - LOC: `657` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined__orders_2f64a0b1-a1d4-4dec-95c3-7978296a3555.yaml`
+  - Analyzes e-commerce transactions to track order creation dates, pricing, and revenue patterns for financial reporting and business intelligence.
+  - LOC: `645` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined__users_5f006731-f052-4586-88f2-ad1b3c904ca9.yaml`
+  - Provides aggregated user data for combined user profiles across multiple platforms, enabling analysis of user engagement and payment patterns.
+  - LOC: `452` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined_course_engagements_f221af29-5df4-4025-8355-401041f94835.yaml`
+  - Provides aggregated course engagement metrics for analyzing learner participation and activity patterns across courses
+  - LOC: `271` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined_course_enrollment_detail_836dd1f0-3e2e-45a9-a721-62a471a43de8.yaml`
+  - Contains detailed enrollment information for courses including certificate status, enrollment dates, and user information for combined course data
+  - LOC: `475` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined_coursesinprogram_f841a3e6-d864-4499-94dd-6ceafe8ac74f.yaml`
+  - Maps courses to their respective programs to enable analysis of program-level enrollment, completion rates, and course progression across educational programs.
+  - LOC: `115` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined_discounts_a5df905c-0480-4227-b234-1a1064672b32.yaml`
+  - Manages combined discount information across B2B contracts, coupons, and product pricing
+  - LOC: `295` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined_problem_submissions_70adedf0-bc96-4922-a720-d579f2b4065c.yaml`
+  - Tracks problem submission data to analyze learner performance and assessment completion patterns across courses.
+  - LOC: `295` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined_program_enrollment_detail_0983d23f-8182-482a-9f0f-b32d69984efc.yaml`
+  - Provides enrollment detail metrics for combined program certificates, tracking whether certificates were earned and when they were created
+  - LOC: `353` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined_total_course_engagements_edf21d6a-1f41-4812-a1aa-3fcbc8358466.yaml`
+  - Aggregates total course engagement data with information about course runs, users, and enrollment status for analytics
+  - LOC: `199` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined_video_engagements_a7af739c-62dd-4be0-a46f-5771a7e0c466.yaml`
+  - Aggregates video engagement metrics across courses to enable comprehensive analysis of how learners interact with video content.
+  - LOC: `367` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__micromasters_course_certificates_70bc54c5-1073-4bdc-922b-76f6eff82ae3.yaml`
+  - Manages and tracks course certificate data for Micromasters programs, supporting verification and credential management processes.
+  - LOC: `224` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__micromasters_dedp_exam_grades_b22c2064-0dd4-4e1a-9cdf-a74a9302f39d.yaml`
+  - Tracks proctored exam grades for Micromasters programs including user identification and exam metadata
+  - LOC: `175` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__micromasters_program_certificates_e531ebf4-6189-4c02-9729-6c6ef18b81ef.yaml`
+  - Manages micromasters program certificate data including completion timestamps and user information
   - LOC: `283` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__micromasters_summary_8e87819b-5332-4cb5-8cda-02f7b8502446.yaml`
+  - Provides summary statistics for micromasters programs including certificate completions and enrollment metrics for program-level analysis.
+  - LOC: `139` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__micromasters_summary_timeseries_14b2945b-3ad0-4a39-9b10-9362c3b54022.yaml`
+  - Tracks and analyzes micromasters program performance metrics over time, including certificate earners and user engagement
+  - LOC: `151` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_course_certificates_45f0412f-0d34-4d04-a3ff-e595a3bada19.yaml`
+  - Generates official course completion certificates with learner details and certificate URLs for verified course participants to document their achievements.
+  - LOC: `140` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_course_enrollments_811f8301-4bea-461e-8359-d354af75c4b1.yaml`
+  - Tracks course enrollment data including user demographics and enrollment status for online courses
+  - LOC: `235` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_discussions_75610c3a-34e1-47f7-ab74-f350afcd9f66.yaml`
+  - Tracks and analyzes discussion engagement patterns across courses, providing insights into user participation and discussion activity.
+  - LOC: `223` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_problem_submissions_9e61277c-345a-4958-947b-2436eb4abf15.yaml`
+  - Provides aggregated problem submission data for MITxOnline courses, enabling analysis of student performance and engagement with course problems.
+  - LOC: `236` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_video_engagements_2eadf96c-5d64-4ad2-bd41-c8e41c316e65.yaml`
+  - Creates aggregated video engagement mart data for business intelligence, consolidating video interaction metrics across courses and users.
+  - LOC: `271` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_video_engagements_w_video_counts_bf17ec0d-2a0a-4f97-ab5b-ae2df862d4b5.yaml`
+  - Analyzes video engagement metrics and completion rates in online courses, helping understand content consumption patterns and learner behavior.
+  - LOC: `150` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__mitxpro_ecommerce_productlist_dc5b25f5-cf3a-41b4-9b15-4b58532da463.yaml`
+  - Provides product catalog information for MITxPro e-commerce platform including pricing and product identifiers
+  - LOC: `283` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__ocw_courses_5e9078ef-d0a9-4db7-9635-75fb9a2321de.yaml`
+  - Manages metadata and configuration for a specific data mart table containing OpenCourseWare course information, enabling business users to query and analyze course publishing data through Superset.
+  - LOC: `247` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/mitxonline_video_engagements_w_video_counts_0514985b-ff21-490b-a34e-25ae356da7e9.yaml`
+  - Combines video engagement data with video counts to analyze viewing patterns and engagement across courses
+  - LOC: `127` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/assets/datasets/Trino/organization_administration_report_4a71d2a9-c1b2-44e7-8c8d-a4a336779ab8.yaml`
-  - Generates reports on organization administration activities, tracking certificate issuance and user engagement metrics by organization
+  - Generates organizational administration reports tracking user activity and engagement metrics, particularly for certificate-related activities and chatbot usage within organizations.
   - LOC: `164` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/assets/datasets/Trino/page_engagement_views_c3182341-5246-40c2-8f04-885369c38093.yaml`
-  - Captures page engagement views data, tracking how users interact with course content across different platforms and sections
+  - Captures and analyzes user page engagement data across course content, tracking views and interactions with different learning materials and sections.
   - LOC: `175` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/assets/datasets/Trino/program_summary_report_0d77ec2b-8489-47f8-b0c3-3abde0b1b8f3.yaml`
-  - Summarizes program-level metrics including enrollments and certificates for reporting
+  - Produces program-level summary reports aggregating certificate earners, verified users, and enrollment metrics for educational programs.
   - LOC: `139` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/raw__learn_ai__app__postgres__ai_chatbots_tutorbotoutput_757ec475-ddad-436a-9a7c-3da657b69a9b.yaml`
+  - Stores AI chatbot tutorbot output data including conversation metadata and chat content
+  - LOC: `140` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/student_risk_probability_report_ca346322-251e-455b-a2cc-b11976e69ce5.yaml`
+  - Generates student risk probability reports for course performance and completion likelihood
+  - LOC: `122` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/tfact_chatbot_events_83431f55-aaaf-4fe5-aa60-a3502e1442f9.yaml`
+  - Captures chatbot interaction events to enable analysis of AI assistant usage patterns and user engagement with learning support tools.
+  - LOC: `223` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/tfact_course_navigation_events_2189d254-14fd-4b38-85a8-6af918546dd0.yaml`
+  - Monitors user navigation patterns and interactions within online course platforms, helping understand how learners explore and engage with course content.
+  - LOC: `175` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/assets/datasets/Trino/tfact_discussion_events_368125b7-c1c9-4f72-a360-9547536b4945.yaml`
-  - Monitors and analyzes discussion forum activity, capturing user interactions, roles, and engagement patterns in online course discussions.
+  - Monitors and analyzes discussion forum activity, capturing user interactions, roles, and engagement patterns within course discussions
   - LOC: `235` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/tfact_studentmodule_problems_c6006f03-b7e0-4f47-b275-dd3d8f022500.yaml`
-  - Tracks student problem-solving attempts and outcomes for performance analysis
-  - LOC: `211` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/assets/datasets/Trino/video_engagements_report_4168432c-fd99-4ef6-bf8c-14acd0cb9b33.yaml`
-  - Generates reports on video engagement with user and course information for analytics
+- `src/ol_superset/assets/datasets/Trino/tfact_video_events_2a608e5d-c828-4457-83c2-0912a1534430.yaml`
+  - Monitors video engagement metrics including viewing duration and user interactions to understand how learners consume educational video content.
+  - LOC: `199` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/video_engagement_report_232bb992-50ba-4dfb-bb9f-bfb403a3517a.yaml`
+  - Generates comprehensive video engagement reports, tracking how users interact with video content across different courses and platforms.
   - LOC: `139` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/ol_superset/commands/promote.py` ⚠️dead-code-candidate
-  - Promotes Superset assets from QA to production with extensive safety checks including validation, git status verification, and manual confirmation to prevent accidental deployments.
-  - LOC: `287` | PageRank: `0.00070` | Complexity: `29.0`
-### utilities
+- `src/ol_superset/assets/datasets/Trino/video_engagements_report_4168432c-fd99-4ef6-bf8c-14acd0cb9b33.yaml`
+  - Generates comprehensive video engagement reports combining user activity, course information, and platform data for business analysis.
+  - LOC: `139` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/metadata.yaml` 🔥`6`
+  - Provides version control and metadata tracking for dashboard assets in the data platform
+  - LOC: `3` | PageRank: `0.00070` | Complexity: `0.0`
+### testing
 
-- `bin/uv-operations.py` ⚠️dead-code-candidate
-  - Executes uv commands across all code locations in the data engineering projects directory, managing Python package dependencies and virtual environments.
-  - LOC: `275` | PageRank: `0.00070` | Complexity: `17.0`
-- `dg_projects/b2b_organization/__init__.py`
-  - Serves as an empty initialization file for the b2b_organization package, establishing it as a Python module
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/b2b_organization/b2b_organization/__init__.py`
-  - Serves as an empty initialization file for the b2b_organization package, establishing it as a Python module
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/b2b_organization/b2b_organization/assets/__init__.py`
-  - Placeholder module for assets package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/b2b_organization/b2b_organization/defs/__init__.py`
-  - Placeholder module for defs package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/b2b_organization/b2b_organization/partitions/__init__.py`
-  - Placeholder module for partitions package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/b2b_organization/b2b_organization_tests/__init__.py`
-  - Serves as an empty initialization file for the b2b_organization tests package, establishing it as a Python module
+  - Placeholder module for the B2B organization test package namespace
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/canvas/canvas/lib/canvas.py` ⚠️dead-code-candidate
-  - Library to fetch Canvas course IDs from a Google Sheet using Google Sheets API
-  - LOC: `54` | PageRank: `0.00070` | Complexity: `3.0`
-- `dg_projects/data_loading/data_loading/__init__.py`
-  - Package initialization for the data loading module
+- `dg_projects/canvas/canvas_tests/__init__.py`
+  - Placeholder for canvas test initialization, likely serving as a test suite entry point for Canvas-related data pipeline testing
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_loading/data_loading/components/__init__.py`
-  - Package initialization for the data loading components module
+- `dg_projects/data_loading/data_loading_tests/__init__.py`
+  - Placeholder module for organizing data loading test components, ensuring test discoverability and structure within the data loading package.
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_loading/data_loading/defs/__init__.py`
-  - Module 1 appears to be an empty initialization file with no defined purpose.
+- `dg_projects/data_platform/orchestration_platform_tests/__init__.py`
+  - Empty initialization file for orchestration platform tests module, serving as a placeholder for test package structure.
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_loading/data_loading/defs/edxorg_s3_ingest/__init__.py`
-  - Module 5 appears to be an empty initialization file with no defined purpose.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/data_platform/data_platform/definitions.py` ⚠️dead-code-candidate
-  - Module 5 provides platform-level utilities for data engineering workflows, including Slack notifications for run failures and Vault authentication for secure credential management in the data platform.
-  - LOC: `142` | PageRank: `0.00070` | Complexity: `12.0`
-- `dg_projects/data_platform/data_platform/lib/__init__.py`
-  - Empty initialization file for the data platform library module
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/__init__.py`
-  - Initialises the edxorg package for organisational structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/assets/__init__.py`
-  - Serves as the package initialization file for the edxorg assets module, establishing the namespace for all edX.org related data processing assets.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/io_managers/__init__.py`
-  - Initialises the edxorg io_managers package for organisational structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/io_managers/gcs.py` ⚠️dead-code-candidate
-  - Manages file input/output operations with Google Cloud Storage, enabling data assets to be loaded from and stored to GCS buckets as part of the data pipeline workflow.
-  - LOC: `50` | PageRank: `0.00070` | Complexity: `5.0`
-- `dg_projects/edxorg/edxorg/jobs/__init__.py`
-  - Initialises the edxorg jobs package for organisational structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/edxorg/edxorg/lib/edxorg.py` ⚠️dead-code-candidate
-  - Defines regex patterns and functions to categorize and parse edX archive file paths based on their naming conventions
-  - LOC: `100` | PageRank: `0.00070` | Complexity: `6.0`
-- `dg_projects/edxorg/edxorg/ops/object_storage.py` ⚠️dead-code-candidate
-  - Provides deprecated file synchronization and download operations between S3 buckets, now superseded by IO Manager interface.
-  - LOC: `136` | PageRank: `0.00070` | Complexity: `5.0`
 - `dg_projects/edxorg/edxorg_tests/__init__.py`
-  - Placeholder module for edxorg tests - likely serves as an entry point for test discovery and execution
+  - Empty test initialization file for edxorg_tests module
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/lakehouse/lakehouse/__init__.py`
-  - Initializes the lakehouse package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/lakehouse/lakehouse/assets/__init__.py`
-  - Placeholder module for lakehouse assets package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/lakehouse/lakehouse/assets/lakehouse/__init__.py`
-  - Placeholder module for lakehouse package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/lakehouse/lakehouse/defs/__init__.py`
-  - Placeholder module for lakehouse definitions package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/lakehouse/lakehouse/lib/__init__.py`
-  - Placeholder module for lakehouse library package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/lakehouse/lakehouse/resources/__init__.py`
-  - Empty initialization module for organizing Superset API resources
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/lakehouse/lakehouse/resources/airbyte.py` ⚠️dead-code-candidate
-  - Provides authenticated API client for interacting with Airbyte OSS to manage data integration workflows and API operations
-  - LOC: `188` | PageRank: `0.00070` | Complexity: `3.0`
-- `dg_projects/lakehouse/lakehouse/resources/superset_api.py` ⚠️dead-code-candidate
-  - Creates authenticated client for accessing Superset API to manage and refresh dataset metadata for business intelligence dashboards
-  - LOC: `195` | PageRank: `0.00070` | Complexity: `4.0`
-- `dg_projects/learning_resources/learning_resources/lib/__init__.py`
-  - Serves as the package initialization module for the learning resources library
+- `dg_projects/edxorg/edxorg_tests/test_edxorg_lib.py` ⚠️dead-code-candidate
+  - Test suite for edxorg archive parsing utilities
+  - LOC: `138` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/lakehouse/lakehouse_tests/__init__.py`
+  - Empty test initialization file for lakehouse_tests module
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/learning_resources/learning_resources_tests/__init__.py`
-  - Provides test package initialization for the learning resources project
+  - Provides test suite structure for learning resources utilities
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/legacy_openedx/legacy_openedx/__init__.py`
-  - Empty module likely serving as package namespace for legacy Open edX definitions
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/legacy_openedx/legacy_openedx/jobs/__init__.py`
-  - Serves as a namespace package for organizing job modules in the legacy Open edX project
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/legacy_openedx/legacy_openedx/lib/__init__.py`
-  - Module 1 appears to be an empty initialization file with no functional code, serving as a placeholder for package structure.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/legacy_openedx/legacy_openedx/ops/__init__.py`
-  - Serves as a placeholder module for operations-related exports, likely intended for future use or to maintain package structure.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/legacy_openedx/legacy_openedx/repositories/__init__.py`
-  - Serves as a namespace package for organizing repository modules in the legacy Open edX project
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/legacy_openedx/legacy_openedx/resources/__init__.py`
-  - Serves as a namespace package for organizing resource modules in the legacy Open edX project
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/legacy_openedx/legacy_openedx/schedules/__init__.py`
-  - Serves as a placeholder module for schedule-related exports, likely intended for future use or to maintain package structure.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/legacy_openedx/legacy_openedx/sensors/__init__.py`
-  - Serves as a placeholder module for sensor-related exports, likely intended for future use or to maintain package structure.
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/__init__.py`
-  - Empty initialization file for the OpenEdX module
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/jobs/__init__.py`
-  - Placeholder module for OpenEdx jobs package - no business functionality implemented
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/lib/__init__.py`
-  - Initializes the openedx library package structure
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/lib/assets_helper.py` ⚠️dead-code-candidate
-  - This module provides utility functions for manipulating Dagster asset definitions, enabling dynamic partitioning and key prefixing to organize data assets in the platform's data catalog.
-  - LOC: `33` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/lib/magic_numbers.py`
-  - This module defines HTTP status code constants for use in the data platform, providing a centralized location for magic numbers related to web response codes.
-  - LOC: `1` | PageRank: `0.00070` | Complexity: `0.0`
-- `dg_projects/openedx/openedx/partitions/__init__.py`
-  - Placeholder module for OpenEdx partitions package - no business functionality implemented
+- `dg_projects/legacy_openedx/legacy_openedx_tests/__init__.py`
+  - Empty initialization file for legacy Open edX tests module, serving as a placeholder for test package structure.
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `dg_projects/openedx/openedx_tests/__init__.py`
-  - Initializes the openedx_tests library package structure
+  - Placeholder module for openedx_tests library, likely serving as an entry point for Open edX platform test suite
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/__init__.py`
-  - Provides version metadata for a shared Dagster orchestration library used across MIT Open Learning data engineering projects
-  - LOC: `3` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/io_managers/filepath.py` ⚠️dead-code-candidate
-  - Manages file-based I/O operations across local, GCS, and S3 storage systems, enabling secure and efficient data movement between pipeline steps.
-  - LOC: `136` | PageRank: `0.00070` | Complexity: `7.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/arrow_helper.py` ⚠️dead-code-candidate
-  - Provides utilities for writing Arrow tables to Parquet files, supporting data export and storage operations in the data platform.
-  - LOC: `55` | PageRank: `0.00070` | Complexity: `3.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_helpers.py` ⚠️dead-code-candidate
-  - Manages file I/O operations for Dagster pipelines, handling local and S3-based storage configurations based on deployment environment.
-  - LOC: `43` | PageRank: `0.00070` | Complexity: `2.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_types/files.py` ⚠️dead-code-candidate
-  - Defines a specialized file path type for Dagster workflows to handle filesystem operations in data pipelines
-  - LOC: `8` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_types/google.py`
-  - Creates a Dagster type wrapper for Google BigQuery dataset objects to enable type-safe data operations
-  - LOC: `4` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/file_rendering.py` ⚠️dead-code-candidate
-  - Renders tabular data to CSV format, providing a utility for exporting structured data to a standard file format.
-  - LOC: `28` | PageRank: `0.00070` | Complexity: `2.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/glue_helper.py` ⚠️dead-code-candidate
-  - Provides helper functions to create and update AWS Glue tables for data lake operations, enabling integration between data processing pipelines and AWS Athena/Glue catalog.
-  - LOC: `112` | PageRank: `0.00070` | Complexity: `4.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/__init__.py`
-  - Provides the foundational structure and entry point for the orchestrate library's resource management system
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/api_client.py` ⚠️dead-code-candidate
-  - Facilitates authenticated HTTP communication with external APIs, providing a reusable client for making GET and POST requests with configurable timeouts and headers.
-  - LOC: `48` | PageRank: `0.00070` | Complexity: `1.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/api_client_factory.py` ⚠️dead-code-candidate
-  - Provides a factory for creating authenticated API clients for external services like Canvas and edX, enabling secure integration with educational platforms
-  - LOC: `80` | PageRank: `0.00070` | Complexity: `3.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/athena_db.py` ⚠️dead-code-candidate
-  - Establishes connections to Amazon Athena databases for executing SQL queries against large-scale data warehouses in cloud-based analytics workflows.
-  - LOC: `105` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/bigquery_db.py` ⚠️dead-code-candidate
-  - Creates connections to Google BigQuery databases using service account credentials, enabling access to cloud-based data warehousing for analytics
-  - LOC: `79` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/canvas_api.py` ⚠️dead-code-candidate
-  - Manages Canvas LMS integration including course data retrieval and content export operations through API calls
-  - LOC: `169` | PageRank: `0.00070` | Complexity: `6.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/gcp_gcs.py` ⚠️dead-code-candidate
-  - Provides secure connectivity to Google Cloud Storage for data pipelines, enabling authenticated file operations within Dagster workflows.
-  - LOC: `59` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/github.py` ⚠️dead-code-candidate
-  - Enables secure GitHub API interactions by fetching credentials from Vault and creating authenticated clients for repository operations within data pipelines.
-  - LOC: `47` | PageRank: `0.00070` | Complexity: `1.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/learn_api.py` ⚠️dead-code-candidate
-  - Handles secure communication with MIT Learn platform by signing and sending webhook notifications for course exports and video shorts processing
-  - LOC: `58` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/oauth.py` ⚠️dead-code-candidate
-  - Handles OAuth2 authentication flows for external APIs, providing secure token management and HTTP client configuration for authenticated requests
-  - LOC: `141` | PageRank: `0.00070` | Complexity: `9.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/openedx.py` ⚠️dead-code-candidate
-  - Manages authentication and communication with edX platforms, allowing retrieval of course information and status checks for educational content management
-  - LOC: `176` | PageRank: `0.00070` | Complexity: `6.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/outputs.py` ⚠️dead-code-candidate
-  - Creates and manages temporary output directories for pipeline results, supporting both simple and date-based naming conventions to prevent conflicts during parallel executions.
-  - LOC: `84` | PageRank: `0.00070` | Complexity: `1.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/postgres_db.py` ⚠️dead-code-candidate
-  - Establishes connections to PostgreSQL databases and executes queries, enabling data retrieval and manipulation for analytics workflows
-  - LOC: `128` | PageRank: `0.00070` | Complexity: `2.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/secrets/__init__.py`
-  - Establishes the foundational structure for secrets management within the orchestrate library
-  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
-- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/secrets/vault.py` ⚠️dead-code-candidate
-  - Provides secure secrets management through Vault integration with multiple authentication methods including AWS IAM, GitHub, and Kubernetes
-  - LOC: `286` | PageRank: `0.00070` | Complexity: `22.0`
-- `src/ol_dbt/macros/apply_grants_macro_override.sql` ⚠️dead-code-candidate
-  - Controls database grant permissions, applying them only in production to prevent accidental data exposure in non-production environments
-  - LOC: `9` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/macros/cast_timestamp_to_iso8601.sql` ⚠️dead-code-candidate
-  - Converts timestamp columns to ISO 8601 format in a database-agnostic way, ensuring consistent timestamp formatting across different SQL dialects for standardized time representation in the data platform.
-  - LOC: `28` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/macros/cross_db_functions.sql` ⚠️dead-code-candidate
-  - Provides cross-database compatibility functions for timestamp parsing, array joining, and regex operations, solving the problem of writing database-agnostic SQL code that works across Trino, DuckDB, and StarRocks.
-  - LOC: `120` | PageRank: `0.00070` | Complexity: `6.0`
-- `src/ol_dbt/macros/date_diff.sql` ⚠️dead-code-candidate
-  - Provides a database-agnostic way to calculate the difference between two dates in various units, enabling consistent date arithmetic across different SQL dialects used in the data platform.
-  - LOC: `16` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/macros/date_parse.sql` ⚠️dead-code-candidate
-  - Offers a database-agnostic method to parse date strings into date objects using format strings, ensuring consistent date parsing functionality across different SQL dialects in the data platform.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/macros/duckdb_glue_integration.sql` ⚠️dead-code-candidate
-  - Enables seamless data access across development and production environments by abstracting away database-specific differences between DuckDB and Trino when querying Iceberg tables
-  - LOC: `30` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/macros/generate_hash_id.sql` ⚠️dead-code-candidate
-  - Creates consistent hash identifiers for data records using SHA-256 hashing, solving the need for reliable primary key generation that works across different database systems for downstream tools like Hightouch.
-  - LOC: `10` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/macros/check_cross_column_duplicates.sql` ⚠️dead-code-candidate
+  - Validates data integrity by checking for duplicate values across two columns to prevent cross-column conflicts in user records
+  - LOC: `38` | PageRank: `0.00070` | Complexity: `3.0`
 - `src/ol_dbt/macros/generate_model_yaml_enhanced.sql` ⚠️dead-code-candidate
-  - Automates the generation of YAML model documentation with enhanced column metadata to streamline data warehouse documentation and maintenance
+  - Generates YAML model definitions with enhanced metadata including column data types and upstream descriptions, facilitating better documentation and understanding of data models
   - LOC: `221` | PageRank: `0.00070` | Complexity: `14.0`
-- `src/ol_dbt/macros/generate_program_readable_id.sql` ⚠️dead-code-candidate
-  - Generates human-readable identifiers for MicroMasters programs from the edX platform, enabling consistent identification and tracking of these programs within the MITx Online data ecosystem.
-  - LOC: `19` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/macros/json_extract_scalar.sql` ⚠️dead-code-candidate
-  - Extracts scalar values from JSON data in a database-agnostic way, handling different SQL dialects
-  - LOC: `17` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/macros/json_query_string.sql` ⚠️dead-code-candidate
-  - Provides cross-database compatibility for extracting string values from JSON data, enabling consistent data extraction across different database systems (Trino, DuckDB, StarRocks) in the data platform.
-  - LOC: `37` | PageRank: `0.00070` | Complexity: `2.0`
-- `src/ol_dbt/macros/override_ref.sql` ⚠️dead-code-candidate
-  - Implements a smart reference mechanism that allows developers to build models locally while automatically falling back to production views when local tables don't exist, enabling incremental development of the data platform.
-  - LOC: `62` | PageRank: `0.00070` | Complexity: `1.0`
-- `src/ol_dbt/macros/override_source.sql` ⚠️dead-code-candidate
-  - Routes database queries to the appropriate data source based on the execution environment, allowing development on local DuckDB while maintaining production Trino compatibility
-  - LOC: `27` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_dbt/macros/translate_course_id_to_platform.sql` ⚠️dead-code-candidate
-  - Maps course identifiers to their corresponding learning platform names (MITxOnline, MITxPro, or edX), solving the problem of tracking which courses belong to which platform when data is stored in a unified format.
-  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
-- `src/ol_dbt/package-lock.yml`
-  - Locks specific versions of dbt packages to ensure reproducible builds and prevent unexpected breaking changes from package updates
-  - LOC: `24` | PageRank: `0.00070` | Complexity: `0.0`
-- `src/ol_superset/ol_superset/cli.py` 🔥`6` ⚠️dead-code-candidate
-  - Implements a CLI for managing Superset assets across environments, providing commands for export, validation, synchronization, promotion, and governance policy application.
-  - LOC: `71` | PageRank: `0.00070` | Complexity: `4.0`
-- `src/ol_superset/ol_superset/commands/__init__.py`
-  - Serves as an initialization module for the commands package, providing the necessary structure for command discovery and organization within the Superset CLI tool.
+- `src/ol_dbt/models/intermediate/mitxresidential/_int_mitxresidential__models.yml`
+  - Define the structure and validation rules for the intermediate residential MITx users table to ensure data integrity and consistency.
+  - LOC: `661` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/intermediate/salesforce/_int_salesforce__models.yml`
+  - Defines data quality tests and accepted values for the intermediate Salesforce opportunity model to ensure data integrity and consistency.
+  - LOC: `156` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/marts/micromasters/_marts_micromasters__models.yml`
+  - Defines schema documentation and data quality tests for MicroMasters data models including DEDP exam grades and course certificates
+  - LOC: `277` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/learn-ai/_stg_learn_ai__models.yml`
+  - Defines data quality tests and documentation for transformed Learn AI staging models to ensure data integrity for analytics
+  - LOC: `172` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/micromasters/_stg_micromasters__models.yml`
+  - Validates and documents staging models for redeemed coupons and payment receipts with data integrity tests
+  - LOC: `988` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/mitxonline/_stg_mitxonline__models.yml`
+  - Defines data quality tests and constraints for email opt-out and enrollment data to ensure data integrity in downstream analytics.
+  - LOC: `2057` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/salesforce/_stg_salesforce__models.yml`
+  - Provides data quality tests and documentation for the opportunity staging model, ensuring data integrity through null checks, uniqueness validation, and value constraints for critical business fields.
+  - LOC: `150` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/ol_superset/commands/validate.py` ⚠️dead-code-candidate
+  - Validate Superset asset definitions by checking YAML syntax and counting assets to ensure configuration integrity
+  - LOC: `164` | PageRank: `0.00070` | Complexity: `17.0`
+### transformation
+
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__tracking_logs__user_activity.sql`
+  - Aggregates and deduplicates user activity tracking logs from the learning platform, providing comprehensive behavioral analytics for understanding learner engagement and platform usage patterns.
+  - LOC: `55` | PageRank: `0.00731` | Complexity: `6.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__tracking_logs__user_activity.sql`
+  - Tracks and logs user activity on the Residential MITx open edX platform, capturing detailed user interactions with course content and system events for analytics and auditing purposes.
+  - LOC: `49` | PageRank: `0.00617` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__users.sql`
+  - Creates a unified user profile table by combining user data from MITx Online, legal addresses, profiles, and MicroMasters accounts to support user identification and matching across platforms.
+  - LOC: `94` | PageRank: `0.00609` | Complexity: `19.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__tracking_logs__user_activity.sql`
+  - Captures and processes user activity tracking logs from xPro courses, filtering out invalid entries and extracting relevant event details for analysis.
+  - LOC: `55` | PageRank: `0.00591` | Complexity: `6.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__tracking_logs__user_activity.sql`
+  - Captures and processes user activity tracking logs from edX.org to provide detailed behavioral data for analysis, enabling understanding of how users interact with course content.
+  - LOC: `51` | PageRank: `0.00557` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitx/int__mitx__programs.sql`
+  - Consolidate MITx program information from MicroMasters and MITx Online, mapping DEDP programs between platforms and distinguishing between micromasters and DEDP program types.
+  - LOC: `31` | PageRank: `0.00548` | Complexity: `6.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_activity.sql`
+  - Captures and organizes user activity tracking data from edx.org courses, providing insights into learner engagement and course interaction patterns.
+  - LOC: `16` | PageRank: `0.00469` | Complexity: `1.0`
+- `src/ol_dbt/models/dimensional/dim_course_content.sql`
+  - Consolidates course structure data from multiple edX platforms (MITxOnline, edXOrg, XPro, Residential) into a single dataset for consistent course content analysis across different learning environments.
+  - LOC: `174` | PageRank: `0.00402` | Complexity: `21.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__programs.sql`
+  - Aggregates program-level information including course requirements, topics, instructors, and pricing to provide a unified view of academic programs and their offerings
+  - LOC: `73` | PageRank: `0.00398` | Complexity: `14.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_runs.sql`
+  - Provides a consolidated view of course run details including scheduling and platform information for MITx Online courses.
+  - LOC: `30` | PageRank: `0.00368` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_program.sql`
+  - Stores and manages MicroMasters program metadata including pricing, course requirements, and financial aid availability for program administration.
+  - LOC: `22` | PageRank: `0.00350` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_courserun.sql`
+  - Tracks MITx Online course run details including scheduling, enrollment windows, and platform information to support course management and enrollment operations.
+  - LOC: `39` | PageRank: `0.00327` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/ocw/stg__ocw__studio__postgres__websites_websitecontent.sql`
+  - Extracts and transforms OCW website content metadata to enable analysis of course materials and learning resources.
+  - LOC: `66` | PageRank: `0.00321` | Complexity: `6.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_users.sql`
+  - Combines user information from multiple sources to create a complete user profile with contact details and demographic data for enrollment and communication purposes.
+  - LOC: `84` | PageRank: `0.00306` | Complexity: `9.0`
+- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__programs.sql`
+  - Provides a clean view of MicroMasters program metadata for downstream reporting
+  - LOC: `13` | PageRank: `0.00303` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters__users.sql`
+  - Create a comprehensive user profile by combining data from multiple authentication providers and user profiles.
+  - LOC: `93` | PageRank: `0.00281` | Complexity: `13.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courseruns.sql`
+  - Consolidates MITx course run data from multiple sources to provide comprehensive course information including enrollment details, instructor names, and topics for program management.
+  - LOC: `134` | PageRank: `0.00280` | Complexity: `14.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_programrequirement.sql`
+  - Tracks program requirements for MITx Online courses, enabling the system to enforce prerequisite structures and degree requirements across different program paths.
+  - LOC: `22` | PageRank: `0.00279` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_course.sql`
+  - Transforms MITx Online course metadata into a clean format with standardized identifiers and timestamps, enabling course catalog analysis and integration with other systems.
+  - LOC: `20` | PageRank: `0.00272` | Complexity: `4.0`
+- `src/ol_dbt/models/dimensional/dim_user.sql`
+  - Creates a unified user dimension table by combining user data from MITx Online, edX, and MITx Pro platforms with deduplication
+  - LOC: `600` | PageRank: `0.00264` | Complexity: `48.0`
+- `src/ol_dbt/models/intermediate/mitx/int__mitx__users.sql`
+  - Create a unified view of MITx users from MITx Online, edX.org, and MicroMasters, deduplicating based on usernames and prioritizing MITx Online profile data when conflicts exist.
+  - LOC: `224` | PageRank: `0.00261` | Complexity: `19.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_user_info_combo.sql`
+  - Combines user profile, enrollment, and certificate information from edX.org to create a comprehensive view of learner engagement and achievement in courses.
+  - LOC: `56` | PageRank: `0.00255` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__program_requirements.sql`
+  - Builds program requirement structures by mapping course and operator nodes to define core and elective requirements for academic programs.
+  - LOC: `125` | PageRank: `0.00245` | Complexity: `17.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__api__course_structure.sql`
+  - Captures course structure data from the Open edX API, filtering for unique course content hashes to track structural changes over time and preserve the latest version of each course block.
+  - LOC: `39` | PageRank: `0.00239` | Complexity: `6.0`
+- `src/ol_dbt/models/marts/combined/marts__combined_course_enrollment_detail.sql`
+  - Provides a unified view of course enrollment details across multiple platforms by combining enrollment data, course information, user profiles, and payment/order records from MITxPRO, MITxOnline, and MicroMasters to support comprehensive enrollment analysis.
+  - LOC: `485` | PageRank: `0.00237` | Complexity: `47.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_structure.sql`
+  - Identifies and extracts only the most recent course structure blocks by detecting content changes through content hash comparison, preparing hierarchical course data for analysis
+  - LOC: `39` | PageRank: `0.00231` | Complexity: `6.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__api__course_structure.sql`
+  - Extracts and transforms course structure data from MITx open edX API to capture the hierarchical organization of course content, enabling analysis of course navigation patterns and content relationships.
+  - LOC: `39` | PageRank: `0.00231` | Complexity: `6.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_course.sql`
+  - Links MicroMasters courses to their corresponding edX courses and programs, providing course metadata including prerequisites, descriptions, and tracking information.
+  - LOC: `23` | PageRank: `0.00225` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_program.sql`
+  - Captures comprehensive program metadata including program type, certification details, and availability status to support program management and reporting.
+  - LOC: `26` | PageRank: `0.00221` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_courserun.sql`
+  - Transforms raw bootcamp course run data into standardized course information with ISO8601 timestamps for course scheduling and management.
+  - LOC: `18` | PageRank: `0.00214` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courses.sql`
+  - Consolidates course information including descriptions, pricing, topics, instructors, and program requirements for course catalog and enrollment management.
+  - LOC: `84` | PageRank: `0.00203` | Complexity: `17.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__users_user.sql`
+  - Transforms raw xPro user data into a cleaned, standardized format for downstream analytics, including user details, activity timestamps, and name formatting.
+  - LOC: `19` | PageRank: `0.00201` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_user_email_opt_in.sql`
+  - This module processes user email opt-in data from the edX platform to track which users have consented to receive emails, along with their course enrollment information. It standardizes user and course identifiers while converting timestamps to ISO8601 format for consistent data handling.
+  - LOC: `21` | PageRank: `0.00200` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitx/int__mitx__courses.sql`
+  - Creates a unified catalog of MITx courses by combining data from MITx Online and edX.org platforms, ensuring each course is represented only once with the most current information regardless of which platform it originated from.
+  - LOC: `46` | PageRank: `0.00200` | Complexity: `7.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_productversion.sql`
+  - Manages product version information including pricing and descriptions, supporting the tracking of different product offerings and their configurations.
+  - LOC: `22` | PageRank: `0.00195` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__auth_usersocialauth.sql`
+  - Tracks and standardizes user authentication methods from external providers (MITxOnline/edx.org) to enable identity matching across systems.
+  - LOC: `20` | PageRank: `0.00195` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_profile.sql`
+  - Maintains comprehensive user profile information for MicroMasters participants, including personal details, contact information, and verification status.
+  - LOC: `74` | PageRank: `0.00195` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__api__courserun.sql`
+  - This module extracts and cleans course run data from edX S3 storage, providing comprehensive information about course availability, pacing, instructors, and enrollment details. It transforms JSON data and creates derived fields to indicate course status and self-paced nature for better course management.
+  - LOC: `55` | PageRank: `0.00193` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/combined/int__combined__course_runs.sql`
+  - Unifies course run data from various educational platforms to provide a centralized view of all available courses, their schedules, and enrollment information.
+  - LOC: `223` | PageRank: `0.00193` | Complexity: `33.0`
+- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__users.sql`
+  - Creates a comprehensive user profile dataset by joining core user information with their most recent education and employment records from MicroMasters profiles.
+  - LOC: `84` | PageRank: `0.00192` | Complexity: `9.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courserun.sql`
+  - Transforms raw course run information from xPro into a standardized format with URLs, dates, and identifiers for analytics and reporting.
+  - LOC: `28` | PageRank: `0.00191` | Complexity: `4.0`
+- `src/ol_dbt/models/marts/combined/marts__combined_video_engagements.sql`
+  - Aggregates video engagement data across multiple learning platforms (mitxonline, edxorg, mitxpro, residential) to provide a unified view of how users interact with video content across the organization's learning ecosystem
+  - LOC: `126` | PageRank: `0.00189` | Complexity: `12.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_platform.sql`
+  - Maintains a reference table of platform information for MITxPro to enable platform-specific reporting and analytics
+  - LOC: `14` | PageRank: `0.00188` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserunenrollments.sql`
+  - Identifies verified enrollments for DEDP courses by cross-referencing orders from both MITx Online and MicroMasters platforms to ensure accurate enrollment tracking across systems.
+  - LOC: `138` | PageRank: `0.00188` | Complexity: `28.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_program.sql`
+  - Extracts and transforms MITxPro program information for analysis of program metadata and status.
+  - LOC: `31` | PageRank: `0.00188` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun.sql`
+  - Transforms course overview data from MITx open edX database to provide comprehensive metadata about course availability, timing, and characteristics for enrollment and scheduling analysis.
+  - LOC: `26` | PageRank: `0.00186` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__program_certificates.sql`
+  - Aggregates program certificate information from both MicroMasters and MITxOnline databases for comprehensive completion tracking
+  - LOC: `141` | PageRank: `0.00184` | Complexity: `14.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_discount.sql`
+  - Transforms raw ecommerce discount data from PostgreSQL into a structured format with standardized discount amounts and human-readable discount descriptions for business reporting.
+  - LOC: `34` | PageRank: `0.00170` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_coursepage.sql`
+  - Extracts and cleans course page data from CMS, providing structured information about individual courses including descriptions, pricing, and multimedia content for course catalog and marketing.
+  - LOC: `21` | PageRank: `0.00169` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_coursetopic.sql`
+  - Maintains a hierarchical taxonomy of course topics, providing a structured classification system for organizing and categorizing courses.
+  - LOC: `17` | PageRank: `0.00165` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponproduct.sql`
+  - Extracts and transforms coupon product relationships to manage discount eligibility for specific products and program runs.
+  - LOC: `20` | PageRank: `0.00164` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_receipt.sql`
+  - Converts raw ecommerce receipt data into a structured format with standardized timestamps for financial transaction analysis and order tracking.
+  - LOC: `18` | PageRank: `0.00163` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_programpage.sql`
+  - Extracts and cleans program page data from CMS, providing structured information about educational programs including descriptions, pricing, and multimedia content for marketing and catalog purposes.
+  - LOC: `21` | PageRank: `0.00163` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__wagtail_page.sql`
+  - Maintains website page structure and metadata, enabling content management and navigation analysis for the platform's web presence.
+  - LOC: `29` | PageRank: `0.00162` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponpayment.sql`
+  - Tracks coupon payment transactions for e-commerce operations, providing visibility into promotional discount redemptions and financial reconciliation.
+  - LOC: `16` | PageRank: `0.00161` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_receipt.sql`
+  - Captures and standardizes e-commerce receipt data from the MITxPro platform, providing a unified view of transaction receipts for auditing and customer service purposes.
+  - LOC: `19` | PageRank: `0.00161` | Complexity: `4.0`
+- `src/ol_dbt/models/dimensional/tfact_problem_events.sql`
+  - Tracks problem check and showanswer events from MITx Online to capture student problem-solving interactions and performance data
+  - LOC: `253` | PageRank: `0.00161` | Complexity: `21.0`
+- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__course_certificates.sql`
+  - Provides a unified view of DEDP course certificates by combining data from MicroMasters and MITxOnline, ensuring deduplication for users migrated between platforms.
+  - LOC: `173` | PageRank: `0.00160` | Complexity: `17.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_company.sql`
+  - Stores company information for organizational customers, facilitating tracking of business accounts and their associated data.
+  - LOC: `16` | PageRank: `0.00160` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponversion.sql`
+  - Tracks coupon version history in MITxPro, maintaining records of coupon modifications and payment version associations for compliance and auditing.
+  - LOC: `17` | PageRank: `0.00159` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_basket.sql`
+  - Maintains the most recent basket records per user by deduplicating based on extraction timestamps, providing a current view of user shopping baskets.
+  - LOC: `20` | PageRank: `0.00159` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_transaction.sql`
+  - Transforms raw transaction data from PostgreSQL into a staging table with standardized identifiers and timestamps, enabling financial transaction analysis and reconciliation.
+  - LOC: `22` | PageRank: `0.00159` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__auth_user.sql`
+  - Maintains user profiles for the MITx platform, storing authentication details and personal information for learners and staff.
+  - LOC: `28` | PageRank: `0.00158` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_wagtail_page.sql`
+  - Maintains detailed metadata about web pages including publication status, revision history, and SEO information to support content management and website operations.
+  - LOC: `28` | PageRank: `0.00156` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_coursepage.sql`
+  - Captures and standardizes course page information from both internal and external CMS sources to provide unified course metadata.
+  - LOC: `63` | PageRank: `0.00156` | Complexity: `11.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__openedx_openedxuser.sql`
+  - Maps user identities between the MITx Online platform and external learning management systems to enable cross-platform user management and authentication.
+  - LOC: `19` | PageRank: `0.00155` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courserun_certificates.sql`
+  - Compiles comprehensive course certificate data for edx.org courses, joining certificate information with user details and course run data for verification and reporting purposes.
+  - LOC: `182` | PageRank: `0.00153` | Complexity: `24.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_to_topics.sql`
+  - Maps course topics to specific courses by joining course page, topic, and course topic tables, supporting content categorization and curriculum organization.
+  - LOC: `22` | PageRank: `0.00151` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courserun_enrollments.sql`
+  - Combines course enrollment data from edX.org with micromasters upgrade deadlines and user information, creating a unified view of course enrollments with verified status and upgrade opportunity tracking.
+  - LOC: `124` | PageRank: `0.00151` | Complexity: `27.0`
+- `src/ol_dbt/models/marts/combined/marts__combined_program_enrollment_detail.sql`
+  - Aggregates program enrollment and completion data across multiple platforms including MITxPRO, MITxOnline, MicroMasters, and edX.org to provide a comprehensive view of learner progress through educational programs.
+  - LOC: `360` | PageRank: `0.00150` | Complexity: `53.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__program_learner_report.sql`
+  - This module processes program learner reports to track user progress and completion status across educational programs, including certificate awarding information. It aggregates completion data at the program level while maintaining detailed course-level enrollment and completion records.
+  - LOC: `121` | PageRank: `0.00150` | Complexity: `14.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponredemption.sql`
+  - Transforms coupon redemption data from the PostgreSQL database, standardizing timestamp formats and renaming fields to track when and how coupons are redeemed in relation to orders.
+  - LOC: `19` | PageRank: `0.00150` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__users.sql`
+  - Creates a unified user profile by combining authentication, legal address, and profile information to provide comprehensive user details for bootcamp operations.
+  - LOC: `40` | PageRank: `0.00149` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/mitx/int__mitx__program_requirements.sql`
+  - Combines program requirements from both MITx Online and MicroMasters platforms to create a unified view of course requirements for each program, enabling analysis of program structure and completion criteria across both platforms.
+  - LOC: `59` | PageRank: `0.00149` | Complexity: `11.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__flexiblepricing_flexiblepricetier.sql`
+  - Manages flexible pricing tiers to support income-based pricing strategies and promotional discount structures.
+  - LOC: `20` | PageRank: `0.00147` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_courserun.sql`
+  - Stores course run metadata to enable course catalog management and enrollment tracking across different learning platforms.
+  - LOC: `35` | PageRank: `0.00145` | Complexity: `6.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2bcoupon.sql`
+  - Manages B2B coupon configurations including discount percentages, activation dates, and expiration for bulk order processing
+  - LOC: `25` | PageRank: `0.00144` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_courserun.sql`
+  - Maintains MITx course catalog information including titles, schedules, instructors, and departments to provide comprehensive course metadata.
+  - LOC: `44` | PageRank: `0.00144` | Complexity: `6.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_course.sql`
+  - Transforms raw bootcamp course data into a cleaned format with standardized column names for downstream analysis of course offerings.
+  - LOC: `15` | PageRank: `0.00142` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_discountredemption.sql`
+  - Processes discount redemption records from e-commerce transactions, mapping user and order relationships to track promotional code usage and discount effectiveness.
+  - LOC: `20` | PageRank: `0.00142` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/salesforce/stg__salesforce__opportunity.sql`
+  - Extracts and cleans Salesforce opportunity data, removing deleted records and deduplicating by system modification timestamp to provide a reliable source for sales pipeline analysis.
+  - LOC: `40` | PageRank: `0.00141` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2breceipt.sql`
+  - Extracts and normalizes B2B e-commerce receipt information from MITxPro, including payment transaction details and billing information for enterprise client management.
+  - LOC: `26` | PageRank: `0.00140` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_video.sql`
+  - Tracks video-related user interactions by filtering and parsing tracking logs for video events, enabling analysis of how learners engage with video content including play, pause, and transcript activities.
+  - LOC: `30` | PageRank: `0.00140` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_discountproduct.sql`
+  - Links discounts to products to enable analysis of which discounts apply to which products for pricing and promotion strategies.
+  - LOC: `20` | PageRank: `0.00139` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__program_certificates.sql`
+  - Generates program certificate records with user details and certificate URLs for credential verification and program completion tracking.
+  - LOC: `43` | PageRank: `0.00139` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_structure.sql`
+  - Structures course content hierarchy by organizing course blocks into chapters and maintaining content relationships for navigation and content delivery
+  - LOC: `66` | PageRank: `0.00139` | Complexity: `9.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponpaymentversion.sql`
+  - Handles coupon payment versions for bulk coupon assignments, tracking discount amounts, types, expiration dates, and redemption limits for promotional campaigns.
+  - LOC: `38` | PageRank: `0.00136` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserunenrollments_with_programs.sql`
+  - Combines course enrollment data with program requirements to identify which enrollments are part of structured learning programs, supporting program tracking and completion analysis.
+  - LOC: `87` | PageRank: `0.00136` | Complexity: `13.0`
+- `src/ol_dbt/models/intermediate/combined/int__combined__users.sql`
+  - Consolidates user profile information from multiple platforms (MITx Online, MITxPro, Bootcamps, edX.org, Residential, MicroMasters, Emeritus, Global Alumni) into a unified user table, handling duplicates and providing a single source of truth for learner identity and demographics.
+  - LOC: `259` | PageRank: `0.00136` | Complexity: `19.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__users.sql`
+  - Consolidates user profile and enrollment data to create comprehensive user profiles
+  - LOC: `75` | PageRank: `0.00135` | Complexity: `14.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2bcouponredemption.sql`
+  - Transforms raw B2B coupon redemption data into a standardized format for downstream analytics and reporting.
+  - LOC: `18` | PageRank: `0.00135` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__users_userprofile.sql`
+  - Transforms raw MITx Online user profile data into a clean, standardized format for downstream analytics, mapping demographic and professional attributes while converting timestamps to ISO8601 format.
+  - LOC: `28` | PageRank: `0.00135` | Complexity: `4.0`
+- `src/ol_dbt/models/marts/combined/marts__combined_coursesinprogram.sql`
+  - Maps courses to their respective programs across different platforms, showing which courses belong to which programs and providing platform-specific context for program-course relationships.
+  - LOC: `86` | PageRank: `0.00134` | Complexity: `17.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_instructorpage.sql`
+  - Extracts and standardizes instructor page data from MITx Online's CMS, providing structured information about course instructors for presentation and analysis.
+  - LOC: `15` | PageRank: `0.00133` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_instructorpagelink.sql`
+  - Manages instructor page relationships, allowing the platform to link instructor profiles to course content and maintain proper attribution and navigation.
+  - LOC: `12` | PageRank: `0.00133` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_order.sql`
+  - Consolidates ecommerce order data including payment information, product details, and user information to track course purchases and financial transactions
+  - LOC: `112` | PageRank: `0.00132` | Complexity: `21.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_certificates.sql`
+  - Tracks course certificate issuance and details for MITx Online courses, supporting credentialing, verification, and learner achievement documentation.
+  - LOC: `40` | PageRank: `0.00132` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/mitx/int__mitx__courserun_enrollments.sql`
+  - Combine MITx Online and edX.org course enrollments into a single dataset, ensuring no duplication by filtering out migrated DEDP course enrollments and standardizing enrollment attributes across platforms.
+  - LOC: `68` | PageRank: `0.00132` | Complexity: `7.0`
+- `src/ol_dbt/models/marts/combined/marts__combined__orders.sql`
+  - Aggregates order and transaction data from multiple platforms to provide a unified view of purchase activity, payment processing, and financial transactions across all learning products.
+  - LOC: `521` | PageRank: `0.00130` | Complexity: `39.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__auth_userprofile.sql`
+  - Transforms user profile data from the MITx open edX platform, standardizing and cleaning personal information for demographic analysis and user segmentation.
+  - LOC: `18` | PageRank: `0.00130` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__auth_user.sql`
+  - Maintains core user identity and authentication data to support user lifecycle tracking and access management.
+  - LOC: `19` | PageRank: `0.00130` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__api__course.sql`
+  - Extracts and processes course metadata from edX.org to provide detailed information about course offerings, structure, and content for analytical purposes.
+  - LOC: `28` | PageRank: `0.00130` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/learn-ai/stg__learn_ai__app__postgres__chatbots_userchatsession.sql`
+  - Logs chatbot user interactions and sessions to analyze conversational AI usage patterns and support effectiveness.
+  - LOC: `24` | PageRank: `0.00129` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__bulk_email_optin.sql`
+  - Tracks which MITx Online users have opted out of bulk email communications for specific courses, enabling targeted email marketing compliance.
+  - LOC: `31` | PageRank: `0.00129` | Complexity: `8.0`
+- `src/ol_dbt/models/marts/combined/marts__combined__users.sql`
+  - Combines user data from multiple platforms (MITx, non-MITx) to create a unified view of user enrollment, program participation, and financial activity across the learning ecosystem.
+  - LOC: `271` | PageRank: `0.00129` | Complexity: `30.0`
+- `src/ol_dbt/models/reporting/cheating_detection_report.sql`
+  - Implements a cheating detection system by analyzing problem-solving patterns and event timing to identify potential academic integrity violations in online courses.
+  - LOC: `306` | PageRank: `0.00129` | Complexity: `32.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_wiretransferreceipt.sql`
+  - Transforms raw wire transfer receipt data into standardized payment records with ISO8601 timestamps for financial tracking and reconciliation.
+  - LOC: `19` | PageRank: `0.00129` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_blockedcountry.sql`
+  - Manages geo-blocking restrictions for MITx Online courses, ensuring compliance with regional licensing agreements and preventing unauthorized access in restricted countries.
+  - LOC: `17` | PageRank: `0.00129` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_basket.sql`
+  - Tracks user shopping baskets and their creation/update timestamps in the MITx Online platform
+  - LOC: `20` | PageRank: `0.00129` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_basketdiscount.sql`
+  - Tracks basket discount redemptions to analyze promotional effectiveness and user purchasing behavior.
+  - LOC: `22` | PageRank: `0.00129` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_basketitem.sql`
+  - Transforms raw basket item data from the e-commerce system, standardizing timestamps and field names to track shopping cart contents and purchase quantities for order processing.
+  - LOC: `21` | PageRank: `0.00129` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_userdiscount.sql`
+  - Captures user-specific discount applications to enable analysis of promotional usage and user discount behavior.
+  - LOC: `19` | PageRank: `0.00129` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__flexiblepricing_countryincomethreshold.sql`
+  - Processes country income threshold data from PostgreSQL into a cleaned staging format, supporting income-based pricing and regional pricing strategy analysis.
+  - LOC: `21` | PageRank: `0.00129` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__flexiblepricing_currencyexchangerate.sql`
+  - Manages currency exchange rates for international pricing in the MITx Online platform
+  - LOC: `23` | PageRank: `0.00129` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_linerunselection.sql`
+  - Tracks user selections of course runs within a line item, capturing which specific course run a user has chosen for enrollment.
+  - LOC: `19` | PageRank: `0.00129` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/salesforce/stg__salesforce__opportunitylineitem.sql`
+  - Processes Salesforce opportunity line items into a staging table with standardized field names and timestamp formatting, enabling detailed product-level sales analysis and revenue tracking.
+  - LOC: `29` | PageRank: `0.00129` | Complexity: `4.0`
+- `src/ol_dbt/models/dimensional/dim_problem.sql`
+  - Extracts and structures problem-solving data from course content, capturing problem metadata and learner submission events to support assessment and analytics.
+  - LOC: `119` | PageRank: `0.00127` | Complexity: `10.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__program_instructors.sql`
+  - Captures instructor information associated with MITx Online programs, enabling the display of instructor credentials and bios for program marketing and credibility.
+  - LOC: `21` | PageRank: `0.00127` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_product.sql`
+  - Provides a unified view of MITxPro e-commerce products including their latest pricing, descriptions, and associated course or program details
+  - LOC: `67` | PageRank: `0.00125` | Complexity: `16.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_education.sql`
+  - Stores user education details from MicroMasters profiles including degrees, schools, and graduation dates to support academic credential verification and user profile enrichment.
+  - LOC: `22` | PageRank: `0.00124` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_employment.sql`
+  - Tracks and standardizes user employment history for analysis of professional outcomes of MicroMasters learners.
+  - LOC: `22` | PageRank: `0.00124` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_coupon.sql`
+  - Manages e-commerce coupon data from MITxPro, tracking coupon codes, their activation status, and applicability to support promotional campaign analysis.
+  - LOC: `20` | PageRank: `0.00124` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_problemcheck.sql`
+  - Captures and processes problem check events from user activity tracking logs to analyze student performance and problem-solving attempts.
+  - LOC: `25` | PageRank: `0.00124` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courses.sql`
+  - Module providing: int__mitxpro__courses. Contains 82 lines of Language.SQL code.
+  - LOC: `82` | PageRank: `0.00123` | Complexity: `17.0`
+- `src/ol_dbt/models/intermediate/ovs/int__ovs__videos.sql`
+  - Aggregates course run grades from edx.org, combining certificate and grade information to provide a complete view of learner performance and completion status across multiple courses and programs.
+  - LOC: `51` | PageRank: `0.00123` | Complexity: `12.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__edxval_video.sql`
+  - Extracts and transforms video metadata from the MITx open edX platform, providing information about video content, duration, and status for content management and delivery.
+  - LOC: `17` | PageRank: `0.00123` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_programpage.sql`
+  - Consolidates program page information from both internal CMS and external sources to provide a unified view of program details for marketing and catalog purposes.
+  - LOC: `40` | PageRank: `0.00123` | Complexity: `6.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__emeritus__api__bigquery__user_enrollments.sql`
+  - Models individual line items within orders to track products, versions, and timestamps for order fulfillment
+  - LOC: `58` | PageRank: `0.00122` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__global_alumni__api__bigquery__user_enrollments.sql`
+  - Integrates global alumni enrollment data with comprehensive user and course run details for cross-platform learner analytics
+  - LOC: `49` | PageRank: `0.00122` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponpaymentversion.sql`
+  - Creates a consolidated view of coupon payment version data for financial and operational reporting.
+  - LOC: `31` | PageRank: `0.00122` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitx/int__mitx__courserun_certificates.sql`
+  - Aggregates course completion certificates from multiple sources (MITx Online, edX.org, and MicroMasters) while filtering out duplicates and ensuring only valid, non-revoked certificates are included in the final dataset.
+  - LOC: `96` | PageRank: `0.00122` | Complexity: `12.0`
+- `src/ol_dbt/models/dimensional/dim_platform.sql`
+  - Creates a standardized platform dimension table with surrogate keys to enable consistent cross-platform analysis and reporting.
+  - LOC: `11` | PageRank: `0.00120` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_certificates_dedp_from_micromasters.sql`
+  - Finds the highest-graded course certificate for DEDP courses by selecting the best run per user-course combination, ensuring consistency when multiple runs have the same grade.
+  - LOC: `73` | PageRank: `0.00120` | Complexity: `18.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_video.sql`
+  - Extracts and transforms video-related user activity events from the course activity logs, filtering for video interactions and parsing JSON fields to capture video metadata like duration, timestamps, and playback speeds.
+  - LOC: `32` | PageRank: `0.00120` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_video.sql`
+  - Extracts and structures video-related user activity events from tracking logs for analysis of video engagement in MITx residential courses.
+  - LOC: `31` | PageRank: `0.00120` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_person_course.sql`
+  - Provides comprehensive user engagement data for edX courses, including activity metrics, enrollment status, and performance indicators to analyze learning behavior and course effectiveness.
+  - LOC: `69` | PageRank: `0.00120` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/ocw/stg__ocw__studio__postgres__websites_website.sql`
+  - Transforms OCW website data to track publishing status and course metadata for content management.
+  - LOC: `44` | PageRank: `0.00118` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/ocw/stg__ocw__studio__postgres__websites_websitestarter.sql`
+  - Transforms OCW website starter data to track template-based website creation and management.
+  - LOC: `22` | PageRank: `0.00118` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__programenrollments.sql`
+  - Consolidates program enrollment data by joining enrollment records with program and user information, enabling analysis of learner engagement across MITx Online programs.
+  - LOC: `39` | PageRank: `0.00118` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_grades.sql`
+  - Creates a comprehensive view of course grades by joining grade records with course run and user information, serving as a foundational dataset for academic performance analysis across MITx Online courses.
+  - LOC: `40` | PageRank: `0.00117` | Complexity: `8.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_facultymemberspage.sql`
+  - Manages faculty member information for course websites, organizing instructor details for display on academic program pages.
+  - LOC: `14` | PageRank: `0.00117` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_course.sql`
+  - Processes course information to enable analysis of online course catalog, program structure, and course availability
+  - LOC: `27` | PageRank: `0.00117` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__course_grades.sql`
+  - Consolidates course grade data from multiple platforms for MicroMasters programs, handling data deduplication
+  - LOC: `168` | PageRank: `0.00116` | Complexity: `17.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__edxval_video.sql`
+  - Transforms raw video metadata from edX MySQL into a cleaned staging table for analytics, enabling tracking of video content status and duration across the platform.
+  - LOC: `18` | PageRank: `0.00116` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/combined/int__combined__courserun_enrollments.sql`
+  - Aggregates enrollment data from various platforms (MITx, MITxPro, Emeritus, Global Alumni, Bootcamps, Residential) and joins it with related grades and certificate information to create a complete view of learner participation and achievement across all educational offerings.
+  - LOC: `249` | PageRank: `0.00116` | Complexity: `29.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__programs.sql`
+  - Compiles comprehensive program information including program details, topics, instructors, and related course content to support program management and marketing efforts.
+  - LOC: `89` | PageRank: `0.00115` | Complexity: `20.0`
+- `src/ol_dbt/models/intermediate/mitx/int__mitx__courserun_enrollments_with_programs.sql`
+  - Aggregates enrollment data from both edX.org and MITx Online platforms, joining with user information and program requirements to provide a comprehensive view of learner enrollments across all MITx programs.
+  - LOC: `78` | PageRank: `0.00114` | Complexity: `12.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_line.sql`
+  - Transforms raw ecommerce line item data from the MicroMasters platform into a standardized format for downstream analysis, enabling business teams to understand course purchases and pricing details.
+  - LOC: `22` | PageRank: `0.00114` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_order.sql`
+  - Transforms e-commerce order data into a consistent format with standardized timestamps and pricing to enable financial reporting and order tracking.
+  - LOC: `21` | PageRank: `0.00114` | Complexity: `4.0`
+- `src/ol_dbt/models/dimensional/tfact_course_navigation_events.sql`
+  - Captures and standardizes course navigation events to analyze user learning pathways and content discovery patterns across different learning platforms.
+  - LOC: `247` | PageRank: `0.00113` | Complexity: `21.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courserun_grades.sql`
+  - Captures detailed problem check events from edX course activities, extracting student answers, attempts, and grades to enable analysis of learner engagement and performance in course assessments.
+  - LOC: `81` | PageRank: `0.00113` | Complexity: `13.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_coursepage_topics.sql`
+  - Tracks which course pages are associated with specific course topics, enabling topic-based navigation and content organization on the MITx Online platform.
+  - LOC: `8` | PageRank: `0.00113` | Complexity: `3.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_coursetopic.sql`
+  - Supplies course topic taxonomy data to support hierarchical classification and navigation of MITx Online courses by subject areas and subtopics.
+  - LOC: `15` | PageRank: `0.00113` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_programcertificate.sql`
+  - Tracks MicroMasters program certificate issuance and metadata for learners completing programs
+  - LOC: `20` | PageRank: `0.00113` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__course_runs.sql`
+  - Provides comprehensive course run details by joining course run data with course and platform information to enable analysis of course offerings and their associated platforms.
+  - LOC: `35` | PageRank: `0.00112` | Complexity: `7.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__auth_user.sql`
+  - Transforms raw user authentication data into standardized user records with ISO8601 timestamps for account management and activity tracking.
+  - LOC: `17` | PageRank: `0.00112` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__profiles_legaladdress.sql`
+  - Transforms raw bootcamp application profile address data into a cleaned format with standardized address fields and proper naming conventions for downstream analytics.
+  - LOC: `27` | PageRank: `0.00112` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__profiles_profile.sql`
+  - Transforms raw bootcamp user profile data into cleaned, standardized user attributes for downstream analytics including demographics, employment details, and experience levels.
+  - LOC: `40` | PageRank: `0.00112` | Complexity: `6.0`
+- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_grades_dedp_from_micromasters.sql`
+  - Find the highest final grade for each DEDP course per user, prioritizing the latest passing grade before certificate generation.
+  - LOC: `77` | PageRank: `0.00111` | Complexity: `20.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_programrun.sql`
+  - Tracks and maintains historical records of changes to B2B orders for audit and compliance purposes.
+  - LOC: `19` | PageRank: `0.00111` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__edxval_video.sql`
+  - Manages video asset metadata and status information for educational content delivery.
+  - LOC: `18` | PageRank: `0.00111` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courseware_studentmodule.sql`
+  - Transforms student module interaction data from MITx open edX database to track individual student engagement with course content, including problem attempts, grades, and timestamps for learning analytics.
+  - LOC: `22` | PageRank: `0.00110` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courseware_studentmodulehistoryextended.sql`
+  - Captures and maintains a history of student module interactions, tracking problem attempts and grades over time for academic performance analysis and progress monitoring.
+  - LOC: `48` | PageRank: `0.00110` | Complexity: `6.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_video.sql`
+  - Extracts video-specific user interactions from tracking logs to analyze video engagement metrics like play, pause, and speed changes.
+  - LOC: `30` | PageRank: `0.00110` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_discussion.sql`
+  - Filters and extracts discussion forum events from user activity tracking logs, capturing discussion participation metadata for community engagement analysis.
+  - LOC: `24` | PageRank: `0.00110` | Complexity: `3.0`
+- `src/ol_dbt/models/staging/zendesk/stg__zendesk__user.sql`
+  - Transforms raw Zendesk user data into a cleaned staging table with standardized field names and formats, making support agent and customer information accessible for analysis.
+  - LOC: `52` | PageRank: `0.00109` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__auth_user.sql`
+  - Centralizes user authentication data from the Open edX platform, providing a single source of truth for user identity and access information.
+  - LOC: `17` | PageRank: `0.00109` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_programcertificate.sql`
+  - Transforms raw program certificate data from PostgreSQL into a standardized format with UUIDs and timestamp conversions for certificate management and auditing.
+  - LOC: `18` | PageRank: `0.00109` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__ecommerce_receipt.sql`
+  - Extracts and transforms payment receipt data from JSON fields to provide structured payment information including transaction details, payer information, and authorization data for bootcamp orders.
+  - LOC: `33` | PageRank: `0.00109` | Complexity: `3.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courserunenrollment.sql`
+  - Standardizes course run enrollment data from the LMS, capturing enrollment status, timestamps, and relationships to users, courses, and orders for learning analytics.
+  - LOC: `22` | PageRank: `0.00109` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_courseruncertificate.sql`
+  - Transforms raw course certificate data from MITx Online into a cleaned format with standardized column names, UUIDs, and certificate URLs for revoked status tracking
+  - LOC: `22` | PageRank: `0.00107` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_receipt.sql`
+  - Transforms raw receipt data into a structured format with payment details and transaction information for financial reconciliation and payment tracking.
+  - LOC: `33` | PageRank: `0.00107` | Complexity: `3.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__bulk_email_optout.sql`
+  - Converts raw bulk email optout data from MySQL into a cleaned format linking user IDs to course IDs for managing email preferences.
+  - LOC: `15` | PageRank: `0.00106` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__users.sql`
+  - Transform and consolidate user data from authentication and profile tables to create a comprehensive user profile view for residential MITx users.
+  - LOC: `25` | PageRank: `0.00106` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__edxval_coursevideo.sql`
+  - Manages video content metadata for MITx courses, tracking which videos are available and hidden in the learning platform.
+  - LOC: `16` | PageRank: `0.00106` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_flexiblepriceapplication.sql`
+  - Combines flexible pricing application data with user information, discount details, and content type mappings to support financial aid and pricing tier management for courses and programs.
+  - LOC: `61` | PageRank: `0.00106` | Complexity: `14.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_coursecertificate.sql`
+  - Captures and enriches course completion records with certificate URLs and timestamps to support credentialing and verification workflows.
+  - LOC: `21` | PageRank: `0.00106` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_courserungrade.sql`
+  - Tracks final course run grades for MicroMasters users including pass/fail status and payment information to support academic progress monitoring and credential issuance.
+  - LOC: `22` | PageRank: `0.00106` | Complexity: `4.0`
+- `src/ol_dbt/models/dimensional/tfact_video_events.sql`
+  - Captures and processes video playback events from multiple platforms, extracting key metrics like duration, position, and timestamps to enable analysis of video consumption patterns.
+  - LOC: `219` | PageRank: `0.00106` | Complexity: `21.0`
+- `src/ol_dbt/models/staging/learn-ai/stg__learn_ai__app__postgres__users_user.sql`
+  - Transforms raw user data by deduplicating records and standardizing user attributes for analytics on platform usage and user behavior
+  - LOC: `22` | PageRank: `0.00105` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_productversion.sql`
+  - Provides a structured view of product version details for e-commerce products, enabling consistent access to product metadata like pricing, descriptions, and enrollment requirements.
+  - LOC: `15` | PageRank: `0.00105` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_transaction.sql`
+  - Transforms raw ecommerce transaction data by extracting and structuring key payment information from JSON fields, enabling financial analysis and reconciliation of online course purchases.
+  - LOC: `42` | PageRank: `0.00105` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__course_enrollments.sql`
+  - Consolidates MicroMasters course enrollment data with program information, filtering to include only MicroMasters programs and providing user demographic and enrollment details.
+  - LOC: `33` | PageRank: `0.00105` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courses_to_topics.sql`
+  - Joins course page topics with course information to map which topics are associated with which courses
+  - LOC: `24` | PageRank: `0.00104` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_line.sql`
+  - Tracks ecommerce line items including product details, pricing, and program run associations to understand purchase transactions and their relationship to specific courses and programs.
+  - LOC: `38` | PageRank: `0.00104` | Complexity: `9.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_order.sql`
+  - Captures order-level ecommerce data including payment information, tax details, and coupon usage to provide a complete view of customer purchases and transaction processing.
+  - LOC: `68` | PageRank: `0.00104` | Complexity: `14.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__users_legaladdress.sql`
+  - Standardizes user legal address information from MITxPro, consolidating address components and VAT IDs for regulatory compliance and billing operations.
+  - LOC: `30` | PageRank: `0.00104` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__users_profile.sql`
+  - Cleans and standardizes user profile data to enable demographic and professional background analysis for business intelligence
+  - LOC: `24` | PageRank: `0.00104` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_certificates_dedp_from_mitxonline.sql`
+  - Extracts DEDP course certificates from mitxonline platform by joining certificate data with course runs, courses, and enrollment information, filtering for DEDP programs only.
+  - LOC: `40` | PageRank: `0.00104` | Complexity: `10.0`
+- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_certificates_non_dedp_from_edxorg.sql`
+  - Extract non-DEDP course certificates from edx.org, including certificate details and course information.
+  - LOC: `30` | PageRank: `0.00104` | Complexity: `7.0`
+- `src/ol_dbt/models/dimensional/afact_problem_engagement.sql`
+  - Aggregates problem engagement metrics by combining problem structure with user attempt data to provide insights into student performance and persistence with course problems.
+  - LOC: `86` | PageRank: `0.00104` | Complexity: `8.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_programenrollment.sql`
+  - Transforms program enrollment data from PostgreSQL into a cleaned staging table, enabling analysis of learner program participation and enrollment patterns across MITx Online courses.
+  - LOC: `20` | PageRank: `0.00103` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_course_to_department.sql`
+  - Maps relationships between courses and departments in the MITx Online platform
+  - LOC: `13` | PageRank: `0.00103` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_department.sql`
+  - Provides structured information about course departments to enable categorization and organization of MITx Online courses by their academic departments.
+  - LOC: `16` | PageRank: `0.00103` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_videos.sql`
+  - Links MITx Online course videos with external video platform data to provide comprehensive video metadata including duration, supporting content management and learning analytics.
+  - LOC: `32` | PageRank: `0.00103` | Complexity: `8.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_video.sql`
+  - Tracks video content metadata for edX courses, including video durations and identifiers to support media management and content analysis.
+  - LOC: `17` | PageRank: `0.00102` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__program_requirements.sql`
+  - Models program requirements for MicroMasters courses, distinguishing between core and elective courses
+  - LOC: `84` | PageRank: `0.00102` | Complexity: `13.0`
+- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_program_certificates_dedp_from_micromasters.sql`
+  - Identifies DEDP (Data, Economics, and Development Policy) program certificates from MicroMasters by joining certificate data with program information, filtering for DEDP programs only.
+  - LOC: `23` | PageRank: `0.00101` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_program_certificates_dedp_from_mitxonline.sql`
+  - Identify DEDP program certificates from mitxonline, linking them to their corresponding program metadata.
+  - LOC: `25` | PageRank: `0.00101` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_program_certificates_non_dedp.sql`
+  - Compiles non-DEDP MicroMasters program certificates from edX.org by joining certificate data with user and program information, handling duplicate certificates and including override lists for special cases.
+  - LOC: `83` | PageRank: `0.00101` | Complexity: `14.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_product.sql`
+  - Joins product data with course run and program information to create a unified product catalog with pricing and type classification for sales analysis.
+  - LOC: `48` | PageRank: `0.00100` | Complexity: `13.0`
+- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__ecommerce_order.sql`
+  - Provides a comprehensive view of ecommerce orders and their associated details including payment information, course enrollment details, and user information for bootcamp-related transactions.
+  - LOC: `51` | PageRank: `0.00100` | Complexity: `11.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_problemcheck.sql`
+  - Module providing: int__edxorg__mitx_user_courseactivity_problemcheck. Contains 24 lines of Language.SQL code.
+  - LOC: `24` | PageRank: `0.00100` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/learn-ai/int__learn_ai__chatbot.sql`
+  - Creates a comprehensive view of Learn AI chatbot interactions across different bot types, linking user conversations with course content and tracking the progression of AI-assisted learning sessions.
+  - LOC: `88` | PageRank: `0.00100` | Complexity: `15.0`
+- `src/ol_dbt/models/intermediate/learn-ai/int__learn_ai__tutorbot.sql`
+  - Consolidates TutorBot chat session data with user information and problem details, enabling analysis of AI tutoring interactions and their relationship to specific course content.
+  - LOC: `35` | PageRank: `0.00100` | Complexity: `9.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_problemcheck.sql`
+  - Captures detailed problem submission data including student answers, attempts, grades, and success status to enable comprehensive assessment analysis and learning analytics.
+  - LOC: `25` | PageRank: `0.00100` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/ocw/int__ocw__course_instructors.sql`
+  - Extracts instructor information from website content metadata and links instructors to their respective courses by joining instructor details with course references.
+  - LOC: `37` | PageRank: `0.00100` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/ocw/int__ocw__courses.sql`
+  - Extracts and consolidates course metadata from multiple PostgreSQL tables into a unified course view, providing comprehensive information about OCW courses including descriptions, topics, and instructor details.
+  - LOC: `45` | PageRank: `0.00100` | Complexity: `7.0`
+- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_video_engagements.sql`
+  - Creates a mart of MITx Online video engagement data with video details, user information, and course context.
+  - LOC: `61` | PageRank: `0.00100` | Complexity: `11.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_basketitem.sql`
+  - Transforms raw e-commerce basket item data into a standardized format for analyzing shopping cart contents and purchase patterns
+  - LOC: `21` | PageRank: `0.00100` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_basketrunselection.sql`
+  - Tracks user selections of course runs within a shopping basket to enable checkout and enrollment processing
+  - LOC: `19` | PageRank: `0.00100` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponbasket.sql`
+  - Processes coupon basket selections from xPro e-commerce data, deduplicating records and standardizing timestamp formats for downstream reporting.
+  - LOC: `20` | PageRank: `0.00100` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_productcouponassignment.sql`
+  - Processes product coupon assignment data from the PostgreSQL database, standardizing timestamp formats and renaming fields to track coupon distribution, redemption status, and email communication metrics.
+  - LOC: `25` | PageRank: `0.00100` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/zendesk/stg__zendesk__ticket_comment.sql`
+  - Transforms raw Zendesk ticket comment data into a cleaned staging table with standardized field names and formats, making support ticket conversations accessible for analysis.
+  - LOC: `28` | PageRank: `0.00100` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_product.sql`
+  - Converts raw ecommerce product data from PostgreSQL into a standardized staging format with consistent pricing and timestamps, supporting product catalog analytics and e-commerce reporting.
+  - LOC: `21` | PageRank: `0.00100` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_coursepage_topics.sql`
+  - Maps course topics to their respective course pages, enabling tracking of which topics are associated with specific courses in the CMS.
+  - LOC: `17` | PageRank: `0.00099` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__edxval_coursevideo.sql`
+  - Maps videos to courses to support video content management and visibility controls in course delivery.
+  - LOC: `16` | PageRank: `0.00099` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/subqueries/__mitxonline_good_economics_for_hard_times_program.sql`
+  - Determines the appropriate DEDP program for counting 14.009x enrollments based on user's program enrollment and course completion date, supporting accurate micromasters reporting.
+  - LOC: `52` | PageRank: `0.00099` | Complexity: `9.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__course_structure.sql`
+  - Tracks course structure changes over time to identify the latest course organization for MITxPro courses
+  - LOC: `66` | PageRank: `0.00099` | Complexity: `9.0`
+- `src/ol_dbt/models/dimensional/dim_video.sql`
+  - Consolidates video metadata from multiple sources into a single dimension table for standardized video content analysis across platforms.
+  - LOC: `102` | PageRank: `0.00098` | Complexity: `10.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__program_entitlement.sql`
+  - Tracks program entitlements purchased by users, including purchase details and entitlement counts, to monitor access to educational programs.
+  - LOC: `20` | PageRank: `0.00098` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_program_certificates.sql`
+  - Generates a deduplicated list of learners who have completed MITx programs on edx.org, linking them to corresponding micromasters program IDs for downstream analytics and reporting.
+  - LOC: `44` | PageRank: `0.00098` | Complexity: `6.0`
+- `src/ol_dbt/models/dimensional/tfact_discussion_events.sql`
+  - Captures discussion forum events to track student engagement in online discussions and community interactions
+  - LOC: `215` | PageRank: `0.00097` | Complexity: `15.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_certificatepage.sql`
+  - Stores certificate page configurations and metadata, including product details, CEU information, and signatory information for course completion certificates.
+  - LOC: `17` | PageRank: `0.00097` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__program_courses.sql`
+  - This module extracts and cleans program course data from edX S3 storage, mapping course keys to readable IDs and providing course descriptions and types. It helps organize educational programs by linking courses to their respective programs and categorizing them appropriately.
+  - LOC: `16` | PageRank: `0.00097` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__programs.sql`
+  - Transforms raw program data from EdX into a clean, deduplicated staging table with standardized timestamps and renamed fields for downstream analytics
+  - LOC: `18` | PageRank: `0.00097` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__program_runs.sql`
+  - Creates a consolidated view of MITxPro program runs with their start/end dates and readable identifiers for tracking program offerings
+  - LOC: `21` | PageRank: `0.00096` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_courseruncertificate.sql`
+  - Provides a cleaned view of course certificate data for bootcamp participants, including certificate URLs and timestamps for tracking issuance and revocation status.
+  - LOC: `21` | PageRank: `0.00096` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courseruncertificate.sql`
+  - Manages course completion certificates, including generation, revocation, and access to certificate URLs for verified learners.
+  - LOC: `21` | PageRank: `0.00096` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_program_courses.sql`
+  - Maps MITx courses to their parent programs, including both micromasters and other program types, by joining program course data with program metadata and handling program title matching for micromasters programs.
+  - LOC: `31` | PageRank: `0.00096` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_grades_dedp_from_mitxonline.sql`
+  - Extracts and organizes course grade data for DEDP programs from MITxOnline, linking grades to specific course runs, programs, and user information for performance tracking.
+  - LOC: `37` | PageRank: `0.00095` | Complexity: `9.0`
+- `src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_grades_non_dedp_from_edxorg.sql`
+  - Retrieves non-DEDP course grades from edX.org platform by joining grade data with course runs and program information, filtering for non-DEDP programs only.
+  - LOC: `28` | PageRank: `0.00095` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_instructors.sql`
+  - Creates a unified view of course instructors by joining course pages with instructor information and their pagelinks, enabling consistent access to instructor details across courses.
+  - LOC: `21` | PageRank: `0.00094` | Complexity: `7.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__edxval_coursevideo.sql`
+  - Extracts and transforms course video metadata to manage video content availability and visibility.
+  - LOC: `16` | PageRank: `0.00094` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__exams_examrun.sql`
+  - Maintains exam run metadata for MicroMasters courses including exam schedules, passing scores, and authorization status to support exam administration and compliance tracking.
+  - LOC: `24` | PageRank: `0.00093` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_coupon.sql`
+  - Creates a unified view of ecommerce coupons by joining coupon data with payment information to support coupon management and usage tracking across the platform.
+  - LOC: `21` | PageRank: `0.00093` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/combined/int__combined__course_videos.sql`
+  - Integrates video content metadata from multiple platforms by combining course structure information with video-specific data, creating a unified view of video assets across all learning platforms with consistent identifiers and properties.
+  - LOC: `69` | PageRank: `0.00093` | Complexity: `8.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__grades_subsectiongrade.sql`
+  - Stores detailed subsection grade data to enable granular assessment of student progress and performance.
+  - LOC: `25` | PageRank: `0.00093` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__grades_subsectiongradeoverride.sql`
+  - Maintains override records for subsection grades to support manual grade adjustments and audit trails for grading decisions.
+  - LOC: `24` | PageRank: `0.00093` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courserunenrollments.sql`
+  - Combines enrollment data from both MITxPro and Open edX systems to provide a complete view of user enrollments across course runs
+  - LOC: `50` | PageRank: `0.00092` | Complexity: `11.0`
+- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__orders.sql`
+  - Aggregates order and payment information for MicroMasters e-commerce transactions, linking user data, course enrollments, and receipt details for comprehensive transaction tracking.
+  - LOC: `95` | PageRank: `0.00092` | Complexity: `19.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_line.sql`
+  - Module providing: stg__mitxpro__app__postgres__ecommerce_line. Contains 19 lines of Language.SQL code.
+  - LOC: `19` | PageRank: `0.00092` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_programrunline.sql`
+  - Transforms e-commerce program run line data to track course offerings and pricing structures for program management
+  - LOC: `19` | PageRank: `0.00092` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__courserun_certificates.sql`
+  - Manages bootcamp course certification data by linking certificates to course runs and user information
+  - LOC: `36` | PageRank: `0.00092` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courserun_certificates.sql`
+  - Consolidates course certificate information with user and course details to provide a comprehensive view of issued certificates, including status, URLs, and recipient information.
+  - LOC: `37` | PageRank: `0.00092` | Complexity: `8.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courserunenrollment.sql`
+  - Tracks course run enrollment data including user status, certificate blocking, and synchronization timestamps with external systems.
+  - LOC: `21` | PageRank: `0.00092` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courserungrade.sql`
+  - Records individual course grades for learners, tracking academic performance and certification eligibility across course runs.
+  - LOC: `21` | PageRank: `0.00092` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun_enrollment.sql`
+  - Tracks student enrollment in MITx residential courses, capturing when learners join courses and their enrollment status.
+  - LOC: `16` | PageRank: `0.00092` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun_grade.sql`
+  - Records student grades for MITx courses, including percentage scores, letter grades, and completion timestamps for academic reporting.
+  - LOC: `18` | PageRank: `0.00092` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__b2b_contractpage.sql`
+  - Transforms raw B2B contract page data from PostgreSQL into a structured format with standardized field names and date conversions for contract management and reporting.
+  - LOC: `21` | PageRank: `0.00092` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_programcertificate.sql`
+  - Stores program certificate records for learners who complete academic programs, tracking certificate issuance and revocation status for credentialing purposes.
+  - LOC: `20` | PageRank: `0.00092` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_programenrollment.sql`
+  - Captures program-level enrollment information for users, allowing tracking of which programs users are enrolled in and their enrollment status across the entire program.
+  - LOC: `21` | PageRank: `0.00092` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_electiveset.sql`
+  - Models program-level elective requirements to enable curriculum planning and student progress tracking toward degree completion.
+  - LOC: `16` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_electiveset_to_course.sql`
+  - Maps elective courses to their parent elective sets to support curriculum structure and course catalog organization.
+  - LOC: `15` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__user_program_certificate_override_list.sql`
+  - Provides a mechanism to override certificate data for specific users in MicroMasters programs, allowing manual adjustments to certification records.
+  - LOC: `4` | PageRank: `0.00091` | Complexity: `1.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__django_contenttype.sql`
+  - Maps Django content type metadata to create a unified identifier for content type references across the platform
+  - LOC: `20` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_product.sql`
+  - Standardizes e-commerce product data to support product catalog management and pricing analysis
+  - LOC: `21` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/learn-ai/stg__learn_ai__app__postgres__chatbots_tutorbotoutput.sql`
+  - Transforms raw TutorBot output data by deduplicating records and cleaning JSON chat content for downstream analytics on tutoring interactions
+  - LOC: `14` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__reversion_version.sql`
+  - Maintains version history for content changes, providing audit trails and enabling rollback capabilities for all platform modifications.
+  - LOC: `19` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/ovs/stg__ovs__studio__postgres__ui_collection.sql`
+  - Transforms collection metadata from raw database format into a standardized schema with ISO8601 timestamps for content organization.
+  - LOC: `27` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/ovs/stg__ovs__studio__postgres__ui_collectionedxendpoint.sql`
+  - Creates a mapping table linking collections to their associated edX endpoints, enabling cross-platform content integration.
+  - LOC: `17` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/ovs/stg__ovs__studio__postgres__ui_edxendpoint.sql`
+  - Transforms the raw OVS studio edxendpoint data by renaming columns and standardizing timestamp formats for consistent downstream use.
+  - LOC: `20` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/ovs/stg__ovs__studio__postgres__ui_encodejob.sql`
+  - Transforms video encoding job data from multiple source systems into a unified format with standardized state names and timestamp conversions.
+  - LOC: `63` | PageRank: `0.00091` | Complexity: `6.0`
+- `src/ol_dbt/models/staging/ovs/stg__ovs__studio__postgres__ui_video.sql`
+  - Transforms raw OVS video data by renaming columns and standardizing timestamp formats for consistent downstream use.
+  - LOC: `29` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__courseware_studentmodule.sql`
+  - Captures detailed student interaction data with course content to enable learning analytics, progress tracking, and performance assessment in MITx Online courses.
+  - LOC: `22` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__courseware_studentmodule.sql`
+  - Transforms student module data from the Open edX MySQL database, deduplicating by course and student to retain only the most recent module state and capturing student progress metrics including grades and timestamps.
+  - LOC: `22` | PageRank: `0.00091` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_courserunenrollment.sql`
+  - Tracks enrollment status and activity for MITx Online course runs to support student registration, access management, and enrollment analytics.
+  - LOC: `26` | PageRank: `0.00090` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_problemsubmitted.sql`
+  - Filters and extracts problem submission events from user activity tracking logs, capturing detailed problem performance data for analytics.
+  - LOC: `23` | PageRank: `0.00090` | Complexity: `3.0`
+- `src/ol_dbt/models/dimensional/dim_discussion_topic.sql`
+  - Creates a unified dimension table for discussion topics across course content, combining discussion components and course-level discussion topics to support analysis of student engagement in course discussions.
+  - LOC: `63` | PageRank: `0.00090` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__dedp_proctored_exam_grades.sql`
+  - Creates a unified view of proctored exam results for DEDP programs across different systems
+  - LOC: `53` | PageRank: `0.00090` | Complexity: `13.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__proctored_exam_grades.sql`
+  - Provides a consolidated view of proctored exam grades by joining MITx Online exam run data with MicroMasters course associations and user information, enabling analysis of exam performance across related courses.
+  - LOC: `88` | PageRank: `0.00090` | Complexity: `19.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_problemcheck.sql`
+  - Captures and structures problem check activity data for educational analytics and student performance tracking.
+  - LOC: `25` | PageRank: `0.00090` | Complexity: `3.0`
+- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_engagements_daily.sql`
+  - Generates daily engagement metrics for MITx Online courses, aggregating user activities like video plays, problem submissions, and discussion participation by course and date.
+  - LOC: `103` | PageRank: `0.00090` | Complexity: `16.0`
+- `src/ol_dbt/models/intermediate/combined/int__combined__course_structure.sql`
+  - Aggregates course structure data from multiple learning platforms into a single unified view, allowing cross-platform analysis of course content organization and structure.
+  - LOC: `89` | PageRank: `0.00090` | Complexity: `10.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_program_enrollments.sql`
+  - Identifies the most recent enrollment record for each user in MITx programs, including both micromasters and other program types, by filtering to the latest certificate or enrollment date per user-program combination.
+  - LOC: `38` | PageRank: `0.00090` | Complexity: `6.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__courserun_enrollment.sql`
+  - Tracks which users are enrolled in which courses and their enrollment details, enabling analysis of course participation and student engagement.
+  - LOC: `15` | PageRank: `0.00090` | Complexity: `4.0`
+- `src/ol_dbt/models/dimensional/tfact_studentmodule_problems.sql`
+  - Consolidates student module problem events from multiple platforms to track problem-solving attempts and outcomes across the learning ecosystem
+  - LOC: `148` | PageRank: `0.00089` | Complexity: `14.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_course_structure.sql`
+  - Creates a structured view of MITx course content by organizing course blocks and chapters, enabling detailed analysis of course structure and content relationships.
+  - LOC: `65` | PageRank: `0.00089` | Complexity: `9.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__course_structure.sql`
+  - Extract and organize course structure data, including chapters and hierarchical relationships, to understand the organization and content of residential MITx courses.
+  - LOC: `66` | PageRank: `0.00089` | Complexity: `9.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2bcoupon.sql`
+  - Provides a clean, focused view of B2B coupon data for business analysis and reporting.
+  - LOC: `19` | PageRank: `0.00088` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponversion.sql`
+  - Identifies the latest version of each coupon for version control and active coupon tracking
+  - LOC: `31` | PageRank: `0.00088` | Complexity: `6.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_coursesinprogrampage.sql`
+  - Organizes and displays course information within program pages for better navigation and user experience.
+  - LOC: `15` | PageRank: `0.00087` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_line.sql`
+  - Transforms ecommerce line item data for bootcamp purchases, converting prices to decimal format and standardizing timestamps for financial tracking.
+  - LOC: `20` | PageRank: `0.00087` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_order.sql`
+  - Transforms raw bootcamp ecommerce order data into a standardized format with proper data types and reference numbers, enabling business teams to track purchase orders and payment status across bootcamp programs.
+  - LOC: `22` | PageRank: `0.00087` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivities_daily.sql`
+  - Stores bulk email opt-in preferences, tracking which users have consented to receive marketing communications about course offerings.
+  - LOC: `19` | PageRank: `0.00086` | Complexity: `4.0`
+- `src/ol_dbt/models/dimensional/tfact_chatbot_events.sql`
+  - Captures chatbot interaction events from both MITx Online and Canvas platforms to track student engagement with AI assistance tools
+  - LOC: `188` | PageRank: `0.00086` | Complexity: `14.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courserun_videos.sql`
+  - Links course videos from multiple platforms to provide comprehensive video metadata including duration and status, enabling accurate video content management across systems.
+  - LOC: `32` | PageRank: `0.00086` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courserun_videos.sql`
+  - Maps course videos to their metadata by linking course video records with video details for content management and delivery.
+  - LOC: `17` | PageRank: `0.00086` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_combinedcoursegrade.sql`
+  - Aggregates final course grades to measure learner achievement and course completion rates.
+  - LOC: `20` | PageRank: `0.00086` | Complexity: `4.0`
+- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_user_profiles.sql`
+  - Creates comprehensive user profile views for MITx Online, combining demographic information with the latest income data from flexible pricing applications.
+  - LOC: `38` | PageRank: `0.00086` | Complexity: `6.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__coursesfaculty.sql`
+  - Extracts and organizes faculty information for MITxPro courses by joining course pages with faculty member data
+  - LOC: `49` | PageRank: `0.00085` | Complexity: `11.0`
+- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_learningresourcetopic.sql`
+  - Transforms raw learning resource topic data into a cleaned staging model with standardized column names for hierarchical topic analysis
+  - LOC: `15` | PageRank: `0.00085` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__profiles_profile.sql`
+  - Transforms MIT Learn user profile data into a cleaned staging table, standardizing field names and handling nulls to prepare user information for downstream analytics.
+  - LOC: `33` | PageRank: `0.00085` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__profiles_profile_topic_interests.sql`
+  - Stores user topic interests for learning resources, linking users to specific learning resource topics they've expressed interest in.
+  - LOC: `14` | PageRank: `0.00085` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__users_user.sql`
+  - Manages user account information for the MIT Learn platform, including authentication details, user status, and SCIM integration for identity management.
+  - LOC: `28` | PageRank: `0.00085` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__course_runs.sql`
+  - Delivers essential course run information including titles, readable IDs, and start/end dates for bootcamp courses to support scheduling and enrollment operations.
+  - LOC: `15` | PageRank: `0.00085` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__courses.sql`
+  - Provides basic course metadata for bootcamp programs including course identifiers and titles
+  - LOC: `12` | PageRank: `0.00085` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courseruns.sql`
+  - Provides a reference table of all available course runs with their metadata, serving as a catalog for course offerings and scheduling information.
+  - LOC: `16` | PageRank: `0.00085` | Complexity: `3.0`
+- `src/ol_dbt/models/dimensional/afact_course_page_engagement.sql`
+  - Records and analyzes page navigation events within course content, tracking how learners move through course materials and which sections they access most frequently.
+  - LOC: `61` | PageRank: `0.00085` | Complexity: `6.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_showanswer.sql`
+  - Captures user interactions with problem solutions by filtering tracking logs for 'showanswer' events, providing insights into when learners view answers to problems within course runs.
+  - LOC: `16` | PageRank: `0.00085` | Complexity: `3.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_order.sql`
+  - Tracks and transforms ecommerce order data including pricing, tax calculations, and timestamps for financial analysis and reporting
+  - LOC: `26` | PageRank: `0.00085` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/learn-ai/stg__learn_ai__app__postgres__chatbots_chatresponserating.sql`
+  - Captures user feedback on chatbot responses by storing ratings and reasons, enabling analysis of AI assistant performance and user satisfaction.
+  - LOC: `16` | PageRank: `0.00084` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/learn-ai/stg__learn_ai__app__postgres__chatbots_djangocheckpoint.sql`
+  - Transforms raw Django checkpoint data by deduplicating records and extracting chat conversation details for analysis of AI tutoring interactions
+  - LOC: `25` | PageRank: `0.00084` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/salesforce/int__salesforce__opportunity.sql`
+  - Provides a clean, deduplicated view of Salesforce opportunity data for downstream analytics by selecting key opportunity attributes from the staging table.
+  - LOC: `30` | PageRank: `0.00084` | Complexity: `3.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2border.sql`
+  - Transforms raw B2B order data into a standardized format with ISO timestamps, capturing essential order details like pricing, status, and coupon information for bulk purchases.
+  - LOC: `29` | PageRank: `0.00084` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_allcoupons.sql`
+  - Consolidates coupon data from multiple sources to provide a unified view of all available discounts and promotional offers, supporting financial reporting and customer service operations.
+  - LOC: `101` | PageRank: `0.00084` | Complexity: `13.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_allorders.sql`
+  - Aggregates ecommerce order data with user and course information to provide a comprehensive view of purchases
+  - LOC: `235` | PageRank: `0.00084` | Complexity: `38.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_company.sql`
+  - Extracts basic company information from the ecommerce system to provide a reference table for business entities and their contact details.
+  - LOC: `11` | PageRank: `0.00084` | Complexity: `3.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_certificate_signatory.sql`
+  - Extracts and cleans course certificate signatory information, normalizing names and constructing image URLs for verification purposes
+  - LOC: `44` | PageRank: `0.00083` | Complexity: `8.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__dashboard_programenrollment.sql`
+  - Manages dashboard-level program enrollment tracking for user-program relationships
+  - LOC: `14` | PageRank: `0.00083` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_proctoredexamgrade.sql`
+  - Standardizes proctored exam grading data with percentage-based scores and timestamps to support academic integrity and performance tracking.
+  - LOC: `26` | PageRank: `0.00083` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_line.sql`
+  - Cleans e-commerce line item data from MITx Online, standardizing timestamps and identifiers for order processing and financial analysis.
+  - LOC: `21` | PageRank: `0.00082` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2border.sql`
+  - Links B2B orders with product information and Salesforce opportunities to track corporate purchases and their related sales opportunities
+  - LOC: `60` | PageRank: `0.00082` | Complexity: `13.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2breceipt.sql`
+  - Extracts and organizes B2B e-commerce receipt data, providing a structured view of payment transactions and billing information for business-to-business course purchases.
+  - LOC: `19` | PageRank: `0.00082` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__coursesinprogram.sql`
+  - Maps courses to programs by linking course pages to program pages through Wagtail page hierarchy
+  - LOC: `52` | PageRank: `0.00082` | Complexity: `13.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__programsfaculty.sql`
+  - Tracks which faculty members are associated with specific programs through CMS pages, enabling the platform to display accurate faculty information for each program.
+  - LOC: `51` | PageRank: `0.00082` | Complexity: `11.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_discount.sql`
+  - Manages e-commerce discount information for MITx Online transactions, enabling promotional pricing and discount tracking for course purchases.
+  - LOC: `17` | PageRank: `0.00082` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_discountproduct.sql`
+  - Tracks individual product-level discounts applied to items in user baskets, linking specific products to their associated discount codes for accurate pricing calculations.
+  - LOC: `11` | PageRank: `0.00082` | Complexity: `3.0`
+- `src/ol_dbt/models/marts/mitxpro/marts__mitxpro_all_coupons.sql`
+  - Provides a comprehensive view of all coupon-related data across the xPRO platform, combining coupon information with order data to enable analysis of coupon usage and redemption patterns
+  - LOC: `249` | PageRank: `0.00082` | Complexity: `42.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_subsection_grades.sql`
+  - Aggregates student performance data at the subsection level for MITx Online courses, including grade overrides and calculated scores.
+  - LOC: `55` | PageRank: `0.00081` | Complexity: `8.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__courseware_studentmodulehistoryextended.sql`
+  - Transforms courseware student module history data to track student problem attempts and grades over time
+  - LOC: `35` | PageRank: `0.00081` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__courseware_studentmodulehistoryextended.sql`
+  - Captures and deduplicates student module history data to track learning progress and assessment grades over time
+  - LOC: `35` | PageRank: `0.00081` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/zendesk/stg__zendesk__brand.sql`
+  - Transform and clean raw Zendesk brand data into a structured format suitable for analysis
+  - LOC: `23` | PageRank: `0.00080` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/zendesk/stg__zendesk__group.sql`
+  - Transform and clean raw Zendesk group data into a structured format suitable for analysis
+  - LOC: `20` | PageRank: `0.00080` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/zendesk/stg__zendesk__organization.sql`
+  - Transform and clean raw Zendesk organization data into a structured format suitable for analysis
+  - LOC: `23` | PageRank: `0.00080` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/zendesk/stg__zendesk__ticket.sql`
+  - Transform and clean raw Zendesk ticket data into a structured format suitable for analysis
+  - LOC: `56` | PageRank: `0.00080` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/zendesk/stg__zendesk__ticket_field.sql`
+  - Transforms raw Zendesk ticket field data into a cleaned staging table with standardized timestamps
+  - LOC: `18` | PageRank: `0.00080` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_coupon.sql`
+  - Transforms raw e-commerce coupon data from MicroMasters into a cleaned staging table with standardized field names and formats, making promotional offer information accessible for analysis.
+  - LOC: `36` | PageRank: `0.00080` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_receipt.sql`
+  - Captures and normalizes payment receipt data from Cybersource transactions for order processing
+  - LOC: `39` | PageRank: `0.00080` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_redeemedcoupon.sql`
+  - Records and normalizes redeemed coupon data to analyze promotional campaign effectiveness and user discount behavior.
+  - LOC: `20` | PageRank: `0.00080` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_to_departments.sql`
+  - Maps MITx Online courses to their respective academic departments to enable organizational reporting and cross-departmental analysis of course offerings
+  - LOC: `18` | PageRank: `0.00078` | Complexity: `5.0`
+- `src/ol_dbt/models/reporting/organization_administration_report.sql`
+  - Creates a comprehensive organizational administration report that consolidates enrollment, role, and engagement data across multiple event types to support institutional oversight and reporting needs.
+  - LOC: `313` | PageRank: `0.00078` | Complexity: `37.0`
+- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__courserunenrollments.sql`
+  - Consolidates enrollment information by linking courserun enrollments with course details and user profiles to track active bootcamp participant registrations.
+  - LOC: `35` | PageRank: `0.00078` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/combined/int__combined__courserun_certificates.sql`
+  - Combines certificate data from multiple learning platforms (MITx Online, MITxPro, Bootcamps) into a unified view, filtering out revoked certificates to provide a comprehensive record of earned credentials across all platforms.
+  - LOC: `71` | PageRank: `0.00078` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/mitx/int__mitx__courserun_grades.sql`
+  - Combine course grade data from MITx Online and edX.org, excluding DEDP courses and program-specific grades to create a comprehensive view of non-program course performance across platforms.
+  - LOC: `85` | PageRank: `0.00078` | Complexity: `12.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courserun_grades.sql`
+  - Aggregates course grade information with user and course details to provide a comprehensive view of student performance, including grades, pass/fail status, and related metadata.
+  - LOC: `36` | PageRank: `0.00078` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courserun_enrollments.sql`
+  - Consolidates course enrollment data with user and course metadata to provide a comprehensive view of who is enrolled in which courses and their enrollment status.
+  - LOC: `30` | PageRank: `0.00078` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courserun_grades.sql`
+  - Provides comprehensive course run grade data by joining grade records with course run details and user information for academic tracking and reporting.
+  - LOC: `30` | PageRank: `0.00078` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__coursetopic.sql`
+  - Maintains a hierarchical structure of course topics, allowing the platform to organize and categorize courses by subject area and specialty.
+  - LOC: `12` | PageRank: `0.00077` | Complexity: `3.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_applicationstep.sql`
+  - Maps application steps to specific bootcamp courses, establishing the sequence and type of submissions required for each course application.
+  - LOC: `15` | PageRank: `0.00077` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_applicationstep_submission.sql`
+  - Processes bootcamp application step submissions to deduplicate records and standardize timestamp formats for tracking application review workflows.
+  - LOC: `24` | PageRank: `0.00077` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_courserun_application.sql`
+  - Transforms raw bootcamp course application data into standardized application records with ISO8601 timestamps for enrollment management and applicant tracking.
+  - LOC: `21` | PageRank: `0.00077` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_courserun_applicationstep.sql`
+  - Links application steps to specific course runs with due dates, creating a bridge between the application process and course scheduling.
+  - LOC: `16` | PageRank: `0.00077` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_installment.sql`
+  - Transforms raw installment payment data for bootcamp courses into a standardized format, enabling the finance team to track payment schedules and deadlines for course enrollments.
+  - LOC: `15` | PageRank: `0.00077` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courses_personalprice.sql`
+  - Processes personal pricing data for bootcamp runs, converting price fields to decimal format for financial calculations and user-specific pricing analysis.
+  - LOC: `15` | PageRank: `0.00077` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/combined/int__combined__user_course_roles.sql`
+  - Combines user course role information from all platforms to create a comprehensive view of user permissions and access levels across different learning systems.
+  - LOC: `172` | PageRank: `0.00077` | Complexity: `33.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__b2b_contract_to_courseruns.sql`
+  - Maps B2B contracts to specific course runs by joining contract data with course run information and organization details, supporting business operations that track which courses are covered under which contractual agreements.
+  - LOC: `23` | PageRank: `0.00077` | Complexity: `7.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_discussion.sql`
+  - Extracts discussion-related user activities from course data to track forum engagement and participation for community analysis.
+  - LOC: `23` | PageRank: `0.00077` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_problemsubmitted.sql`
+  - Captures and structures problem submission events from course activity logs, extracting relevant metadata like problem identifiers, scores, and weights from the JSON event objects for analytics on student problem-solving attempts.
+  - LOC: `22` | PageRank: `0.00077` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_discussion.sql`
+  - Captures discussion forum activity from course tracking logs to analyze student engagement
+  - LOC: `24` | PageRank: `0.00077` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_problemsubmitted.sql`
+  - Captures problem submission events from course activities to track student problem-solving attempts, scores, and related metadata for assessment and analytics.
+  - LOC: `23` | PageRank: `0.00077` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_discussion.sql`
+  - Extract and structure discussion forum activity data to analyze user interactions and engagement in residential MITx course discussions.
+  - LOC: `24` | PageRank: `0.00077` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_problemsubmitted.sql`
+  - Records problem submission events with grading information, enabling analysis of student performance, grading patterns, and assessment outcomes.
+  - LOC: `23` | PageRank: `0.00077` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/micromasters/int__micromasters__program_enrollments.sql`
+  - Consolidates program enrollment data across multiple platforms to track learner participation
+  - LOC: `198` | PageRank: `0.00077` | Complexity: `19.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__program_certificates.sql`
+  - Generates program certificate records with URLs for certificate distribution and verification.
+  - LOC: `38` | PageRank: `0.00077` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__programenrollments.sql`
+  - Consolidates program enrollment data with user and program details for enrollment analytics and reporting.
+  - LOC: `40` | PageRank: `0.00077` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2bcouponredemption.sql`
+  - Captures B2B coupon redemption records to track when and how corporate coupons are used in orders
+  - LOC: `12` | PageRank: `0.00076` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponredemption.sql`
+  - Captures coupon redemption data to track discount usage across orders
+  - LOC: `12` | PageRank: `0.00076` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponproduct.sql`
+  - Extracts coupon-product relationships to understand which products can be purchased using specific coupons
+  - LOC: `13` | PageRank: `0.00076` | Complexity: `3.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__user.sql`
+  - Extracts and cleans user authentication data from edX.org to provide a reliable source of user identity and profile information for downstream analytics.
+  - LOC: `27` | PageRank: `0.00075` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__user_courseaccessrole.sql`
+  - Manages user role assignments within courses, tracking which users have specific access permissions and organizational affiliations for course administration.
+  - LOC: `16` | PageRank: `0.00075` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__user_profile.sql`
+  - Standardizes and cleans user profile data from edX, handling null values and data type conversions to create consistent user demographic and biographical information.
+  - LOC: `44` | PageRank: `0.00075` | Complexity: `9.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__user_courseaccessrole.sql`
+  - Cleans and standardizes course access role data from MITx Online, mapping user roles to courses and normalizing organization identifiers for consistent analysis.
+  - LOC: `15` | PageRank: `0.00075` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__mysql__user_courseaccessrole.sql`
+  - Tracks user roles and permissions within MIT xPro courses, enabling role-based access control and user management.
+  - LOC: `15` | PageRank: `0.00075` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__user_courseaccessrole.sql`
+  - Transforms user course-level role assignments from MITx open edX database to provide visibility into which users have staff, instructor, or researcher access to specific courses.
+  - LOC: `15` | PageRank: `0.00075` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_product.sql`
+  - Extracts pricing and enrollment mode information for course runs to support financial analysis and product offering decisions.
+  - LOC: `14` | PageRank: `0.00075` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_signatorypage.sql`
+  - Transforms raw CMS signatory page data from PostgreSQL into a cleaned format linking signatory information to Wagtail page structures for certificate signing management.
+  - LOC: `17` | PageRank: `0.00075` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_wagtailcore_revision.sql`
+  - Captures page revision history to support content change tracking and rollback capabilities.
+  - LOC: `20` | PageRank: `0.00075` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivities_daily.sql`
+  - Aggregates daily user activity statistics for edX courses, providing insights into user engagement patterns by tracking the number of events per user per course per day.
+  - LOC: `18` | PageRank: `0.00073` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivities_daily.sql`
+  - Aggregates daily user activity statistics for course runs by counting events per user per day, enabling analysis of engagement patterns over time.
+  - LOC: `19` | PageRank: `0.00073` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivities_daily.sql`
+  - Aggregates daily user course activity statistics to provide insights into user engagement patterns over time.
+  - LOC: `19` | PageRank: `0.00073` | Complexity: `4.0`
+- `bin/dbt-create-staging-models.py` ⚠️dead-code-candidate
+  - Generates DBT sources and staging models by discovering database tables and creating the necessary YAML and SQL files for DBT project configuration.
+  - LOC: `745` | PageRank: `0.00070` | Complexity: `66.0`
+- `dg_deployments/reconcile_edxorg_partitions.py` ⚠️dead-code-candidate
+  - Fixes incorrect course ID parsing in edxorg archive partitions by identifying and correcting malformed partition keys and S3 object paths, ensuring data consistency and accessibility.
+  - LOC: `572` | PageRank: `0.00070` | Complexity: `50.0`
+- `dg_projects/edxorg/edxorg/assets/edxorg_api.py` ⚠️dead-code-candidate
+  - Extracts and processes program metadata from EdX.org APIs, transforming course and program data into structured assets for downstream analytics
+  - LOC: `273` | PageRank: `0.00070` | Complexity: `12.0`
+- `dg_projects/edxorg/edxorg/assets/edxorg_archive.py` ⚠️dead-code-candidate
+  - Handles the processing and extraction of course asset data from raw archives, modeling different asset types for downstream analysis.
+  - LOC: `632` | PageRank: `0.00070` | Complexity: `18.0`
+- `dg_projects/edxorg/edxorg/assets/openedx_course_archives.py` ⚠️dead-code-candidate
+  - Processes and transforms course archive data from EdX.org, extracting metadata, video information, and certificate details from XML exports for downstream consumption
+  - LOC: `247` | PageRank: `0.00070` | Complexity: `9.0`
+- `dg_projects/lakehouse/lakehouse/assets/instructor_onboarding.py` ⚠️dead-code-candidate
+  - Generates instructor onboarding user lists from course data, preparing CSV files with user emails for GitHub repository access management in educational platforms.
+  - LOC: `230` | PageRank: `0.00070` | Complexity: `2.0`
+- `dg_projects/lakehouse/lakehouse/assets/lakehouse/dbt.py` ⚠️dead-code-candidate
+  - Module 2 enables automated data transformation by orchestrating dbt model execution and metadata collection as part of a data lakehouse pipeline.
+  - LOC: `62` | PageRank: `0.00070` | Complexity: `2.0`
+- `dg_projects/lakehouse/lakehouse/assets/superset.py` ⚠️dead-code-candidate
+  - Creates and maintains Superset datasets that mirror dbt models, ensuring analytics dashboards reflect the latest data warehouse structures through automated dataset synchronization.
+  - LOC: `90` | PageRank: `0.00070` | Complexity: `3.0`
+- `dg_projects/learning_resources/learning_resources/assets/video_shorts.py` ⚠️dead-code-candidate
+  - Manages the ingestion and processing pipeline for educational video shorts, transforming raw video files from Dropbox into compressed, thumbnail-optimized assets ready for learning platforms.
+  - LOC: `509` | PageRank: `0.00070` | Complexity: `22.0`
+- `dg_projects/learning_resources/learning_resources/lib/video_processing.py` ⚠️dead-code-candidate
+  - Generates video thumbnails and compresses video files to meet size requirements for efficient delivery
+  - LOC: `190` | PageRank: `0.00070` | Complexity: `12.0`
+- `dg_projects/openedx/openedx/assets/openedx.py` ⚠️dead-code-candidate
+  - Manages and processes courseware data from Open edX environments, including retrieving course structures and modeling course content assets for downstream consumption.
+  - LOC: `384` | PageRank: `0.00070` | Complexity: `15.0`
+- `dg_projects/openedx/openedx/jobs/normalize_logs.py` ⚠️dead-code-candidate
+  - Graph definitions for normalizing and processing OpenEdX tracking logs
+  - LOC: `46` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/partitions/openedx.py`
+  - Defines partition structures for organizing OpenEdX course data by deployment and course run
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/student_risk_probability/student_risk_probability/assets/risk_probability.py` ⚠️dead-code-candidate
+  - Module 2 calculates student risk probabilities by processing cheating detection data, scaling numeric features, and applying logistic regression weights to identify students at risk of academic dishonesty.
+  - LOC: `80` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/student_risk_probability/student_risk_probability/lib/helper.py` ⚠️dead-code-candidate
+  - Module 4 provides utility functions for scaling features using RobustScaler and calculating risk probabilities through logistic regression, enabling the transformation and analysis of student data.
+  - LOC: `58` | PageRank: `0.00070` | Complexity: `1.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/glue_helper.py` ⚠️dead-code-candidate
+  - Provides helper functions for AWS Glue operations and dbt model data retrieval, converting data schemas and managing table creation in data lakes.
+  - LOC: `112` | PageRank: `0.00070` | Complexity: `4.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/ops/__init__.py`
+  - Contains operational building blocks (ops) that define specific data processing tasks within the orchestration framework.
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/macros/apply_deduplication_query.sql` ⚠️dead-code-candidate
+  - Handles duplicate records in incremental data syncs by keeping only the most recent version based on partition columns, ensuring data consistency in analytics tables
+  - LOC: `39` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/macros/cast_date_to_iso8601.sql` ⚠️dead-code-candidate
+  - Standardizes date formatting across different database systems by converting various date representations to ISO 8601 format, enabling consistent date handling in downstream analytics
+  - LOC: `26` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/macros/extract_course_id.sql` ⚠️dead-code-candidate
+  - Extracts and standardizes course identifiers from various data sources to enable consistent course-level analytics and reporting
+  - LOC: `49` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/macros/generate_base_model_enhanced.sql` ⚠️dead-code-candidate
+  - Generates enhanced base models for data warehouse tables with configurable column handling and entity type detection to support consistent data modeling across sources
+  - LOC: `200` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/macros/generate_program_readable_id.sql` ⚠️dead-code-candidate
+  - Generates human-readable identifiers for MicroMasters programs by creating standardized program IDs based on program metadata, helping to maintain consistent program identification across the platform.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/macros/transform_code_to_readable_values.sql` ⚠️dead-code-candidate
+  - Provides standardized, human-readable transformations for demographic data fields such as gender, education level, and company size to ensure consistent reporting across the platform
+  - LOC: `144` | PageRank: `0.00070` | Complexity: `7.0`
+- `src/ol_dbt/macros/transform_studentmodule_data.sql` ⚠️dead-code-candidate
+  - Transforms student module data to extract and normalize problem event information from course platform data for analytics
+  - LOC: `91` | PageRank: `0.00070` | Complexity: `10.0`
+- `src/ol_dbt/macros/translate_course_id_to_platform.sql` ⚠️dead-code-candidate
+  - Maps course identifiers to their respective learning platforms to enable accurate data routing and platform-specific processing
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/dimensional/afact_discussion_engagement.sql` ⚠️dead-code-candidate
+  - Tracks and aggregates learner engagement with discussion forum posts, including creation, viewing, voting, replying, and commenting actions, to measure participation in course discussions.
+  - LOC: `67` | PageRank: `0.00070` | Complexity: `8.0`
+- `src/ol_dbt/models/dimensional/afact_video_engagement.sql` ⚠️dead-code-candidate
+  - Tracks and analyzes video engagement metrics including play counts, time watched, and user interactions to understand learning behavior with video content.
+  - LOC: `108` | PageRank: `0.00070` | Complexity: `17.0`
+- `src/ol_dbt/models/external/irx/mitx/_irx_mitx__models.yml`
+  - Defines data models for user ID mapping, course teams, and team memberships to support collaborative learning features and user management.
+  - LOC: `240` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__bigquery__email_opt_in.sql` ⚠️dead-code-candidate
+  - Tracks user email opt-in preferences for targeted communications
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aiclassifier.sql` ⚠️dead-code-candidate
+  - Provides access to AI classifier definitions and their associated configuration data for machine learning-based assessment evaluation.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aiclassifierset.sql` ⚠️dead-code-candidate
+  - Provides access to course assessment classifier set metadata for tracking AI-based assessment configurations across courses.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aigradingworkflow.sql` ⚠️dead-code-candidate
+  - Extracts AI grading workflow execution timestamps and algorithm identifiers to monitor automated grading processes.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aitrainingworkflow.sql` ⚠️dead-code-candidate
+  - Maps AI training workflows to course items for automated assessment system training and configuration
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_aitrainingworkflow_training_examples.sql` ⚠️dead-code-candidate
+  - Links training examples to AI training workflows, enabling tracking of which training data is used in specific model training processes.
+  - LOC: `8` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessment.sql` ⚠️dead-code-candidate
+  - Links assessment data with submission and student item records to track scoring information and assessment types.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentfeedback.sql` ⚠️dead-code-candidate
+  - Retrieves assessment feedback content by joining feedback records with related assessment and submission data to provide comprehensive feedback tracking.
+  - LOC: `33` | PageRank: `0.00070` | Complexity: `11.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentfeedback_assessments.sql` ⚠️dead-code-candidate
+  - Creates a mapping between assessment feedback assessments and actual submissions, enabling analysis of which assessments are linked to specific feedback instances.
+  - LOC: `28` | PageRank: `0.00070` | Complexity: `9.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentfeedback_options.sql` ⚠️dead-code-candidate
+  - Extracts assessment feedback option data linked to actual assessments and submissions, providing insights into peer evaluation patterns and feedback quality.
+  - LOC: `39` | PageRank: `0.00070` | Complexity: `13.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentfeedbackoption.sql` ⚠️dead-code-candidate
+  - Retrieve assessment feedback option text and IDs for student submissions, enabling analysis of student feedback on assessments.
+  - LOC: `44` | PageRank: `0.00070` | Complexity: `15.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentpart.sql` ⚠️dead-code-candidate
+  - Creates a consolidated view of assessment parts linked to their parent assessments, submissions, and student items for detailed grading analysis.
+  - LOC: `25` | PageRank: `0.00070` | Complexity: `9.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_criterion.sql` ⚠️dead-code-candidate
+  - Retrieve rubric criterion details (order, ID, rubric ID) to understand assessment structure and grading requirements.
+  - LOC: `66` | PageRank: `0.00070` | Complexity: `24.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_criterionoption.sql` ⚠️dead-code-candidate
+  - Get criterion option details (order, ID, points) for rubric-based assessments to understand grading criteria and scoring.
+  - LOC: `73` | PageRank: `0.00070` | Complexity: `26.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_peerworkflow.sql` ⚠️dead-code-candidate
+  - Captures peer grading workflow timestamps and completion data to analyze grading efficiency and identify bottlenecks in the assessment process.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_peerworkflowitem.sql` ⚠️dead-code-candidate
+  - Records timestamps and IDs for peer assessment workflows
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_rubric.sql` ⚠️dead-code-candidate
+  - Consolidates rubric data across multiple assessment systems including human and AI grading workflows to maintain consistent evaluation criteria
+  - LOC: `55` | PageRank: `0.00070` | Complexity: `22.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_studenttrainingworkflow.sql` ⚠️dead-code-candidate
+  - Tracks student training workflows and progress for assessment items to support learning analytics and intervention
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_studenttrainingworkflowitem.sql` ⚠️dead-code-candidate
+  - Extracts workflow item data for tracking student training processes, including workflow IDs, order numbers, and timestamps.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_trainingexample.sql` ⚠️dead-code-candidate
+  - Provides access to assessment training examples by combining training data from multiple related tables to support AI model training workflows.
+  - LOC: `33` | PageRank: `0.00070` | Complexity: `12.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_trainingexample_options_selected.sql` ⚠️dead-code-candidate
+  - Tracks which assessment training example options were selected by users during the training process, enabling analysis of training data quality and model performance.
+  - LOC: `48` | PageRank: `0.00070` | Complexity: `14.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__auth_user.sql` ⚠️dead-code-candidate
+  - Creates a user profile view by joining user authentication data with course enrollment information for system access and user management.
+  - LOC: `33` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__auth_userprofile.sql` ⚠️dead-code-candidate
+  - Combines user profile information with course enrollment data to create comprehensive learner profiles for demographic analysis and personalization.
+  - LOC: `28` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__certificates_generatedcertificate.sql` ⚠️dead-code-candidate
+  - Manages certificate generation and distribution by storing certificate metadata, status, and verification information for course completion
+  - LOC: `23` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__course_groups_cohortmembership.sql` ⚠️dead-code-candidate
+  - Manages course cohort membership and group classifications
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__courseware_studentmodulehistoryextended.sql` ⚠️dead-code-candidate
+  - Joins student module history with module details to track student progress, grades, and state changes for course content.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__credit_crediteligibility.sql` ⚠️dead-code-candidate
+  - Monitors credit eligibility and course completion deadlines
+  - LOC: `18` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__django_comment_client_role_users.sql` ⚠️dead-code-candidate
+  - Maps users to their roles in course discussions, supporting access control and understanding of user permissions within the learning platform.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__grades_persistentcoursegrade.sql` ⚠️dead-code-candidate
+  - Retrieves the most recent course grades for students, including percentages, letter grades, and pass/fail status.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__grades_persistentsubsectiongrade.sql` ⚠️dead-code-candidate
+  - Tracks student performance in course subsections by persisting grade data including earned and possible points for both all and graded attempts
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__student_anonymoususerid.sql` ⚠️dead-code-candidate
+  - Maps anonymous user IDs to course IDs to enable privacy-preserving user tracking across MITx courses.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__student_courseaccessrole.sql` ⚠️dead-code-candidate
+  - Manages user roles and permissions within courses, enabling administrators to assign and track organizational access levels for different users.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__student_courseenrollment.sql` ⚠️dead-code-candidate
+  - Extract course enrollment details including course ID, mode, and active status to track student course participation.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__student_languageproficiency.sql` ⚠️dead-code-candidate
+  - Maps users to their language proficiency codes to enable personalized learning experiences and content delivery based on language skills.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__submissions_score.sql` ⚠️dead-code-candidate
+  - Tracks student performance on individual assignments by capturing earned points, reset status, and submission details for grading and assessment purposes.
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__submissions_scoresummary.sql` ⚠️dead-code-candidate
+  - Captures student assessment score summaries for academic tracking
+  - LOC: `10` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__submissions_studentitem.sql` ⚠️dead-code-candidate
+  - Links student IDs to course IDs and item IDs to enable tracking of individual student interactions with specific course content.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__submissions_submission.sql` ⚠️dead-code-candidate
+  - Captures submission metadata for team submissions, including submission timestamps and statuses, to support collaborative assessment workflows.
+  - LOC: `10` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__teams.sql` ⚠️dead-code-candidate
+  - Captures team formation details including team size and descriptions, enabling analysis of collaborative learning patterns and group dynamics.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__teams_membership.sql` ⚠️dead-code-candidate
+  - Obtain team membership information linking users to teams for collaborative course activities and group work.
+  - LOC: `14` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__user_api_usercoursetag.sql` ⚠️dead-code-candidate
+  - Stores user-specific course tags that allow for personalized learning experiences and categorization of user interactions with course content.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__user_id_map.sql` ⚠️dead-code-candidate
+  - Creates a mapping between anonymous user IDs and actual user IDs for course analytics, enabling tracking of user activity while preserving privacy.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__workflow_assessmentworkflow.sql` ⚠️dead-code-candidate
+  - Maintains a deduplicated, most-recent version of assessment workflow records to track the current state of grading processes across courses.
+  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__workflow_assessmentworkflowstep.sql` ⚠️dead-code-candidate
+  - Extracts assessment workflow step data filtered by active workflows to track the progress and completion status of assessment processes.
+  - LOC: `12` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__bigquery__email_opt_in.sql` ⚠️dead-code-candidate
+  - Transforms bulk email opt-in data to provide user contact information and course enrollment details for email marketing and communication targeting.
+  - LOC: `13` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedback_assessments.sql` ⚠️dead-code-candidate
+  - Extracts assessment feedback assessment IDs by joining assessment feedback assessments with related assessment, submission, and student item data to establish relationships between feedback and assessments
+  - LOC: `28` | PageRank: `0.00070` | Complexity: `9.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedback_options.sql` ⚠️dead-code-candidate
+  - Creates a unified view of assessment feedback options by joining multiple assessment-related tables to provide comprehensive feedback data for analysis.
+  - LOC: `39` | PageRank: `0.00070` | Complexity: `13.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedbackoption.sql` ⚠️dead-code-candidate
+  - Extracts distinct assessment feedback option texts and IDs by joining multiple assessment feedback-related tables to establish relationships between feedback options and assessments
+  - LOC: `44` | PageRank: `0.00070` | Complexity: `15.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentpart.sql` ⚠️dead-code-candidate
+  - Joins assessment parts with their assessments and submissions to extract assessment feedback and option details, supporting analysis of peer assessment outcomes and grading.
+  - LOC: `25` | PageRank: `0.00070` | Complexity: `9.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_peerworkflow.sql` ⚠️dead-code-candidate
+  - Extracts peer workflow data including cancellation and completion timestamps along with student and course identifiers for peer assessment processes
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_peerworkflowitem.sql` ⚠️dead-code-candidate
+  - Extracts peer workflow assessment data for tracking when assessments were started, by whom, and their identifiers, enabling monitoring of peer review processes.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__course_groups_cohortmembership.sql` ⚠️dead-code-candidate
+  - Maps users to course cohorts and groups, enabling analysis of how students are organized into different learning communities and group-based activities.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__grades_persistentcoursegrade.sql` ⚠️dead-code-candidate
+  - Calculates and maintains final course grades for students, tracking percentage scores, letter grades, and completion timestamps for academic records and certification.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__student_anonymoususerid.sql` ⚠️dead-code-candidate
+  - Extracts anonymous user IDs linked to courses, enabling privacy-compliant user tracking and analytics without exposing personal identifiers.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__student_courseaccessrole.sql` ⚠️dead-code-candidate
+  - Manages user roles and permissions within courses, enabling administrators to assign and track organizational access levels for different users.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__student_languageproficiency.sql` ⚠️dead-code-candidate
+  - Captures student language proficiency information to support multilingual course delivery and analyze language diversity in the student population.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__submissions_score.sql` ⚠️dead-code-candidate
+  - Records detailed scoring information for student submissions including earned points and reset status to track assessment performance and grading outcomes.
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__submissions_studentitem.sql` ⚠️dead-code-candidate
+  - Tracks student submissions for course assignments, linking students to specific course items and enabling assignment management and grading workflows.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__submissions_submission.sql` ⚠️dead-code-candidate
+  - Tracks individual student submissions including submission IDs, timestamps, and status to monitor assessment completion and submission workflows.
+  - LOC: `10` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__teams.sql` ⚠️dead-code-candidate
+  - Extracts team information including team size and descriptions from course teams, supporting analysis of group dynamics and team-based learning structures.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__user_api_usercoursetag.sql` ⚠️dead-code-candidate
+  - Extracts user course tag data including course IDs, user IDs, and tag IDs for tracking user-specific course metadata
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__workflow_assessmentworkflow.sql` ⚠️dead-code-candidate
+  - Monitors assessment workflow processes and their status changes over time to track the lifecycle of course evaluations and grading workflows.
+  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/xpro/_irx_xpro__models.yml`
+  - Defines data models for user mapping, team structures, and team memberships to support collaborative learning and user management
+  - LOC: `211` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__bigquery__email_opt_in.sql` ⚠️dead-code-candidate
+  - Captures user email opt-in preferences for courses to support communication and marketing efforts while respecting user choices.
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessment.sql` ⚠️dead-code-candidate
+  - Links assessment scores to the users who submitted them by connecting assessment records with submission and student item data, enabling performance tracking and grading workflows.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessmentfeedback.sql` ⚠️dead-code-candidate
+  - Extracts assessment feedback data linked to actual submissions to enable analysis of instructor feedback patterns and student performance evaluation.
+  - LOC: `33` | PageRank: `0.00070` | Complexity: `11.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessmentfeedback_assessments.sql` ⚠️dead-code-candidate
+  - Maps assessment feedback relationships to their corresponding assessments and submissions, enabling analysis of the assessment feedback lifecycle and grading workflows.
+  - LOC: `28` | PageRank: `0.00070` | Complexity: `9.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessmentfeedback_options.sql` ⚠️dead-code-candidate
+  - Creates a consolidated view of assessment feedback options by joining multiple assessment-related tables, enabling comprehensive analysis of feedback data across the platform.
+  - LOC: `39` | PageRank: `0.00070` | Complexity: `13.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessmentfeedbackoption.sql` ⚠️dead-code-candidate
+  - Extracts assessment feedback option details linked to specific assessments and submissions to enable analysis of student feedback and assessment outcomes.
+  - LOC: `44` | PageRank: `0.00070` | Complexity: `15.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_assessmentpart.sql` ⚠️dead-code-candidate
+  - Analyzes assessment responses and feedback by linking assessment parts to submissions and student items for grading and evaluation
+  - LOC: `25` | PageRank: `0.00070` | Complexity: `9.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_peerworkflow.sql` ⚠️dead-code-candidate
+  - Monitors peer assessment workflows, capturing when grading is completed and when assessments are cancelled to track peer review processes.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_peerworkflowitem.sql` ⚠️dead-code-candidate
+  - Tracks when peer assessment workflows start and who authored them, enabling analysis of peer assessment activity and engagement patterns.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_studenttrainingworkflow.sql` ⚠️dead-code-candidate
+  - Records student training workflow data, tracking the progress and state of students through training processes within courses.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_studenttrainingworkflowitem.sql` ⚠️dead-code-candidate
+  - Captures training workflow item data to track the sequence and timing of training activities within assessment workflows.
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__auth_user.sql` ⚠️dead-code-candidate
+  - Provides a unified view of authenticated users enrolled in courses by joining user authentication data with course enrollment records, enabling user management and course participation tracking.
+  - LOC: `33` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__auth_userprofile.sql` ⚠️dead-code-candidate
+  - Provides user profile data enriched with course enrollment information to support understanding student demographics and characteristics within courses.
+  - LOC: `28` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__certificates_generatedcertificate.sql` ⚠️dead-code-candidate
+  - Tracks the most recent certificate generation records for courses, ensuring only the latest certificate status and details are available for reporting and verification purposes.
+  - LOC: `23` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__course_groups_cohortmembership.sql` ⚠️dead-code-candidate
+  - Tracks which users belong to which course groups and their associated cohort information, enabling analysis of group-based course participation and cohort structures.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__credit_crediteligibility.sql` ⚠️dead-code-candidate
+  - Tracks credit eligibility data including deadlines and user information to manage academic credit offerings and course completion requirements.
+  - LOC: `18` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__django_comment_client_role_users.sql` ⚠️dead-code-candidate
+  - Maps users to their roles within courses by joining role definitions with user-role assignments, supporting course-specific permissions and access control.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__grades_persistentcoursegrade.sql` ⚠️dead-code-candidate
+  - Stores final course grades with grading policies and timestamps, enabling reporting on student performance and course completion rates.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__grades_persistentsubsectiongrade.sql` ⚠️dead-code-candidate
+  - Maintains subsection-level grade details including earned and possible points, supporting granular analysis of student progress within course sections.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__student_anonymoususerid.sql` ⚠️dead-code-candidate
+  - Maps anonymous user identifiers to course contexts for privacy-preserving analytics and learner tracking across MITx courses.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__student_courseaccessrole.sql` ⚠️dead-code-candidate
+  - Manages course access roles and permissions for users across organizations and courses to enable proper authorization and role-based access control
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__student_courseenrollment.sql` ⚠️dead-code-candidate
+  - Captures student course enrollment details including enrollment status and mode to support course administration and analytics
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__student_languageproficiency.sql` ⚠️dead-code-candidate
+  - Maps user language proficiency to their profiles and course enrollments, supporting analysis of language capabilities across the student population.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__submissions_score.sql` ⚠️dead-code-candidate
+  - Filters submission scores to only include those associated with valid student items, ensuring data quality for grading and assessment analysis.
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__submissions_scoresummary.sql` ⚠️dead-code-candidate
+  - Tracks the highest, current, and latest submission scores for student items to enable performance monitoring and grading workflows.
+  - LOC: `10` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__submissions_studentitem.sql` ⚠️dead-code-candidate
+  - Tracks individual student submissions for assessment items to enable grading and performance monitoring
+  - LOC: `6` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__submissions_submission.sql` ⚠️dead-code-candidate
+  - Captures team submission records with their status and timestamps, allowing tracking of submission workflows and team assessment processes.
+  - LOC: `10` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__teams.sql` ⚠️dead-code-candidate
+  - Provides team information for courses, including team size, description, and ID, to support team-based learning and collaboration features.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__teams_membership.sql` ⚠️dead-code-candidate
+  - Generates a list of team memberships by joining course teams with their memberships, supporting team-based learning and collaboration features.
+  - LOC: `14` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__user_api_usercoursetag.sql` ⚠️dead-code-candidate
+  - Captures user course tag associations, providing visibility into how users are tagged or categorized within specific courses for tracking purposes.
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `1.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__user_id_map.sql` ⚠️dead-code-candidate
+  - Creates a mapping between anonymous user identifiers and actual user credentials to enable privacy-preserving analytics while maintaining ability to track individual student progress.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `7.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__workflow_assessmentworkflow.sql` ⚠️dead-code-candidate
+  - Maintains the latest assessment workflow status for courses by deduplicating workflow records based on modification time, supporting progress tracking and workflow management.
+  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__workflow_assessmentworkflowstep.sql` ⚠️dead-code-candidate
+  - Monitors assessment workflow step completion status to track the progress and efficiency of multi-step assessment processes.
+  - LOC: `12` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/models/intermediate/bootcamps/_int_bootcamps__models.yml`
+  - Validates wire transfer payment receipt data against source system records to ensure data integrity
+  - LOC: `490` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__applications.sql` ⚠️dead-code-candidate
+  - Tracks bootcamp application progress and financial details by joining application data with course runs, payment information, and completion status
+  - LOC: `100` | PageRank: `0.00070` | Complexity: `21.0`
+- `src/ol_dbt/models/intermediate/edxorg/_int_edxorg__models.yml`
+  - Provides a comprehensive reference model for MITx course runs on edx.org, capturing course metadata and enrollment periods to support course management and analytics.
+  - LOC: `927` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivities.sql` ⚠️dead-code-candidate
+  - Aggregates user course activity statistics to track engagement metrics like event counts, unique video plays, and last activity timestamps for business reporting on user participation.
+  - LOC: `68` | PageRank: `0.00070` | Complexity: `10.0`
+- `src/ol_dbt/models/intermediate/micromasters/_int_micromasters__models.yml`
+  - Defines the schema and documentation for DEDP proctored exam grade data model
+  - LOC: `685` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/intermediate/mitx/int__mitx__program_certificates.sql` ⚠️dead-code-candidate
+  - Consolidates program completion certificates from both MicroMasters and MITx Online platforms into a single view, providing a unified record of learners who have completed programs across both educational platforms.
+  - LOC: `45` | PageRank: `0.00070` | Complexity: `8.0`
+- `src/ol_dbt/models/intermediate/mitxonline/_int_mitxonline__models.yml`
+  - Manages currency exchange rates for flexible pricing, enabling accurate conversion between different currencies for international transactions.
+  - LOC: `2183` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_blockedcountries.sql` ⚠️dead-code-candidate
+  - Provides information about which countries are blocked from accessing specific MITx Online courses, enabling compliance with regional restrictions and licensing agreements.
+  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_basket.sql` ⚠️dead-code-candidate
+  - Extracts basic basket information including user ID, creation, and update timestamps to track shopping cart activity and user purchase initiation.
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_basketdiscount.sql` ⚠️dead-code-candidate
+  - Captures basket-level discount applications, recording when and by whom discounts were applied to entire shopping baskets for promotional analysis.
+  - LOC: `14` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_basketitem.sql` ⚠️dead-code-candidate
+  - Extracts basket item data from ecommerce tables, providing product purchase quantity and timing information for transaction analysis.
+  - LOC: `13` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_discountredemption.sql` ⚠️dead-code-candidate
+  - Extracts discount redemption records from the ecommerce system, providing visibility into promotional code usage and revenue impact.
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_userdiscount.sql` ⚠️dead-code-candidate
+  - Extracts user discount application records from ecommerce tables, providing discount usage tracking for promotional effectiveness analysis.
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_countryincomethreshold.sql` ⚠️dead-code-candidate
+  - Stores country-specific income thresholds for flexible pricing calculations in MITx Online.
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_currencyexchangerate.sql` ⚠️dead-code-candidate
+  - Aggregates daily user activity metrics per course, counting tracking events to monitor student engagement patterns over time.
+  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_flexiblepricetier.sql` ⚠️dead-code-candidate
+  - Maintains pricing tier information for flexible pricing models in MITx Online, including income thresholds and discount associations.
+  - LOC: `15` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivities.sql` ⚠️dead-code-candidate
+  - Creates comprehensive user activity metrics for MITx Online courses by aggregating video plays, problem checks, and course navigation data to track learner engagement and progress
+  - LOC: `103` | PageRank: `0.00070` | Complexity: `17.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_basket.sql` ⚠️dead-code-candidate
+  - Links shopping baskets to applied coupons for e-commerce purchase analysis
+  - LOC: `18` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_basketitem.sql` ⚠️dead-code-candidate
+  - Monitors user activity showing when students reveal answers to problems, helping identify engagement patterns and potential academic integrity issues in course interactions.
+  - LOC: `21` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_basketrunselection.sql` ⚠️dead-code-candidate
+  - Provides a consolidated dataset of basket run selections by linking basket selections to their corresponding user and course run information, enabling analysis of user enrollment patterns.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_linerunselection.sql` ⚠️dead-code-candidate
+  - Captures detailed information about line run selections in the e-commerce system, providing visibility into course enrollment choices and registration timing.
+  - LOC: `12` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_productcouponassignment.sql` ⚠️dead-code-candidate
+  - Tracks coupon assignments to products and their redemption status for e-commerce transactions
+  - LOC: `24` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__platforms.sql` ⚠️dead-code-candidate
+  - Provides platform information for MITxPro, listing available learning platforms
+  - LOC: `10` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivities.sql` ⚠️dead-code-candidate
+  - Aggregates user activity data from various sources to provide comprehensive course engagement statistics including video plays and problem submissions
+  - LOC: `104` | PageRank: `0.00070` | Complexity: `17.0`
+- `src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_showanswer.sql` ⚠️dead-code-candidate
+  - Consolidates course metadata from multiple sources including platform details, instructor information, topics, and certificate data to create a comprehensive course catalog for MITxPro programs.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivities.sql` ⚠️dead-code-candidate
+  - Aggregate user course activity data, including video interactions and problem checks, to provide insights into user engagement and performance in residential MITx courses.
+  - LOC: `69` | PageRank: `0.00070` | Complexity: `10.0`
+- `src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__user_courseactivity_showanswer.sql` ⚠️dead-code-candidate
+  - Tracks when students view correct answers for problems, enabling analysis of answer-checking behavior and potential academic integrity concerns.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/ocw/_int_ocw__models.yml`
+  - Provides a comprehensive view of OpenCourseWare (OCW) course metadata for production, enabling tracking of course publication status, URLs, and lifecycle information to support content management and publishing workflows.
+  - LOC: `257` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/intermediate/ocw/int__ocw__course_departments.sql` ⚠️dead-code-candidate
+  - Extracts and transforms department numbers from JSON arrays into individual rows, mapping department numbers to their corresponding names for course classification.
+  - LOC: `11` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/ocw/int__ocw__course_topics.sql` ⚠️dead-code-candidate
+  - Transforms nested JSON arrays of course topics into individual rows, separating topics into topic, subtopic, and speciality categories for better analysis and reporting.
+  - LOC: `12` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/intermediate/ocw/int__ocw__resources.sql` ⚠️dead-code-candidate
+  - Consolidates course resources and their metadata, including learning resource types, titles, and external resource status, to provide a comprehensive view of course materials and their accessibility.
+  - LOC: `135` | PageRank: `0.00070` | Complexity: `9.0`
+- `src/ol_dbt/models/intermediate/ovs/_int_ovs__models.yml`
+  - Consolidates video collection data from ODL Video Service with Open edX endpoints, providing a unified view of video assets, their durations, and platform associations to support content delivery across multiple edX environments.
+  - LOC: `52` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/intermediate/salesforce/int__salesforce__opportunitylineitem.sql` ⚠️dead-code-candidate
+  - Creates a refined view of Salesforce opportunity line item data, extracting essential product and pricing details for analysis of sales opportunities.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/intermediate/zendesk/_zendesk_models.yml`
+  - Provides a structured view of Zendesk ticket data for analysis, including ticket metadata and relationships
+  - LOC: `148` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/intermediate/zendesk/int__zendesk__ticket.sql` ⚠️dead-code-candidate
+  - Combines Zendesk ticket data with related entities to provide a comprehensive ticket view
+  - LOC: `126` | PageRank: `0.00070` | Complexity: `27.0`
+- `src/ol_dbt/models/intermediate/zendesk/int__zendesk__ticket_comment.sql` ⚠️dead-code-candidate
+  - Creates a denormalized view of Zendesk ticket comments with author information for easier analysis
+  - LOC: `27` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/marts/combined/marts__combined__products.sql` ⚠️dead-code-candidate
+  - Integrates product information from various platforms (MITx Online, MITxPro, edX) to provide a comprehensive catalog of courses, programs, and their pricing details in a unified format.
+  - LOC: `281` | PageRank: `0.00070` | Complexity: `29.0`
+- `src/ol_dbt/models/marts/combined/marts__combined_course_engagements.sql` ⚠️dead-code-candidate
+  - Consolidates daily course activity data across multiple platforms to track user engagement patterns and learning behaviors in a unified format for comprehensive analysis
+  - LOC: `272` | PageRank: `0.00070` | Complexity: `29.0`
+- `src/ol_dbt/models/marts/combined/marts__combined_discounts.sql` ⚠️dead-code-candidate
+  - Consolidates discount and coupon information from multiple platforms to track promotional offers, their usage, and redemption status across the learning ecosystem.
+  - LOC: `108` | PageRank: `0.00070` | Complexity: `17.0`
+- `src/ol_dbt/models/marts/combined/marts__combined_problem_submissions.sql` ⚠️dead-code-candidate
+  - Consolidates problem submission and assessment data from multiple learning platforms into a unified dataset, enabling analysis of learner performance and engagement with course problems across different educational environments.
+  - LOC: `105` | PageRank: `0.00070` | Complexity: `10.0`
+- `src/ol_dbt/models/marts/combined/marts__combined_total_course_engagements.sql` ⚠️dead-code-candidate
+  - Analyzes comprehensive course engagement metrics across platforms by combining enrollment data with content interaction statistics to measure learning effectiveness and platform utilization
+  - LOC: `315` | PageRank: `0.00070` | Complexity: `34.0`
+- `src/ol_dbt/models/marts/micromasters/marts__micromasters_course_certificates.sql` ⚠️dead-code-candidate
+  - Aggregates course certificate and grade information for Micromasters programs, providing a comprehensive view of student certifications and academic performance across course runs.
+  - LOC: `36` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/marts/micromasters/marts__micromasters_dedp_exam_grades.sql` ⚠️dead-code-candidate
+  - Provides a unified view of proctored exam grades from both Micromasters and MITxOnline platforms, combining student performance data across these two educational systems.
+  - LOC: `49` | PageRank: `0.00070` | Complexity: `8.0`
+- `src/ol_dbt/models/marts/micromasters/marts__micromasters_program_certificates.sql` ⚠️dead-code-candidate
+  - Exposes processed program certificate data from intermediate models for downstream consumption in analytical queries
+  - LOC: `7` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_dbt/models/marts/micromasters/marts__micromasters_summary.sql` ⚠️dead-code-candidate
+  - Aggregates enrollment and certificate data across MicroMasters programs to provide program-level statistics including total enrollments, verified enrollments, and user demographics
+  - LOC: `95` | PageRank: `0.00070` | Complexity: `19.0`
+- `src/ol_dbt/models/marts/micromasters/marts__micromasters_summary_timeseries.sql` ⚠️dead-code-candidate
+  - Generates time-series summaries of MicroMasters enrollment data showing monthly program-level statistics and total platform-wide metrics over time
+  - LOC: `222` | PageRank: `0.00070` | Complexity: `28.0`
+- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_certificates.sql` ⚠️dead-code-candidate
+  - Tracks course completion certificates for MITx Online users, linking certificate data with user profiles to provide comprehensive completion records.
+  - LOC: `22` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_enrollments.sql` ⚠️dead-code-candidate
+  - Creates a detailed view of course enrollments on the MITxOnline platform by joining enrollment data with user demographic information to support analysis of learner characteristics and enrollment patterns.
+  - LOC: `29` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_discussions.sql` ⚠️dead-code-candidate
+  - Captures and organizes discussion activity data for MITx Online courses, linking user interactions with course information and user profiles.
+  - LOC: `34` | PageRank: `0.00070` | Complexity: `7.0`
+- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_problem_submissions.sql` ⚠️dead-code-candidate
+  - Creates a mart of MITx Online problem submissions with user and course details, identifying the most recent attempt for each problem by user and course run.
+  - LOC: `42` | PageRank: `0.00070` | Complexity: `7.0`
+- `src/ol_dbt/models/marts/mitxonline/marts__mitxonline_problem_summary.sql` ⚠️dead-code-candidate
+  - Provides summary statistics for problem attempts in MITx Online courses, tracking user interactions like show answers, attempts, and success rates for course problems.
+  - LOC: `76` | PageRank: `0.00070` | Complexity: `12.0`
+- `src/ol_dbt/models/marts/mitxpro/marts__mitxpro_ecommerce_productlist.sql` ⚠️dead-code-candidate
+  - Creates a unified product catalog for the xPRO platform by combining product information with course details, enabling consistent product identification and pricing across different course formats
+  - LOC: `141` | PageRank: `0.00070` | Complexity: `23.0`
+- `src/ol_dbt/models/marts/ocw/marts__ocw_courses.sql` ⚠️dead-code-candidate
+  - Creates a denormalized view of OCW courses with instructor information, combining course details with instructor names to provide a comprehensive course catalog.
+  - LOC: `33` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/reporting/Enrollment_Activity_Counts_Dataset.sql` ⚠️dead-code-candidate
+  - Provides a detailed breakdown of course enrollment activity by user, including counts of enrollments, unenrollments, and audit participation, to track engagement and participation patterns across courses.
+  - LOC: `140` | PageRank: `0.00070` | Complexity: `14.0`
+- `src/ol_dbt/models/reporting/chatbot_usage_report.sql` ⚠️dead-code-candidate
+  - Generates a report on chatbot usage across learning platforms, deduplicating messages and tracking AI agent interactions.
+  - LOC: `90` | PageRank: `0.00070` | Complexity: `14.0`
+- `src/ol_dbt/models/reporting/combined_enrollments_with_gender_and_date.sql` ⚠️dead-code-candidate
+  - Creates a unified enrollment dataset enriched with user demographic information and gender data, enabling detailed analysis of course participation patterns and learner characteristics.
+  - LOC: `51` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/reporting/combined_video_engagements_counts_report.sql` ⚠️dead-code-candidate
+  - Aggregates video engagement statistics across multiple platforms, tracking watched videos and progress by chapter and course.
+  - LOC: `38` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/reporting/engagement_problem_completion_raw.sql` ⚠️dead-code-candidate
+  - Analyzes problem completion data to calculate metrics such as problems attempted, problems correct, and completion rates, helping to assess learner performance and content effectiveness in courses.
+  - LOC: `79` | PageRank: `0.00070` | Complexity: `18.0`
+- `src/ol_dbt/models/reporting/engagement_problem_completion_summary.sql` ⚠️dead-code-candidate
+  - Analyzes problem completion rates in course sections by counting attempted problems and calculating completion percentages for each learner.
+  - LOC: `82` | PageRank: `0.00070` | Complexity: `18.0`
+- `src/ol_dbt/models/reporting/enrollment_detail_report.sql` ⚠️dead-code-candidate
+  - Generates a detailed report of course enrollments including learner progress, certification status, and course completion metrics to support enrollment analysis and learner success tracking.
+  - LOC: `94` | PageRank: `0.00070` | Complexity: `12.0`
+- `src/ol_dbt/models/reporting/instructor_module_report.sql` ⚠️dead-code-candidate
+  - Provides detailed instructor-level reporting on course activity, combining user enrollment data, video engagement metrics, and chatbot interactions to track learner behavior and course performance.
+  - LOC: `234` | PageRank: `0.00070` | Complexity: `36.0`
+- `src/ol_dbt/models/reporting/learner_demographics_and_cert_info.sql` ⚠️dead-code-candidate
+  - Generates demographic and certification indicators for learners enrolled in Data, Economics, and Design of Policy (DEDP) programs, tracking international development and public policy specialization certifications.
+  - LOC: `80` | PageRank: `0.00070` | Complexity: `16.0`
+- `src/ol_dbt/models/reporting/learner_engagement_report.sql` ⚠️dead-code-candidate
+  - Analyzes learner engagement with video content and discussion forums to measure course participation and identify areas where learners may need additional support.
+  - LOC: `385` | PageRank: `0.00070` | Complexity: `53.0`
+- `src/ol_dbt/models/reporting/mitxonline_course_engagements_daily_report.sql` ⚠️dead-code-candidate
+  - Generates a daily report of user engagement activities in MITxOnline courses, including events like problem submissions, video plays, and discussion participation, to monitor learner behavior and course effectiveness.
+  - LOC: `40` | PageRank: `0.00070` | Complexity: `7.0`
+- `src/ol_dbt/models/reporting/mitxonline_video_engagements_w_video_counts.sql` ⚠️dead-code-candidate
+  - Measures video engagement metrics for MITx Online courses by tracking which videos users watch and their progress through course content.
+  - LOC: `51` | PageRank: `0.00070` | Complexity: `6.0`
+- `src/ol_dbt/models/reporting/page_engagement_views_report.sql` ⚠️dead-code-candidate
+  - Tracks page views and content consumption patterns to understand how learners navigate and interact with course materials throughout their learning journey.
+  - LOC: `66` | PageRank: `0.00070` | Complexity: `13.0`
+- `src/ol_dbt/models/reporting/problem_engagement_detail_report.sql` ⚠️dead-code-candidate
+  - Provides comprehensive problem engagement analytics showing learner performance, problem attempts, and grading patterns to enable assessment of learning effectiveness and course difficulty.
+  - LOC: `121` | PageRank: `0.00070` | Complexity: `20.0`
+- `src/ol_dbt/models/reporting/program_enrollment_with_user_report.sql` ⚠️dead-code-candidate
+  - Generates comprehensive program enrollment reports that combine user information with course enrollment details to track program completion and engagement metrics across multiple courses.
+  - LOC: `114` | PageRank: `0.00070` | Complexity: `15.0`
+- `src/ol_dbt/models/reporting/program_summary_report.sql` ⚠️dead-code-candidate
+  - Aggregates program-level enrollment data and completion statistics to evaluate program effectiveness and learner outcomes across multiple courses.
+  - LOC: `75` | PageRank: `0.00070` | Complexity: `14.0`
+- `src/ol_dbt/models/reporting/student_risk_probability_report.sql` ⚠️dead-code-candidate
+  - Compiles student risk probability data by correlating academic performance with cheating detection results to identify at-risk students in online courses.
+  - LOC: `31` | PageRank: `0.00070` | Complexity: `6.0`
+- `src/ol_dbt/models/reporting/video_engagement_report.sql` ⚠️dead-code-candidate
+  - Produces a video engagement report that tracks which videos users have watched and their viewing patterns, enabling analysis of content consumption and learner progress through course material.
+  - LOC: `37` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__django_contenttype.sql` ⚠️dead-code-candidate
+  - Creates a standardized content type reference table that maps application models to human-readable identifiers, supporting data governance and cross-system data integration in the bootcamp platform.
+  - LOC: `20` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_orderaudit.sql` ⚠️dead-code-candidate
+  - Transforms ecommerce order audit records to track changes in order data with proper user attribution and standardized timestamps for compliance and debugging.
+  - LOC: `20` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_policy.sql` ⚠️dead-code-candidate
+  - Extracts and cleans course policy configurations including pacing, modules, and discussion settings to understand course structure and delivery options.
+  - LOC: `18` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun.sql` ⚠️dead-code-candidate
+  - Cleans and standardizes course metadata from EdX, including parsing instructor information and handling null date values for course scheduling
+  - LOC: `36` | PageRank: `0.00070` | Complexity: `9.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun_certificate.sql` ⚠️dead-code-candidate
+  - Transforms and cleans raw edX certificate data from S3, handling data type conversions and deduplication to ensure accurate certificate information for analysis.
+  - LOC: `31` | PageRank: `0.00070` | Complexity: `6.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun_enrollment.sql` ⚠️dead-code-candidate
+  - Captures course enrollment data including user participation, enrollment status, and mode to track learner engagement in courses.
+  - LOC: `18` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun_grade.sql` ⚠️dead-code-candidate
+  - Processes student course grade data from EdX, converting string values to appropriate types and standardizing timestamps for academic performance tracking
+  - LOC: `30` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courseware_studentmodule.sql` ⚠️dead-code-candidate
+  - This module processes student module data from edX S3 storage to track individual student progress within courses, including problem grades and module states. It converts timestamps to ISO8601 format and standardizes data types for downstream analytics on student performance.
+  - LOC: `22` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__django_contenttype.sql` ⚠️dead-code-candidate
+  - Transforms raw Django content type data from MicroMasters into a cleaned staging table with standardized field names and formats, establishing a mapping between application models and their database representations.
+  - LOC: `20` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_couponinvoice.sql` ⚠️dead-code-candidate
+  - Stores coupon invoice information to track discount application and billing adjustments for MicroMasters e-commerce transactions.
+  - LOC: `17` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_usercoupon.sql` ⚠️dead-code-candidate
+  - Manages user coupon allocation and tracking for e-commerce promotions
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitlearn/_stg_mitlearn_models.yml`
+  - Transforms raw MIT Learn user data into a cleaned staging model with standardized column names and added integrity tests for downstream analytics
+  - LOC: `274` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_search_percolatequery.sql` ⚠️dead-code-candidate
+  - Transforms raw search percolate query data into a cleaned staging model with standardized column names for analyzing saved search queries
+  - LOC: `18` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_search_percolatequery_users.sql` ⚠️dead-code-candidate
+  - Tracks which users are associated with specific search percolate queries, enabling personalized search alert functionality.
+  - LOC: `15` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_userlist.sql` ⚠️dead-code-candidate
+  - Maintains user-created collections of learning resources, including titles, descriptions, authors, and privacy settings for organizing educational content.
+  - LOC: `18` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_userlist_topics.sql` ⚠️dead-code-candidate
+  - Transforms raw user list topic associations into a cleaned staging model with standardized column names for tracking user-topic relationships
+  - LOC: `14` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_userlistrelationship.sql` ⚠️dead-code-candidate
+  - Captures the hierarchical relationships between user-created learning resource lists, tracking which lists are nested within others and their positions.
+  - LOC: `17` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_programrun.sql` ⚠️dead-code-candidate
+  - Manages program run scheduling, allowing the platform to coordinate when specific programs are available to learners and track program lifecycle dates.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__reversion_revision.sql` ⚠️dead-code-candidate
+  - Maintains content revision history for content management system to enable change tracking and content restoration.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__blockcompletion.sql` ⚠️dead-code-candidate
+  - Records user progress on individual course blocks, tracking completion status and timestamps to monitor learning outcomes and course progression.
+  - LOC: `37` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2bcouponaudit.sql` ⚠️dead-code-candidate
+  - Tracks changes to B2B coupons by capturing before/after states when coupon data is modified, enabling audit trails for coupon management.
+  - LOC: `21` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2borderaudit.sql` ⚠️dead-code-candidate
+  - Stores and manages program run schedules and lifecycle information for educational programs.
+  - LOC: `21` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_signatorypage.sql` ⚠️dead-code-candidate
+  - Transforms CMS signatory page data from the PostgreSQL database, extracting key metadata about signatory pages including names, titles, and organizational affiliations for use in the warehouse.
+  - LOC: `15` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_bulkcouponassignment.sql` ⚠️dead-code-candidate
+  - Manages bulk coupon assignment sheets, tracking the lifecycle of mass coupon distributions including assignment progress and completion timestamps.
+  - LOC: `24` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_orderaudit.sql` ⚠️dead-code-candidate
+  - Extracts and transforms order audit records to track changes to e-commerce orders over time.
+  - LOC: `21` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__blockcompletion.sql` ⚠️dead-code-candidate
+  - Extracts and transforms block completion data to track learner progress through course content.
+  - LOC: `37` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__blockcompletion.sql` ⚠️dead-code-candidate
+  - Monitors student progress through course content blocks, recording completion status and timestamps for learning analytics.
+  - LOC: `37` | PageRank: `0.00070` | Complexity: `5.0`
+- `src/ol_dbt/models/staging/ocw/_stg_ocw__models.yml`
+  - Defines metadata schema and validation rules for OCW websites, ensuring data quality and consistency for course-related content management.
+  - LOC: `257` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/models/staging/ovs/_stg_ovs__models.yml`
+  - Defines the staging model for OVS video collections with column descriptions and data quality tests to ensure data integrity before further processing.
+  - LOC: `200` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/Data_Detail_Problems_dc0886e8-1861-4bd9-a694-25a063adcf83.yaml`
+  - Provides comprehensive problem event data with user answers, attempts, success rates, and grading information to evaluate student problem-solving processes.
+  - LOC: `205` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/Program_Enrollment_with_user_cc496da8-03f6-43ea-9b6c-900ba695e4b6.yaml`
+  - Combines program enrollment data with user demographic information and course completion metrics to analyze educational program effectiveness and student characteristics.
+  - LOC: `512` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/afact_problem_engagement_37bb25c7-421f-432a-bc42-5cc10a129746.yaml`
+  - Captures detailed problem engagement events with timestamps and user identifiers to understand problem-solving attempts and completion patterns.
+  - LOC: `175` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/combined_learners_enrollment_detail_b579034e-2b79-4d3a-ba84-94c9fcfa0cc5.yaml`
+  - Consolidates enrollment details across multiple platforms into a unified view, supporting program management and tracking learner progress across different educational offerings.
+  - LOC: `842` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/engagement_problem_summary_test1_d763f86e-5c1b-4996-9b35-f8cb13947f11.yaml`
+  - Provides detailed engagement metrics for learners in specific course sections, tracking problem attempts, correct answers, and completion rates to identify learning patterns and areas where students struggle.
+  - LOC: `196` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/learner_engagement_report_4752cd11-a13e-4a8e-be31-4d9227b07ca2.yaml`
+  - Generates comprehensive learner engagement reports that combine problem-solving statistics, video engagement metrics, and course completion data to assess student progress and platform effectiveness.
+  - LOC: `331` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined__products_d53b0a52-4450-4d2a-8ce4-143b9f9e327b.yaml`
+  - Aggregates product catalog data with enrollment and pricing information to support e-commerce operations and course catalog management for the learning platform.
+  - LOC: `375` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__combined_video_engagements_w_video_counts_42f063d3-3c06-4834-b993-777fdbc6dea7.yaml`
+  - Analyzes video engagement metrics including watched video counts, chapter progression, and course enrollment status to measure content consumption patterns.
+  - LOC: `158` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/marts__mitxonline_problem_summary_dc51305d-a55b-42b6-84d2-a412f96ac900.yaml`
+  - Creates problem-specific performance summaries for learners across courses, enabling instructors to analyze individual student problem-solving patterns and identify knowledge gaps.
+  - LOC: `175` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/assets/datasets/Trino/tfact_studentmodule_problems_c6006f03-b7e0-4f47-b275-dd3d8f022500.yaml`
+  - Tracks detailed student problem engagement data including timestamps, grades, and problem identifiers to analyze learning behavior and performance patterns.
+  - LOC: `211` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/ol_superset/commands/apply_rls.py` ⚠️dead-code-candidate
-  - Applies governance row-level security policies to Superset instances by creating or updating RLS filters based on predefined policy definitions, ensuring data access controls are properly enforced across the platform.
+  - Applies governance row-level security policies to Superset instances, enabling organizations to enforce data access controls and compliance requirements across their analytics platform.
   - LOC: `244` | PageRank: `0.00070` | Complexity: `27.0`
-- `src/ol_superset/ol_superset/commands/dedupe.py` ⚠️dead-code-candidate
-  - Cleans up duplicate Superset asset files by removing redundant database ID or UUID suffixes from filenames, resolving issues caused by cross-environment exports that create multiple files for the same asset.
-  - LOC: `361` | PageRank: `0.00070` | Complexity: `36.0`
-- `src/ol_superset/ol_superset/commands/lock.py` ⚠️dead-code-candidate
-  - Manages asset lock/unlock state to control whether Superset dashboards and charts can be manually edited in the UI, enforcing 'managed as code' workflows by preventing accidental UI modifications to production assets.
-  - LOC: `563` | PageRank: `0.00070` | Complexity: `51.0`
 - `src/ol_superset/ol_superset/commands/refresh.py` ⚠️dead-code-candidate
-  - Updates physical dataset schemas in Superset to reflect changes from dbt model deployments, ensuring charts and dashboards can access new or modified columns in the underlying database tables.
+  - Refreshes physical dataset schemas in Superset to sync column definitions with the underlying database, ensuring that dashboards and charts reflect the latest data model changes from dbt deployments.
   - LOC: `244` | PageRank: `0.00070` | Complexity: `21.0`
 - `src/ol_superset/ol_superset/commands/sync.py` ⚠️dead-code-candidate
-  - Ensures consistency between Superset environments by synchronizing assets from a source instance to a target instance, automatically handling database UUID mapping and optionally previewing changes before execution.
+  - Synchronizes Superset assets between different environment instances, enabling teams to move dashboards, charts, and datasets from one environment to another while automatically handling database UUID mapping.
   - LOC: `262` | PageRank: `0.00070` | Complexity: `17.0`
+- `src/ol_superset/ol_superset/lib/role_management.py` ⚠️dead-code-candidate
+  - Synchronizes dataset access permissions with governance policies by loading role definitions and mapping them to local dataset metadata
+  - LOC: `467` | PageRank: `0.00070` | Complexity: `44.0`
+### utilities
+
+- `bin/dbt-local-dev.py` ⚠️dead-code-candidate
+  - Provides a unified CLI tool for local DBT development with DuckDB and Iceberg, enabling registration of AWS Glue tables as DuckDB views, testing connectivity, and cleaning up development schemas.
+  - LOC: `1782` | PageRank: `0.00070` | Complexity: `155.0`
+- `bin/utils/chunk_tracking_logs_by_day.py` ⚠️dead-code-candidate
+  - Organises historical tracking log files from S3 into date-based directory structures, enabling consistent storage and retrieval of logs that were previously scattered due to evolving logging infrastructure
+  - LOC: `127` | PageRank: `0.00070` | Complexity: `10.0`
+- `bin/uv-operations.py` ⚠️dead-code-candidate
+  - Executes uv package management commands across multiple code locations by discovering directories with pyproject.toml files and running specified uv operations on each one.
+  - LOC: `275` | PageRank: `0.00070` | Complexity: `17.0`
+- `dg_projects/__init__.py`
+  - Empty initialization file for the dg_projects package
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/b2b_organization/__init__.py`
+  - Placeholder module for the B2B organization package namespace
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/b2b_organization/b2b_organization/__init__.py`
+  - Placeholder module for the B2B organization package namespace
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/b2b_organization/b2b_organization/assets/__init__.py`
+  - Placeholder module for asset-related imports and exports
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/b2b_organization/b2b_organization/defs/__init__.py`
+  - Placeholder module for definitions-related imports and exports
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/b2b_organization/b2b_organization/partitions/__init__.py`
+  - Placeholder module for partition-related imports and exports
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/b2b_organization/b2b_organization/sensors/__init__.py`
+  - Provides package initialization for the B2B organization sensors module, likely serving as a placeholder for potential future imports or configurations.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/canvas/canvas/resources/api_client_factory.py` ⚠️dead-code-candidate
+  - Provides a factory for creating API clients with credentials sourced from Vault, supporting multiple client types like CanvasApiClient and MITLearnApiClient
+  - LOC: `79` | PageRank: `0.00070` | Complexity: `3.0`
+- `dg_projects/data_loading/data_loading/__init__.py`
+  - Placeholder module for organizing the data loading package structure, ensuring proper namespace and import functionality.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/data_loading/data_loading/components/__init__.py`
+  - Placeholder module for organizing data loading components, providing a clear structure for pipeline definitions and assets.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/data_loading/data_loading/defs/__init__.py`
+  - Module 1 serves as a placeholder or initialization file for the edxorg_s3_ingest package, establishing the package structure without adding functionality.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/data_loading/data_loading/defs/edxorg_s3_ingest/__init__.py`
+  - Module 5 serves as a placeholder or initialization file for the edxorg_s3_ingest package, establishing the package structure without adding functionality.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/data_platform/data_platform/__init__.py`
+  - Serves as the root package initialization for the data platform module, establishing the namespace and structure for the data engineering application.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/data_platform/data_platform/assets/__init__.py`
+  - Acts as the initialization point for the assets package, organizing and exposing the asset-related components of the data platform.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/data_platform/data_platform/assets/metadata/__init__.py`
+  - Provides package-level initialization for the metadata module, organizing and exposing metadata-related functionality within the assets structure.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/data_platform/data_platform/defs/__init__.py`
+  - Serves as the package initialization for the definitions module, organizing and exposing the core data definitions and schemas used across the data platform.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/data_platform/data_platform/lib/__init__.py`
+  - Empty initialization file for the data platform library package
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/edxorg/edxorg/io_managers/gcs.py` ⚠️dead-code-candidate
+  - Manages input/output operations for files stored in Google Cloud Storage, providing a bridge between Dagster's asset system and GCS storage
+  - LOC: `50` | PageRank: `0.00070` | Complexity: `5.0`
+- `dg_projects/edxorg/edxorg/lib/__init__.py`
+  - Placeholder module with no implementation - likely reserved for future library-related functionality
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/edxorg/edxorg/lib/edxorg.py` ⚠️dead-code-candidate
+  - Provides utilities for parsing and categorizing edX archive file names to identify data types and sources for downstream processing
+  - LOC: `100` | PageRank: `0.00070` | Complexity: `6.0`
+- `dg_projects/edxorg/edxorg/ops/__init__.py`
+  - Placeholder module with no implementation - likely reserved for future ops-related functionality
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/edxorg/edxorg/ops/object_storage.py` ⚠️dead-code-candidate
+  - Manages file synchronization and download operations between S3 buckets, facilitating data movement across storage systems.
+  - LOC: `136` | PageRank: `0.00070` | Complexity: `5.0`
+- `dg_projects/lakehouse/lakehouse/assets/__init__.py`
+  - Module 1 is a placeholder Python package initialization file with no business logic.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/lakehouse/lakehouse/assets/lakehouse/__init__.py`
+  - Module 3 is a placeholder Python package initialization file with no business logic.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/lakehouse/lakehouse/defs/__init__.py`
+  - Module 4 is a placeholder Python package initialization file with no business logic.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/lakehouse/lakehouse/lib/__init__.py`
+  - Module 5 is a placeholder Python package initialization file with no business logic.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/lakehouse/lakehouse/resources/airbyte.py` ⚠️dead-code-candidate
+  - Provides a specialized Airbyte client for interacting with Airbyte Community Edition APIs, enabling data integration workflows through programmatic control of Airbyte workspaces and connections.
+  - LOC: `188` | PageRank: `0.00070` | Complexity: `3.0`
+- `dg_projects/lakehouse/lakehouse/resources/superset_api.py` ⚠️dead-code-candidate
+  - Implements OAuth-based authentication for the Superset API, allowing automated access to analytics dashboards and datasets through secure token management.
+  - LOC: `195` | PageRank: `0.00070` | Complexity: `4.0`
+- `dg_projects/learning_resources/learning_resources/__init__.py`
+  - Serves as the package initialization file for the learning_resources module, establishing it as an importable Python package.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/learning_resources/learning_resources/assets/__init__.py`
+  - Serves as the entry point for asset definitions, enabling the data platform to discover and organize video processing assets.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/learning_resources/learning_resources/lib/__init__.py`
+  - Provides the package namespace for learning resources utilities
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/learning_resources/learning_resources/resources/__init__.py`
+  - Provides package initialization for the resources subpackage, making resource modules importable within the learning_resources package.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/learning_resources/learning_resources/sensors/__init__.py`
+  - Provides the package initialization for sensor modules, enabling the discovery and registration of video monitoring sensors within the platform.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/legacy_openedx/legacy_openedx/__init__.py`
+  - Provides an empty package initialization file for the legacy_openedx module, serving as a namespace package to organize the legacy Open edX data extraction components.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/legacy_openedx/legacy_openedx/jobs/__init__.py`
+  - Empty module - likely a placeholder for future job definitions or organizational purposes
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/legacy_openedx/legacy_openedx/lib/__init__.py`
+  - Empty initialization file for legacy Open edX library module, serving as a placeholder for library package structure.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/legacy_openedx/legacy_openedx/ops/__init__.py`
+  - Placeholder module for ops package structure
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/legacy_openedx/legacy_openedx/repositories/__init__.py`
+  - Empty module - likely a placeholder for future repository definitions or organizational purposes
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/legacy_openedx/legacy_openedx/resources/__init__.py`
+  - Empty module - likely a placeholder for future resource definitions or organizational purposes
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/legacy_openedx/legacy_openedx/resources/sqlite_db.py` ⚠️dead-code-candidate
+  - Provides a SQLite database client resource for local development and testing, enabling execution of SQL queries against a local database with configurable connection parameters.
+  - LOC: `63` | PageRank: `0.00070` | Complexity: `1.0`
+- `dg_projects/legacy_openedx/legacy_openedx/schedules/__init__.py`
+  - Placeholder module for schedules package structure
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/legacy_openedx/legacy_openedx/schedules/open_edx.py` ⚠️dead-code-candidate
+  - Schedules daily pipeline runs for different business units to process Open edX course data
+  - LOC: `37` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/legacy_openedx/legacy_openedx/sensors/__init__.py`
+  - Placeholder module for sensors package structure
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/__init__.py`
+  - Empty initialization file for the OpenEdX package
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/assets/__init__.py`
+  - Serves as a placeholder package initialization file for the openedx assets module, establishing the Python package structure.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/components/__init__.py`
+  - Exposes the OpenEdX deployment component as a reusable module for data engineering workflows
+  - LOC: `5` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/jobs/__init__.py`
+  - Provides a namespace for organizing OpenEdX data engineering components
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/lib/assets_helper.py` ⚠️dead-code-candidate
+  - Module 5 provides utility functions for dynamically binding partition definitions to asset specifications and adding prefixes to asset keys in data pipelines.
+  - LOC: `33` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/lib/magic_numbers.py`
+  - Module 4 defines HTTP status code constants, specifically for handling 404 Not Found errors in web applications.
+  - LOC: `1` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/ops/__init__.py`
+  - Module 3 is empty and provides no functionality.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/partitions/__init__.py`
+  - Provides a namespace for organizing OpenEdX partition definitions
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/schedules/__init__.py`
+  - Serves as a placeholder package initialization file for the openedx schedules module, establishing the Python package structure.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `dg_projects/openedx/openedx/sensors/__init__.py`
+  - Module 1 is empty and provides no functionality.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/__init__.py`
+  - Provides a shared library for MIT Open Learning Dagster orchestration with version tracking for consistent dependency management.
+  - LOC: `3` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/io_managers/filepath.py` ⚠️dead-code-candidate
+  - Manages file-based data I/O operations across local, GCS, and S3 storage systems, handling asset materialization tracking and secure credential management.
+  - LOC: `136` | PageRank: `0.00070` | Complexity: `7.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/__init__.py`
+  - Empty module, likely a placeholder for package initialization.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_helpers.py` ⚠️dead-code-candidate
+  - Manages Dagster environment-specific I/O operations and file object handling for local development and S3 storage.
+  - LOC: `43` | PageRank: `0.00070` | Complexity: `2.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_types/__init__.py`
+  - Serves as an empty initialization module for the dagster_types package, establishing the namespace for type definitions
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_types/files.py` ⚠️dead-code-candidate
+  - Defines a custom Dagster type for file paths that extends PosixPath, ensuring type safety when passing file paths between Dagster solids
+  - LOC: `8` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_types/google.py`
+  - Creates a Dagster type wrapper for Google BigQuery dataset objects, allowing BigQuery datasets to be used as typed inputs/outputs in Dagster pipelines
+  - LOC: `4` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/file_rendering.py` ⚠️dead-code-candidate
+  - Renders tabular data to CSV format for file-based data export and reporting.
+  - LOC: `28` | PageRank: `0.00070` | Complexity: `2.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/openedx.py` ⚠️dead-code-candidate
+  - Provides utilities for processing and analyzing course structure data from learning management systems, enabling hierarchical organization of course content and generation of block indexes for tracking learner progression through course materials.
+  - LOC: `316` | PageRank: `0.00070` | Complexity: `28.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/utils.py` ⚠️dead-code-candidate
+  - Handles authentication with Vault for secret management and provides S3 bucket configurations based on deployment environments.
+  - LOC: `94` | PageRank: `0.00070` | Complexity: `8.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/lib/yaml_config_helper.py` ⚠️dead-code-candidate
+  - Provides a utility to load YAML configuration files from disk, enabling dynamic configuration management for data processing workflows
+  - LOC: `21` | PageRank: `0.00070` | Complexity: `2.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/__init__.py`
+  - Provides base API client functionality for external service integrations
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/api_client.py` ⚠️dead-code-candidate
+  - Enables HTTP-based API communication for external services, providing a reusable client for making authenticated GET and POST requests to REST APIs.
+  - LOC: `48` | PageRank: `0.00070` | Complexity: `1.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/api_client_factory.py` ⚠️dead-code-candidate
+  - Provides a factory for creating API clients that can securely access various external services using credentials stored in Vault
+  - LOC: `80` | PageRank: `0.00070` | Complexity: `3.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/athena_db.py` ⚠️dead-code-candidate
+  - Establishes connections to Amazon Athena databases for executing SQL queries against data stored in S3, supporting both credential-based and IAM-based authentication.
+  - LOC: `105` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/bigquery_db.py` ⚠️dead-code-candidate
+  - Creates connections to BigQuery databases using service account credentials for cloud-based data operations
+  - LOC: `79` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/canvas_api.py` ⚠️dead-code-candidate
+  - Manages Canvas LMS API interactions for course content export and status monitoring
+  - LOC: `169` | PageRank: `0.00070` | Complexity: `6.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/gcp_gcs.py` ⚠️dead-code-candidate
+  - Provides secure authentication and connection to Google Cloud Storage for data engineering workflows, enabling pipelines to read and write files in GCS buckets.
+  - LOC: `59` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/github.py` ⚠️dead-code-candidate
+  - Facilitates secure access to GitHub repositories by retrieving API tokens from Vault and creating authenticated clients for repository operations.
+  - LOC: `47` | PageRank: `0.00070` | Complexity: `1.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/learn_api.py` ⚠️dead-code-candidate
+  - Handles secure webhook notifications to MIT Learn platform for course content and video processing
+  - LOC: `58` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/oauth.py` ⚠️dead-code-candidate
+  - Handles OAuth2 authentication flows and token management for secure API access across multiple services
+  - LOC: `141` | PageRank: `0.00070` | Complexity: `9.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/openedx.py` ⚠️dead-code-candidate
+  - Manages authentication and communication with edX platforms, including course data retrieval and status checking
+  - LOC: `176` | PageRank: `0.00070` | Complexity: `6.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/outputs.py` ⚠️dead-code-candidate
+  - Creates and manages temporary directories for storing pipeline execution results, supporting both simple and date-structured output organization with automatic cleanup.
+  - LOC: `84` | PageRank: `0.00070` | Complexity: `1.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/postgres_db.py` ⚠️dead-code-candidate
+  - Establishes connections to PostgreSQL databases and enables chunked query execution for efficient data retrieval
+  - LOC: `128` | PageRank: `0.00070` | Complexity: `2.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/secrets/__init__.py`
+  - Contains initialization and configuration for secret management systems
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `packages/ol-orchestrate-lib/src/ol_orchestrate/resources/secrets/vault.py` ⚠️dead-code-candidate
+  - Implements Vault secret retrieval with multiple authentication methods for secure credential access
+  - LOC: `286` | PageRank: `0.00070` | Complexity: `22.0`
+- `src/ol_dbt/macros/cast_timestamp_to_iso8601.sql` ⚠️dead-code-candidate
+  - Converts timestamp columns to ISO 8601 format in a database-agnostic way, ensuring consistent timestamp formatting across different database systems for standardized time representation.
+  - LOC: `28` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_dbt/macros/cross_db_functions.sql` ⚠️dead-code-candidate
+  - Provides cross-database compatibility functions to ensure SQL code works consistently across Trino, DuckDB, and StarRocks environments
+  - LOC: `120` | PageRank: `0.00070` | Complexity: `6.0`
+- `src/ol_dbt/macros/date_diff.sql` ⚠️dead-code-candidate
+  - Provides a database-agnostic way to calculate the difference between two dates in various units, ensuring consistent date calculations across different database systems used in the data platform.
+  - LOC: `16` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/macros/date_parse.sql` ⚠️dead-code-candidate
+  - Offers a database-agnostic way to parse date strings using different format patterns, enabling consistent date parsing across various database systems while handling format differences between engines.
+  - LOC: `19` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/macros/generate_hash_id.sql` ⚠️dead-code-candidate
+  - Creates a consistent hash ID from strings for use as primary keys, ensuring data integrity across systems like Hightouch
+  - LOC: `10` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/macros/json_extract_scalar.sql` ⚠️dead-code-candidate
+  - Provides database-agnostic JSON field extraction functionality that adapts to different database systems' JSON handling capabilities
+  - LOC: `17` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_dbt/macros/json_query_string.sql` ⚠️dead-code-candidate
+  - Provides a cross-database macro for extracting string values from JSON data that works consistently across different database systems like Trino, DuckDB, and StarRocks.
+  - LOC: `37` | PageRank: `0.00070` | Complexity: `2.0`
+- `src/ol_superset/ol_superset/cli.py` 🔥`6` ⚠️dead-code-candidate
+  - Implements CLI tool for managing Superset assets across environments with safety guardrails for controlled promotion
+  - LOC: `71` | PageRank: `0.00070` | Complexity: `4.0`
+- `src/ol_superset/ol_superset/commands/__init__.py`
+  - Initializes the commands module structure, serving as a container for all Superset CLI command implementations.
+  - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
+- `src/ol_superset/ol_superset/commands/dedupe.py` ⚠️dead-code-candidate
+  - Cleans up and standardizes asset filenames by removing duplicate database IDs and UUID suffixes, ensuring consistent naming conventions across environments and preventing conflicts when assets are moved between instances.
+  - LOC: `361` | PageRank: `0.00070` | Complexity: `36.0`
+- `src/ol_superset/ol_superset/commands/export.py` ⚠️dead-code-candidate
+  - Export all Superset assets from an instance to a local directory for backup or migration purposes
+  - LOC: `142` | PageRank: `0.00070` | Complexity: `3.0`
+- `src/ol_superset/ol_superset/commands/lock.py` ⚠️dead-code-candidate
+  - Manage external editing permissions for Superset assets to enforce 'managed as code' workflows by locking or unlocking dashboards and charts
+  - LOC: `563` | PageRank: `0.00070` | Complexity: `51.0`
+- `src/ol_superset/ol_superset/commands/promote.py` ⚠️dead-code-candidate
+  - Promote Superset assets from QA to production with safety checks to prevent accidental deployments
+  - LOC: `287` | PageRank: `0.00070` | Complexity: `29.0`
 - `src/ol_superset/ol_superset/lib/__init__.py`
-  - Serves as an empty initialization module for the Superset library package, establishing the namespace structure.
+  - Serves as an empty initialization module for the Superset library package structure
   - LOC: `0` | PageRank: `0.00070` | Complexity: `0.0`
 - `src/ol_superset/ol_superset/lib/database_mapping.py` ⚠️dead-code-candidate
-  - Maps database identifiers between Superset instances by fetching and parsing database UUIDs, facilitating database migration and synchronization tasks.
+  - Maps database names to UUIDs by querying target Superset instances and parsing CLI output, facilitating database identification across different Superset environments
   - LOC: `211` | PageRank: `0.00070` | Complexity: `26.0`
-- `src/ol_superset/ol_superset/lib/role_management.py` ⚠️dead-code-candidate
-  - Manages role-based access control by loading governance policies and synchronizing dataset permissions, ensuring proper data governance and security compliance.
-  - LOC: `467` | PageRank: `0.00070` | Complexity: `44.0`
 - `src/ol_superset/ol_superset/lib/superset_api.py` ⚠️dead-code-candidate
-  - Provides authentication and API client functionality for Superset instances, enabling secure programmatic access to Superset data and features through OAuth with PKCE.
+  - Provides OAuth authentication and API client functionality for Superset instances using PKCE flow, enabling secure programmatic access to Superset dashboards and data
   - LOC: `918` | PageRank: `0.00070` | Complexity: `92.0`
 - `src/ol_superset/ol_superset/lib/utils.py` ⚠️dead-code-candidate
-  - Offers shared utilities for Superset CLI operations including repository path resolution, asset counting, and command execution, supporting data engineering workflow management.
+  - Offers shared utilities for repository navigation, asset counting, and CLI command execution, supporting data engineering workflows and asset management
   - LOC: `151` | PageRank: `0.00070` | Complexity: `17.0`

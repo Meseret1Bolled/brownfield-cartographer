@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__users_profile.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__users_profile.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Stores user profile information including demographics, employment details, and educational background for customer segmentation and personalization.",
+  "purpose_statement": "Cleans and standardizes user profile data to enable demographic and professional background analysis for business intelligence",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__users_profile"

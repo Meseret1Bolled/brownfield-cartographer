@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/migration/edxorg_to_mitxonline_users.sql",
   "relative_path": "src/ol_dbt/models/migration/edxorg_to_mitxonline_users.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Migrates user data from edX to MITxOnline platform by matching certificate holders and program entitlement users, ensuring consistent user profiles across platforms.",
-  "domain_cluster": "transformation",
+  "purpose_statement": "Migrates user data from edXOrg to MITxOnline by matching certificates and program entitlements with MITxOnline user records, ensuring consistent user profiles across platforms.",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "edxorg_to_mitxonline_users"
   ],

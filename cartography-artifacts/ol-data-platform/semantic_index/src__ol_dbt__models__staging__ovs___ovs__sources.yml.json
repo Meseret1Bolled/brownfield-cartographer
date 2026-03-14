@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/ovs/_ovs__sources.yml",
   "relative_path": "src/ol_dbt/models/staging/ovs/_ovs__sources.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines the source configuration for raw OVS data ingestion, specifying which tables and columns to extract from the PostgreSQL database.",
+  "purpose_statement": "Defines the raw data sources from the OVS warehouse for video collections and videos, establishing the foundational data structures for downstream processing.",
   "domain_cluster": "ingestion",
   "exported_functions": [],
   "exported_classes": [],

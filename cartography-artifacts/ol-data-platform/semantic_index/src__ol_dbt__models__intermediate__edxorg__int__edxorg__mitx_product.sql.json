@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_product.sql",
   "relative_path": "src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_product.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts pricing and enrollment mode information for MITx course runs to support financial analysis and enrollment management",
+  "purpose_statement": "Extracts pricing and enrollment mode information for course runs to support financial analysis and product offering decisions.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__edxorg__mitx_product"

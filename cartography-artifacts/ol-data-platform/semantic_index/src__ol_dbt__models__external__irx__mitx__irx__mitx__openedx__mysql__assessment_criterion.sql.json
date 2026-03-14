@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_criterion.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_criterion.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts assessment criterion details, supporting evaluation of grading rubrics and assessment criteria.",
+  "purpose_statement": "Retrieve rubric criterion details (order, ID, rubric ID) to understand assessment structure and grading requirements.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitx__openedx__mysql__assessment_criterion"

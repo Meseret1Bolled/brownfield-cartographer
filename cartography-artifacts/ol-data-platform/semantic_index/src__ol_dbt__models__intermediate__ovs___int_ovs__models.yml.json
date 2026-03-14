@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/ovs/_int_ovs__models.yml",
   "relative_path": "src/ol_dbt/models/intermediate/ovs/_int_ovs__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Tracks video collections and their associated videos across different edX platforms for content management and distribution",
+  "purpose_statement": "Consolidates video collection data from ODL Video Service with Open edX endpoints, providing a unified view of video assets, their durations, and platform associations to support content delivery across multiple edX environments.",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

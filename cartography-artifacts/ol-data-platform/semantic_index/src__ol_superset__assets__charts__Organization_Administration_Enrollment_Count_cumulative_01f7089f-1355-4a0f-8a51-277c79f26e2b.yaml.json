@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Organization_Administration_Enrollment_Count_cumulative_01f7089f-1355-4a0f-8a51-277c79f26e2b.yaml",
   "relative_path": "src/ol_superset/assets/charts/Organization_Administration_Enrollment_Count_cumulative_01f7089f-1355-4a0f-8a51-277c79f26e2b.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides cumulative enrollment counts over time for organizational administration, tracking how many learners are enrolled each month and carrying forward those counts to subsequent months.",
+  "purpose_statement": "Tracks and visualizes cumulative enrollment counts over time to monitor and analyze the growth of course enrollments.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

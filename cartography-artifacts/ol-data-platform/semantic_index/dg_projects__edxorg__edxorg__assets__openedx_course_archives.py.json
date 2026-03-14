@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/edxorg/edxorg/assets/openedx_course_archives.py",
   "relative_path": "dg_projects/edxorg/edxorg/assets/openedx_course_archives.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Processes and extracts structured metadata from edX course XML exports, including course details, video elements, and certificate information, transforming raw course data into analyzable formats.",
+  "purpose_statement": "Processes and transforms course archive data from EdX.org, extracting metadata, video information, and certificate details from XML exports for downstream consumption",
   "domain_cluster": "transformation",
   "exported_functions": [
     "dummy_edxorg_course_xml",

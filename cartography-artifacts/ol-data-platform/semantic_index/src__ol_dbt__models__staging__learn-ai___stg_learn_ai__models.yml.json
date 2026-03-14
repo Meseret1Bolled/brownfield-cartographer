@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/learn-ai/_stg_learn_ai__models.yml",
   "relative_path": "src/ol_dbt/models/staging/learn-ai/_stg_learn_ai__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines data quality tests and column descriptions for the cleaned Learn AI models to ensure data integrity and provide documentation for downstream consumers.",
+  "purpose_statement": "Defines data quality tests and documentation for transformed Learn AI staging models to ensure data integrity for analytics",
   "domain_cluster": "testing",
   "exported_functions": [],
   "exported_classes": [],

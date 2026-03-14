@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_criterionoption.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_criterionoption.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Gathers criterion option data for assessments, facilitating evaluation of grading criteria and scoring mechanisms.",
+  "purpose_statement": "Get criterion option details (order, ID, points) for rubric-based assessments to understand grading criteria and scoring.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitx__openedx__mysql__assessment_criterionoption"

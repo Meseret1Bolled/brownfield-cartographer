@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Chatbots_37348ff8-4ec6-4b33-a2a6-5d8d8bf62356.yaml",
   "relative_path": "src/ol_superset/assets/charts/Chatbots_37348ff8-4ec6-4b33-a2a6-5d8d8bf62356.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Filters and displays chatbot interactions specifically for the VideoGPTBot agent, allowing analysis of AI-assisted learning conversations and student support effectiveness.",
+  "purpose_statement": "Filters and displays chatbot interaction data specifically for the VideoGPTBot agent, allowing support teams to review AI-powered assistance conversations and their effectiveness.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Video_Engagement_By_Section_f37fc707-aeb4-4731-b0d5-634b47a57eae.yaml",
   "relative_path": "src/ol_superset/assets/charts/Video_Engagement_By_Section_f37fc707-aeb4-4731-b0d5-634b47a57eae.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Analyzes video engagement metrics by course section, displaying watch time percentages and durations to understand content consumption patterns across different learning modules.",
+  "purpose_statement": "Presents video engagement metrics by course section, displaying percentage watched and time metrics to evaluate learner video consumption patterns across different course sections.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

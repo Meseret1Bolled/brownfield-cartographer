@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/salesforce/stg__salesforce__opportunity.sql",
   "relative_path": "src/ol_dbt/models/staging/salesforce/stg__salesforce__opportunity.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extract and transform Salesforce opportunity data from raw warehouse format, removing deleted records and standardizing field names for downstream analytics",
+  "purpose_statement": "Extracts and cleans Salesforce opportunity data, removing deleted records and deduplicating by system modification timestamp to provide a reliable source for sales pipeline analysis.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__salesforce__opportunity"

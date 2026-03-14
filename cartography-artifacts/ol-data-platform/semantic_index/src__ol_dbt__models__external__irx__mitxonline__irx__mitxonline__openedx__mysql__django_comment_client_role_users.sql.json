@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__django_comment_client_role_users.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__django_comment_client_role_users.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps user roles to courses by associating users with their roles in specific courses, supporting course administration and access control management.",
-  "domain_cluster": "transformation",
+  "purpose_statement": "Maps users to their roles in specific courses, enabling role-based access control and permissions within the learning platform.",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__django_comment_client_role_users"
   ],

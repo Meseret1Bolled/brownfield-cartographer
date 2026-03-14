@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_certificates_dedp_from_micromasters.sql",
   "relative_path": "src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_certificates_dedp_from_micromasters.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Finds the highest grade course certificates for DEDP courses from MicroMasters by selecting the best run per user per course before certificate generation, handling ties by timestamp.",
+  "purpose_statement": "Finds the highest-graded course certificate for DEDP courses by selecting the best run per user-course combination, ensuring consistency when multiple runs have the same grade.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "__micromasters_course_certificates_dedp_from_micromasters"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_programpage.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_programpage.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates CMS program page data from both internal and external sources to provide unified program information.",
+  "purpose_statement": "Consolidates program page information from both internal CMS and external sources to provide a unified view of program details for marketing and catalog purposes.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__cms_programpage"

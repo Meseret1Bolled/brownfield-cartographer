@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms and cleans course metadata from raw S3 data, standardizing course identifiers and handling null timestamps to enable consistent course information across the platform.",
+  "purpose_statement": "Cleans and standardizes course metadata from EdX, including parsing instructor information and handling null date values for course scheduling",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__courserun"

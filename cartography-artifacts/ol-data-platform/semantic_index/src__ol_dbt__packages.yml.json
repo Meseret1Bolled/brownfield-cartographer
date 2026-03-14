@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/packages.yml",
   "relative_path": "src/ol_dbt/packages.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Specifies version ranges for dbt packages to allow controlled updates within safe boundaries while maintaining compatibility",
+  "purpose_statement": "Defines package dependencies with version constraints for dbt project",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

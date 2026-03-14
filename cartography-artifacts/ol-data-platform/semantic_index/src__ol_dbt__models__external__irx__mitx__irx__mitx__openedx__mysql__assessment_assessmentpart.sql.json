@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentpart.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_assessmentpart.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Joins assessment parts with their parent assessments, submissions, and student items to provide a complete view of student responses and feedback for AI-graded assessment components.",
+  "purpose_statement": "Creates a consolidated view of assessment parts linked to their parent assessments, submissions, and student items for detailed grading analysis.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitx__openedx__mysql__assessment_assessmentpart"

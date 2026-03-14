@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/openedx/openedx/__init__.py",
   "relative_path": "dg_projects/openedx/openedx/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Empty initialization file for the OpenEdX module",
+  "purpose_statement": "Empty initialization file for the OpenEdX package",
   "domain_cluster": "utilities",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_course.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_course.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maintains metadata about online courses including titles, status, and program associations for catalog management and course delivery.",
+  "purpose_statement": "Processes course information to enable analysis of online course catalog, program structure, and course availability",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__courses_course"

@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/bin/utils/chunk_tracking_logs_by_day.py",
   "relative_path": "bin/utils/chunk_tracking_logs_by_day.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Organizes tracking log files in S3 by moving or copying them from a source bucket to a destination bucket, organizing them into date-based path prefixes to standardize inconsistent log file paths across different logging agents.",
-  "domain_cluster": "ingestion",
+  "purpose_statement": "Organises historical tracking log files from S3 into date-based directory structures, enabling consistent storage and retrieval of logs that were previously scattered due to evolving logging infrastructure",
+  "domain_cluster": "utilities",
   "exported_functions": [
     "date_chunk_files"
   ],

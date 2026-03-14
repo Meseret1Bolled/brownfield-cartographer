@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/yaml_config_helper.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/yaml_config_helper.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Loads configuration files from disk to provide flexible, externalized settings for data pipeline execution",
-  "domain_cluster": "configuration",
+  "purpose_statement": "Provides a utility to load YAML configuration files from disk, enabling dynamic configuration management for data processing workflows",
+  "domain_cluster": "utilities",
   "exported_functions": [
     "load_yaml_config"
   ],

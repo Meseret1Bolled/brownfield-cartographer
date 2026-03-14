@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__user_courseaccessrole.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__user_courseaccessrole.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps user roles to courses by cleaning and standardizing course access role data, providing visibility into who has what level of access to specific courses.",
+  "purpose_statement": "Transforms user course-level role assignments from MITx open edX database to provide visibility into which users have staff, instructor, or researcher access to specific courses.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxresidential__openedx__user_courseaccessrole"

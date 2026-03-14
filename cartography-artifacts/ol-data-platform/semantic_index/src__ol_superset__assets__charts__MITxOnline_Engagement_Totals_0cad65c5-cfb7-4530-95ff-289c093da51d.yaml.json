@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/MITxOnline_Engagement_Totals_0cad65c5-cfb7-4530-95ff-289c093da51d.yaml",
   "relative_path": "src/ol_superset/assets/charts/MITxOnline_Engagement_Totals_0cad65c5-cfb7-4530-95ff-289c093da51d.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays daily engagement totals across videos, problems, and discussions to measure overall learner activity and course participation",
+  "purpose_statement": "Tracks daily engagement metrics like video watching, problem attempts, and discussion participation across courseruns.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

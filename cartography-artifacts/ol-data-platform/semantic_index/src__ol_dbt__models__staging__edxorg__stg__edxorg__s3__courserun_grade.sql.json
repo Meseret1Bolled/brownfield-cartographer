@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun_grade.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun_grade.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Standardizes course grade data from persistent grade storage, converting string values to proper types and normalizing timestamps to provide accurate academic performance metrics.",
+  "purpose_statement": "Processes student course grade data from EdX, converting string values to appropriate types and standardizing timestamps for academic performance tracking",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__courserun_grade"

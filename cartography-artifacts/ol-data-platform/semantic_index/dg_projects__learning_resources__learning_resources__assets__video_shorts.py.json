@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/learning_resources/learning_resources/assets/video_shorts.py",
   "relative_path": "dg_projects/learning_resources/learning_resources/assets/video_shorts.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Processes and transforms video short content from Google Sheets metadata, including compression, thumbnail generation, and storage management for educational video assets.",
+  "purpose_statement": "Manages the ingestion and processing pipeline for educational video shorts, transforming raw video files from Dropbox into compressed, thumbnail-optimized assets ready for learning platforms.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "google_sheets_api",

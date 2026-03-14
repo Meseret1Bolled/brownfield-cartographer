@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Order_detail_fb906f1f-c07f-472f-9387-ad02f73cae55.yaml",
   "relative_path": "src/ol_superset/assets/charts/Order_detail_fb906f1f-c07f-472f-9387-ad02f73cae55.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides detailed order information including pricing, discounts, taxes, and payment details, enabling comprehensive analysis of sales transactions and revenue tracking across different products and platforms.",
+  "purpose_statement": "Provides detailed order information including pricing, discounts, payment details, and transaction data for e-commerce transaction analysis",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

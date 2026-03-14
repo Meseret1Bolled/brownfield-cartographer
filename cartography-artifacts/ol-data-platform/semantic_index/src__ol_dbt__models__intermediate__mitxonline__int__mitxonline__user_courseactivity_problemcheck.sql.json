@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_problemcheck.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivity_problemcheck.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures and structures problem check events from user activity logs to enable detailed analysis of student problem-solving behavior and assessment performance.",
+  "purpose_statement": "Captures and processes problem check events from user activity tracking logs to analyze student performance and problem-solving attempts.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__user_courseactivity_problemcheck"

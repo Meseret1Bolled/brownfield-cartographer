@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2bcoupon.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__b2becommerce_b2bcoupon.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Standardizes B2B coupon data from Postgres into staging tables with consistent timestamp formatting and boolean field naming conventions",
+  "purpose_statement": "Manages B2B coupon configurations including discount percentages, activation dates, and expiration for bulk order processing",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__b2becommerce_b2bcoupon"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Problem_Results_f07a7065-db29-4749-a4c6-d2c75c9d55f8.yaml",
   "relative_path": "src/ol_superset/assets/charts/Problem_Results_f07a7065-db29-4749-a4c6-d2c75c9d55f8.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Presents problem-solving success rates and counts by course run to evaluate course effectiveness and identify areas needing improvement in educational content.",
+  "purpose_statement": "Analyzes problem-level assessment results showing correct/incorrect counts and percentages to evaluate learning effectiveness",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

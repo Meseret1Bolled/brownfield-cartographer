@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/student_risk_probability/build.yaml",
   "relative_path": "dg_projects/student_risk_probability/build.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Module 2 defines the build configuration for the student risk probability Docker image, specifying the build context, Dockerfile location, and target registry for deployment.",
+  "purpose_statement": "Defines Docker build configuration for the student risk probability service, specifying build context, Dockerfile location, and registry for container deployment",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_linerunselection.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_linerunselection.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks line run selections for MITxPro e-commerce transactions, capturing which course runs were selected for specific line items.",
+  "purpose_statement": "Captures detailed information about line run selections in the e-commerce system, providing visibility into course enrollment choices and registration timing.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__ecommerce_linerunselection"

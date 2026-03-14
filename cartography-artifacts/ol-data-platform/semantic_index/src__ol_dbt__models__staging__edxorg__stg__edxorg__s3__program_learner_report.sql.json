@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__program_learner_report.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__program_learner_report.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates program learner completion data to assess program effectiveness and learner outcomes",
+  "purpose_statement": "This module processes program learner reports to track user progress and completion status across educational programs, including certificate awarding information. It aggregates completion data at the program level while maintaining detailed course-level enrollment and completion records.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__program_learner_report"

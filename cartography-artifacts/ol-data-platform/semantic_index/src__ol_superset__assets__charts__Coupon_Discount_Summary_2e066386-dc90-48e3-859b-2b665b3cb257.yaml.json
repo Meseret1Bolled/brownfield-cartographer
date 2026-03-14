@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Coupon_Discount_Summary_2e066386-dc90-48e3-859b-2b665b3cb257.yaml",
   "relative_path": "src/ol_superset/assets/charts/Coupon_Discount_Summary_2e066386-dc90-48e3-859b-2b665b3cb257.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays a detailed summary of coupon and discount information including validity status, remaining coupons, and usage statistics in a tabular format for business analysis.",
+  "purpose_statement": "Provides a detailed summary of coupon and discount usage to manage and optimize promotional strategies and financial incentives.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

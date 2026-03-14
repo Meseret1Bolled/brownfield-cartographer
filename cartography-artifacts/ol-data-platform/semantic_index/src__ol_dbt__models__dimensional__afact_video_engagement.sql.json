@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/dimensional/afact_video_engagement.sql",
   "relative_path": "src/ol_dbt/models/dimensional/afact_video_engagement.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Analyzes video engagement events to calculate time played and track user interactions with videos, providing insights into video consumption patterns.",
+  "purpose_statement": "Tracks and analyzes video engagement metrics including play counts, time watched, and user interactions to understand learning behavior with video content.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "afact_video_engagement"

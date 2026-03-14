@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/marts__mitxpro_all_coupons_50998478-4b82-451d-82ed-5ea60fd48b05.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/marts__mitxpro_all_coupons_50998478-4b82-451d-82ed-5ea60fd48b05.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Contains coupon and discount information for MITxPro products including contract numbers, payment details, and product identifiers to support revenue analysis and promotional campaign tracking.",
+  "purpose_statement": "Manages coupon data for MITxPro platform including discount information and payment details",
   "domain_cluster": "ingestion",
   "exported_functions": [],
   "exported_classes": [],

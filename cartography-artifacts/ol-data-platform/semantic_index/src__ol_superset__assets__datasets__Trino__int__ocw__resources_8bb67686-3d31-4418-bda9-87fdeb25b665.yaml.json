@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/int__ocw__resources_8bb67686-3d31-4418-bda9-87fdeb25b665.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/int__ocw__resources_8bb67686-3d31-4418-bda9-87fdeb25b665.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "This dataset tracks the status of external resource URLs and backup URLs for course materials, monitoring whether links are accessible or broken.",
+  "purpose_statement": "Stores metadata for a Trino table containing external resource information with status codes and backup URLs for Open Learning Warehouse resources",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

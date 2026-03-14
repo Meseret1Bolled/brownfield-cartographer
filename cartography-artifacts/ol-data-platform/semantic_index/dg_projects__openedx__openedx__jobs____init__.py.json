@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/openedx/openedx/jobs/__init__.py",
   "relative_path": "dg_projects/openedx/openedx/jobs/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Placeholder module for OpenEdx jobs package - no business functionality implemented",
+  "purpose_statement": "Provides a namespace for organizing OpenEdX data engineering components",
   "domain_cluster": "utilities",
   "exported_functions": [],
   "exported_classes": [],

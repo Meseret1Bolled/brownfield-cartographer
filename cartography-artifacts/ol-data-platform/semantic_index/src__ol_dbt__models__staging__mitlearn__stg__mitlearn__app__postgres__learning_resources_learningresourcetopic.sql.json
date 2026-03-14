@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_learningresourcetopic.sql",
   "relative_path": "src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_learningresourcetopic.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a staging model for learning resource topics, capturing hierarchical topic structures and their relationships for content categorization",
+  "purpose_statement": "Transforms raw learning resource topic data into a cleaned staging model with standardized column names for hierarchical topic analysis",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitlearn__app__postgres__learning_resources_learningresourcetopic"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/int__learn_ai__tutorbot_4fe652f8-e672-4e71-89da-fb964985847b.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/int__learn_ai__tutorbot_4fe652f8-e672-4e71-89da-fb964985847b.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Captures AI tutorbot interaction data to analyze learner engagement and support system effectiveness.",
+  "purpose_statement": "Captures AI tutorbot interaction data including chat sessions and user engagement",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

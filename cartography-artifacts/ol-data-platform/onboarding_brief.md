@@ -1,29 +1,29 @@
 # FDE Day-One Onboarding Brief — `ol-data-platform`
 
-_Generated: 2026-03-14T17:14:37.481371+00:00_
+_Generated: 2026-03-14T20:26:47.076596+00:00_
 _System: dbt data transformation project_
 
 ## Five FDE Day-One Answers
 
 ### Q1. What is the primary data ingestion path? (trace from raw sources to first transformation)
 
-The primary data ingestion path starts with raw data sources like `user_course_roles`, `platforms`, and `legacy_edx_certificate_revision_mapping` (all in-degree=0), which flow into staging models such as `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/zendesk/stg__zendesk__ticket_field.sql` and `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/zendesk/stg__zendesk__organization.sql`. These staging models represent the first transformation layer, converting raw data into structured DBT models for downstream processing.
+The primary data ingestion path begins with raw sources like user_course_roles, platforms, legacy_edx_certificate_revision_mapping, open_learning, edxorg_raw_data_archive, and edxorg_raw_tracking_logs, which feed into staging models such as stg__zendesk__ticket_field.sql and stg__micromasters__app__postgres__auth_user.sql. These staging models then transform the raw data into intermediate and dimensional models, with the most critical ingestion point being the tracking logs user_activity files across multiple platforms (mitxonline, mitxresidential, mitxpro, edxorg). The ingestion pipeline appears to be centralized around the DBT models in the staging directory, with tracking logs being the most heavily processed data source.
 
 ### Q2. What are the 3-5 most critical output datasets or endpoints?
 
-The 3-5 most critical output datasets are the high-velocity reporting model `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/_reporting__models.yml`, the migration model `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/migration/edxorg_to_mitxonline_enrollments.sql`, and the dimensional model `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/dimensional/dim_course_content.sql`. These outputs serve as the primary interfaces for analytics and data consumption across the platform.
+The 3-5 most critical output datasets are the dimensional/dim_course_content.sql model which consolidates course structure data, the intermediate/mitxonline/int__mitxonline__users.sql model which creates unified user profiles, and the reporting/_reporting__models.yml configuration which likely drives business intelligence outputs. Additionally, the migration/edxorg_to_mitxonline_enrollments.sql model appears critical for cross-platform enrollment data synchronization. The tracking logs user_activity models across all platforms are also essential outputs for behavioral analytics.
 
 ### Q3. What is the blast radius if the most critical module fails? (which downstream systems break)
 
-If the most critical module `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__tracking_logs__user_activity.sql` fails, the blast radius would include all downstream models that depend on user activity tracking data, particularly the intermediate models like `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__users.sql` and reporting models. This would break analytics dashboards and any systems relying on user engagement metrics.
+If the most critical module (stg__mitxonline__openedx__tracking_logs__user_activity.sql) fails, the blast radius would affect all downstream analytics and reporting that depend on user behavior data, including the intermediate/mitxonline/int__mitxonline__users.sql model and any reporting models that consume user activity data. The failure would also impact the dimensional/dim_course_content.sql model since it relies on user activity data for course engagement metrics. All business intelligence dashboards and analytics dependent on user behavior tracking would be compromised.
 
 ### Q4. Where is the business logic concentrated vs distributed? (which modules/files own the core rules)
 
-Business logic is concentrated in the transformation models, particularly in the staging files like `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__tracking_logs__user_activity.sql` which handle filtering, deduplication, and data cleaning rules. The logic is distributed across multiple platforms (MITx Online, edX, XPro, Residential) but centralized in the intermediate models that unify data from these sources.
+The business logic is concentrated in the intermediate models, particularly int__mitxonline__users.sql and int__mitxonline__programs.sql, which handle user profile unification and program-level aggregation respectively. The staging models contain transformation logic but are more focused on data cleaning and preparation. The reporting models likely contain the final business logic for presentation and analytics, while the dimensional models primarily serve as data warehouses for consumption.
 
 ### Q5. What has changed most frequently in the last 30 days? (git velocity map — likely pain points)
 
-The most frequently changed files in the last 30 days are the reporting models `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/_reporting__models.yml`, the migration model `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/migration/edxorg_to_mitxonline_enrollments.sql`, and the docker-compose configuration `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/docker-compose.yaml`. These represent active development areas and potential pain points requiring frequent updates.
+Based on the velocity map, the most frequently changing files in the last 30 days are reporting/_reporting__models.yml, migration/edxorg_to_mitxonline_enrollments.sql, and the docker-compose.yaml configuration file. The CLI interface (ol_superset/cli.py) and metadata configuration (assets/metadata.yaml) have also seen recent changes. These changes suggest active development in reporting capabilities, cross-platform data migration, and infrastructure configuration, indicating these areas may be current pain points or undergoing significant enhancement.
 
 ## Evidence Summary
 

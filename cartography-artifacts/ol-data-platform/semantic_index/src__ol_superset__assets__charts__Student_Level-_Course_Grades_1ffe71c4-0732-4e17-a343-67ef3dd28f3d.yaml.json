@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Student_Level-_Course_Grades_1ffe71c4-0732-4e17-a343-67ef3dd28f3d.yaml",
   "relative_path": "src/ol_superset/assets/charts/Student_Level-_Course_Grades_1ffe71c4-0732-4e17-a343-67ef3dd28f3d.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides student-level course grade data organized by platform and user identifiers",
+  "purpose_statement": "Shows student-level course grades with platform and user identifiers, aggregating final grades for analysis",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

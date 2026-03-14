@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/Data_Detail_Problems_dc0886e8-1861-4bd9-a694-25a063adcf83.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/Data_Detail_Problems_dc0886e8-1861-4bd9-a694-25a063adcf83.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Consolidates detailed problem event data with course and problem metadata for analytics",
+  "purpose_statement": "Provides comprehensive problem event data with user answers, attempts, success rates, and grading information to evaluate student problem-solving processes.",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

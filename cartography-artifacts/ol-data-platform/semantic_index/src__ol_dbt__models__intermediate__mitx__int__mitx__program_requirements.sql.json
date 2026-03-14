@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitx/int__mitx__program_requirements.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitx/int__mitx__program_requirements.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Combines program requirements from MITx Online and MicroMasters platforms to provide a unified view of course requirements across both systems, enabling consistent program tracking and enrollment validation.",
+  "purpose_statement": "Combines program requirements from both MITx Online and MicroMasters platforms to create a unified view of course requirements for each program, enabling analysis of program structure and completion criteria across both platforms.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitx__program_requirements"

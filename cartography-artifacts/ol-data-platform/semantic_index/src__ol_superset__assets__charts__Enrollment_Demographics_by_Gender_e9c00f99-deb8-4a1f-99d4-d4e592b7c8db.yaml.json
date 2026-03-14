@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Enrollment_Demographics_by_Gender_e9c00f99-deb8-4a1f-99d4-d4e592b7c8db.yaml",
   "relative_path": "src/ol_superset/assets/charts/Enrollment_Demographics_by_Gender_e9c00f99-deb8-4a1f-99d4-d4e592b7c8db.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Shows enrollment demographics broken down by gender, providing insights into the gender distribution of learners in the program.",
+  "purpose_statement": "Shows enrollment demographics broken down by gender to analyze learner diversity and inclusion patterns",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

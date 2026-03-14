@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/MITx_Enrollments_89862956-6021-420f-b56e-cd73e6680a78.yaml",
   "relative_path": "src/ol_superset/assets/charts/MITx_Enrollments_89862956-6021-420f-b56e-cd73e6680a78.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays enrollment information for MITx courses including user details and course identifiers",
+  "purpose_statement": "Provides a detailed enrollment table showing course run information and user details for MITx courses",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/dim_user_7f46cdba-1bf0-4f10-9606-a41b77b9e77c.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/dim_user_7f46cdba-1bf0-4f10-9606-a41b77b9e77c.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Maintains a dimensional user profile dataset containing demographic information, preferences, and interests, supporting personalized learning experiences and targeted communications.",
+  "purpose_statement": "Stores user dimension data including join dates, preferences, interests, and goals to support personalized learning experiences and user segmentation.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

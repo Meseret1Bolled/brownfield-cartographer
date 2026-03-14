@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/_irx_mitxonline__models.yml",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/_irx_mitxonline__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Language.YAML module with 233 lines. No exported symbols detected.",
+  "purpose_statement": "Defines model metadata for user ID mapping, teams, and teams membership without actual data extraction logic",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

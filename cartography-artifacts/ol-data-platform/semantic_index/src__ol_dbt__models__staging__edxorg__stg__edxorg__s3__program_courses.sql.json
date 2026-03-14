@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__program_courses.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__program_courses.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates program course metadata to support program structure and learner pathway analysis",
+  "purpose_statement": "This module extracts and cleans program course data from edX S3 storage, mapping course keys to readable IDs and providing course descriptions and types. It helps organize educational programs by linking courses to their respective programs and categorizing them appropriately.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__program_courses"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivities.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__user_courseactivities.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates and analyzes user engagement data across MITx Online courses, including video plays, problem checks, and chapter visits, to provide comprehensive course activity statistics.",
+  "purpose_statement": "Creates comprehensive user activity metrics for MITx Online courses by aggregating video plays, problem checks, and course navigation data to track learner engagement and progress",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__user_courseactivities"

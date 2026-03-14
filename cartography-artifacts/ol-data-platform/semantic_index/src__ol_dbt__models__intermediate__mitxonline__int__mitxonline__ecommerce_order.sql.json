@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_order.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_order.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Processes e-commerce order data including transactions, payments, and user information to track course purchases and financial transactions.",
+  "purpose_statement": "Consolidates ecommerce order data including payment information, product details, and user information to track course purchases and financial transactions",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__ecommerce_order"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2bcoupon.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2bcoupon.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides access to B2B coupon data including discount details and usage information for business-to-business e-commerce operations.",
+  "purpose_statement": "Provides a clean, focused view of B2B coupon data for business analysis and reporting.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__b2becommerce_b2bcoupon"

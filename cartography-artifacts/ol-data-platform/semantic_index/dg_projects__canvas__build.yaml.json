@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/canvas/build.yaml",
   "relative_path": "dg_projects/canvas/build.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Configures Docker build settings for the Canvas data pipeline",
+  "purpose_statement": "Defines Docker build configuration for Canvas data pipeline, specifying build context and target registry",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

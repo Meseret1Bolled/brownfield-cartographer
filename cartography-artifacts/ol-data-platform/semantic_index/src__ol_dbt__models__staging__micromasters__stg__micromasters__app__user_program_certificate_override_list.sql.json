@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__user_program_certificate_override_list.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__user_program_certificate_override_list.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides a secure, hardcoded list of program certificate overrides for specific users, enabling manual overrides of automated certificate generation logic.",
+  "purpose_statement": "Provides a mechanism to override certificate data for specific users in MicroMasters programs, allowing manual adjustments to certification records.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__user_program_certificate_override_list"

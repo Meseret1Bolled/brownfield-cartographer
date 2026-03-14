@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_productcouponassignment.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_productcouponassignment.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks coupon assignments to products and users, enabling analysis of coupon redemption and usage patterns.",
+  "purpose_statement": "Tracks coupon assignments to products and their redemption status for e-commerce transactions",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__ecommerce_productcouponassignment"

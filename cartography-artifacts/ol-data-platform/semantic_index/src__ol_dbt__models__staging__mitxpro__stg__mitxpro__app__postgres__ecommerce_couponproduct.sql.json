@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponproduct.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponproduct.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms coupon product eligibility data from MITxPro's e-commerce system, supporting business analysis of promotional offerings and program-specific discounts.",
+  "purpose_statement": "Extracts and transforms coupon product relationships to manage discount eligibility for specific products and program runs.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_couponproduct"

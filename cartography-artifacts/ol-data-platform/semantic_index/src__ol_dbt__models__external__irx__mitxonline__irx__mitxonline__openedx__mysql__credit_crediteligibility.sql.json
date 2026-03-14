@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__credit_crediteligibility.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__credit_crediteligibility.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages credit eligibility and course assignments by linking user credit eligibility records to specific courses, enabling tracking of deadlines and course participation for credit-bearing activities.",
-  "domain_cluster": "transformation",
+  "purpose_statement": "Manages credit eligibility by linking users to courses they can earn credit for, including deadlines and course mappings.",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__credit_crediteligibility"
   ],

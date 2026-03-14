@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_certificates.sql",
   "relative_path": "src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_certificates.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides a comprehensive view of course completion certificates including user details and certificate metadata for verification and reporting purposes.",
+  "purpose_statement": "Tracks course completion certificates for MITx Online users, linking certificate data with user profiles to provide comprehensive completion records.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__mitxonline_course_certificates"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/DEDP_Learner_Grades_by_Course_1ec63597-fd4e-4e55-b5e0-aa09309f3cce.yaml",
   "relative_path": "src/ol_superset/assets/charts/DEDP_Learner_Grades_by_Course_1ec63597-fd4e-4e55-b5e0-aa09309f3cce.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays DEDP learner grades organized by course, enabling analysis of student performance across different courses within the DEDP program.",
+  "purpose_statement": "Displays DEDP learner grades organized by course for program evaluation and academic performance tracking",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

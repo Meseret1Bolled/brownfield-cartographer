@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponversion.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponversion.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks coupon version history, allowing analysis of coupon changes and identification of the most recent coupon versions.",
+  "purpose_statement": "Identifies the latest version of each coupon for version control and active coupon tracking",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__ecommerce_couponversion"

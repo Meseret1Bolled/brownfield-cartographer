@@ -1,8 +1,8 @@
 # Cartography Analysis Summary
 
 **Target:** `/home/meseret/Desktop/brownfield-cartographer/ol-data-platform`
-**Generated:** 2026-03-14T17:14:38.710353
-**Duration:** 3203.0s
+**Generated:** 2026-03-14T20:26:47.979227
+**Duration:** 2687.6s
 
 ## Module Graph
 - Modules: 1106

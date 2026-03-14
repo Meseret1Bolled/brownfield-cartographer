@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_showanswer.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__user_courseactivity_showanswer.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures user interactions with course content where answers were shown, tracking student engagement patterns and problem-solving behavior for educational analytics.",
+  "purpose_statement": "Consolidates course metadata from multiple sources including platform details, instructor information, topics, and certificate data to create a comprehensive course catalog for MITxPro programs.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__user_courseactivity_showanswer"

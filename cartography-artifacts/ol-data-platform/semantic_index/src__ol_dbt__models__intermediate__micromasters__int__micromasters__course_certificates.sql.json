@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/micromasters/int__micromasters__course_certificates.sql",
   "relative_path": "src/ol_dbt/models/intermediate/micromasters/int__micromasters__course_certificates.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Combines course certificates from multiple sources (MicroMasters, MITxOnline, and legacy edx.org) for DEDP programs, ensuring proper deduplication and data consistency for learners who have migrated between platforms.",
+  "purpose_statement": "Provides a unified view of DEDP course certificates by combining data from MicroMasters and MITxOnline, ensuring deduplication for users migrated between platforms.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__micromasters__course_certificates"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__program_certificates.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__program_certificates.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Generates a comprehensive view of program certificates by combining certificate data with program and user information, including certificate URLs for verification.",
+  "purpose_statement": "Generates program certificate records with user details and certificate URLs for credential verification and program completion tracking.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__program_certificates"

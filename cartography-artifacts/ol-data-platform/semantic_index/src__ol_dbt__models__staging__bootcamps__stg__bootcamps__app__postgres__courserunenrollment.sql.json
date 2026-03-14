@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courserunenrollment.sql",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__courserunenrollment.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks course enrollment status and certificate blocking for bootcamp participants, supporting enrollment management and credential control.",
+  "purpose_statement": "Tracks course run enrollment data including user status, certificate blocking, and synchronization timestamps with external systems.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__bootcamps__app__postgres__courserunenrollment"

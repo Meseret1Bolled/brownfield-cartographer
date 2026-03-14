@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_courserun.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__bigquery__mitx_courserun.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Sources and normalizes MITx course information from BigQuery, providing comprehensive course metadata including titles, schedules, and institutional details for catalog and enrollment systems.",
+  "purpose_statement": "Maintains MITx course catalog information including titles, schedules, instructors, and departments to provide comprehensive course metadata.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__bigquery__mitx_courserun"

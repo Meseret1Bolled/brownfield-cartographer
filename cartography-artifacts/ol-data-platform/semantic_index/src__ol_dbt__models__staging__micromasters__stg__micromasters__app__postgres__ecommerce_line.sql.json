@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_line.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_line.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw ecommerce line item data from the MicroMasters PostgreSQL database into a standardized staging format with readable course identifiers and proper data types",
+  "purpose_statement": "Transforms raw ecommerce line item data from the MicroMasters platform into a standardized format for downstream analysis, enabling business teams to understand course purchases and pricing details.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__ecommerce_line"

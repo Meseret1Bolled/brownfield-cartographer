@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/int__learn_ai__chatbot_f1ec896e-86d4-451a-84cc-841d234e70a6.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/int__learn_ai__chatbot_f1ec896e-86d4-451a-84cc-841d234e70a6.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides access to chatbot interaction data including session details and user information for analysis of learner support interactions.",
+  "purpose_statement": "Stores and manages chatbot interaction data, tracking user conversations and engagement with the AI learning assistant.",
   "domain_cluster": "ingestion",
   "exported_functions": [],
   "exported_classes": [],

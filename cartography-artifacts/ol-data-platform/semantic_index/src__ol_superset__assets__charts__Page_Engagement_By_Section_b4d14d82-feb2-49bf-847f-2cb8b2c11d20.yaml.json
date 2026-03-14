@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Page_Engagement_By_Section_b4d14d82-feb2-49bf-847f-2cb8b2c11d20.yaml",
   "relative_path": "src/ol_superset/assets/charts/Page_Engagement_By_Section_b4d14d82-feb2-49bf-847f-2cb8b2c11d20.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Analyzes page engagement metrics by course section to understand learner interaction with course content",
+  "purpose_statement": "Reports on page-level engagement metrics across course sections, aggregating view counts to understand which content areas are most actively accessed by learners.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

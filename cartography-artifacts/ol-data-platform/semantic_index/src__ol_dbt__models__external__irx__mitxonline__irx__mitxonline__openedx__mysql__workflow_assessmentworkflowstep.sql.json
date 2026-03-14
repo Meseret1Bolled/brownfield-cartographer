@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__workflow_assessmentworkflowstep.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__workflow_assessmentworkflowstep.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Track assessment workflow step completion times to analyze grading process efficiency and identify bottlenecks in the review pipeline.",
+  "purpose_statement": "Extract workflow assessment step details including completion timestamps and order for specific workflows, enabling tracking of assessment process progress and timing.",
   "domain_cluster": "ingestion",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__workflow_assessmentworkflowstep"

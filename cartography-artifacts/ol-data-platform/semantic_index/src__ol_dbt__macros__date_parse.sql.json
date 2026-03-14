@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/date_parse.sql",
   "relative_path": "src/ol_dbt/macros/date_parse.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Offers a database-agnostic method to parse date strings into date objects using format strings, ensuring consistent date parsing functionality across different SQL dialects in the data platform.",
+  "purpose_statement": "Offers a database-agnostic way to parse date strings using different format patterns, enabling consistent date parsing across various database systems while handling format differences between engines.",
   "domain_cluster": "utilities",
   "exported_functions": [
     "date_parse"

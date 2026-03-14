@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/Program_Enrollment_with_user_cc496da8-03f6-43ea-9b6c-900ba695e4b6.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/Program_Enrollment_with_user_cc496da8-03f6-43ea-9b6c-900ba695e4b6.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Combines program enrollment data with user demographics and course completion metrics for comprehensive program analysis",
+  "purpose_statement": "Combines program enrollment data with user demographic information and course completion metrics to analyze educational program effectiveness and student characteristics.",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

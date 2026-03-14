@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitx/_int_mitx__models.yml",
   "relative_path": "src/ol_dbt/models/intermediate/mitx/_int_mitx__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines the schema and validation rules for intermediate models that combine MITx Online and edX.org data, establishing data quality tests and column specifications for programs, courses, and other entities.",
+  "purpose_statement": "Define the schema and data validation rules for intermediate MITx models that combine data from MITx Online, edX.org, and MicroMasters platforms for programs and courses.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

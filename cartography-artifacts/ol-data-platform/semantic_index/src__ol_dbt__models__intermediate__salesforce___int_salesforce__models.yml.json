@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/salesforce/_int_salesforce__models.yml",
   "relative_path": "src/ol_dbt/models/intermediate/salesforce/_int_salesforce__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines data quality tests and descriptions for the Salesforce opportunity intermediate model to ensure data integrity and business rule compliance.",
+  "purpose_statement": "Defines data quality tests and accepted values for the intermediate Salesforce opportunity model to ensure data integrity and consistency.",
   "domain_cluster": "testing",
   "exported_functions": [],
   "exported_classes": [],

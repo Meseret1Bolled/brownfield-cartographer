@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Learn_User_Profile_2e3e900a-3782-4738-80fe-0d60802d4461.yaml",
   "relative_path": "src/ol_superset/assets/charts/Learn_User_Profile_2e3e900a-3782-4738-80fe-0d60802d4461.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays detailed user profiles for learners in the MITx system, including personal information, education level, interests, and engagement status to support user management and analysis",
+  "purpose_statement": "Displays user profiles from the learning platform, allowing administrators to view and analyze learner information including demographics, interests, and engagement status.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

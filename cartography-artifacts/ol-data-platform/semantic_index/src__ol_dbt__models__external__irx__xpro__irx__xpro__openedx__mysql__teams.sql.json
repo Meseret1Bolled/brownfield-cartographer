@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__teams.sql",
   "relative_path": "src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__teams.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides access to team information from the openedx MySQL teams table, enabling analysis of course team structures and their attributes.",
+  "purpose_statement": "Provides team information for courses, including team size, description, and ID, to support team-based learning and collaboration features.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__xpro__openedx__mysql__teams"

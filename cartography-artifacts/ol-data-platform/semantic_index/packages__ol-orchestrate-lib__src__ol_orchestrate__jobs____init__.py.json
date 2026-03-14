@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/jobs/__init__.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/jobs/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides initialization for orchestration job components, serving as the entry point for defining and managing data pipeline workflows.",
+  "purpose_statement": "Defines the public interface for job orchestration components, exposing available job definitions for execution scheduling.",
   "domain_cluster": "orchestration",
   "exported_functions": [],
   "exported_classes": [],

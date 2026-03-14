@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_coursepage_topics.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_coursepage_topics.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks topic assignments for both internal course pages and external course pages to understand content categorization across different course types",
+  "purpose_statement": "Maps course topics to their respective course pages, enabling tracking of which topics are associated with specific courses in the CMS.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__cms_coursepage_topics"

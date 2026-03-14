@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/tfact_problem_events_5fc7287d-1bf8-4fc2-b008-c80f84e3a6d9.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/tfact_problem_events_5fc7287d-1bf8-4fc2-b008-c80f84e3a6d9.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Records problem event data from courses including timestamps, user interactions, and grades to support learning analytics and course effectiveness measurement.",
+  "purpose_statement": "Captures problem event data including user interactions and grading information for course assessments",
   "domain_cluster": "ingestion",
   "exported_functions": [],
   "exported_classes": [],

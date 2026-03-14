@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/mitxonline/marts__mitxonline_discussions.sql",
   "relative_path": "src/ol_dbt/models/marts/mitxonline/marts__mitxonline_discussions.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures detailed discussion activity data including user interactions, course context, and timing to analyze community engagement and learning discussions.",
+  "purpose_statement": "Captures and organizes discussion activity data for MITx Online courses, linking user interactions with course information and user profiles.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__mitxonline_discussions"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/student_risk_probability/student_risk_probability/assets/risk_probability.py",
   "relative_path": "dg_projects/student_risk_probability/student_risk_probability/assets/risk_probability.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Calculate student risk probabilities for academic integrity monitoring by applying logistic regression to scaled features from cheating detection data",
+  "purpose_statement": "Module 2 calculates student risk probabilities by processing cheating detection data, scaling numeric features, and applying logistic regression weights to identify students at risk of academic dishonesty.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "student_risk_probability"

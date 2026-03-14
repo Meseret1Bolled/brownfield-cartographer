@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/apply_deduplication_query.sql",
   "relative_path": "src/ol_dbt/macros/apply_deduplication_query.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides deduplication logic to ensure only the most recent record is retained when incremental sync appends duplicate data, preventing data quality issues from multiple record versions",
+  "purpose_statement": "Handles duplicate records in incremental data syncs by keeping only the most recent version based on partition columns, ensuring data consistency in analytics tables",
   "domain_cluster": "transformation",
   "exported_functions": [
     "apply_deduplication_query"

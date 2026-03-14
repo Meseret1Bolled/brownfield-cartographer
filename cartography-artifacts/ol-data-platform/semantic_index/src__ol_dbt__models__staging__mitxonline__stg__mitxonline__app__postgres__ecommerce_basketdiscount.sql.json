@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_basketdiscount.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_basketdiscount.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw ecommerce basket discount data to track when users apply discounts to their shopping baskets, enabling analysis of promotional campaign effectiveness and revenue impact",
+  "purpose_statement": "Tracks basket discount redemptions to analyze promotional effectiveness and user purchasing behavior.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__app__postgres__ecommerce_basketdiscount"

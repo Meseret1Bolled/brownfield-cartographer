@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_line.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_line.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw ecommerce line item data from Postgres into staging format with standardized timestamps for order line analysis",
+  "purpose_statement": "Module providing: stg__mitxpro__app__postgres__ecommerce_line. Contains 19 lines of Language.SQL code.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_line"

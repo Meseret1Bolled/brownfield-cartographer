@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/edxorg/edxorg/lib/edxorg.py",
   "relative_path": "dg_projects/edxorg/edxorg/lib/edxorg.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines regex patterns and functions to categorize and parse edX archive file paths based on their naming conventions",
+  "purpose_statement": "Provides utilities for parsing and categorizing edX archive file names to identify data types and sources for downstream processing",
   "domain_cluster": "utilities",
   "exported_functions": [
     "categorize_archive_element",

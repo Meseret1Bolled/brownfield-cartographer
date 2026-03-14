@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/engagement_problem_completion_raw.sql",
   "relative_path": "src/ol_dbt/models/reporting/engagement_problem_completion_raw.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Calculates problem completion statistics including attempts, correct answers, and completion rates for course assessments.",
+  "purpose_statement": "Analyzes problem completion data to calculate metrics such as problems attempted, problems correct, and completion rates, helping to assess learner performance and content effectiveness in courses.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "engagement_problem_completion_raw"

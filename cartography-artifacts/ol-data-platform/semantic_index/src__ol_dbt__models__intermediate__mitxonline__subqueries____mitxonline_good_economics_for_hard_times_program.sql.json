@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/subqueries/__mitxonline_good_economics_for_hard_times_program.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/subqueries/__mitxonline_good_economics_for_hard_times_program.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Determines which DEDP program should count a 14.009x enrollment for micromasters reporting based on whether the learner is in the Public Policy program or completed the course before Fall 2023, ensuring accurate credential tracking across program tracks.",
+  "purpose_statement": "Determines the appropriate DEDP program for counting 14.009x enrollments based on user's program enrollment and course completion date, supporting accurate micromasters reporting.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "__mitxonline_good_economics_for_hard_times_program"

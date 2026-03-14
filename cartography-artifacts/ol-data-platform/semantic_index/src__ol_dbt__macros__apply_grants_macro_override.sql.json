@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/apply_grants_macro_override.sql",
   "relative_path": "src/ol_dbt/macros/apply_grants_macro_override.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Controls database grant permissions, applying them only in production to prevent accidental data exposure in non-production environments",
-  "domain_cluster": "utilities",
+  "purpose_statement": "Implements conditional database grant application logic that only applies permissions in production environments to protect test data in non-production environments",
+  "domain_cluster": "configuration",
   "exported_functions": [
     "apply_grants_macro_override"
   ],

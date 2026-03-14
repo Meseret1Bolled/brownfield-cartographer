@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/micromasters/int__micromasters__course_grades.sql",
   "relative_path": "src/ol_dbt/models/intermediate/micromasters/int__micromasters__course_grades.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Combine course grade data from multiple platforms (MicroMasters, MITxOnline, edX) for DEDP program learners to provide unified academic performance tracking",
+  "purpose_statement": "Consolidates course grade data from multiple platforms for MicroMasters programs, handling data deduplication",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__micromasters__course_grades"

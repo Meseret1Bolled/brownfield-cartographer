@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/student_risk_probability_report.sql",
   "relative_path": "src/ol_dbt/models/reporting/student_risk_probability_report.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Combines student grade data with risk probability assessments to provide a comprehensive view of student performance and potential risk factors.",
+  "purpose_statement": "Compiles student risk probability data by correlating academic performance with cheating detection results to identify at-risk students in online courses.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "student_risk_probability_report"

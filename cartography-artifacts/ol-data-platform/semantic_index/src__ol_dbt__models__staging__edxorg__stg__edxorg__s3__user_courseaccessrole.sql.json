@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__user_courseaccessrole.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__user_courseaccessrole.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages course access roles and permissions by mapping user roles to specific courses, enabling role-based access control across the learning platform.",
+  "purpose_statement": "Manages user role assignments within courses, tracking which users have specific access permissions and organizational affiliations for course administration.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__user_courseaccessrole"

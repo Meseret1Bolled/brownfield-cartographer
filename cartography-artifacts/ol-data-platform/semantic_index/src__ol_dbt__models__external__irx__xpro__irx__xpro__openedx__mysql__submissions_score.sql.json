@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__submissions_score.sql",
   "relative_path": "src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__submissions_score.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Filters submission scores to include only those that have corresponding student items, ensuring data integrity in assessment scoring.",
+  "purpose_statement": "Filters submission scores to only include those associated with valid student items, ensuring data quality for grading and assessment analysis.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__xpro__openedx__mysql__submissions_score"

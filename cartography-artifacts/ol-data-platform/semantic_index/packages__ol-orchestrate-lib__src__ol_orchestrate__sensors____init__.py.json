@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/sensors/__init__.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/sensors/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Initializes the sensors module for the orchestrate library, creating the namespace for sensor-related functionality in the data platform.",
+  "purpose_statement": "Serves as the entry point for sensor-related functionality, organizing and exposing storage monitoring capabilities to the orchestration system.",
   "domain_cluster": "orchestration",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/Course_Enrollment_Activity_101c4123-af4c-492b-a087-246d06569a1d.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/Course_Enrollment_Activity_101c4123-af4c-492b-a087-246d06569a1d.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Tracks and analyzes course enrollment patterns, demographics, and geographic distribution",
+  "purpose_statement": "Presents course enrollment activity metrics including geographic distribution and learner performance analytics",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

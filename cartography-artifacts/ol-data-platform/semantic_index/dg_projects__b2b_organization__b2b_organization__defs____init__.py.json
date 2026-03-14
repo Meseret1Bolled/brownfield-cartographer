@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/b2b_organization/b2b_organization/defs/__init__.py",
   "relative_path": "dg_projects/b2b_organization/b2b_organization/defs/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Placeholder module for defs package structure",
+  "purpose_statement": "Placeholder module for definitions-related imports and exports",
   "domain_cluster": "utilities",
   "exported_functions": [],
   "exported_classes": [],

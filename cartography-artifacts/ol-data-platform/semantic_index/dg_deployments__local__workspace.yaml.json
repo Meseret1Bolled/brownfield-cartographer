@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_deployments/local/workspace.yaml",
   "relative_path": "dg_deployments/local/workspace.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines workspace configuration for Dagster web server to discover and load multiple gRPC-based code locations, enabling distributed orchestration across different data domains",
+  "purpose_statement": "Defines a workspace configuration that connects multiple Dagster gRPC servers, enabling distributed orchestration across different data platform components.",
   "domain_cluster": "orchestration",
   "exported_functions": [],
   "exported_classes": [],

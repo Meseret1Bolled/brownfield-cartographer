@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/organization_administration_report.sql",
   "relative_path": "src/ol_dbt/models/reporting/organization_administration_report.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Generates organization administration reports with enrollment, role, and engagement data for institutional oversight.",
+  "purpose_statement": "Creates a comprehensive organizational administration report that consolidates enrollment, role, and engagement data across multiple event types to support institutional oversight and reporting needs.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "organization_administration_report"

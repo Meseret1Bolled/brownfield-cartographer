@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_order.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_order.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures e-commerce order transactions for financial reconciliation and user purchase history",
+  "purpose_statement": "Transforms e-commerce order data into a consistent format with standardized timestamps and pricing to enable financial reporting and order tracking.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__ecommerce_order"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/canvas/canvas/assets/__init__.py",
   "relative_path": "dg_projects/canvas/canvas/assets/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides initialization for Canvas assets, establishing the foundation for Canvas data extraction and processing workflows.",
+  "purpose_statement": "Exports the public interface for Canvas asset modules",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

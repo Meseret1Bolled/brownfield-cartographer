@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun_enrollment.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun_enrollment.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks and stores course enrollment data for students, enabling analysis of course participation and enrollment status.",
+  "purpose_statement": "Tracks student enrollment in MITx residential courses, capturing when learners join courses and their enrollment status.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxresidential__openedx__courserun_enrollment"

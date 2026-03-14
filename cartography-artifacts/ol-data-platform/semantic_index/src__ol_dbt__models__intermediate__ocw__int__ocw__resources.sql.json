@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/ocw/int__ocw__resources.sql",
   "relative_path": "src/ol_dbt/models/intermediate/ocw/int__ocw__resources.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates all learning resources associated with OCW courses including files, links, and metadata to provide a comprehensive inventory of course materials and their attributes.",
+  "purpose_statement": "Consolidates course resources and their metadata, including learning resource types, titles, and external resource status, to provide a comprehensive view of course materials and their accessibility.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__ocw__resources"

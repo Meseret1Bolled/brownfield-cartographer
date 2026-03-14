@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/lakehouse/lakehouse/assets/lakehouse/dbt.py",
   "relative_path": "dg_projects/lakehouse/lakehouse/assets/lakehouse/dbt.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines and orchestrates DBT-based data transformation assets for the lakehouse, including environment-specific configuration and automation policies",
+  "purpose_statement": "Module 2 enables automated data transformation by orchestrating dbt model execution and metadata collection as part of a data lakehouse pipeline.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "full_dbt_project",

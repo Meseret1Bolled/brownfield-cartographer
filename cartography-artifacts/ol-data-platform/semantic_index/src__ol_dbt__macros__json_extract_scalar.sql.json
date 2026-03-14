@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/json_extract_scalar.sql",
   "relative_path": "src/ol_dbt/macros/json_extract_scalar.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts scalar values from JSON data in a database-agnostic way, handling different SQL dialects",
+  "purpose_statement": "Provides database-agnostic JSON field extraction functionality that adapts to different database systems' JSON handling capabilities",
   "domain_cluster": "utilities",
   "exported_functions": [
     "json_extract_scalar"

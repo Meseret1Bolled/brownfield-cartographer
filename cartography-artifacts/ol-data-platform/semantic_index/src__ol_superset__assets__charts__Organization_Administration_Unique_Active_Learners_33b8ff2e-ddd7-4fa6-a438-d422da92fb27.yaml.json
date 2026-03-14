@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Organization_Administration_Unique_Active_Learners_33b8ff2e-ddd7-4fa6-a438-d422da92fb27.yaml",
   "relative_path": "src/ol_superset/assets/charts/Organization_Administration_Unique_Active_Learners_33b8ff2e-ddd7-4fa6-a438-d422da92fb27.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Tracks unique active learners by organization, counting distinct users who engaged in any learning activity within a given month",
+  "purpose_statement": "Shows monthly counts of unique active learners who engaged with course content through discussions, videos, problems, or other activities, providing insights into learner participation trends.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

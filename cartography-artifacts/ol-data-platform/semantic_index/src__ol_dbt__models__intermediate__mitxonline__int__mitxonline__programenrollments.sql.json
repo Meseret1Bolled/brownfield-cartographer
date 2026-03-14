@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__programenrollments.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__programenrollments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates program enrollment data from MITx Online by joining enrollment records with program and user information, providing a comprehensive view of learner program participation and status.",
+  "purpose_statement": "Consolidates program enrollment data by joining enrollment records with program and user information, enabling analysis of learner engagement across MITx Online programs.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__programenrollments"

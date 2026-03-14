@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__django_contenttype.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__django_contenttype.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Standardizes Django content type metadata to enable consistent referencing of database models across the platform.",
+  "purpose_statement": "Maps Django content type metadata to create a unified identifier for content type references across the platform",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__django_contenttype"

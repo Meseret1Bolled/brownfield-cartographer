@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_structure.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_structure.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Processes course structure data to track content changes by comparing content hashes, ensuring only updated course blocks are processed for downstream analytics.",
+  "purpose_statement": "Identifies and extracts only the most recent course structure blocks by detecting content changes through content hash comparison, preparing hierarchical course data for analysis",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__course_structure"

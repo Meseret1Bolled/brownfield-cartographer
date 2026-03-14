@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courseruns.sql",
   "relative_path": "src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_courseruns.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates MITx course run information from multiple sources including course details, instructor information, and program associations for comprehensive course catalog management",
+  "purpose_statement": "Consolidates MITx course run data from multiple sources to provide comprehensive course information including enrollment details, instructor names, and topics for program management.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__edxorg__mitx_courseruns"

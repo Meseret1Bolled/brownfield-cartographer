@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Daily_Learner_Enrollment_Graph_e197cb29-a6e4-4880-a28f-35a959c77ed8.yaml",
   "relative_path": "src/ol_superset/assets/charts/Daily_Learner_Enrollment_Graph_e197cb29-a6e4-4880-a28f-35a959c77ed8.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays daily enrollment trends for a specific course run, showing total, verified, and audit enrollment counts over time in an area chart.",
+  "purpose_statement": "Shows daily enrollment trends for specific courses, tracking total, verified, and audit enrollments over time",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

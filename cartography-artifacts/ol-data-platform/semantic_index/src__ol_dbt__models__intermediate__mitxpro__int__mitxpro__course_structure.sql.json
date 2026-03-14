@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__course_structure.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__course_structure.sql",
   "language": "Language.SQL",
-  "purpose_statement": "This module processes course structure data from MITxPro, organizing it by course run and time to provide a structured view of course content including chapters and their relationships.",
+  "purpose_statement": "Tracks course structure changes over time to identify the latest course organization for MITxPro courses",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__course_structure"

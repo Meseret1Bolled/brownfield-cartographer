@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_order.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_order.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks and standardizes e-commerce order data including pricing, tax calculations, and timestamps for financial reporting and reconciliation.",
+  "purpose_statement": "Tracks and transforms ecommerce order data including pricing, tax calculations, and timestamps for financial analysis and reporting",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_order"

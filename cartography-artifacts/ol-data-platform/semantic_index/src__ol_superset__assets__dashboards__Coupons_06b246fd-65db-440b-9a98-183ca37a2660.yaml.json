@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/Coupons_06b246fd-65db-440b-9a98-183ca37a2660.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/Coupons_06b246fd-65db-440b-9a98-183ca37a2660.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Manages and tracks coupon/discount program performance through summary statistics and dashboard updates for financial and promotional analysis.",
+  "purpose_statement": "Offers a detailed view of coupon and discount usage patterns, enabling analysis of promotional effectiveness and financial impact of discount programs.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

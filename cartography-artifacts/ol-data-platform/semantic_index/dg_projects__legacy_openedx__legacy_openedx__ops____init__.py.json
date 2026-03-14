@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/legacy_openedx/legacy_openedx/ops/__init__.py",
   "relative_path": "dg_projects/legacy_openedx/legacy_openedx/ops/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Serves as a placeholder module for operations-related exports, likely intended for future use or to maintain package structure.",
+  "purpose_statement": "Placeholder module for ops package structure",
   "domain_cluster": "utilities",
   "exported_functions": [],
   "exported_classes": [],

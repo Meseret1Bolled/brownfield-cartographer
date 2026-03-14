@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__student_anonymoususerid.sql",
   "relative_path": "src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__student_anonymoususerid.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps anonymous user IDs to course IDs to enable privacy-preserving user tracking across MITx courses.",
-  "domain_cluster": "ingestion",
+  "purpose_statement": "Maps anonymous user identifiers to course contexts for privacy-preserving analytics and learner tracking across MITx courses.",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "irx__xpro__openedx__mysql__student_anonymoususerid"
   ],

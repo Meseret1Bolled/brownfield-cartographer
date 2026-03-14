@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/ocw/int__ocw__course_topics.sql",
   "relative_path": "src/ol_dbt/models/intermediate/ocw/int__ocw__course_topics.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts and normalizes topic, subtopic, and speciality classifications for OCW courses from JSON arrays stored in the website content metadata.",
+  "purpose_statement": "Transforms nested JSON arrays of course topics into individual rows, separating topics into topic, subtopic, and speciality categories for better analysis and reporting.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__ocw__course_topics"

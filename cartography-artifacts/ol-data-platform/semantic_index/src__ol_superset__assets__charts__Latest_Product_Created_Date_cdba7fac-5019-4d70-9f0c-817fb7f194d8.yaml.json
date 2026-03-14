@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Latest_Product_Created_Date_cdba7fac-5019-4d70-9f0c-817fb7f194d8.yaml",
   "relative_path": "src/ol_superset/assets/charts/Latest_Product_Created_Date_cdba7fac-5019-4d70-9f0c-817fb7f194d8.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Shows the most recent product creation date to monitor product catalog updates and data pipeline completeness",
+  "purpose_statement": "Tracks the most recent product creation dates, providing visibility into product pipeline activity and development velocity.",
   "domain_cluster": "monitoring",
   "exported_functions": [],
   "exported_classes": [],

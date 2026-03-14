@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/marts__combined__orders_02e97623-3edd-4d3a-acbe-119e889a043a.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/marts__combined__orders_02e97623-3edd-4d3a-acbe-119e889a043a.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Aggregates order data with calculated date fields for financial and sales analysis",
+  "purpose_statement": "Tracks and aggregates order data including pricing and temporal information for financial analysis and reporting",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

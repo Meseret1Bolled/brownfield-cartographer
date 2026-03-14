@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/data_platform/data_platform/lib/__init__.py",
   "relative_path": "dg_projects/data_platform/data_platform/lib/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Empty initialization file for the data platform library module",
+  "purpose_statement": "Empty initialization file for the data platform library package",
   "domain_cluster": "utilities",
   "exported_functions": [],
   "exported_classes": [],

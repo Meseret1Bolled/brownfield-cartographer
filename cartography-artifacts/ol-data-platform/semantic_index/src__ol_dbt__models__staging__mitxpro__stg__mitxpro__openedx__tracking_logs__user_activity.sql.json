@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__tracking_logs__user_activity.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__openedx__tracking_logs__user_activity.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures and cleans user activity tracking logs from xPro, filtering out invalid events and deduplicating records to provide a reliable source of user engagement data.",
+  "purpose_statement": "Captures and processes user activity tracking logs from xPro courses, filtering out invalid entries and extracting relevant event details for analysis.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__openedx__tracking_logs__user_activity"

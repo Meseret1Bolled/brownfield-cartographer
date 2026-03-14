@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/resources/__init__.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/resources/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides the foundational structure and entry point for the orchestrate library's resource management system",
+  "purpose_statement": "Provides base API client functionality for external service integrations",
   "domain_cluster": "utilities",
   "exported_functions": [],
   "exported_classes": [],

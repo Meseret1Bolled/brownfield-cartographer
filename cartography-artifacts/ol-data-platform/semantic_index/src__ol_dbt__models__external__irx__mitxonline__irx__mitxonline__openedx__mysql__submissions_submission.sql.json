@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__submissions_submission.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__submissions_submission.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks submission records for team-based assignments, capturing when teams submitted work, its status, and submission identifiers.",
+  "purpose_statement": "Tracks individual student submissions including submission IDs, timestamps, and status to monitor assessment completion and submission workflows.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__submissions_submission"

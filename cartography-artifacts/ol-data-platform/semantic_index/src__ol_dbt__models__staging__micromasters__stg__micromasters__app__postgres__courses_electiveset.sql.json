@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_electiveset.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_electiveset.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages program-level elective requirements to ensure students meet graduation criteria",
+  "purpose_statement": "Models program-level elective requirements to enable curriculum planning and student progress tracking toward degree completion.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__courses_electiveset"

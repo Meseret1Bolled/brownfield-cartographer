@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/sync_config.yml",
   "relative_path": "src/ol_superset/sync_config.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Configures synchronization workflows between QA and production Superset environments, defining asset promotion strategies and environment-specific metadata mappings.",
+  "purpose_statement": "Configures synchronization workflows between QA and production Superset environments, enabling controlled promotion of analytics dashboards",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

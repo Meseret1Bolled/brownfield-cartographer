@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Problem_Engagement_By_Subsection_bec01f31-3a3e-4bba-a280-9160e00e2b87.yaml",
   "relative_path": "src/ol_superset/assets/charts/Problem_Engagement_By_Subsection_bec01f31-3a3e-4bba-a280-9160e00e2b87.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Shows problem engagement statistics broken down by subsection to track student performance",
+  "purpose_statement": "Displays problem engagement statistics by subsection, showing average percentage of problems attempted per section",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

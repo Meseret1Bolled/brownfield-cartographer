@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_program.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_program.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Standardizes program information from MicroMasters, including pricing, course requirements, and availability, to support program management and enrollment decisions.",
+  "purpose_statement": "Stores and manages MicroMasters program metadata including pricing, course requirements, and financial aid availability for program administration.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__courses_program"

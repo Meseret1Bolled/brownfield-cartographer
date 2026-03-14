@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/MITx_Online_Course_Run_Metadata_c46d73a1-16c3-450b-a43d-63383fad7be2.yaml",
   "relative_path": "src/ol_superset/assets/charts/MITx_Online_Course_Run_Metadata_c46d73a1-16c3-450b-a43d-63383fad7be2.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides a table view of MITx Online course run metadata including course numbers, titles, and run dates for administrative reference.",
+  "purpose_statement": "Provides course run metadata and scheduling information for MITx Online courses, helping administrators track course availability and timing",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

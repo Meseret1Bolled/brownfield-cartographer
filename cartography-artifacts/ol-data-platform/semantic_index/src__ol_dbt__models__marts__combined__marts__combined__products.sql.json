@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/combined/marts__combined__products.sql",
   "relative_path": "src/ol_dbt/models/marts/combined/marts__combined__products.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates product information from different platforms to create a unified product catalog with consistent attributes",
+  "purpose_statement": "Integrates product information from various platforms (MITx Online, MITxPro, edX) to provide a comprehensive catalog of courses, programs, and their pricing details in a unified format.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__combined__products"

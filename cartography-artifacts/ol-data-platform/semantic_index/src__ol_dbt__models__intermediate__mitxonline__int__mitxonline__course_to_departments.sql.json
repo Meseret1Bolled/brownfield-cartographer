@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_to_departments.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_to_departments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps MITx Online courses to their respective departments, providing a bridge between course content and organizational structure for reporting and analysis.",
+  "purpose_statement": "Maps MITx Online courses to their respective academic departments to enable organizational reporting and cross-departmental analysis of course offerings",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__course_to_departments"

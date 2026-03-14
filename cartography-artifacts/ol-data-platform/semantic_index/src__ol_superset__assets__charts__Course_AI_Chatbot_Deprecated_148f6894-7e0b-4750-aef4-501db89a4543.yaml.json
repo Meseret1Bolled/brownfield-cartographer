@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Course_AI_Chatbot_Deprecated_148f6894-7e0b-4750-aef4-501db89a4543.yaml",
   "relative_path": "src/ol_superset/assets/charts/Course_AI_Chatbot_Deprecated_148f6894-7e0b-4750-aef4-501db89a4543.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Logs AI chatbot interactions for course support, capturing both agent and human messages for troubleshooting and analysis.",
+  "purpose_statement": "Provides access to course AI chatbot interactions including agent and human messages, enabling analysis of chatbot usage and effectiveness in supporting learners.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

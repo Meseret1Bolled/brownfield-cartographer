@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Product_Dashboard_Last_Updated_6733b1cd-bb65-44e6-959e-ca21305807e7.yaml",
   "relative_path": "src/ol_superset/assets/charts/Product_Dashboard_Last_Updated_6733b1cd-bb65-44e6-959e-ca21305807e7.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Monitors the last update times of product data marts, ensuring data freshness and pipeline reliability.",
+  "purpose_statement": "Monitors the last update timestamps of product dashboard tables, allowing data engineering teams to track data freshness and system updates.",
   "domain_cluster": "monitoring",
   "exported_functions": [],
   "exported_classes": [],

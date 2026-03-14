@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Problem_Engagement_by_Courserun_1e30a45b-d97d-4f44-ac2c-1d9de9e05bc1.yaml",
   "relative_path": "src/ol_superset/assets/charts/Problem_Engagement_by_Courserun_1e30a45b-d97d-4f44-ac2c-1d9de9e05bc1.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Presents average problem engagement rates by courserun to evaluate learning activity and course difficulty across different programs",
+  "purpose_statement": "Shows average problem engagement rates by courserun to assess learner participation in course activities.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

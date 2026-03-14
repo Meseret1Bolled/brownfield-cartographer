@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/_edxorg_sources.yml",
   "relative_path": "src/ol_dbt/models/staging/edxorg/_edxorg_sources.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines the raw data sources and their schemas for the edX data warehouse, establishing the foundation for all subsequent data transformation and analysis processes.",
+  "purpose_statement": "Defines the source configuration for edX.org data, establishing the connection and schema structure for raw data ingestion from various edX.org sources.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/_reporting__sources.yml",
   "relative_path": "src/ol_dbt/models/reporting/_reporting__sources.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines source metadata for the reporting schema, specifically documenting the student risk probability table which contains model-generated risk scores for identifying potentially suspicious student behavior.",
+  "purpose_statement": "Defines a source for student risk probability data from a logistic regression model for monitoring suspicious behavior.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

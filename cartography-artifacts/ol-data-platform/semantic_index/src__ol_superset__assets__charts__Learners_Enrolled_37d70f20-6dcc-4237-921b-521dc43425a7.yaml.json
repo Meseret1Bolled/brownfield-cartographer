@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Learners_Enrolled_37d70f20-6dcc-4237-921b-521dc43425a7.yaml",
   "relative_path": "src/ol_superset/assets/charts/Learners_Enrolled_37d70f20-6dcc-4237-921b-521dc43425a7.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays the total count of distinct learners currently enrolled in courses, providing a quick overview of active learner engagement.",
+  "purpose_statement": "Displays the total count of currently enrolled learners as a large numeric visualization for quick insight into enrollment numbers.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

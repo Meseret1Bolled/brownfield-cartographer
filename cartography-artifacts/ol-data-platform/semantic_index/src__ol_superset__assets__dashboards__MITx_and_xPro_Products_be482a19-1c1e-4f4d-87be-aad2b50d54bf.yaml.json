@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/MITx_and_xPro_Products_be482a19-1c1e-4f4d-87be-aad2b50d54bf.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/MITx_and_xPro_Products_be482a19-1c1e-4f4d-87be-aad2b50d54bf.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Manages and displays MITx and xPro product information including creation dates and product listings with column definitions and data source details",
+  "purpose_statement": "Provides product management insights for MITx and xPro platforms by displaying product creation timelines and comprehensive product data, supporting business decisions around course offerings and pricing strategies.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

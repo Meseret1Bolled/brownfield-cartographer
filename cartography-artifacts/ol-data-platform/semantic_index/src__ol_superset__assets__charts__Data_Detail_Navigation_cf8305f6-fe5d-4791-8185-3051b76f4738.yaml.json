@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Data_Detail_Navigation_cf8305f6-fe5d-4791-8185-3051b76f4738.yaml",
   "relative_path": "src/ol_superset/assets/charts/Data_Detail_Navigation_cf8305f6-fe5d-4791-8185-3051b76f4738.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays detailed navigation data including event timestamps and user interactions",
+  "purpose_statement": "Enables detailed navigation through raw event data with filtering capabilities for platform activity analysis",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

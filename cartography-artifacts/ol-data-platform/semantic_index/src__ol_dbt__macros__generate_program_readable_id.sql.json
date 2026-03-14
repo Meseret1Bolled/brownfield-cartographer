@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/generate_program_readable_id.sql",
   "relative_path": "src/ol_dbt/macros/generate_program_readable_id.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Generates human-readable identifiers for MicroMasters programs from the edX platform, enabling consistent identification and tracking of these programs within the MITx Online data ecosystem.",
-  "domain_cluster": "utilities",
+  "purpose_statement": "Generates human-readable identifiers for MicroMasters programs by creating standardized program IDs based on program metadata, helping to maintain consistent program identification across the platform.",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "generate_program_readable_id"
   ],

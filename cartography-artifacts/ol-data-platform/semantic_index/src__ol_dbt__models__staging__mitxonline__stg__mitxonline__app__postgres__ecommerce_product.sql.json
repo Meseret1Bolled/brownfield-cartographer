@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_product.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__ecommerce_product.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages product catalog information including pricing and availability for online commerce",
+  "purpose_statement": "Converts raw ecommerce product data from PostgreSQL into a standardized staging format with consistent pricing and timestamps, supporting product catalog analytics and e-commerce reporting.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__app__postgres__ecommerce_product"

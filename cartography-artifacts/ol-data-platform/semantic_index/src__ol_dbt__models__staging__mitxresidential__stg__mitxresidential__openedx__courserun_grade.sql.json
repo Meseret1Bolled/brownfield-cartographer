@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun_grade.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun_grade.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Records and tracks course grades for students, enabling performance analysis and certification decisions.",
+  "purpose_statement": "Records student grades for MITx courses, including percentage scores, letter grades, and completion timestamps for academic reporting.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxresidential__openedx__courserun_grade"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/hooks.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/hooks.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Implements Dagster hooks for sending success/failure notifications to Healthchecks.io, enabling monitoring and alerting for pipeline execution.",
+  "purpose_statement": "Implements Dagster hooks for integration with external monitoring services, providing automated notifications for pipeline success and failure events to enable operational visibility and alerting.",
   "domain_cluster": "monitoring",
   "exported_functions": [
     "notify_healthchecks_io_on_success",

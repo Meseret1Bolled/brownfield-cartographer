@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_subsection_grades.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_subsection_grades.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Combines subsection grade data with course structure information to provide detailed academic performance metrics, including both raw and overridden grades for individual course components.",
+  "purpose_statement": "Aggregates student performance data at the subsection level for MITx Online courses, including grade overrides and calculated scores.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__courserun_subsection_grades"

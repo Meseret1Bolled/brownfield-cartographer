@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__edxval_coursevideo.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__edxval_coursevideo.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages course video metadata, allowing for content management and video-related analytics.",
+  "purpose_statement": "Manages video content metadata for MITx courses, tracking which videos are available and hidden in the learning platform.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxresidential__openedx__edxval_coursevideo"

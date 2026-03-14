@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Content_Engagement_984bd054-65c0-4f76-b7ee-7fb0608ccd6e.yaml",
   "relative_path": "src/ol_superset/assets/charts/Content_Engagement_984bd054-65c0-4f76-b7ee-7fb0608ccd6e.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Tracks user engagement with course content by measuring distinct counts of video views, problem attempts, and discussion participation over time",
+  "purpose_statement": "Visualizes user engagement across video watching, problem attempts, and discussion participation over time",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

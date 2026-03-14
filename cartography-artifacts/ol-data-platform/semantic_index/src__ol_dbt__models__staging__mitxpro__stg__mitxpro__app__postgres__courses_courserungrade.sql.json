@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courserungrade.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courserungrade.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks individual course grades for users, including letter grades and pass/fail status, to monitor student academic progress and performance in specific courses.",
+  "purpose_statement": "Records individual course grades for learners, tracking academic performance and certification eligibility across course runs.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__courses_courserungrade"

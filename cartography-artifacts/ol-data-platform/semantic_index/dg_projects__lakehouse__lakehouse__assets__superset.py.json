@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/lakehouse/lakehouse/assets/superset.py",
   "relative_path": "dg_projects/lakehouse/lakehouse/assets/superset.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Generates and refreshes Superset datasets based on dbt models to ensure BI dashboards reflect current data warehouse state",
+  "purpose_statement": "Creates and maintains Superset datasets that mirror dbt models, ensuring analytics dashboards reflect the latest data warehouse structures through automated dataset synchronization.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "create_superset_asset"

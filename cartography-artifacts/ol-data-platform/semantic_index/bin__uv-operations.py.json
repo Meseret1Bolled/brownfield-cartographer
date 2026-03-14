@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/bin/uv-operations.py",
   "relative_path": "bin/uv-operations.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Executes uv commands across all code locations in the data engineering projects directory, managing Python package dependencies and virtual environments.",
+  "purpose_statement": "Executes uv package management commands across multiple code locations by discovering directories with pyproject.toml files and running specified uv operations on each one.",
   "domain_cluster": "utilities",
   "exported_functions": [
     "find_code_locations",

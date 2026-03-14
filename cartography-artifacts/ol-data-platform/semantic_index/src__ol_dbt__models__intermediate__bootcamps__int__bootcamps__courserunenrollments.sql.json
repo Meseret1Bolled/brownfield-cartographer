@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__courserunenrollments.sql",
   "relative_path": "src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__courserunenrollments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "This module combines enrollment data with course run and user information to provide a comprehensive view of active course enrollments, including user details and course information, to support enrollment management and tracking.",
+  "purpose_statement": "Consolidates enrollment information by linking courserun enrollments with course details and user profiles to track active bootcamp participant registrations.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__bootcamps__courserunenrollments"

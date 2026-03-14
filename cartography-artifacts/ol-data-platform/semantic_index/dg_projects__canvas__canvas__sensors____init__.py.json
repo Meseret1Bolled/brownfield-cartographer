@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/canvas/canvas/sensors/__init__.py",
   "relative_path": "dg_projects/canvas/canvas/sensors/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Module for canvas sensors initialization",
+  "purpose_statement": "Initializes the canvas sensors package",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

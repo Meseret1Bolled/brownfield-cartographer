@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/partitions/__init__.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/partitions/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides initialization for orchestration partition components, enabling the definition and management of data partitioning strategies for pipeline execution.",
+  "purpose_statement": "Defines the public interface for partition-related components, exposing available partition definitions for data segmentation.",
   "domain_cluster": "orchestration",
   "exported_functions": [],
   "exported_classes": [],

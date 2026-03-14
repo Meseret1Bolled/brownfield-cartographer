@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/marts__combined_total_course_engagements_edf21d6a-1f41-4812-a1aa-3fcbc8358466.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/marts__combined_total_course_engagements_edf21d6a-1f41-4812-a1aa-3fcbc8358466.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "This dataset aggregates total course engagement metrics, combining enrollment data with user activity to measure course participation and completion rates.",
+  "purpose_statement": "Aggregates total course engagement data with information about course runs, users, and enrollment status for analytics",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

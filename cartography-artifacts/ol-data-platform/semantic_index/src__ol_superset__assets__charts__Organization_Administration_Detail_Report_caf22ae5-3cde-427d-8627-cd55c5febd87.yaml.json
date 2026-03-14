@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Organization_Administration_Detail_Report_caf22ae5-3cde-427d-8627-cd55c5febd87.yaml",
   "relative_path": "src/ol_superset/assets/charts/Organization_Administration_Detail_Report_caf22ae5-3cde-427d-8627-cd55c5febd87.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides detailed organizational administration data including platform, course, user activity, and certificate information for administrative reporting and analysis",
+  "purpose_statement": "Provides detailed reporting on organization-level administration activities, tracking certificate creation dates, user engagement metrics, and chatbot usage patterns across different platforms and courses.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

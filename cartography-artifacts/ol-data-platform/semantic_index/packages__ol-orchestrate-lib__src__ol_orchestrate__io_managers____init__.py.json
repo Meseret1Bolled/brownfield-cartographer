@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/io_managers/__init__.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/io_managers/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides initialization for orchestration I/O manager components, establishing the foundation for data input/output operations in pipelines.",
+  "purpose_statement": "Defines the public interface for input/output manager components, exposing available IO managers for data handling.",
   "domain_cluster": "orchestration",
   "exported_functions": [],
   "exported_classes": [],

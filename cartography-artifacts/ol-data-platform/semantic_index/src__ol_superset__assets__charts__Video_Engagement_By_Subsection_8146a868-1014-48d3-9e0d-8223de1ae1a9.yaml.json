@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Video_Engagement_By_Subsection_8146a868-1014-48d3-9e0d-8223de1ae1a9.yaml",
   "relative_path": "src/ol_superset/assets/charts/Video_Engagement_By_Subsection_8146a868-1014-48d3-9e0d-8223de1ae1a9.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Measures video engagement at the subsection level, calculating watch completion rates to help instructors understand which content students are actually consuming and where attention drops off.",
+  "purpose_statement": "Shows video engagement metrics by subsection, including watch time percentages and duration data, to help course designers understand which content students are actually viewing and completing.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

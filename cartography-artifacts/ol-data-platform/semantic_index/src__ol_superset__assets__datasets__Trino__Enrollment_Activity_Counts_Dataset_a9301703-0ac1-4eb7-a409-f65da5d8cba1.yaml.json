@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/Enrollment_Activity_Counts_Dataset_a9301703-0ac1-4eb7-a409-f65da5d8cba1.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/Enrollment_Activity_Counts_Dataset_a9301703-0ac1-4eb7-a409-f65da5d8cba1.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Tracks enrollment activities and counts across courses to monitor learner progression and engagement, supporting analysis of enrollment trends and course completion metrics.",
+  "purpose_statement": "Aggregates enrollment activity counts by user demographics and course status to track enrollment trends, certificate completions, and course participation patterns over time.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

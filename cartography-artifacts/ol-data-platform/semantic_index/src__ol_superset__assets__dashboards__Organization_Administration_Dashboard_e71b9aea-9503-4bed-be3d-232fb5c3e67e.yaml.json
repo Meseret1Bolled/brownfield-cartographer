@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/Organization_Administration_Dashboard_e71b9aea-9503-4bed-be3d-232fb5c3e67e.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/Organization_Administration_Dashboard_e71b9aea-9503-4bed-be3d-232fb5c3e67e.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides administrative oversight of organization-wide learning activities by tracking enrollment counts, active learners, video consumption, and problem engagement metrics for organizational administration purposes.",
+  "purpose_statement": "Provides a centralized view for monitoring organization-level administrative activities, including enrollment counts, active learner metrics, and content consumption statistics to support operational oversight.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

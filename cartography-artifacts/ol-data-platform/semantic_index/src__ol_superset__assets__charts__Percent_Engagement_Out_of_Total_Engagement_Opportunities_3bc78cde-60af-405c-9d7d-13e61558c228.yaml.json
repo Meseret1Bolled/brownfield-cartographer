@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Percent_Engagement_Out_of_Total_Engagement_Opportunities_3bc78cde-60af-405c-9d7d-13e61558c228.yaml",
   "relative_path": "src/ol_superset/assets/charts/Percent_Engagement_Out_of_Total_Engagement_Opportunities_3bc78cde-60af-405c-9d7d-13e61558c228.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Calculates and displays the average engagement percentages across videos watched, problems submitted, and discussions engaged for each course run.",
+  "purpose_statement": "Shows the average percentage of engagement opportunities utilized across videos, problems, and discussions for each course run.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

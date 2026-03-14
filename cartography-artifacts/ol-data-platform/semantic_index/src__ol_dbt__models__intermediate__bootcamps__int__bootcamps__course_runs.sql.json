@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__course_runs.sql",
   "relative_path": "src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__course_runs.sql",
   "language": "Language.SQL",
-  "purpose_statement": "This module extracts and presents key information about course runs, including their titles, readable IDs, and start/end dates, to support tracking and management of bootcamp course offerings.",
+  "purpose_statement": "Delivers essential course run information including titles, readable IDs, and start/end dates for bootcamp courses to support scheduling and enrollment operations.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__bootcamps__course_runs"

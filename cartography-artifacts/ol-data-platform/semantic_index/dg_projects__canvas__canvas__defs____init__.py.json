@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/canvas/canvas/defs/__init__.py",
   "relative_path": "dg_projects/canvas/canvas/defs/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Module for canvas definitions initialization",
+  "purpose_statement": "Initializes the canvas definitions package",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/Data_Detail_Nav_32e283f5-fc02-403a-9c92-b8286352cdba.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/Data_Detail_Nav_32e283f5-fc02-403a-9c92-b8286352cdba.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Monitors course navigation events to track how learners interact with course content and their progression through learning materials.",
+  "purpose_statement": "Captures detailed navigation events within courses, allowing analysis of how users interact with course content and navigate through materials.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

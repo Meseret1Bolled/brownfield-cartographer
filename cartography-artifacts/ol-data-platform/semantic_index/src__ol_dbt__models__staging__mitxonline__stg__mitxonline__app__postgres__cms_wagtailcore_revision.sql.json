@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_wagtailcore_revision.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_wagtailcore_revision.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Cleans and deduplicates Wagtail CMS revision data to track content changes and editing history for website content management",
+  "purpose_statement": "Captures page revision history to support content change tracking and rollback capabilities.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__app__postgres__cms_wagtailcore_revision"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/generate_hash_id.sql",
   "relative_path": "src/ol_dbt/macros/generate_hash_id.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates consistent hash identifiers for data records using SHA-256 hashing, solving the need for reliable primary key generation that works across different database systems for downstream tools like Hightouch.",
+  "purpose_statement": "Creates a consistent hash ID from strings for use as primary keys, ensuring data integrity across systems like Hightouch",
   "domain_cluster": "utilities",
   "exported_functions": [
     "generate_hash_id"

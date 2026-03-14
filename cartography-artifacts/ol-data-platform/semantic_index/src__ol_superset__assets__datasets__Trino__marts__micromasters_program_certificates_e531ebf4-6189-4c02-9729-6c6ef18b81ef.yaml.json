@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/marts__micromasters_program_certificates_e531ebf4-6189-4c02-9729-6c6ef18b81ef.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/marts__micromasters_program_certificates_e531ebf4-6189-4c02-9729-6c6ef18b81ef.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Tracks MicroMasters program certificate issuance and learner completion data for program management and reporting.",
+  "purpose_statement": "Manages micromasters program certificate data including completion timestamps and user information",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

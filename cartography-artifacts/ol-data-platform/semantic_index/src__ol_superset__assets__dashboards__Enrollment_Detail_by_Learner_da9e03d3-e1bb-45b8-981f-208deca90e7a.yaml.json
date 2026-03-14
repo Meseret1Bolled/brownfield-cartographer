@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/Enrollment_Detail_by_Learner_da9e03d3-e1bb-45b8-981f-208deca90e7a.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/Enrollment_Detail_by_Learner_da9e03d3-e1bb-45b8-981f-208deca90e7a.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Shows detailed enrollment information for individual learners including performance and status tracking",
+  "purpose_statement": "Offers detailed enrollment tracking and analysis for individual learners across course offerings",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

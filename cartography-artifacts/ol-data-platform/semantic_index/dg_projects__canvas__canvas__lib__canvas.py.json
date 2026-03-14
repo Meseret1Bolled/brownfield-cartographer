@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/canvas/canvas/lib/canvas.py",
   "relative_path": "dg_projects/canvas/canvas/lib/canvas.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Library to fetch Canvas course IDs from a Google Sheet using Google Sheets API",
-  "domain_cluster": "utilities",
+  "purpose_statement": "Fetches Canvas course IDs from a Google Sheet to enable dynamic data pipeline partitioning",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "fetch_canvas_course_ids_from_google_sheet"
   ],

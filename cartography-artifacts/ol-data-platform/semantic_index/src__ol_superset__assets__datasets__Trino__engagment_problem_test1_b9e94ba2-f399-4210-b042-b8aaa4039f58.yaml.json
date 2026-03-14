@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/engagment_problem_test1_b9e94ba2-f399-4210-b042-b8aaa4039f58.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/engagment_problem_test1_b9e94ba2-f399-4210-b042-b8aaa4039f58.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Evaluates problem-solving engagement and performance metrics for educational assessment and learner progress tracking",
+  "purpose_statement": "Analyzes problem engagement data including attempts, grades, and completion rates for detailed learning assessment",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

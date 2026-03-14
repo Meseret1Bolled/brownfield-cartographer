@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__user.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__user.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Ingests and cleans raw user authentication data from edX, converting string fields to appropriate types and normalizing timestamps for user profile analysis.",
+  "purpose_statement": "Extracts and cleans user authentication data from edX.org to provide a reliable source of user identity and profile information for downstream analytics.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__user"

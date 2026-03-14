@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/ol_superset/commands/roles.py",
   "relative_path": "src/ol_superset/ol_superset/commands/roles.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Manages dataset access permissions for governance roles by computing and applying which datasets each role should have access to based on local asset definitions and governance policies.",
+  "purpose_statement": "Manage dataset access permissions for governance roles by mapping local assets to role-based permissions",
   "domain_cluster": "configuration",
   "exported_functions": [
     "roles_list",

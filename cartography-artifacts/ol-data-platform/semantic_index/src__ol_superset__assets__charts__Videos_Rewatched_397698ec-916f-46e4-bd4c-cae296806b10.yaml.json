@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Videos_Rewatched_397698ec-916f-46e4-bd4c-cae296806b10.yaml",
   "relative_path": "src/ol_superset/assets/charts/Videos_Rewatched_397698ec-916f-46e4-bd4c-cae296806b10.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays daily aggregated video watch counts with filtering for rewatched content, helping analyze viewing patterns and content engagement behavior.",
+  "purpose_statement": "Tracks and displays the volume of video rewatches over time to identify content that users find valuable enough to review multiple times",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

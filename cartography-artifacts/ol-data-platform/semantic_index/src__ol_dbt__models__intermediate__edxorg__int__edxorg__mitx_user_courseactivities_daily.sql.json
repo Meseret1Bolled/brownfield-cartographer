@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivities_daily.sql",
   "relative_path": "src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivities_daily.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks daily user activity within MITx courses by counting events per user per course per day, providing granular engagement analytics.",
+  "purpose_statement": "Aggregates daily user activity statistics for edX courses, providing insights into user engagement patterns by tracking the number of events per user per course per day.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__edxorg__mitx_user_courseactivities_daily"

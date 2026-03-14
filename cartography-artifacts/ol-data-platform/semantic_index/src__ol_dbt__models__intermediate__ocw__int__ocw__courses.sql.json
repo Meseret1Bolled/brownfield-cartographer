@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/ocw/int__ocw__courses.sql",
   "relative_path": "src/ol_dbt/models/intermediate/ocw/int__ocw__courses.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates core course metadata from multiple source tables to provide a unified view of OCW course attributes including title, status, publication dates, and descriptive information.",
+  "purpose_statement": "Extracts and consolidates course metadata from multiple PostgreSQL tables into a unified course view, providing comprehensive information about OCW courses including descriptions, topics, and instructor details.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__ocw__courses"

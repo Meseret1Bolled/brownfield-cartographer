@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/Data_Detail_Discuss_5bab95fd-d465-44f3-bed8-40c559958fc4.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/Data_Detail_Discuss_5bab95fd-d465-44f3-bed8-40c559958fc4.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides detailed discussion event data for analyzing user engagement and interaction patterns within courses, enabling insights into how learners participate in course discussions.",
+  "purpose_statement": "Provides detailed discussion activity data including event timestamps, post content, and user engagement metrics for analysis of course discussion forums.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

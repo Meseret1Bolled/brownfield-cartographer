@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courseware_studentmodulehistoryextended.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courseware_studentmodulehistoryextended.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks historical changes to student module states and grades in MITx residential courses, enabling analysis of learning progress and problem-solving patterns over time.",
+  "purpose_statement": "Captures and maintains a history of student module interactions, tracking problem attempts and grades over time for academic performance analysis and progress monitoring.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxresidential__openedx__courseware_studentmodulehistoryextended"

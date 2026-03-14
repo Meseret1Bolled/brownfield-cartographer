@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/tfact_video_events_2a608e5d-c828-4457-83c2-0912a1534430.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/tfact_video_events_2a608e5d-c828-4457-83c2-0912a1534430.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Tracks video engagement metrics including watch duration and user interactions to analyze learning behavior and content effectiveness.",
+  "purpose_statement": "Monitors video engagement metrics including viewing duration and user interactions to understand how learners consume educational video content.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

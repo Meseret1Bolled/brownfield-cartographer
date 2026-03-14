@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/marts__ocw_courses_5e9078ef-d0a9-4db7-9635-75fb9a2321de.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/marts__ocw_courses_5e9078ef-d0a9-4db7-9635-75fb9a2321de.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides access to OCW course data through a Trino database connection for data analysis and reporting purposes.",
+  "purpose_statement": "Manages metadata and configuration for a specific data mart table containing OpenCourseWare course information, enabling business users to query and analyze course publishing data through Superset.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

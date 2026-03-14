@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/ol_superset/commands/lock.py",
   "relative_path": "src/ol_superset/ol_superset/commands/lock.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Manages asset lock/unlock state to control whether Superset dashboards and charts can be manually edited in the UI, enforcing 'managed as code' workflows by preventing accidental UI modifications to production assets.",
+  "purpose_statement": "Manage external editing permissions for Superset assets to enforce 'managed as code' workflows by locking or unlocking dashboards and charts",
   "domain_cluster": "utilities",
   "exported_functions": [
     "list_all_assets_from_api",

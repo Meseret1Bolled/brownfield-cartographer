@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/ocw/_stg_ocw__models.yml",
   "relative_path": "src/ol_dbt/models/staging/ocw/_stg_ocw__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines metadata structure and validation rules for OCW websites in the staging layer, ensuring data quality for downstream analytics on OCW website properties and publishing status.",
+  "purpose_statement": "Defines metadata schema and validation rules for OCW websites, ensuring data quality and consistency for course-related content management.",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

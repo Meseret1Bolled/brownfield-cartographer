@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_flexiblepriceapplication.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_flexiblepriceapplication.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages flexible pricing applications for courses and programs, linking pricing requests with user information, discount details, and content types to enable dynamic pricing and financial aid processing.",
+  "purpose_statement": "Combines flexible pricing application data with user information, discount details, and content type mappings to support financial aid and pricing tier management for courses and programs.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__flexiblepricing_flexiblepriceapplication"

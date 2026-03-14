@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/data_platform/data_platform/definitions.py",
   "relative_path": "dg_projects/data_platform/data_platform/definitions.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Module 5 provides platform-level utilities for data engineering workflows, including Slack notifications for run failures and Vault authentication for secure credential management in the data platform.",
-  "domain_cluster": "utilities",
+  "purpose_statement": "Platform-level utilities and notifications for the data engineering pipeline, providing Slack failure notifications and vault authentication for run monitoring and error handling.",
+  "domain_cluster": "monitoring",
   "exported_functions": [
     "truncate_text",
     "get_exception",

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/lakehouse/lakehouse/assets/lakehouse/__init__.py",
   "relative_path": "dg_projects/lakehouse/lakehouse/assets/lakehouse/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Placeholder module for lakehouse package structure",
+  "purpose_statement": "Module 3 is a placeholder Python package initialization file with no business logic.",
   "domain_cluster": "utilities",
   "exported_functions": [],
   "exported_classes": [],

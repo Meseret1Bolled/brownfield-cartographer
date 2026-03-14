@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/ol_superset/lib/database_mapping.py",
   "relative_path": "src/ol_superset/ol_superset/lib/database_mapping.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Maps database identifiers between Superset instances by fetching and parsing database UUIDs, facilitating database migration and synchronization tasks.",
+  "purpose_statement": "Maps database names to UUIDs by querying target Superset instances and parsing CLI output, facilitating database identification across different Superset environments",
   "domain_cluster": "utilities",
   "exported_functions": [
     "get_target_databases",

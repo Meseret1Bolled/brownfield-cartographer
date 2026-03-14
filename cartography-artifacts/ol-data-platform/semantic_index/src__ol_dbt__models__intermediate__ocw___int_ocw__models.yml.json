@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/ocw/_int_ocw__models.yml",
   "relative_path": "src/ol_dbt/models/intermediate/ocw/_int_ocw__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides metadata about OCW courses including their status, publication details, and URLs for managing course content",
+  "purpose_statement": "Provides a comprehensive view of OpenCourseWare (OCW) course metadata for production, enabling tracking of course publication status, URLs, and lifecycle information to support content management and publishing workflows.",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

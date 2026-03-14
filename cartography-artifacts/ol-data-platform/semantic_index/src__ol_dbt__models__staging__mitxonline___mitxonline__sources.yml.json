@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/_mitxonline__sources.yml",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/_mitxonline__sources.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines the source data structure for MITx Online warehouse data, mapping raw tables from various loaders (Airbyte) to their respective schemas and providing column-level descriptions for downstream data processing",
+  "purpose_statement": "Defines raw data sources from MITx Online platform including email optouts, ecommerce data, and courseware information",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/afact_problem_engagement_37bb25c7-421f-432a-bc42-5cc10a129746.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/afact_problem_engagement_37bb25c7-421f-432a-bc42-5cc10a129746.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Monitors problem engagement metrics including attempts and timestamps for learning analytics",
+  "purpose_statement": "Captures detailed problem engagement events with timestamps and user identifiers to understand problem-solving attempts and completion patterns.",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

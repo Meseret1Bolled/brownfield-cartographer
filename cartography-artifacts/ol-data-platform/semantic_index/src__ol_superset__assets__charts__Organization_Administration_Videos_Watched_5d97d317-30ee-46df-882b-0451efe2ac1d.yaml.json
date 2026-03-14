@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Organization_Administration_Videos_Watched_5d97d317-30ee-46df-882b-0451efe2ac1d.yaml",
   "relative_path": "src/ol_superset/assets/charts/Organization_Administration_Videos_Watched_5d97d317-30ee-46df-882b-0451efe2ac1d.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Tracks monthly video viewing activity by users in organizational administration courses to monitor engagement and resource usage",
+  "purpose_statement": "Tracks monthly video consumption patterns for organization administration, helping measure learner engagement and content utilization effectiveness.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

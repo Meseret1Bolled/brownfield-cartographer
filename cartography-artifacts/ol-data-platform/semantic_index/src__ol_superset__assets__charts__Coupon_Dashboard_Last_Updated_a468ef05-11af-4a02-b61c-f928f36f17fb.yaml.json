@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Coupon_Dashboard_Last_Updated_a468ef05-11af-4a02-b61c-f928f36f17fb.yaml",
   "relative_path": "src/ol_superset/assets/charts/Coupon_Dashboard_Last_Updated_a468ef05-11af-4a02-b61c-f928f36f17fb.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Monitors coupon data freshness by displaying when coupon-related tables were last updated in the data warehouse",
+  "purpose_statement": "Displays coupon creation and update timestamps from the coupon management system, providing visibility into coupon lifecycle and modification history.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

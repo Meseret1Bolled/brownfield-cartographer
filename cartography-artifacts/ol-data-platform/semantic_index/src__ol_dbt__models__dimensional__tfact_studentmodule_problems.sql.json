@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/dimensional/tfact_studentmodule_problems.sql",
   "relative_path": "src/ol_dbt/models/dimensional/tfact_studentmodule_problems.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates student problem-solving events from multiple platforms (MITx Online, MITx Pro, Residential) to provide comprehensive tracking of student assessment attempts and outcomes.",
+  "purpose_statement": "Consolidates student module problem events from multiple platforms to track problem-solving attempts and outcomes across the learning ecosystem",
   "domain_cluster": "transformation",
   "exported_functions": [
     "tfact_studentmodule_problems"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/Suspicious_Behavior_Report_1e2883d9-d122-4af6-aa33-43a0f0ac2c3b.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/Suspicious_Behavior_Report_1e2883d9-d122-4af6-aa33-43a0f0ac2c3b.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Detects and reports suspicious academic behavior patterns to maintain academic integrity and identify potential cheating incidents.",
+  "purpose_statement": "Identifies and analyzes suspicious behavior patterns in course activities, detecting potential academic integrity issues and helping maintain the credibility of educational assessments.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

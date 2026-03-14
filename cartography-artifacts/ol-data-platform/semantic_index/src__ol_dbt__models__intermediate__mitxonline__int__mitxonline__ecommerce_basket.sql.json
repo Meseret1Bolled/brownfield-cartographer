@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_basket.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_basket.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks shopping cart data for MITx Online users, capturing basket creation and modification timestamps to support e-commerce functionality.",
+  "purpose_statement": "Extracts basic basket information including user ID, creation, and update timestamps to track shopping cart activity and user purchase initiation.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__ecommerce_basket"

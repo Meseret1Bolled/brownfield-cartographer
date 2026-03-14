@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/openedx/openedx/jobs/normalize_logs.py",
   "relative_path": "dg_projects/openedx/openedx/jobs/normalize_logs.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Graph definitions for normalizing and transforming OpenEdX tracking log data between S3 buckets",
+  "purpose_statement": "Graph definitions for normalizing and processing OpenEdX tracking logs",
   "domain_cluster": "transformation",
   "exported_functions": [
     "normalize_tracking_logs",

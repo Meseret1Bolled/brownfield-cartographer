@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/mitxonline_course_engagements_daily_report.sql",
   "relative_path": "src/ol_dbt/models/reporting/mitxonline_course_engagements_daily_report.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates daily course engagement metrics including events, problem submissions, and video plays for online learning platforms.",
+  "purpose_statement": "Generates a daily report of user engagement activities in MITxOnline courses, including events like problem submissions, video plays, and discussion participation, to monitor learner behavior and course effectiveness.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "mitxonline_course_engagements_daily_report"

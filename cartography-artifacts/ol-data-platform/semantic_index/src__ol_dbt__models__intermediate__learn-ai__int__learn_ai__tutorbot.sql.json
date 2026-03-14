@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/learn-ai/int__learn_ai__tutorbot.sql",
   "relative_path": "src/ol_dbt/models/intermediate/learn-ai/int__learn_ai__tutorbot.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates TutorBot chat session data with user and course information to analyze AI tutoring interactions and their effectiveness.",
+  "purpose_statement": "Consolidates TutorBot chat session data with user information and problem details, enabling analysis of AI tutoring interactions and their relationship to specific course content.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__learn_ai__tutorbot"

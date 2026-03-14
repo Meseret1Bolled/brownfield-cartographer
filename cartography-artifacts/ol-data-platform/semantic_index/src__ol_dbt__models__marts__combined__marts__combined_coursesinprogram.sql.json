@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/combined/marts__combined_coursesinprogram.sql",
   "relative_path": "src/ol_dbt/models/marts/combined/marts__combined_coursesinprogram.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps courses to their respective programs across different platforms to provide program structure visibility",
+  "purpose_statement": "Maps courses to their respective programs across different platforms, showing which courses belong to which programs and providing platform-specific context for program-course relationships.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__combined_coursesinprogram"

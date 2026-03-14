@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Enrollment_Activity_Over_Time_07019136-a885-4261-8960-cfca368642d7.yaml",
   "relative_path": "src/ol_superset/assets/charts/Enrollment_Activity_Over_Time_07019136-a885-4261-8960-cfca368642d7.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Presents a time-series line chart of enrollment activity over time, allowing administrators to analyze enrollment trends and patterns across different course offerings.",
+  "purpose_statement": "Visualizes enrollment trends over time, tracking both total enrollments and audit enrollments to provide insights into course participation patterns.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

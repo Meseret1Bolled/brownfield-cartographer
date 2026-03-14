@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/Learner_Engagement_ca0fe164-7452-4e90-be12-e0c793f0ac05.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/Learner_Engagement_ca0fe164-7452-4e90-be12-e0c793f0ac05.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Enables educators to monitor and analyze learner engagement with course videos, tracking which subsections and course runs are most engaging to optimize content delivery.",
+  "purpose_statement": "Provides insights into learner engagement with video content and course materials, tracking video completion rates, discussion participation, and overall engagement metrics to identify learning patterns and content effectiveness.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_course.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__courses_course.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw course metadata from MicroMasters to standardized format, linking edx.org courses to MicroMasters programs for program structure and prerequisites.",
+  "purpose_statement": "Links MicroMasters courses to their corresponding edX courses and programs, providing course metadata including prerequisites, descriptions, and tracking information.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__courses_course"

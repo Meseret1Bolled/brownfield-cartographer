@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitx/int__mitx__courserun_enrollments.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitx/int__mitx__courserun_enrollments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Combines and deduplicates course enrollment data from MITx Online and edX.org platforms to provide a unified view of learner enrollments across both systems, handling platform-specific enrollment logic and deduplication for DEDP courses.",
+  "purpose_statement": "Combine MITx Online and edX.org course enrollments into a single dataset, ensuring no duplication by filtering out migrated DEDP course enrollments and standardizing enrollment attributes across platforms.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitx__courserun_enrollments"

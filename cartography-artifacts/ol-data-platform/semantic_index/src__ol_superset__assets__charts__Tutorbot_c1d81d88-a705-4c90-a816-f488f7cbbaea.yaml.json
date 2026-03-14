@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Tutorbot_c1d81d88-a705-4c90-a816-f488f7cbbaea.yaml",
   "relative_path": "src/ol_superset/assets/charts/Tutorbot_c1d81d88-a705-4c90-a816-f488f7cbbaea.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides a comprehensive view of all tutorbot interactions and chat sessions, including user details and conversation content, for analyzing AI tutoring effectiveness and student support quality.",
+  "purpose_statement": "Shows detailed tutorbot chat session data including conversation content, user information, and timestamps for educational support analysis.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

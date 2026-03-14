@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_coursecertificate.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_coursecertificate.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Stores course completion certificates with verification URLs for credentialing and program completion tracking",
+  "purpose_statement": "Captures and enriches course completion records with certificate URLs and timestamps to support credentialing and verification workflows.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__grades_coursecertificate"

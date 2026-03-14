@@ -3,7 +3,7 @@
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__users_user.sql",
   "language": "Language.SQL",
   "purpose_statement": "Manages user account information and authentication for MITx Online platform",
-  "domain_cluster": "transformation",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "stg__mitxonline__app__postgres__users_user"
   ],

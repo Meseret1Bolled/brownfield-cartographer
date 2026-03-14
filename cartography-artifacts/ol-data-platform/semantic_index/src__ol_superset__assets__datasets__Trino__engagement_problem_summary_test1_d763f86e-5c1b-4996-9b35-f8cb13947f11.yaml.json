@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/engagement_problem_summary_test1_d763f86e-5c1b-4996-9b35-f8cb13947f11.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/engagement_problem_summary_test1_d763f86e-5c1b-4996-9b35-f8cb13947f11.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "This module provides a detailed analysis of student engagement with course problems, tracking metrics like problems attempted, problems solved, and completion rates for individual learners across different courses.",
+  "purpose_statement": "Provides detailed engagement metrics for learners in specific course sections, tracking problem attempts, correct answers, and completion rates to identify learning patterns and areas where students struggle.",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

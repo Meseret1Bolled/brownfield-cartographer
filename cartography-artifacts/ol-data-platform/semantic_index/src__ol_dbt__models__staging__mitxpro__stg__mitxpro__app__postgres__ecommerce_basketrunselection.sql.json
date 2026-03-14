@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_basketrunselection.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_basketrunselection.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw ecommerce basket run selection data from Postgres into a standardized staging format with ISO8601 timestamps for downstream analytics",
+  "purpose_statement": "Tracks user selections of course runs within a shopping basket to enable checkout and enrollment processing",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_basketrunselection"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/ol_superset/__init__.py",
   "relative_path": "src/ol_superset/ol_superset/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Declares the Superset asset management package version and serves as the module's initialization point.",
+  "purpose_statement": "Declares version information for Superset asset management package",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_problemsubmitted.sql",
   "relative_path": "src/ol_dbt/models/intermediate/edxorg/int__edxorg__mitx_user_courseactivity_problemsubmitted.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw problem submission events from course activity data into a structured format containing detailed problem performance metrics including scores, weights, and problem identifiers for academic analytics.",
+  "purpose_statement": "Captures and structures problem submission events from course activity logs, extracting relevant metadata like problem identifiers, scores, and weights from the JSON event objects for analytics on student problem-solving attempts.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__edxorg__mitx_user_courseactivity_problemsubmitted"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/generate_base_model_enhanced.sql",
   "relative_path": "src/ol_dbt/macros/generate_base_model_enhanced.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Generates enhanced base models for data sources by automatically detecting entity types from table names and handling column metadata retrieval from both database relations and configuration files, solving the problem of inconsistent schema discovery across different data sources.",
+  "purpose_statement": "Generates enhanced base models for data warehouse tables with configurable column handling and entity type detection to support consistent data modeling across sources",
   "domain_cluster": "transformation",
   "exported_functions": [
     "generate_base_model_enhanced"

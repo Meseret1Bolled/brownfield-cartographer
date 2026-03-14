@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Percentage_of_Video_Played_9bb14cc1-d787-4f47-b6d3-86adb3d4ec47.yaml",
   "relative_path": "src/ol_superset/assets/charts/Percentage_of_Video_Played_9bb14cc1-d787-4f47-b6d3-86adb3d4ec47.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Measures average video completion rates by section, helping assess learner engagement with course video content.",
+  "purpose_statement": "Calculates and displays the average percentage of video content played by learners, helping educators understand video engagement patterns across different sections and subsections of courses.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

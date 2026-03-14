@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_programrun.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_programrun.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages program run scheduling and lifecycle, allowing the platform to coordinate when academic programs are available to learners and track their active periods.",
+  "purpose_statement": "Manages program run scheduling, allowing the platform to coordinate when specific programs are available to learners and track program lifecycle dates.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__app__postgres__courses_programrun"

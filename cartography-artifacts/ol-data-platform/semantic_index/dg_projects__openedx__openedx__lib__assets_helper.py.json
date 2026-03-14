@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/openedx/openedx/lib/assets_helper.py",
   "relative_path": "dg_projects/openedx/openedx/lib/assets_helper.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "This module provides utility functions for manipulating Dagster asset definitions, enabling dynamic partitioning and key prefixing to organize data assets in the platform's data catalog.",
+  "purpose_statement": "Module 5 provides utility functions for dynamically binding partition definitions to asset specifications and adding prefixes to asset keys in data pipelines.",
   "domain_cluster": "utilities",
   "exported_functions": [
     "late_bind_partition_to_spec",

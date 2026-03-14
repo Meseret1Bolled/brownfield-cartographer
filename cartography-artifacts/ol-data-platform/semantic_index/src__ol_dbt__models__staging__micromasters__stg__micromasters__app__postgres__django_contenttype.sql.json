@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__django_contenttype.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__django_contenttype.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw Django content type data into a cleaned staging table with standardized field names and concatenated full names for reference in downstream data processing.",
+  "purpose_statement": "Transforms raw Django content type data from MicroMasters into a cleaned staging table with standardized field names and formats, establishing a mapping between application models and their database representations.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__django_contenttype"

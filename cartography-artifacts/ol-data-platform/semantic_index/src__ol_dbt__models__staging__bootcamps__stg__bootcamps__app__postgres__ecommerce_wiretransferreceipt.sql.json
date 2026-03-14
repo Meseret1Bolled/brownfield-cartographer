@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_wiretransferreceipt.sql",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_wiretransferreceipt.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Processes wire transfer receipt data from the e-commerce system, addressing the business requirement to track payment methods and financial transactions by standardizing wire transfer information with proper timestamps.",
+  "purpose_statement": "Transforms raw wire transfer receipt data into standardized payment records with ISO8601 timestamps for financial tracking and reconciliation.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__bootcamps__app__postgres__ecommerce_wiretransferreceipt"

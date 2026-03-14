@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__users.sql",
   "relative_path": "src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__users.sql",
   "language": "Language.SQL",
-  "purpose_statement": "This module consolidates user account information with legal address and profile details to provide a complete view of user demographics, contact information, and professional background for bootcamp participants.",
+  "purpose_statement": "Creates a unified user profile by combining authentication, legal address, and profile information to provide comprehensive user details for bootcamp operations.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__bootcamps__users"

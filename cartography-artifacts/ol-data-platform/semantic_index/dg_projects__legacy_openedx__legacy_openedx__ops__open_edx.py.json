@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/legacy_openedx/legacy_openedx/ops/open_edx.py",
   "relative_path": "dg_projects/legacy_openedx/legacy_openedx/ops/open_edx.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides core data processing operations for Open edX integration, including course listing, database exports, and data transformation utilities for the data platform.",
-  "domain_cluster": "transformation",
+  "purpose_statement": "Provides operations to export Open edX course data and forum content from databases",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "list_courses",
     "fetch_edx_course_structure_from_api",

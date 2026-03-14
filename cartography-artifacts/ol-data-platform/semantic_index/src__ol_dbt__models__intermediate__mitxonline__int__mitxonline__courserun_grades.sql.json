@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_grades.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__courserun_grades.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates course grade information from MITx Online including user details and course metadata to provide a comprehensive view of student performance across all courses, solving the need for academic reporting and transcript generation.",
+  "purpose_statement": "Creates a comprehensive view of course grades by joining grade records with course run and user information, serving as a foundational dataset for academic performance analysis across MITx Online courses.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__courserun_grades"

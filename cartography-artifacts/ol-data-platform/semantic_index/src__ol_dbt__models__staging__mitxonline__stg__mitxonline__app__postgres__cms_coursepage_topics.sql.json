@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_coursepage_topics.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_coursepage_topics.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps course pages to their associated course topics for organizing educational content by subject area",
+  "purpose_statement": "Tracks which course pages are associated with specific course topics, enabling topic-based navigation and content organization on the MITx Online platform.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__app__postgres__cms_coursepage_topics"

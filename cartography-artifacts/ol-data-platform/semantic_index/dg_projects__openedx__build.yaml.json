@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/openedx/build.yaml",
   "relative_path": "dg_projects/openedx/build.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Docker build configuration for the OpenEdX data extraction service",
+  "purpose_statement": "Docker build configuration for OpenEdX data pipeline",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__user_courseaccessrole.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__user_courseaccessrole.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Clean and standardize course access role data from Open edX MySQL database, mapping MITx organization codes and providing consistent naming conventions for course access roles and user relationships.",
+  "purpose_statement": "Cleans and standardizes course access role data from MITx Online, mapping user roles to courses and normalizing organization identifiers for consistent analysis.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__openedx__mysql__user_courseaccessrole"

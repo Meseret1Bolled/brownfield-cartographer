@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/schedule_storage.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/schedule_storage.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides PostgreSQL-backed schedule storage with connection pooling to efficiently manage workflow scheduling metadata",
-  "domain_cluster": "monitoring",
+  "purpose_statement": "Implements a Postgres-backed schedule storage with connection pooling to efficiently manage database connections for Dagster schedule persistence",
+  "domain_cluster": "configuration",
   "exported_functions": [
     "optimize_for_webserver",
     "config_type",

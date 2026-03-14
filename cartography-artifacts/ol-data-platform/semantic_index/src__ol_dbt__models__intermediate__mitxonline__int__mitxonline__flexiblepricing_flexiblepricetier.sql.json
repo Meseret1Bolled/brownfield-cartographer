@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_flexiblepricetier.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__flexiblepricing_flexiblepricetier.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Lists flexible pricing tiers with income thresholds, enabling differential pricing strategies based on user economic circumstances and supporting accessibility initiatives.",
+  "purpose_statement": "Maintains pricing tier information for flexible pricing models in MITx Online, including income thresholds and discount associations.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__flexiblepricing_flexiblepricetier"

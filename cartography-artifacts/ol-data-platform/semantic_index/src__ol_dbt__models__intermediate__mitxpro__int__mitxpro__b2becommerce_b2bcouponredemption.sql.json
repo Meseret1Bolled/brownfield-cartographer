@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2bcouponredemption.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__b2becommerce_b2bcouponredemption.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures B2B coupon redemption events to track when corporate coupon codes are applied to orders, enabling analysis of coupon utilization and redemption patterns.",
+  "purpose_statement": "Captures B2B coupon redemption records to track when and how corporate coupons are used in orders",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__b2becommerce_b2bcouponredemption"

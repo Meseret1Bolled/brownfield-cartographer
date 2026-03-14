@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/profiles.yml",
   "relative_path": "src/ol_dbt/profiles.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Configures database connection profiles for different environments (QA, production, development) to enable dbt to connect to appropriate data warehouses based on deployment context",
+  "purpose_statement": "Configures database connections for development, QA, and production environments using Trino and DuckDB",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

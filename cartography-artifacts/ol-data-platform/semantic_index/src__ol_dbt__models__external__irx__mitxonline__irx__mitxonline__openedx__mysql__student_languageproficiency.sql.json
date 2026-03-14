@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__student_languageproficiency.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__student_languageproficiency.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Links user language proficiency data to active course enrollments, enabling analysis of language skills in educational contexts.",
+  "purpose_statement": "Captures student language proficiency information to support multilingual course delivery and analyze language diversity in the student population.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__student_languageproficiency"

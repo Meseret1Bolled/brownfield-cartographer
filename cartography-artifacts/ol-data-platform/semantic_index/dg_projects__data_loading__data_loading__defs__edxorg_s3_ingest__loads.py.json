@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/data_loading/data_loading/defs/edxorg_s3_ingest/loads.py",
   "relative_path": "dg_projects/data_loading/data_loading/defs/edxorg_s3_ingest/loads.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Module 3 provides the core data loading functionality for EdX.org S3 CSV/TSV files, enabling ingestion of educational course data from Amazon S3 into the data platform.",
+  "purpose_statement": "Module 3 implements the core logic for loading EdX.org CSV/TSV data from S3 using dlt, providing the data extraction mechanism that feeds into downstream processing.",
   "domain_cluster": "ingestion",
   "exported_functions": [
     "run_pipeline",

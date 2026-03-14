@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxresidential/_mitxresidential__sources.yml",
   "relative_path": "src/ol_dbt/models/staging/mitxresidential/_mitxresidential__sources.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines the source data models and their metadata for the MITx residential data warehouse, establishing the foundation for all subsequent data transformations.",
+  "purpose_statement": "Defines source metadata for MITx open edX data warehouse tables, establishing the connection between raw data sources and downstream transformation models for user and course role data.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

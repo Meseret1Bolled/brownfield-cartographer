@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__grades_persistentcoursegrade.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__grades_persistentcoursegrade.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks student course grades including percentages and letter grades, recording when students pass courses and when grades were last modified.",
+  "purpose_statement": "Calculates and maintains final course grades for students, tracking percentage scores, letter grades, and completion timestamps for academic records and certification.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__grades_persistentcoursegrade"

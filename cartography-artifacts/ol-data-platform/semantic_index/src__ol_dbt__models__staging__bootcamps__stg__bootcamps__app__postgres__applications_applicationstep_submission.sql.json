@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_applicationstep_submission.sql",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__applications_applicationstep_submission.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Processes application submission data to track the status and review history of bootcamp applications across different stages.",
+  "purpose_statement": "Processes bootcamp application step submissions to deduplicate records and standardize timestamp formats for tracking application review workflows.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__bootcamps__app__postgres__applications_applicationstep_submission"

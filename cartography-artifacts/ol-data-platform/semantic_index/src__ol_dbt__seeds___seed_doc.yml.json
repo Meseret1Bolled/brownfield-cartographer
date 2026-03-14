@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/seeds/_seed_doc.yml",
   "relative_path": "src/ol_dbt/seeds/_seed_doc.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines seed data structures for user access roles and platform metadata to enable row-level security filtering and platform information tracking in downstream analytics",
+  "purpose_statement": "Defines seed data for row-level access controls and platform metadata in analytics, enabling secure and consistent data access across MITx Online and edX.org.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

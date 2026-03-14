@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/transform_code_to_readable_values.sql",
   "relative_path": "src/ol_dbt/macros/transform_code_to_readable_values.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms coded gender values into human-readable text for reporting and analysis",
+  "purpose_statement": "Provides standardized, human-readable transformations for demographic data fields such as gender, education level, and company size to ensure consistent reporting across the platform",
   "domain_cluster": "transformation",
   "exported_functions": [
     "transform_code_to_readable_values"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Page_Engagement_By_Subsection_f41fcf95-edc7-4dcd-bbe8-54406e775b37.yaml",
   "relative_path": "src/ol_superset/assets/charts/Page_Engagement_By_Subsection_f41fcf95-edc7-4dcd-bbe8-54406e775b37.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays page engagement metrics by subsection, showing total page views for each subsection to understand which content areas receive the most learner interaction.",
+  "purpose_statement": "Displays page view engagement data organized by subsection to understand which course content areas attract the most student interaction",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/MITxOnline_Enrollment_Activity_6fd11c69-4110-465f-8ed6-bfcdbe59b8b4.yaml",
   "relative_path": "src/ol_superset/assets/charts/MITxOnline_Enrollment_Activity_6fd11c69-4110-465f-8ed6-bfcdbe59b8b4.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Visualizes daily enrollment trends by enrollment type (verified, audit, total) to track course adoption patterns and marketing effectiveness over time.",
+  "purpose_statement": "Visualizes daily enrollment trends by type (verified, audit, total) using area charts, helping administrators track course adoption and compare enrollment patterns over time.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_to_topics.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__course_to_topics.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps MITx Online courses to their associated topics by joining course pages with topic relationships, enabling topic-based course organization and discovery.",
+  "purpose_statement": "Maps course topics to specific courses by joining course page, topic, and course topic tables, supporting content categorization and curriculum organization.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__course_to_topics"

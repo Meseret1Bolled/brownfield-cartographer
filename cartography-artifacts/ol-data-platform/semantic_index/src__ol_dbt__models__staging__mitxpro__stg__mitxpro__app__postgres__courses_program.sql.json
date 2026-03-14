@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_program.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_program.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw program data from MITxPro into a clean, standardized format for downstream analytics, enabling business users to analyze program offerings and their status.",
+  "purpose_statement": "Extracts and transforms MITxPro program information for analysis of program metadata and status.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__courses_program"

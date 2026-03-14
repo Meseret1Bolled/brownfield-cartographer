@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__teams_membership.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__teams_membership.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Map users to their team memberships to enable analysis of collaborative learning patterns and team-based assessment workflows.",
+  "purpose_statement": "Extract team membership records by joining course team and team membership tables, establishing the relationship between users and their team assignments.",
   "domain_cluster": "ingestion",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__teams_membership"

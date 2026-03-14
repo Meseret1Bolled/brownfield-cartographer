@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Organization_Administration_Chatbot_Use_a8eba8e2-dff3-4975-8b54-9f6f4dd39478.yaml",
   "relative_path": "src/ol_superset/assets/charts/Organization_Administration_Chatbot_Use_a8eba8e2-dff3-4975-8b54-9f6f4dd39478.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides a visual time-series chart showing chatbot usage and learner session counts for course administration, helping track engagement patterns over time.",
+  "purpose_statement": "Provides a monthly summary of chatbot usage and learner session activity within specific course blocks, enabling administrators to track engagement with the chatbot feature over time.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

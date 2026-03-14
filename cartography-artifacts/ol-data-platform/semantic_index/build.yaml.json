@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/build.yaml",
   "relative_path": "build.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Stores registry configuration for the build system, likely defining artifact storage locations or package repositories for the data platform.",
+  "purpose_statement": "Defines build configuration for container registry integration, establishing foundation for automated deployment pipeline",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

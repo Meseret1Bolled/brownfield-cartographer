@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__api__courserun.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__api__courserun.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maintains course run details including availability and enrollment information for program catalog management",
+  "purpose_statement": "This module extracts and cleans course run data from edX S3 storage, providing comprehensive information about course availability, pacing, instructors, and enrollment details. It transforms JSON data and creates derived fields to indicate course status and self-paced nature for better course management.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__api__courserun"

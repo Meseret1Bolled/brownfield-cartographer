@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun_certificate.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__courserun_certificate.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw edX course certificate data by cleaning, deduplicating, and casting values to appropriate types for downstream analysis.",
+  "purpose_statement": "Transforms and cleans raw edX certificate data from S3, handling data type conversions and deduplication to ensure accurate certificate information for analysis.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__courserun_certificate"

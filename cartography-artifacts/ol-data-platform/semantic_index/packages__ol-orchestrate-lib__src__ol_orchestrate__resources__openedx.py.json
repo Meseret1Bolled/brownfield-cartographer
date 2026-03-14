@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/resources/openedx.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/resources/openedx.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Manages authentication and communication with edX platforms, allowing retrieval of course information and status checks for educational content management",
+  "purpose_statement": "Manages authentication and communication with edX platforms, including course data retrieval and status checking",
   "domain_cluster": "utilities",
   "exported_functions": [
     "get_edx_course_ids",

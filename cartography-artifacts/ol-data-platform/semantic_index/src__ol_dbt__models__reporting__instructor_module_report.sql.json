@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/instructor_module_report.sql",
   "relative_path": "src/ol_dbt/models/reporting/instructor_module_report.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides detailed instructor-level analytics for course modules, including user engagement metrics, video watch patterns, and activity tracking to support teaching effectiveness evaluation.",
+  "purpose_statement": "Provides detailed instructor-level reporting on course activity, combining user enrollment data, video engagement metrics, and chatbot interactions to track learner behavior and course performance.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "instructor_module_report"

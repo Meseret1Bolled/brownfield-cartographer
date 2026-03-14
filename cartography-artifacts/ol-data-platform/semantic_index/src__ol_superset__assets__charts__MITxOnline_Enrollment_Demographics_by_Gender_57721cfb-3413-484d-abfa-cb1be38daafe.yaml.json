@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/MITxOnline_Enrollment_Demographics_by_Gender_57721cfb-3413-484d-abfa-cb1be38daafe.yaml",
   "relative_path": "src/ol_superset/assets/charts/MITxOnline_Enrollment_Demographics_by_Gender_57721cfb-3413-484d-abfa-cb1be38daafe.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Shows enrollment demographics by gender to analyze learner diversity and participation patterns in MITxOnline courses",
+  "purpose_statement": "Displays enrollment demographics by gender to understand the gender distribution of learners.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/enrollment_detail_report.sql",
   "relative_path": "src/ol_dbt/models/reporting/enrollment_detail_report.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides detailed enrollment data for courses, including user information, enrollment status, and completion metrics to track learner participation and progress.",
+  "purpose_statement": "Generates a detailed report of course enrollments including learner progress, certification status, and course completion metrics to support enrollment analysis and learner success tracking.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "enrollment_detail_report"

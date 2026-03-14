@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/combined/int__combined__course_runs.sql",
   "relative_path": "src/ol_dbt/models/intermediate/combined/int__combined__course_runs.sql",
   "language": "Language.SQL",
-  "purpose_statement": "This model consolidates course run information from multiple educational platforms and providers (MITx, MITxOnline, edX, MITxPro, bootcamps, micromasters, emeritus, global alumni, and residential) to provide a unified catalog of all available course offerings.",
+  "purpose_statement": "Unifies course run data from various educational platforms to provide a centralized view of all available courses, their schedules, and enrollment information.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__combined__course_runs"

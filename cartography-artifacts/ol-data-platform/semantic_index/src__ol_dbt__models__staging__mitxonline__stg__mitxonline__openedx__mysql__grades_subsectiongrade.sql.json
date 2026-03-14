@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__grades_subsectiongrade.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__grades_subsectiongrade.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms persistent subsection grade data to track student progress and performance in course modules for learning analytics",
+  "purpose_statement": "Stores detailed subsection grade data to enable granular assessment of student progress and performance.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__openedx__mysql__grades_subsectiongrade"

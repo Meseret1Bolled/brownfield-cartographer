@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_productcouponassignment.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_productcouponassignment.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages coupon assignment data for tracking bulk coupon distributions, redemption status, and communication with recipients about their assigned coupons.",
+  "purpose_statement": "Processes product coupon assignment data from the PostgreSQL database, standardizing timestamp formats and renaming fields to track coupon distribution, redemption status, and email communication metrics.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_productcouponassignment"

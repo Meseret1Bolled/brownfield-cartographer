@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/b2b_organization/b2b_organization/assets/data_export.py",
   "relative_path": "dg_projects/b2b_organization/b2b_organization/assets/data_export.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Exports organization-specific data from a reporting table to CSV files for individual B2B organizations",
-  "domain_cluster": "transformation",
+  "purpose_statement": "Exports B2B organization administration reports to CSV files partitioned by organization and date",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "export_b2b_organization_data"
   ],

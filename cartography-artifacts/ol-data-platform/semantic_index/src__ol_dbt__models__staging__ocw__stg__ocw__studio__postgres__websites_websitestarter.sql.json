@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/ocw/stg__ocw__studio__postgres__websites_websitestarter.sql",
   "relative_path": "src/ol_dbt/models/staging/ocw/stg__ocw__studio__postgres__websites_websitestarter.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms OCW studio website starter data from raw warehouse tables into a staging model with standardized column names and ISO8601 formatted timestamps for website starter configurations.",
+  "purpose_statement": "Transforms OCW website starter data to track template-based website creation and management.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__ocw__studio__postgres__websites_websitestarter"

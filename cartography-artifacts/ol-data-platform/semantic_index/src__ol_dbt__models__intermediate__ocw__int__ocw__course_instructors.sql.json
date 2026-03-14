@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/ocw/int__ocw__course_instructors.sql",
   "relative_path": "src/ol_dbt/models/intermediate/ocw/int__ocw__course_instructors.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps instructor UUIDs to detailed instructor information by joining course metadata with instructor content records to provide comprehensive instructor details for each course.",
+  "purpose_statement": "Extracts instructor information from website content metadata and links instructors to their respective courses by joining instructor details with course references.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__ocw__course_instructors"

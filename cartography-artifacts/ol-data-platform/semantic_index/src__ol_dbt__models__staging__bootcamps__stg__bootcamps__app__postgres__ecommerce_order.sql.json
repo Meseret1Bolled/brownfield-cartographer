@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_order.sql",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__ecommerce_order.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw ecommerce order data from the bootcamps PostgreSQL database into a standardized staging format with proper formatting and timestamps",
+  "purpose_statement": "Transforms raw bootcamp ecommerce order data into a standardized format with proper data types and reference numbers, enabling business teams to track purchase orders and payment status across bootcamp programs.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__bootcamps__app__postgres__ecommerce_order"

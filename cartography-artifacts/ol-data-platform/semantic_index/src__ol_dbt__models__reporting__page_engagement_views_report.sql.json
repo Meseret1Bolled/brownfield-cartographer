@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/page_engagement_views_report.sql",
   "relative_path": "src/ol_dbt/models/reporting/page_engagement_views_report.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks page views and navigation patterns within courses to understand how learners interact with course content and materials.",
+  "purpose_statement": "Tracks page views and content consumption patterns to understand how learners navigate and interact with course materials throughout their learning journey.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "page_engagement_views_report"

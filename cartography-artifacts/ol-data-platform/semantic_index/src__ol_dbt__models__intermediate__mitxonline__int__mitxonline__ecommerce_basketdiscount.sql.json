@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_basketdiscount.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_basketdiscount.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates an intermediate table of basket discount data, allowing tracking of how and when discounts are applied to user baskets in the MITx Online e-commerce system.",
+  "purpose_statement": "Captures basket-level discount applications, recording when and by whom discounts were applied to entire shopping baskets for promotional analysis.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__ecommerce_basketdiscount"

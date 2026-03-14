@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/learning_resources/build.yaml",
   "relative_path": "dg_projects/learning_resources/build.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines Docker build configuration for learning resources project, specifying build context and registry location",
+  "purpose_statement": "Configuration for building Docker image for learning resources project",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

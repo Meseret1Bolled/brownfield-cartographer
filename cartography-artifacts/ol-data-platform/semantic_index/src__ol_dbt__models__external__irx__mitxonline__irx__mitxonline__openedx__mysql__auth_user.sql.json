@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__auth_user.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__auth_user.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a comprehensive user profile by joining authentication data with course enrollment information, providing essential user details for system access and course participation tracking.",
-  "domain_cluster": "transformation",
+  "purpose_statement": "Maintains user profiles and authentication data for students enrolled in courses, including personal information and access permissions.",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__auth_user"
   ],

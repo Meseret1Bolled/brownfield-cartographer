@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courses.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__courses.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates course metadata from multiple sources including platform details, topics, instructors, and certificate information, creating a comprehensive catalog for course management and marketing purposes.",
+  "purpose_statement": "Module providing: int__mitxpro__courses. Contains 82 lines of Language.SQL code.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__courses"

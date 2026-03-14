@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/marts__mitxonline_course_enrollments_811f8301-4bea-461e-8359-d354af75c4b1.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/marts__mitxonline_course_enrollments_811f8301-4bea-461e-8359-d354af75c4b1.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides enrollment data for MITx Online courses, enabling analysis of course participation and learner demographics.",
+  "purpose_statement": "Tracks course enrollment data including user demographics and enrollment status for online courses",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

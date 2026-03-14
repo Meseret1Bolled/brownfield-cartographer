@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/lakehouse/lakehouse_tests/__init__.py",
   "relative_path": "dg_projects/lakehouse/lakehouse_tests/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Placeholder module for lakehouse tests - likely serves as an entry point for test discovery and execution",
+  "purpose_statement": "Empty test initialization file for lakehouse_tests module",
   "domain_cluster": "testing",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/micromasters/int__micromasters__users.sql",
   "relative_path": "src/ol_dbt/models/intermediate/micromasters/int__micromasters__users.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a comprehensive user profile by combining basic user information with their highest education degree and most recent employment details, providing a complete view of learner background and demographics.",
+  "purpose_statement": "Creates a comprehensive user profile dataset by joining core user information with their most recent education and employment records from MicroMasters profiles.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__micromasters__users"

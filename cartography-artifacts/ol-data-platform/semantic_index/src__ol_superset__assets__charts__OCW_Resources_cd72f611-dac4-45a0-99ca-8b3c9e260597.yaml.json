@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/OCW_Resources_cd72f611-dac4-45a0-99ca-8b3c9e260597.yaml",
   "relative_path": "src/ol_superset/assets/charts/OCW_Resources_cd72f611-dac4-45a0-99ca-8b3c9e260597.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays a comprehensive table of OCW (OpenCourseWare) resources with metadata and status information, enabling content managers to monitor resource availability and licensing compliance.",
+  "purpose_statement": "Displays a comprehensive list of OpenCourseWare (OCW) resources including course details, resource metadata, and external resource status, facilitating resource management and quality assurance.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

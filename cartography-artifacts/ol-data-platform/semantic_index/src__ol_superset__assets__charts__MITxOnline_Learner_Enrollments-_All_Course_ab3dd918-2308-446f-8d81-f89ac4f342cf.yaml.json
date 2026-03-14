@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/MITxOnline_Learner_Enrollments-_All_Course_ab3dd918-2308-446f-8d81-f89ac4f342cf.yaml",
   "relative_path": "src/ol_superset/assets/charts/MITxOnline_Learner_Enrollments-_All_Course_ab3dd918-2308-446f-8d81-f89ac4f342cf.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Visualizes learner enrollment trends over time, breaking down counts by enrollment type (verified, audit, total) to track platform growth and learner behavior patterns.",
+  "purpose_statement": "Visualizes learner enrollment trends across all courses over time, breaking down counts by enrollment mode (verified, audit, total) to track overall course participation and growth.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

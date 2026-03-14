@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Learner_Performance_d747faf0-d2f8-4dde-84ca-54b60775e051.yaml",
   "relative_path": "src/ol_superset/assets/charts/Learner_Performance_d747faf0-d2f8-4dde-84ca-54b60775e051.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Reports learner performance metrics including passing grades, average course grades, and certificate completion rates for academic assessment",
+  "purpose_statement": "Analyzes learner performance by course, including passing grades, average scores, and certificate completion rates.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

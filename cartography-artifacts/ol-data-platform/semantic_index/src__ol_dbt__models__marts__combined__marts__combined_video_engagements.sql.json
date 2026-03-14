@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/combined/marts__combined_video_engagements.sql",
   "relative_path": "src/ol_dbt/models/marts/combined/marts__combined_video_engagements.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates video engagement data across all learning platforms to provide a unified view of learner video interactions and consumption patterns.",
+  "purpose_statement": "Aggregates video engagement data across multiple learning platforms (mitxonline, edxorg, mitxpro, residential) to provide a unified view of how users interact with video content across the organization's learning ecosystem",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__combined_video_engagements"

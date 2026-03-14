@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_userlistrelationship.sql",
   "relative_path": "src/ol_dbt/models/staging/mitlearn/stg__mitlearn__app__postgres__learning_resources_userlistrelationship.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures the hierarchical relationships between user-created lists and their constituent items, enabling tracking of which lists contain which resources and their ordering within those lists.",
+  "purpose_statement": "Captures the hierarchical relationships between user-created learning resource lists, tracking which lists are nested within others and their positions.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitlearn__app__postgres__learning_resources_userlistrelationship"

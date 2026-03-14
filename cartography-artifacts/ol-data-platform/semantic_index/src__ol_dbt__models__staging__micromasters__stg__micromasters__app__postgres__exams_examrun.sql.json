@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__exams_examrun.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__exams_examrun.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Stores and tracks exam run information for MicroMasters courses, including exam scheduling and grading details.",
+  "purpose_statement": "Maintains exam run metadata for MicroMasters courses including exam schedules, passing scores, and authorization status to support exam administration and compliance tracking.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__exams_examrun"

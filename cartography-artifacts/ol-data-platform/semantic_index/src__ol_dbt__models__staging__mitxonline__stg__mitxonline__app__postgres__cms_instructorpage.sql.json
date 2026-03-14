@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_instructorpage.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__cms_instructorpage.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extract and transform instructor page data from MITx Online's PostgreSQL CMS database into a staging table with standardized field names for use in instructor-related analytics and reporting.",
+  "purpose_statement": "Extracts and standardizes instructor page data from MITx Online's CMS, providing structured information about course instructors for presentation and analysis.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__app__postgres__cms_instructorpage"

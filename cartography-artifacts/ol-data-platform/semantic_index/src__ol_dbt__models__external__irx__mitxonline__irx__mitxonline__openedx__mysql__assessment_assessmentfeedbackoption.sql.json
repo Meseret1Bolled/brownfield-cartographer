@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedbackoption.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedbackoption.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a distinct list of assessment feedback options along with their text content by joining multiple assessment-related tables to support analysis of peer assessment options.",
+  "purpose_statement": "Extracts distinct assessment feedback option texts and IDs by joining multiple assessment feedback-related tables to establish relationships between feedback options and assessments",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__assessment_assessmentfeedbackoption"

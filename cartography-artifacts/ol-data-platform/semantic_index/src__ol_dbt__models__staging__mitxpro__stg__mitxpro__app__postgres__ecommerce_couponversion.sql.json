@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponversion.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_couponversion.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms coupon version data to track changes to coupon configurations over time, supporting audit trails and version control for promotional campaigns.",
+  "purpose_statement": "Tracks coupon version history in MITxPro, maintaining records of coupon modifications and payment version associations for compliance and auditing.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_couponversion"

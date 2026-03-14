@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__programs.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__programs.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a clean staging table for program metadata from raw S3 data, deduplicating by program UUID to provide a single source of truth for program information.",
+  "purpose_statement": "Transforms raw program data from EdX into a clean, deduplicated staging table with standardized timestamps and renamed fields for downstream analytics",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__programs"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/instructor_module_report_8c2b6f11-28f8-4353-8e43-6c53ea6b1d91.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/instructor_module_report_8c2b6f11-28f8-4353-8e43-6c53ea6b1d91.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Delivers instructor-focused reporting data including video engagement metrics and user activity patterns, helping instructors understand learner behavior and course effectiveness.",
+  "purpose_statement": "Tracks instructor module-level activity including video engagement metrics and chatbot interactions to monitor teaching effectiveness and student engagement in course modules.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

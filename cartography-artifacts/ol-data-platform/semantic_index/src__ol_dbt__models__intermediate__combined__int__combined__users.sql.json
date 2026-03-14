@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/combined/int__combined__users.sql",
   "relative_path": "src/ol_dbt/models/intermediate/combined/int__combined__users.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates user profile information from multiple educational platforms into a single unified dataset, handling duplicates and providing consistent user identification across systems",
+  "purpose_statement": "Consolidates user profile information from multiple platforms (MITx Online, MITxPro, Bootcamps, edX.org, Residential, MicroMasters, Emeritus, Global Alumni) into a unified user table, handling duplicates and providing a single source of truth for learner identity and demographics.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__combined__users"

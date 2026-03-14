@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedback_assessments.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessmentfeedback_assessments.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides a mapping between assessment feedback records and their associated assessments, submissions, and student items to enable analysis of assessment feedback data.",
+  "purpose_statement": "Extracts assessment feedback assessment IDs by joining assessment feedback assessments with related assessment, submission, and student item data to establish relationships between feedback and assessments",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__assessment_assessmentfeedback_assessments"

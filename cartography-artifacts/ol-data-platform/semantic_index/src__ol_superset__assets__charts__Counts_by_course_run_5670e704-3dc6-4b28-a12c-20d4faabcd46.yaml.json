@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Counts_by_course_run_5670e704-3dc6-4b28-a12c-20d4faabcd46.yaml",
   "relative_path": "src/ol_superset/assets/charts/Counts_by_course_run_5670e704-3dc6-4b28-a12c-20d4faabcd46.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides enrollment and certificate counts by course run over time to track course performance and completion rates",
+  "purpose_statement": "Provides enrollment and certification trend analysis by course run over time, enabling administrators to monitor course performance and learner engagement patterns.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

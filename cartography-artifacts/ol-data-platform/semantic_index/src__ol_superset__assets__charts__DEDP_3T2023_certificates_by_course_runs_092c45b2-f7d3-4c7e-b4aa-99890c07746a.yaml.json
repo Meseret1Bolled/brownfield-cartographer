@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/DEDP_3T2023_certificates_by_course_runs_092c45b2-f7d3-4c7e-b4aa-99890c07746a.yaml",
   "relative_path": "src/ol_superset/assets/charts/DEDP_3T2023_certificates_by_course_runs_092c45b2-f7d3-4c7e-b4aa-99890c07746a.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Visualizes certificate completion counts by course runs for a specific program and term using a time series bar chart to track educational program performance.",
+  "purpose_statement": "Tracks certificate issuance counts across DEDP 3T2023 course runs to monitor program completion rates",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/legacy_openedx/legacy_openedx/resources/healthchecks.py",
   "relative_path": "dg_projects/legacy_openedx/legacy_openedx/resources/healthchecks.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Implements Healthchecks.io integration for monitoring pipeline execution status and performance metrics",
+  "purpose_statement": "Implements a Healthchecks.io integration resource for monitoring pipeline execution status, allowing automated health check pings to track job start times and failures.",
   "domain_cluster": "monitoring",
   "exported_functions": [
     "send_update",

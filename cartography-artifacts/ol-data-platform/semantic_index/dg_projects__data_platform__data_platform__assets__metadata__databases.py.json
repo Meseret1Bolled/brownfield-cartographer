@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/data_platform/data_platform/assets/metadata/databases.py",
   "relative_path": "dg_projects/data_platform/data_platform/assets/metadata/databases.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Configures metadata workflows for database sources",
+  "purpose_statement": "Configures and initializes metadata workflows for database ingestion, specifically setting up a Trino source connection to extract database metadata for cataloging and governance.",
   "domain_cluster": "ingestion",
   "exported_functions": [],
   "exported_classes": [],

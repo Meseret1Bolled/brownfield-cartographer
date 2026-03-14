@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_grades_dedp_from_mitxonline.sql",
   "relative_path": "src/ol_dbt/models/intermediate/micromasters/subqueries/__micromasters_course_grades_dedp_from_mitxonline.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts and combines course grade information for DEDP programs from MITxOnline, linking grades to specific course runs and programs to track academic performance and completion metrics.",
+  "purpose_statement": "Extracts and organizes course grade data for DEDP programs from MITxOnline, linking grades to specific course runs, programs, and user information for performance tracking.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "__micromasters_course_grades_dedp_from_mitxonline"

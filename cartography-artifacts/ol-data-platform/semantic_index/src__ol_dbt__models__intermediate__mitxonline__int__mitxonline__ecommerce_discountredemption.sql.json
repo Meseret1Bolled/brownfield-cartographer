@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_discountredemption.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__ecommerce_discountredemption.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts discount redemption records from MITx Online e-commerce system to track promotional code usage and financial impact of discounts.",
+  "purpose_statement": "Extracts discount redemption records from the ecommerce system, providing visibility into promotional code usage and revenue impact.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__ecommerce_discountredemption"

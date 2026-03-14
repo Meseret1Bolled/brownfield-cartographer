@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/_bootcamps__sources.yml",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/_bootcamps__sources.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines raw data sources for bootcamp-related tables including wire transfer receipts, payment receipts, and ecommerce line items, establishing the foundation for downstream data processing.",
+  "purpose_statement": "Defines the structure and metadata of raw bootcamp data sources, enabling reliable data extraction from the warehouse.",
   "domain_cluster": "ingestion",
   "exported_functions": [],
   "exported_classes": [],

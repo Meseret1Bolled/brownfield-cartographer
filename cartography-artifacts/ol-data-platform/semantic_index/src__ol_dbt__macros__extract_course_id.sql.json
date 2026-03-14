@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/macros/extract_course_id.sql",
   "relative_path": "src/ol_dbt/macros/extract_course_id.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts and normalizes course identifiers from various tracking log formats for consistent course data analysis",
+  "purpose_statement": "Extracts and standardizes course identifiers from various data sources to enable consistent course-level analytics and reporting",
   "domain_cluster": "transformation",
   "exported_functions": [
     "extract_course_id"

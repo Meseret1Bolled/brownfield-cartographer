@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/edxorg/edxorg/assets/edxorg_archive.py",
   "relative_path": "dg_projects/edxorg/edxorg/assets/edxorg_archive.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Handles extraction and processing of raw course assets from archived data, modeling different asset types for downstream analytics.",
-  "domain_cluster": "ingestion",
+  "purpose_statement": "Handles the processing and extraction of course asset data from raw archives, modeling different asset types for downstream analysis.",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "gcs_edxorg_archive_sensor",
     "edxorg_raw_data_archive",

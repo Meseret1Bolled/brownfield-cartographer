@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__users_userprofile.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__users_userprofile.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transform raw user profile data from MITx Online's PostgreSQL database into a cleaned staging table with standardized field names and data types for downstream analytics, handling null values and converting timestamps to ISO8601 format.",
+  "purpose_statement": "Transforms raw MITx Online user profile data into a clean, standardized format for downstream analytics, mapping demographic and professional attributes while converting timestamps to ISO8601 format.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__app__postgres__users_userprofile"

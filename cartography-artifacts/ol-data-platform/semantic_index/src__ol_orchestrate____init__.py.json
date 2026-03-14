@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_orchestrate/__init__.py",
   "relative_path": "src/ol_orchestrate/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Serves as a deprecated module that has been migrated to a new CLI structure for data orchestration workflows.",
+  "purpose_statement": "Deprecated module that previously contained orchestration logic for data engineering workflows, now migrated to a new CLI-based structure with separate code locations for different data sources.",
   "domain_cluster": "orchestration",
   "exported_functions": [],
   "exported_classes": [],

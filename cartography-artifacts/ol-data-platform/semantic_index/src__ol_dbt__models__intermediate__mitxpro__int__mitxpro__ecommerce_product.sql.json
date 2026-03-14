@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_product.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_product.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides a comprehensive view of product information including pricing, descriptions, and associations with courses or programs, enabling analysis of product offerings and their attributes.",
+  "purpose_statement": "Provides a unified view of MITxPro e-commerce products including their latest pricing, descriptions, and associated course or program details",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__ecommerce_product"

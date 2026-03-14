@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/lakehouse/build.yaml",
   "relative_path": "dg_projects/lakehouse/build.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Configures Docker build settings for the lakehouse project",
+  "purpose_statement": "Configuration file defining Docker build context and registry for the lakehouse project, enabling containerized deployment of data processing infrastructure",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

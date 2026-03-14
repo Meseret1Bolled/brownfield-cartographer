@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_facultymemberspage.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__cms_facultymemberspage.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages faculty member information displayed on course pages, including headings and faculty details, to present accurate instructor information to students.",
+  "purpose_statement": "Manages faculty member information for course websites, organizing instructor details for display on academic program pages.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__cms_facultymemberspage"

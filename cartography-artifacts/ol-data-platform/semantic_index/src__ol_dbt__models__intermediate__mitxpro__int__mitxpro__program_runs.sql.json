@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__program_runs.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__program_runs.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a consolidated view of program run information by combining program details with specific run instances, allowing tracking of different program offerings over time.",
+  "purpose_statement": "Creates a consolidated view of MITxPro program runs with their start/end dates and readable identifiers for tracking program offerings",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__program_runs"

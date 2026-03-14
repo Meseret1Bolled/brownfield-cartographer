@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/learn-ai/int__learn_ai__chatbot.sql",
   "relative_path": "src/ol_dbt/models/intermediate/learn-ai/int__learn_ai__chatbot.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Combines chatbot checkpoint data with user and course information to track AI recommendation and assistance interactions across multiple chatbot agents.",
+  "purpose_statement": "Creates a comprehensive view of Learn AI chatbot interactions across different bot types, linking user conversations with course content and tracking the progression of AI-assisted learning sessions.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__learn_ai__chatbot"

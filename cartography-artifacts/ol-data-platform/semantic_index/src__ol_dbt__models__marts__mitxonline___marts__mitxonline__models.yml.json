@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/mitxonline/_marts__mitxonline__models.yml",
   "relative_path": "src/ol_dbt/models/marts/mitxonline/_marts__mitxonline__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines metadata and configuration for MITx Online marts including course certificates and user profiles, establishing data governance and column-level documentation for downstream consumption.",
+  "purpose_statement": "Defines metadata and column descriptions for MITx Online mart models including course certificates and user profiles.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

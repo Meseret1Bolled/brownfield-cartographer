@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/Learner_Demographics_And_Cert_Info_232090f5-bb02-4327-9067-2ae49b64074b.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/Learner_Demographics_And_Cert_Info_232090f5-bb02-4327-9067-2ae49b64074b.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Compiles comprehensive learner demographic data and certificate information for analyzing student populations and program completion rates.",
+  "purpose_statement": "Compiles comprehensive learner demographic and certification data to support marketing analysis, program enrollment tracking, and personalized learner engagement strategies.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

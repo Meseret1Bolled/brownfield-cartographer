@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_basketitem.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_basketitem.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Maps basket items to their corresponding baskets and users, establishing the relationship between shopping cart contents and customer accounts for order processing workflows.",
+  "purpose_statement": "Monitors user activity showing when students reveal answers to problems, helping identify engagement patterns and potential academic integrity issues in course interactions.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__ecommerce_basketitem"

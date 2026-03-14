@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__programs.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxonline/int__mitxonline__programs.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates program information including requirements, topics, instructors, and metadata to provide a comprehensive view of educational programs and their components.",
+  "purpose_statement": "Aggregates program-level information including course requirements, topics, instructors, and pricing to provide a unified view of academic programs and their offerings",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxonline__programs"

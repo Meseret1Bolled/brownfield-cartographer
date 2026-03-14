@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/ol_superset/lib/utils.py",
   "relative_path": "src/ol_superset/ol_superset/lib/utils.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Offers shared utilities for Superset CLI operations including repository path resolution, asset counting, and command execution, supporting data engineering workflow management.",
+  "purpose_statement": "Offers shared utilities for repository navigation, asset counting, and CLI command execution, supporting data engineering workflows and asset management",
   "domain_cluster": "utilities",
   "exported_functions": [
     "get_repo_root",

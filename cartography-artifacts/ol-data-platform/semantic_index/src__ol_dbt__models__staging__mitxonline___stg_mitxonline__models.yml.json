@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/_stg_mitxonline__models.yml",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/_stg_mitxonline__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Validates and enforces data quality rules for staging tables containing user enrollment and email opt-out information",
+  "purpose_statement": "Defines data quality tests and constraints for email opt-out and enrollment data to ensure data integrity in downstream analytics.",
   "domain_cluster": "testing",
   "exported_functions": [],
   "exported_classes": [],

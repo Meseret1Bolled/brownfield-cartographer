@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Enrollment_Geography_118ba89d-4c33-4720-b22e-a2576ff93316.yaml",
   "relative_path": "src/ol_superset/assets/charts/Enrollment_Geography_118ba89d-4c33-4720-b22e-a2576ff93316.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Visualizes enrollment data geographically on a world map, showing where users are located by aggregating enrollment counts by country.",
+  "purpose_statement": "Shows the geographic distribution of enrollments across different countries using a world map visualization",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

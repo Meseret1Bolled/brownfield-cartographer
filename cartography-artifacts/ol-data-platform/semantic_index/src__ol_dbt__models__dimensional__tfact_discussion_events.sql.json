@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/dimensional/tfact_discussion_events.sql",
   "relative_path": "src/ol_dbt/models/dimensional/tfact_discussion_events.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks discussion forum events from MITx Online and MITx Pro platforms to monitor student engagement in collaborative learning and knowledge sharing activities.",
+  "purpose_statement": "Captures discussion forum events to track student engagement in online discussions and community interactions",
   "domain_cluster": "transformation",
   "exported_functions": [
     "tfact_discussion_events"

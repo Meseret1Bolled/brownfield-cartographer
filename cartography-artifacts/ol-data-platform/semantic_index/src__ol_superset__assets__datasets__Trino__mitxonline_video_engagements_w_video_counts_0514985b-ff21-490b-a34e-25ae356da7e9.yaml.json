@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/mitxonline_video_engagements_w_video_counts_0514985b-ff21-490b-a34e-25ae356da7e9.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/mitxonline_video_engagements_w_video_counts_0514985b-ff21-490b-a34e-25ae356da7e9.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Analyzes video engagement patterns with course and user details for content consumption insights",
+  "purpose_statement": "Combines video engagement data with video counts to analyze viewing patterns and engagement across courses",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

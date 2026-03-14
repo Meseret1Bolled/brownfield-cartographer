@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courseruns.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxresidential/int__mitxresidential__courseruns.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides course metadata for scheduling and organizational purposes",
+  "purpose_statement": "Provides a reference table of all available course runs with their metadata, serving as a catalog for course offerings and scheduling information.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxresidential__courseruns"

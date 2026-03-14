@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Enrollment_Activity_b7056cdf-6d2a-43c0-b0a8-b66ab3f3980c.yaml",
   "relative_path": "src/ol_superset/assets/charts/Enrollment_Activity_b7056cdf-6d2a-43c0-b0a8-b66ab3f3980c.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides enrollment activity tracking by visualizing verified, audit, total enrollments, and certificates earned over time for courses",
+  "purpose_statement": "Provides a time-series visualization of enrollment activity metrics, showing trends in verified enrollments, audits, total enrollments, and certificates earned over time.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

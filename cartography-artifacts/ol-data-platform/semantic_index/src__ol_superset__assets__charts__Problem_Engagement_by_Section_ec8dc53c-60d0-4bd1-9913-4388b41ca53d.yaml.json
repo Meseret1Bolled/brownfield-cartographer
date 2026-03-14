@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Problem_Engagement_by_Section_ec8dc53c-60d0-4bd1-9913-4388b41ca53d.yaml",
   "relative_path": "src/ol_superset/assets/charts/Problem_Engagement_by_Section_ec8dc53c-60d0-4bd1-9913-4388b41ca53d.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Shows problem engagement statistics by course section, including average percentages of problems attempted and correct with detailed metrics",
+  "purpose_statement": "Analyzes problem engagement metrics by course section, providing average problem attempt and success rates to help instructors identify areas where students struggle and need additional support.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

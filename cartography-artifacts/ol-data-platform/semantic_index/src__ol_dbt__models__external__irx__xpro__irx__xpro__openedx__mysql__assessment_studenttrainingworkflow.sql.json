@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_studenttrainingworkflow.sql",
   "relative_path": "src/ol_dbt/models/external/irx/xpro/irx__xpro__openedx__mysql__assessment_studenttrainingworkflow.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages student training workflows, supporting the tracking of student progress through training items in courses.",
+  "purpose_statement": "Records student training workflow data, tracking the progress and state of students through training processes within courses.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__xpro__openedx__mysql__assessment_studenttrainingworkflow"

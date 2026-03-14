@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_company.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_company.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Stores company information for e-commerce customers and partners.",
+  "purpose_statement": "Stores company information for organizational customers, facilitating tracking of business accounts and their associated data.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_company"

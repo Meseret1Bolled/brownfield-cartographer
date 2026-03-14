@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Combined_Learners_f2f10600-7302-4887-af04-d0aad29333ea.yaml",
   "relative_path": "src/ol_superset/assets/charts/Combined_Learners_f2f10600-7302-4887-af04-d0aad29333ea.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides a comprehensive list of combined learners with their usernames, emails, countries, and full names for user management and analysis.",
+  "purpose_statement": "Provides a comprehensive table of combined learner information including usernames, emails, and countries for user management and outreach",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

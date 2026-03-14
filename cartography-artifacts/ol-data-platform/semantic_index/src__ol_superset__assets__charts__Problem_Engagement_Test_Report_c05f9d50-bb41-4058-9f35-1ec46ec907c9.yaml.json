@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Problem_Engagement_Test_Report_c05f9d50-bb41-4058-9f35-1ec46ec907c9.yaml",
   "relative_path": "src/ol_superset/assets/charts/Problem_Engagement_Test_Report_c05f9d50-bb41-4058-9f35-1ec46ec907c9.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides a test report showing problem engagement metrics including percentage of problems attempted and percentage of problems correct, grouped by section, to evaluate student performance in course content.",
+  "purpose_statement": "Provides a test report showing problem engagement metrics (attempted and correct percentages) by section for educational assessment analysis.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

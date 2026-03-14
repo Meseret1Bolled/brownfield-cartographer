@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/ol_superset/cli.py",
   "relative_path": "src/ol_superset/ol_superset/cli.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Implements a CLI for managing Superset assets across environments, providing commands for export, validation, synchronization, promotion, and governance policy application.",
+  "purpose_statement": "Implements CLI tool for managing Superset assets across environments with safety guardrails for controlled promotion",
   "domain_cluster": "utilities",
   "exported_functions": [
     "main"

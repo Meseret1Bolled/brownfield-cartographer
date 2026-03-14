@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/edxorg/edxorg/io_managers/gcs.py",
   "relative_path": "dg_projects/edxorg/edxorg/io_managers/gcs.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Manages file input/output operations with Google Cloud Storage, enabling data assets to be loaded from and stored to GCS buckets as part of the data pipeline workflow.",
+  "purpose_statement": "Manages input/output operations for files stored in Google Cloud Storage, providing a bridge between Dagster's asset system and GCS storage",
   "domain_cluster": "utilities",
   "exported_functions": [
     "load_input",

@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__django_contenttype.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__django_contenttype.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides content type mappings for the Django application to support polymorphic relationships and content management functionality.",
-  "domain_cluster": "transformation",
+  "purpose_statement": "Maintains content type metadata for the Django application, enabling proper handling of different data models and their relationships within the platform.",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "stg__mitxonline__app__postgres__django_contenttype"
   ],

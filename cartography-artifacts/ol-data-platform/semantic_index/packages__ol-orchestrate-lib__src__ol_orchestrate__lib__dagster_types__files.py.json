@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_types/files.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/dagster_types/files.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Defines a specialized file path type for Dagster workflows to handle filesystem operations in data pipelines",
+  "purpose_statement": "Defines a custom Dagster type for file paths that extends PosixPath, ensuring type safety when passing file paths between Dagster solids",
   "domain_cluster": "utilities",
   "exported_functions": [],
   "exported_classes": [

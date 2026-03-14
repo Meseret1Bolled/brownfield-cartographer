@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/dashboards/Distribution_of_Number_of_Videos_Watched_b54af54e-1da9-4835-a65b-3ba03c6b3e57.yaml",
   "relative_path": "src/ol_superset/assets/dashboards/Distribution_of_Number_of_Videos_Watched_b54af54e-1da9-4835-a65b-3ba03c6b3e57.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Analyzes the distribution patterns of video watching behavior across learners to understand engagement levels and content consumption patterns.",
+  "purpose_statement": "Visualizes the distribution of video consumption patterns across learners to understand engagement levels and identify outliers in learning behavior.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

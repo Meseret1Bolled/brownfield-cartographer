@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_basketitem.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_basketitem.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks items added to shopping baskets in the e-commerce system, capturing product selections and quantities for later purchase processing.",
+  "purpose_statement": "Transforms raw e-commerce basket item data into a standardized format for analyzing shopping cart contents and purchase patterns",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_basketitem"

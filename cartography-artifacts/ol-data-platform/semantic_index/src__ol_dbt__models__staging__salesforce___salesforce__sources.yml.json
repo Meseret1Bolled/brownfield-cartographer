@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/salesforce/_salesforce__sources.yml",
   "relative_path": "src/ol_dbt/models/staging/salesforce/_salesforce__sources.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Define metadata and schema for Salesforce opportunity raw data source, including field descriptions and data types for data catalog and documentation",
+  "purpose_statement": "Defines the source configuration for Salesforce raw data, specifying the database schema and table structure for opportunity data ingestion from the third-party CRM system.",
   "domain_cluster": "ingestion",
   "exported_functions": [],
   "exported_classes": [],

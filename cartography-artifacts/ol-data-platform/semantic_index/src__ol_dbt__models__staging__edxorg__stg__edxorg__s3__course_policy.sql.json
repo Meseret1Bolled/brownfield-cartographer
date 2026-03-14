@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_policy.sql",
   "relative_path": "src/ol_dbt/models/staging/edxorg/stg__edxorg__s3__course_policy.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Cleanses and standardizes course policy data from edX, making course structure, pacing, and discussion settings available for downstream applications and analytics.",
+  "purpose_statement": "Extracts and cleans course policy configurations including pacing, modules, and discussion settings to understand course structure and delivery options.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__edxorg__s3__course_policy"

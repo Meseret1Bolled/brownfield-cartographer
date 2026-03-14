@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/canvas/canvas/assets/canvas.py",
   "relative_path": "dg_projects/canvas/canvas/assets/canvas.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Extracts and processes course data from Canvas, including files, assignments, and other course elements, transforming them into structured assets for downstream use.",
-  "domain_cluster": "transformation",
+  "purpose_statement": "Contains assets for extracting and processing Canvas course data including files and assignments",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "export_course_content",
     "course_content_metadata"

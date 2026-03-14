@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_programcertificate.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__grades_programcertificate.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Tracks MicroMasters program completion and certification status for users, enabling verification of educational credentials and program participation.",
+  "purpose_statement": "Tracks MicroMasters program certificate issuance and metadata for learners completing programs",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__grades_programcertificate"

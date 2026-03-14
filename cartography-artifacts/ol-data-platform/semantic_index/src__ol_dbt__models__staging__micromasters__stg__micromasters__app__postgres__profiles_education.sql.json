@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_education.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_education.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures and standardizes user education profiles for MicroMasters learners, including their academic background and degree information.",
+  "purpose_statement": "Stores user education details from MicroMasters profiles including degrees, schools, and graduation dates to support academic credential verification and user profile enrichment.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__profiles_education"

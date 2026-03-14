@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__django_contenttype.sql",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__django_contenttype.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw Django content type data from the bootcamps PostgreSQL database into a standardized staging format with concatenated identifiers",
+  "purpose_statement": "Creates a standardized content type reference table that maps application models to human-readable identifiers, supporting data governance and cross-system data integration in the bootcamp platform.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__bootcamps__app__postgres__django_contenttype"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__auth_user.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__auth_user.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Stores and maintains user account information, providing the foundation for user identification and personalization.",
+  "purpose_statement": "Maintains user profiles for the MITx platform, storing authentication details and personal information for learners and staff.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxresidential__openedx__auth_user"

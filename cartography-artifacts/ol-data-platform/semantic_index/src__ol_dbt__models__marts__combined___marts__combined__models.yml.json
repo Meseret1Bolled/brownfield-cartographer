@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/combined/_marts__combined__models.yml",
   "relative_path": "src/ol_dbt/models/marts/combined/_marts__combined__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines the schema and validation rules for combined user and course-to-program association data, ensuring data integrity and uniqueness across platforms for mart models.",
+  "purpose_statement": "Defines the schema and validation rules for combined user and program enrollment data models, ensuring data integrity and consistency across platform-specific user information and program enrollment details.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

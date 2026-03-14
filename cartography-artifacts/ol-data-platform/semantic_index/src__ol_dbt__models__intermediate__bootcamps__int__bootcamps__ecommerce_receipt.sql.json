@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__ecommerce_receipt.sql",
   "relative_path": "src/ol_dbt/models/intermediate/bootcamps/int__bootcamps__ecommerce_receipt.sql",
   "language": "Language.SQL",
-  "purpose_statement": "This module processes and extracts detailed payment receipt information from JSON data, including transaction details, payment methods, and billing information, to support financial tracking and reconciliation of course purchases.",
+  "purpose_statement": "Extracts and transforms payment receipt data from JSON fields to provide structured payment information including transaction details, payer information, and authorization data for bootcamp orders.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__bootcamps__ecommerce_receipt"

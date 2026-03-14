@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/zendesk/_zendesk_models.yml",
   "relative_path": "src/ol_dbt/models/intermediate/zendesk/_zendesk_models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Consolidate Zendesk ticket metadata for analytics, including ticket details, status, and relationships to brands and groups",
+  "purpose_statement": "Provides a structured view of Zendesk ticket data for analysis, including ticket metadata and relationships",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

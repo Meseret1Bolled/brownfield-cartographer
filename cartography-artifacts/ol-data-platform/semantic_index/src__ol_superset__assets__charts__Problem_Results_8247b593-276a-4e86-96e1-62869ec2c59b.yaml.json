@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Problem_Results_8247b593-276a-4e86-96e1-62869ec2c59b.yaml",
   "relative_path": "src/ol_superset/assets/charts/Problem_Results_8247b593-276a-4e86-96e1-62869ec2c59b.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Provides detailed problem-level performance analytics for courses, showing correct/incorrect answer rates and percentages to identify learning gaps and track student success at the individual problem level.",
+  "purpose_statement": "Displays problem-level performance metrics including correct/incorrect counts and percentages for course problems, enabling analysis of student problem-solving success rates.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

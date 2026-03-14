@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitlearn/_stg_mitlearn_models.yml",
   "relative_path": "src/ol_dbt/models/staging/mitlearn/_stg_mitlearn_models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Transforms raw MIT Learn user data into a standardized staging model with consistent naming conventions and validation rules for downstream analytics",
+  "purpose_statement": "Transforms raw MIT Learn user data into a cleaned staging model with standardized column names and added integrity tests for downstream analytics",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

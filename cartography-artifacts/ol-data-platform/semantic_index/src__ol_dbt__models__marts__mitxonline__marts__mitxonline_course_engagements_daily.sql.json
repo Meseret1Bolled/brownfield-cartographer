@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_engagements_daily.sql",
   "relative_path": "src/ol_dbt/models/marts/mitxonline/marts__mitxonline_course_engagements_daily.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregates daily course engagement metrics including video plays, problem submissions, and discussion participation to monitor learner activity and course effectiveness.",
+  "purpose_statement": "Generates daily engagement metrics for MITx Online courses, aggregating user activities like video plays, problem submissions, and discussion participation by course and date.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__mitxonline_course_engagements_daily"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/program_summary_report.sql",
   "relative_path": "src/ol_dbt/models/reporting/program_summary_report.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Generates program-level enrollment and completion statistics to measure program effectiveness and learner outcomes across multiple courses.",
+  "purpose_statement": "Aggregates program-level enrollment data and completion statistics to evaluate program effectiveness and learner outcomes across multiple courses.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "program_summary_report"

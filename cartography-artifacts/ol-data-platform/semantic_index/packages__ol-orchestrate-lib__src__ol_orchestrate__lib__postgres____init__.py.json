@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/__init__.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/postgres/__init__.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Exports pooled PostgreSQL storage implementations for Dagster, enabling consistent connection pooling across run, event log, and schedule storage components",
+  "purpose_statement": "Exports pooled Postgres storage implementations for Dagster to replace default storage classes that lack proper connection management",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

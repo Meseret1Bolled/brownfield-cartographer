@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__courseware_studentmodule.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__mysql__courseware_studentmodule.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Captures detailed student interaction data with course modules to enable progress tracking and analytics.",
+  "purpose_statement": "Captures detailed student interaction data with course content to enable learning analytics, progress tracking, and performance assessment in MITx Online courses.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__openedx__mysql__courseware_studentmodule"

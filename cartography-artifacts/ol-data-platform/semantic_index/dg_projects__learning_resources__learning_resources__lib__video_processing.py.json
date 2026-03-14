@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/learning_resources/learning_resources/lib/video_processing.py",
   "relative_path": "dg_projects/learning_resources/learning_resources/lib/video_processing.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Handles video processing tasks including thumbnail generation and file compression to optimize media assets for web delivery",
+  "purpose_statement": "Generates video thumbnails and compresses video files to meet size requirements for efficient delivery",
   "domain_cluster": "transformation",
   "exported_functions": [
     "generate_video_thumbnail",

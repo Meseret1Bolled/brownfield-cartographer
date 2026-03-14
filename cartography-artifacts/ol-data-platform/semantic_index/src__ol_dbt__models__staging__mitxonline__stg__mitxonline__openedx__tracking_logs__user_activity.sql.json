@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__tracking_logs__user_activity.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__openedx__tracking_logs__user_activity.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates an incremental staging model of user activity tracking logs, filtering out invalid records and deduplicating by key user activity fields for behavioral analysis.",
+  "purpose_statement": "Aggregates and deduplicates user activity tracking logs from the learning platform, providing comprehensive behavioral analytics for understanding learner engagement and platform usage patterns.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__openedx__tracking_logs__user_activity"

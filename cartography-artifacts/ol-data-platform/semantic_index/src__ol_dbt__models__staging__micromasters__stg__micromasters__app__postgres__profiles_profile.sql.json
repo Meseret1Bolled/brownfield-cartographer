@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_profile.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__profiles_profile.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms user profile data from MicroMasters to a standardized format, capturing demographic, contact, and educational information for user management and personalization.",
+  "purpose_statement": "Maintains comprehensive user profile information for MicroMasters participants, including personal details, contact information, and verification status.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__profiles_profile"

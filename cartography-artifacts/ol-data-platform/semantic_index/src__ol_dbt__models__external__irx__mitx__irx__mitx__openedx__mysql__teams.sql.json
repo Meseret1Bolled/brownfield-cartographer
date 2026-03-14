@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__teams.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__teams.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Stores information about course teams including their size and descriptions, facilitating team-based learning activities and group assignments.",
-  "domain_cluster": "ingestion",
+  "purpose_statement": "Captures team formation details including team size and descriptions, enabling analysis of collaborative learning patterns and group dynamics.",
+  "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitx__openedx__mysql__teams"
   ],

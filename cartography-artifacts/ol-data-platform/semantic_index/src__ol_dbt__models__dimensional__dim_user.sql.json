@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/dimensional/dim_user.sql",
   "relative_path": "src/ol_dbt/models/dimensional/dim_user.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a unified user dimension table that deduplicates and consolidates user data across MITx Online, edX, and MITx Pro platforms for consistent user analytics.",
+  "purpose_statement": "Creates a unified user dimension table by combining user data from MITx Online, edX, and MITx Pro platforms with deduplication",
   "domain_cluster": "transformation",
   "exported_functions": [
     "dim_user"

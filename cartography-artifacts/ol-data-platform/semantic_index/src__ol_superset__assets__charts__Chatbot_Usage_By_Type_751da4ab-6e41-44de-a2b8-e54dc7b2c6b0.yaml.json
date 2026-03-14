@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Chatbot_Usage_By_Type_751da4ab-6e41-44de-a2b8-e54dc7b2c6b0.yaml",
   "relative_path": "src/ol_superset/assets/charts/Chatbot_Usage_By_Type_751da4ab-6e41-44de-a2b8-e54dc7b2c6b0.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Shows chatbot usage patterns by type over time, tracking the frequency of different chatbot interactions to understand which features are being used most.",
+  "purpose_statement": "Tracks and visualizes chatbot usage patterns by type over time to analyze user interaction with automated support systems.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

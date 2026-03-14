@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_receipt.sql",
   "relative_path": "src/ol_dbt/models/staging/micromasters/stg__micromasters__app__postgres__ecommerce_receipt.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Processes payment receipt data from CyberSource transactions, providing transaction verification and payment status information for order fulfillment.",
+  "purpose_statement": "Captures and normalizes payment receipt data from Cybersource transactions for order processing",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__micromasters__app__postgres__ecommerce_receipt"

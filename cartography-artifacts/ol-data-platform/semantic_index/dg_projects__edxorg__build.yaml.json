@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/edxorg/build.yaml",
   "relative_path": "dg_projects/edxorg/build.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Docker build configuration for edxorg data processing service - defines how to containerize the edxorg application for deployment",
+  "purpose_statement": "Docker build configuration for edxorg data pipeline",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Distribution_of_Number_of_Videos_Watched_9bdb6168-d5c9-4651-af36-556e29f3b5db.yaml",
   "relative_path": "src/ol_superset/assets/charts/Distribution_of_Number_of_Videos_Watched_9bdb6168-d5c9-4651-af36-556e29f3b5db.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Shows the distribution of how many videos learners watch, providing insights into content engagement patterns across the user base.",
+  "purpose_statement": "Analyzes the distribution of the number of videos watched by learners to assess content engagement and identify viewing patterns.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

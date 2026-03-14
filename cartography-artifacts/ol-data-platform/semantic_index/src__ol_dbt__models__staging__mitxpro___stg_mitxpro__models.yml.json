@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/_stg_mitxpro__models.yml",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/_stg_mitxpro__models.yml",
   "language": "Language.YAML",
-  "purpose_statement": "Defines the schema and validation rules for B2B coupon redemption data, ensuring data integrity for tracking when coupons are used to place orders.",
+  "purpose_statement": "Defines the structure and validation rules for B2B coupon redemption data, ensuring data integrity for coupon usage tracking in bulk orders.",
   "domain_cluster": "configuration",
   "exported_functions": [],
   "exported_classes": [],

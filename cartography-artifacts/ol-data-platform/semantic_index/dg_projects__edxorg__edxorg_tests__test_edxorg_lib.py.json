@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/edxorg/edxorg_tests/test_edxorg_lib.py",
   "relative_path": "dg_projects/edxorg/edxorg_tests/test_edxorg_lib.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Unit tests for edxorg parsing utilities - validates file categorization and path parsing logic for edx.org data archive processing",
+  "purpose_statement": "Test suite for edxorg archive parsing utilities",
   "domain_cluster": "testing",
   "exported_functions": [
     "test_sql_is_db_table",

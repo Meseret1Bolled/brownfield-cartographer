@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/xPRO_Product_List_-_Standard_Products_Only_244158fe-79de-4ad8-bc53-f82ef3f32ffa.yaml",
   "relative_path": "src/ol_superset/assets/charts/xPRO_Product_List_-_Standard_Products_Only_244158fe-79de-4ad8-bc53-f82ef3f32ffa.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Lists all standard xPRO products with their details including pricing, availability dates, and enrollment periods to manage and track the catalog of educational offerings.",
+  "purpose_statement": "Lists standard xPRO products with pricing, descriptions, and enrollment details for course catalog management.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/student_risk_probability/student_risk_probability/lib/helper.py",
   "relative_path": "dg_projects/student_risk_probability/student_risk_probability/lib/helper.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provide helper functions for scaling features and calculating risk probabilities using logistic regression weights",
+  "purpose_statement": "Module 4 provides utility functions for scaling features using RobustScaler and calculating risk probabilities through logistic regression, enabling the transformation and analysis of student data.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "scaled_features",

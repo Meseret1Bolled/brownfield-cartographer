@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponproduct.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__ecommerce_couponproduct.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Extracts coupon-product relationships to track which products are associated with specific coupons, enabling analysis of promotional campaign effectiveness and product-level discounting.",
+  "purpose_statement": "Extracts coupon-product relationships to understand which products can be purchased using specific coupons",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__ecommerce_couponproduct"

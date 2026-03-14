@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courseruncertificate.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__courses_courseruncertificate.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages course completion certificates for MIT xPro users including certificate generation and revocation tracking.",
+  "purpose_statement": "Manages course completion certificates, including generation, revocation, and access to certificate URLs for verified learners.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__courses_courseruncertificate"

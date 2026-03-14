@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/learning_resources/learning_resources/assets/sloan_api.py",
   "relative_path": "dg_projects/learning_resources/learning_resources/assets/sloan_api.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Extracts course and course-offering metadata from MIT Sloan Executive Education APIs and stores the structured data in S3 for downstream use",
+  "purpose_statement": "Extracts and processes course metadata from MIT Sloan Executive Education API, transforming it into structured assets for storage and consumption by other systems.",
   "domain_cluster": "ingestion",
   "exported_functions": [
     "sloan_course_metadata"

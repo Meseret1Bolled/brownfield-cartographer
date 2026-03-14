@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/Enrollment_Activity_Counts_Dataset.sql",
   "relative_path": "src/ol_dbt/models/reporting/Enrollment_Activity_Counts_Dataset.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Provides daily counts of enrollment activities including enrollments, unenrollments, and audit mode participation for reporting and analysis.",
+  "purpose_statement": "Provides a detailed breakdown of course enrollment activity by user, including counts of enrollments, unenrollments, and audit participation, to track engagement and participation patterns across courses.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "Enrollment_Activity_Counts_Dataset"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/reporting/mitxonline_video_engagements_w_video_counts.sql",
   "relative_path": "src/ol_dbt/models/reporting/mitxonline_video_engagements_w_video_counts.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Creates a report of MITx Online video engagement metrics, including total videos per section, user-specific viewing counts, and current course status.",
+  "purpose_statement": "Measures video engagement metrics for MITx Online courses by tracking which videos users watch and their progress through course content.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "mitxonline_video_engagements_w_video_counts"

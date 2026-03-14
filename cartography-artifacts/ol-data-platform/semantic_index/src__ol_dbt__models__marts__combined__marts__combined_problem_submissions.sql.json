@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/marts/combined/marts__combined_problem_submissions.sql",
   "relative_path": "src/ol_dbt/models/marts/combined/marts__combined_problem_submissions.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Consolidates problem submission and assessment data from multiple learning platforms into a single dataset for comprehensive analysis of learner performance and engagement.",
+  "purpose_statement": "Consolidates problem submission and assessment data from multiple learning platforms into a unified dataset, enabling analysis of learner performance and engagement with course problems across different educational environments.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "marts__combined_problem_submissions"

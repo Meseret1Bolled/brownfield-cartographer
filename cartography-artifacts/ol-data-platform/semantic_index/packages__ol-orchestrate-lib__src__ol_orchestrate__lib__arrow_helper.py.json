@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/lib/arrow_helper.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/lib/arrow_helper.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides utilities for writing Arrow tables to Parquet files, supporting data export and storage operations in the data platform.",
-  "domain_cluster": "utilities",
+  "purpose_statement": "Handles the export of data from in-memory Arrow tables to Parquet files, providing file system abstraction for writing structured data to local or cloud storage in a format optimized for analytics workloads.",
+  "domain_cluster": "ingestion",
   "exported_functions": [
     "write_parquet_file",
     "stream_to_parquet_file"

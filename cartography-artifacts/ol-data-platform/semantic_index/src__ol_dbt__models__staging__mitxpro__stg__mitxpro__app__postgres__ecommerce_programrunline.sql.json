@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_programrunline.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxpro/stg__mitxpro__app__postgres__ecommerce_programrunline.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Manages the relationship between program runs and their associated line items, tracking which program runs contain which courses or content.",
+  "purpose_statement": "Transforms e-commerce program run line data to track course offerings and pricing structures for program management",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxpro__app__postgres__ecommerce_programrunline"

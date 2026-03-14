@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__courserun.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw course overview data to provide a comprehensive view of course metadata including dates, grading policies, and course attributes for business reporting.",
+  "purpose_statement": "Transforms course overview data from MITx open edX database to provide comprehensive metadata about course availability, timing, and characteristics for enrollment and scheduling analysis.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxresidential__openedx__courserun"

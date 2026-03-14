@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_deployments/local/dagster.yaml",
   "relative_path": "dg_deployments/local/dagster.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Configures Dagster scheduler, run coordinator, and storage backend for orchestrating data pipeline execution with PostgreSQL persistence and local artifact storage",
+  "purpose_statement": "Configures local Dagster deployment settings including scheduler, run coordinator, storage backend, and artifact storage for orchestrating data pipelines.",
   "domain_cluster": "orchestration",
   "exported_functions": [],
   "exported_classes": [],

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/charts/Engagement_By_Section_And_Subsection_b503879e-45e5-43aa-90eb-de7044e442b4.yaml",
   "relative_path": "src/ol_superset/assets/charts/Engagement_By_Section_And_Subsection_b503879e-45e5-43aa-90eb-de7044e442b4.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Displays engagement data by section and subsection including page views, percentage watched, and average grades to analyze how students interact with different parts of course material.",
+  "purpose_statement": "Displays engagement data by section and subsection including page views, video watch percentages, and average grades for learning analytics.",
   "domain_cluster": "serving",
   "exported_functions": [],
   "exported_classes": [],

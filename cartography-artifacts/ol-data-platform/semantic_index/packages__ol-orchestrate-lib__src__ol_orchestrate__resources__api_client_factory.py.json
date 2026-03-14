@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/packages/ol-orchestrate-lib/src/ol_orchestrate/resources/api_client_factory.py",
   "relative_path": "packages/ol-orchestrate-lib/src/ol_orchestrate/resources/api_client_factory.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides a factory for creating authenticated API clients for external services like Canvas and edX, enabling secure integration with educational platforms",
+  "purpose_statement": "Provides a factory for creating API clients that can securely access various external services using credentials stored in Vault",
   "domain_cluster": "utilities",
   "exported_functions": [
     "client",

@@ -2,8 +2,8 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/legacy_openedx/legacy_openedx/resources/sqlite_db.py",
   "relative_path": "dg_projects/legacy_openedx/legacy_openedx/resources/sqlite_db.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides SQLite database client and Dagster resource for local development and testing of data pipelines without requiring a full MySQL setup",
-  "domain_cluster": "configuration",
+  "purpose_statement": "Provides a SQLite database client resource for local development and testing, enabling execution of SQL queries against a local database with configurable connection parameters.",
+  "domain_cluster": "utilities",
   "exported_functions": [
     "sqlite_db_resource",
     "run_query"

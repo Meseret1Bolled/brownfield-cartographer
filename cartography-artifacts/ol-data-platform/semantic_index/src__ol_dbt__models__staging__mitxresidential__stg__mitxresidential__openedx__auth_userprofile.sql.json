@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__auth_userprofile.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxresidential/stg__mitxresidential__openedx__auth_userprofile.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms and cleans user profile data from the MITx residential platform, standardizing names and demographic information for consistent analysis of learner characteristics.",
+  "purpose_statement": "Transforms user profile data from the MITx open edX platform, standardizing and cleaning personal information for demographic analysis and user segmentation.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxresidential__openedx__auth_userprofile"

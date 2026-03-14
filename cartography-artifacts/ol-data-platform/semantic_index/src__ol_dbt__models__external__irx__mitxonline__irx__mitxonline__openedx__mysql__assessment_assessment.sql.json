@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessment.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitxonline/irx__mitxonline__openedx__mysql__assessment_assessment.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Retrieve assessment scores along with scorer information for analytics on grading patterns and assessment completion rates.",
+  "purpose_statement": "Extract scorer IDs, assessment IDs, and score types for assessments by joining assessment data with submission and student item records, enabling tracking of who scored what assessment.",
   "domain_cluster": "ingestion",
   "exported_functions": [
     "irx__mitxonline__openedx__mysql__assessment_assessment"

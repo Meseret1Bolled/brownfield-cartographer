@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_superset/assets/datasets/Trino/tfact_studentmodule_problems_c6006f03-b7e0-4f47-b275-dd3d8f022500.yaml",
   "relative_path": "src/ol_superset/assets/datasets/Trino/tfact_studentmodule_problems_c6006f03-b7e0-4f47-b275-dd3d8f022500.yaml",
   "language": "Language.YAML",
-  "purpose_statement": "Tracks student problem-solving attempts and outcomes for performance analysis",
+  "purpose_statement": "Tracks detailed student problem engagement data including timestamps, grades, and problem identifiers to analyze learning behavior and performance patterns.",
   "domain_cluster": "transformation",
   "exported_functions": [],
   "exported_classes": [],

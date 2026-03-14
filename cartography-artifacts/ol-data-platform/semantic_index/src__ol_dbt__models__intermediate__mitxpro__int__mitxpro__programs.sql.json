@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__programs.sql",
   "relative_path": "src/ol_dbt/models/intermediate/mitxpro/int__mitxpro__programs.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Module providing: int__mitxpro__programs. Contains 89 lines of Language.SQL code.",
+  "purpose_statement": "Compiles comprehensive program information including program details, topics, instructors, and related course content to support program management and marketing efforts.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__mitxpro__programs"

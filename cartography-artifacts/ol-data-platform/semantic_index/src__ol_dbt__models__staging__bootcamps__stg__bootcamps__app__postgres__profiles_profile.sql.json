@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__profiles_profile.sql",
   "relative_path": "src/ol_dbt/models/staging/bootcamps/stg__bootcamps__app__postgres__profiles_profile.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transforms raw bootcamp user profile data into a cleaned format with standardized fields for user demographics and professional information, solving the business problem of having inconsistent user data across the platform by providing a unified view of user profiles.",
+  "purpose_statement": "Transforms raw bootcamp user profile data into cleaned, standardized user attributes for downstream analytics including demographics, employment details, and experience levels.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__bootcamps__app__postgres__profiles_profile"

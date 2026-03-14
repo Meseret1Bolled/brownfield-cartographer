@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_studenttrainingworkflowitem.sql",
   "relative_path": "src/ol_dbt/models/external/irx/mitx/irx__mitx__openedx__mysql__assessment_studenttrainingworkflowitem.sql",
   "language": "Language.SQL",
-  "purpose_statement": "This module extracts student training workflow items from the MITx Open edX MySQL database, capturing the progression of students through training workflows including workflow IDs, order numbers, start times, and unique identifiers.",
+  "purpose_statement": "Extracts workflow item data for tracking student training processes, including workflow IDs, order numbers, and timestamps.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "irx__mitx__openedx__mysql__assessment_studenttrainingworkflowitem"

@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/intermediate/zendesk/int__zendesk__ticket.sql",
   "relative_path": "src/ol_dbt/models/intermediate/zendesk/int__zendesk__ticket.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Aggregate Zendesk ticket data with related entities like users, organizations, and custom fields for comprehensive ticket analysis",
+  "purpose_statement": "Combines Zendesk ticket data with related entities to provide a comprehensive ticket view",
   "domain_cluster": "transformation",
   "exported_functions": [
     "int__zendesk__ticket"

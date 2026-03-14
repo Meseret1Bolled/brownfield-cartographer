@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_course.sql",
   "relative_path": "src/ol_dbt/models/staging/mitxonline/stg__mitxonline__app__postgres__courses_course.sql",
   "language": "Language.SQL",
-  "purpose_statement": "Transform course metadata from MITx Online's PostgreSQL database, converting course identifiers to multiple formats and extracting course numbers for use in course catalog and enrollment analytics.",
+  "purpose_statement": "Transforms MITx Online course metadata into a clean format with standardized identifiers and timestamps, enabling course catalog analysis and integration with other systems.",
   "domain_cluster": "transformation",
   "exported_functions": [
     "stg__mitxonline__app__postgres__courses_course"

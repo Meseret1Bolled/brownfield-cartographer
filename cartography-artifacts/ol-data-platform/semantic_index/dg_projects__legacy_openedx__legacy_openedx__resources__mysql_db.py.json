@@ -2,7 +2,7 @@
   "path": "/home/meseret/Desktop/brownfield-cartographer/ol-data-platform/dg_projects/legacy_openedx/legacy_openedx/resources/mysql_db.py",
   "relative_path": "dg_projects/legacy_openedx/legacy_openedx/resources/mysql_db.py",
   "language": "Language.PYTHON",
-  "purpose_statement": "Provides a reusable MySQL database client for connecting to and querying a MySQL database, enabling data extraction from legacy Open edX systems",
+  "purpose_statement": "Provides a reusable MySQL database client for connecting to and querying Open edX databases, enabling data extraction operations",
   "domain_cluster": "ingestion",
   "exported_functions": [
     "mysql_db_resource",
