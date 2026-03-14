@@ -1,0 +1,4 @@
+# Ignore vendored JS/HTML libraries from language stats
+lib/** linguist-vendored
+web/index.html linguist-vendored
+*.html linguist-vendored
