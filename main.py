@@ -23,6 +23,38 @@ from pydantic import BaseModel
 from src.models import DataLineageGraph, ModuleGraph
 from src.orchestrator import Orchestrator
 
+
+# ---------------------------------------------------------------------------
+# Path cleaning — strip absolute machine paths from all text output
+# ---------------------------------------------------------------------------
+
+import re as _re
+
+def _clean_paths(text: str, repo_path: Path | None = None) -> str:
+    """Replace absolute paths with relative paths in any text string."""
+    if not text:
+        return text
+    # Remove /home/user/.../repo-name/ prefix, keep everything after repo name
+    text = _re.sub(r'/(?:home|Users)/[^\s/]+/[^\s/]+/[^\s/]+/', '', text)
+    # Also strip remaining /home/... fragments
+    text = _re.sub(r'/home/\S+?/([\w\-\.]+\.(?:py|sql|yml|yaml|md|json|toml|txt|csv|ipynb))', r'\1', text)
+    return text
+
+
+def _clean_dict(d: dict) -> dict:
+    """Recursively clean all string values in a dict."""
+    out = {}
+    for k, v in d.items():
+        if isinstance(v, str):
+            out[k] = _clean_paths(v)
+        elif isinstance(v, dict):
+            out[k] = _clean_dict(v)
+        elif isinstance(v, list):
+            out[k] = [_clean_paths(i) if isinstance(i, str) else i for i in v]
+        else:
+            out[k] = v
+    return out
+
 # ---------------------------------------------------------------------------
 # App setup
 # ---------------------------------------------------------------------------
@@ -38,7 +70,7 @@ BUNDLED_ARTIFACTS = PROJECT_ROOT / "cartography-artifacts"
 # Where user repos live on disk — can be overridden via env var
 BASE_DIR = Path(os.getenv("CARTOGRAPHER_BASE_DIR", str(Path.home() / "Desktop" / "brownfield-cartographer")))
 
-GIT_DAYS = int(os.getenv("CARTOGRAPHER_GIT_DAYS", "30"))
+GIT_DAYS = int(os.getenv("CARTOGRAPHER_GIT_DAYS", "90"))
 
 # ---------------------------------------------------------------------------
 # Known repos: bundled artifacts + local repos if they exist
@@ -380,7 +412,7 @@ async def get_semanticist(repo_name: str):
         return JSONResponse({
             "domain_map": td.get("domain_map", {}),
             "drift_flags": td.get("drift_flags", {}),
-            "day_one_answers": td.get("day_one_answers", {}),
+            "day_one_answers": _clean_dict(td.get("day_one_answers", {})),
             "budget_summary": td.get("budget_summary", {}),
             "models": td.get("models", {}),
         })
@@ -409,7 +441,7 @@ async def get_artifact(repo_name: str, artifact: str):
     f = cart_dir / artifact
     if not f.exists():
         raise HTTPException(404, f"{artifact} not found — run analysis first")
-    return JSONResponse({"content": f.read_text(encoding="utf-8")})
+    return JSONResponse({"content": _clean_paths(f.read_text(encoding="utf-8"))})
 
 
 # ---------------------------------------------------------------------------

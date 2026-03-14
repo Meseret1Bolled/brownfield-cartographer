@@ -191,6 +191,11 @@ GitHub URL / Local Path
 ```
 
 ---
+## Architecture
+
+![Four-agent pipeline](assets/Archit.png)
+
+> **Surveyor** (static structure) → **Hydrologist** (data lineage) → **Semanticist** (LLM semantic layer) → **Archivist** (living artifacts). The **Navigator** provides interactive querying over the generated knowledge graph.
 
 ## Environment Variables
 
